@@ -1,77 +1,117 @@
 # drift
 
-> Observability for autonomous coding agents.
+> Runtime governance for autonomous coding agents.
 
-Drift helps developers understand what agents are doing before things go wrong.
-
----
-
-## Why Drift
-
-Coding agents are getting increasingly autonomous.
-
-They:
-- read and modify code
-- retry failed actions
-- call tools repeatedly
-- search documentation
-- rewrite implementation paths
-- burn thousands of tokens while you stare at a terminal wondering:
-
-> “Is this thing actually making progress?”
-
-Today, developers still have very limited visibility into:
-- what agents are doing
-- whether they are stuck
-- why token costs explode
-- when goals start drifting
-- when humans should intervene
-
-Drift is an observability layer for coding agents.
-
-Not another chat UI.
-Not another wrapper.
-
-A runtime lens into agent behavior.
+Drift helps developers understand when agents stop pursuing the original goal.
 
 ---
 
-# Core Ideas
+# Core Definition
 
-## Runtime Observability
+```txt
+Drift = Goal Alignment Failure
+```
 
-Treat coding agents like distributed systems.
+Drift is not:
+- latency
+- token usage
+- observability health
+- infrastructure monitoring
 
-We already have:
-- logs
-- tracing
-- metrics
-- replay
-- observability
-
-for backend infrastructure.
-
-But AI agents still operate like black boxes.
-
-Drift brings runtime visibility to autonomous workflows.
-
----
-
-## Drift Detection
-
-Agents rarely fail instantly.
-
-They drift.
+Drift happens when an agent gradually diverges from the original human intent.
 
 Examples:
-- repeated tool calls
-- endless retries
-- token growth without progress
-- context degradation
-- rollback loops
-- excessive file churn
+- fixing unrelated files after the original task completed
+- expanding scope without approval
+- entering exploratory loops
+- replacing the user goal with self-generated work
 
-Drift detects these patterns before humans lose trust.
+This project focuses on intent continuity.
+
+Not generic observability.
+
+---
+
+# Why Drift Exists
+
+Coding agents are becoming increasingly autonomous.
+
+They:
+- rewrite implementation paths
+- retry failed actions
+- generate new subgoals
+- search documentation endlessly
+- mutate execution plans over time
+
+Humans eventually lose visibility into:
+- whether the original task is still active
+- whether exploration is still legitimate
+- when intervention is required
+- whether the agent is still aligned with user intent
+
+Operational systems require runtime governance.
+
+---
+
+# Core Concepts
+
+## Goal Lifecycle
+
+```txt
+Goal Created
+    ↓
+Goal Refined
+    ↓
+Goal Expanded
+    ↓
+Goal Forgotten
+    ↓
+Goal Replaced
+```
+
+Drift tracks how goals evolve during long-running execution.
+
+---
+
+## Goal Authority Model
+
+```txt
+Human Goal
+    ↓
+System Goal
+    ↓
+Agent Subgoal
+```
+
+Only humans can:
+- create goals
+- replace goals
+- cancel goals
+
+Agents may generate subgoals.
+
+Agents must not silently replace the original intent.
+
+---
+
+## Runtime Narrative
+
+Drift converts noisy execution traces into understandable runtime stories.
+
+Example:
+
+```txt
+14:32 Agent started drifting after dependency upgrade.
+
+Reason:
+- original task became inactive
+- exploratory actions increased
+- unrelated files were modified
+```
+
+The objective is not just replay.
+
+The objective is explainability.
 
 ---
 
@@ -79,42 +119,67 @@ Drift detects these patterns before humans lose trust.
 
 Autonomy should not mean invisibility.
 
-Drift helps developers decide:
-- when to let the agent continue
-- when to intervene
-- when to stop execution entirely
+Drift helps determine:
+- when agents are still aligned
+- when exploration becomes risky
+- when humans should intervene
 
----
-
-# MVP
-
-The first version focuses on a single experience:
-
-## Observe a coding agent in real time.
-
-Features:
-- real-time timeline
-- semantic event stream
-- token usage tracking
-- loop detection
-- replay session
-- runtime risk indicators
-
----
-
-# Example Runtime Timeline
+Example:
 
 ```txt
-[10:21] Searching authentication flow
-[10:22] Reading src/auth.ts
-[10:23] Editing token refresh logic
-[10:24] Running tests
-[10:24] Tests failed
-[10:25] Retrying implementation
-[10:26] Possible loop detected
+Drift Score: 0.82
+
+Recommendation:
+Human intervention suggested.
 ```
 
-Instead of raw logs, Drift converts noisy execution traces into understandable runtime states.
+---
+
+# Architecture
+
+```txt
+Agent Runtime
+      ↓
+Collector Layer
+      ↓
+Normalized Events
+      ↓
+Goal Tracker
+      ↓
+Divergence Scoring
+      ↓
+Runtime Narrative Engine
+      ↓
+Human Takeover Recommendation
+```
+
+---
+
+# Project Structure
+
+```txt
+drift/
+ ├── goal/
+ │    ├── extractor/
+ │    ├── tracker/
+ │    └── continuity/
+ │
+ ├── events/
+ │    ├── parser/
+ │    └── schema/
+ │
+ ├── scoring/
+ │    ├── divergence/
+ │    ├── entropy/
+ │    └── takeover/
+ │
+ ├── narrative/
+ │    └── generator/
+ │
+ ├── replay/
+ │
+ └── eval/
+```
 
 ---
 
@@ -125,89 +190,83 @@ Instead of raw logs, Drift converts noisy execution traces into understandable r
   "id": "evt_001",
   "timestamp": 1747051200,
   "agent": "claude-code",
+  "goal_id": "goal_001",
   "type": "tool_call",
-  "status": "running",
   "tool": "edit_file",
   "target": "src/auth.ts",
-  "tokens": 1200,
-  "message": "Updating auth flow"
+  "semantic_intent": "upgrade dependency",
+  "drift_score": 0.71,
+  "message": "Agent started modifying unrelated build configuration"
 }
 ```
 
 ---
 
-# Architecture
+# MVP
 
-```txt
-Agent Runtime
-      ↓
-Event Interceptor
-      ↓
-Normalized Events
-      ↓
-Drift Detection Engine
-      ↓
-Realtime Timeline UI
-```
+Initial scope:
 
----
+- goal tracking
+- runtime event normalization
+- divergence scoring
+- runtime narrative generation
+- replay timeline
+- human takeover recommendation
 
-# Tech Stack
-
-## Frontend
-- Next.js
-- TailwindCSS
-- shadcn/ui
-- WebSocket stream
-
-## Backend
-- Node.js
-- Fastify
-- Event ingestion layer
-- Runtime analyzer
+Not building:
+- another agent framework
+- another chat UI
+- full observability platform
 
 ---
 
 # Roadmap
 
 ## Phase 1
-- realtime timeline
-- event ingestion SDK
-- semantic state mapping
-- replay viewer
+- Goal Schema v0
+- runtime event schema
+- local embedding divergence scoring
+- runtime narrative prototype
+- replay timeline
 
 ## Phase 2
-- drift scoring
-- anomaly detection
-- multi-agent sessions
-- runtime checkpoints
-
-## Phase 3
-- OpenTelemetry integration
-- LangGraph support
+- drift benchmark dataset
+- takeover recommendation engine
+- multi-session evaluation
 - Claude Code adapter
 - Cursor adapter
-- agent benchmarking
+
+## Phase 3
+- goal graph modeling
+- runtime governance policies
+- OpenTelemetry integration
+- multi-agent coordination
+- drift benchmark publication
 
 ---
 
 # Vision
 
-AI agents are becoming operational systems.
+AI agents are evolving from assistants into operational systems.
 
-Operational systems require observability.
+Operational systems require:
+- observability
+- accountability
+- governance
+- intent continuity
 
-Drift aims to become the runtime visibility layer for autonomous software agents.
+Drift aims to become the runtime governance layer for autonomous software agents.
 
 ---
 
 # Status
 
-Early prototype.
+Early research prototype.
 
-Currently focused on:
-- coding agent tracing
-- runtime replay
-- agent drift detection
+Current focus:
+- goal continuity tracking
+- runtime drift detection
+- runtime narrative generation
+- human takeover boundaries
 
 Contributions and discussions are welcome.

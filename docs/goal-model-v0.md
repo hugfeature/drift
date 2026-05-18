@@ -82,9 +82,43 @@ System normalization:
 }
 ```
 
-The runtime does not attempt to infer semantic truth.
+Important:
 
-It converts ambiguous intent into observable operational objectives.
+Normalization itself is a semantic inference problem.
+
+v0 strategy:
+
+```txt
+LLM normalization
+        +
+Human confirmation
+```
+
+The runtime proposes observable operational targets.
+
+Humans confirm whether the normalized goal matches the intended task.
+
+This confirmation event becomes runtime data.
+
+Example:
+
+```json
+{
+  "event": "goal_confirmed",
+  "source": "human",
+  "normalized_goal": {
+    "observable_targets": [
+      "lint",
+      "format",
+      "unused_files"
+    ]
+  }
+}
+```
+
+The runtime does not attempt to discover semantic truth.
+
+It attempts to create operationally observable intent.
 
 ---
 
@@ -155,6 +189,31 @@ Fix login bug
 Fix OAuth token refresh bug
 ```
 
+Agents may refine goals within the original scope.
+
+Allowed:
+
+```txt
+Fix login bug
+→
+Fix OAuth token refresh issue
+```
+
+Not allowed:
+
+```txt
+Fix login bug
+→
+Refactor authentication architecture
+```
+
+Constraint:
+
+Agent refinement must not:
+- replace observable targets
+- shrink original intent
+- introduce unrelated execution domains
+
 ---
 
 ## Goal Expanded
@@ -185,18 +244,28 @@ The runtime no longer demonstrates active alignment with the original goal.
 Detection requires:
 - semantic divergence
 - temporal persistence
+- exploratory continuity
 
 Single unrelated actions are insufficient.
 
-Potential heuristic:
+v0 heuristic:
 
 ```txt
-N consecutive unrelated actions
+5 consecutive unrelated actions
 +
-inactive original goal window
+10 minute inactive goal window
 +
-increasing exploratory behavior
+increasing exploratory entropy
 ```
+
+These thresholds are intentionally operational rather than theoretically optimal.
+
+v0 prioritizes:
+- observability
+- reproducibility
+- benchmarkability
+
+Thresholds are expected to evolve through runtime evaluation.
 
 ---
 
@@ -230,13 +299,47 @@ Example mutation event:
 
 ---
 
+# Subgoal Depth
+
+Agent subgoals may recursively generate new subgoals.
+
+Example:
+
+```txt
+Fix login bug
+  → Fix OAuth refresh
+    → Refactor token store
+      → Upgrade jwt library
+        → Fix breaking changes in tests
+```
+
+Deep subgoal nesting increases drift risk.
+
+Reason:
+- original intent becomes inactive
+- local optimization dominates execution
+- unrelated maintenance work accumulates
+
+v0 runtime rule:
+
+```txt
+subgoal_depth <= 3
+```
+
+Subgoal depth beyond 3 triggers:
+- elevated drift risk
+- runtime warning
+- takeover recommendation consideration
+
+---
+
 # Goal Mutation Rules
 
 | Actor | Create | Refine | Expand | Replace |
 |---|---|---|---|---|
 | Human | yes | yes | yes | yes |
 | System | no | yes | suggest only | no |
-| Agent | no | no | suggest only | no |
+| Agent | no | yes, within scope | suggest only | no |
 
 ---
 
@@ -249,6 +352,7 @@ Drift scoring should combine:
 - exploratory entropy
 - inactive goal duration
 - unauthorized scope expansion
+- subgoal depth escalation
 
 Drift must not rely solely on:
 - token usage
@@ -270,6 +374,7 @@ Reason:
 - original goal inactive
 - unrelated subgoals increasing
 - exploratory actions escalating
+- subgoal depth exceeded safe threshold
 
 Recommendation:
 Human intervention suggested.

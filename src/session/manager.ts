@@ -35,6 +35,7 @@ function generateId(prefix: string): string {
 export interface SessionManagerOptions {
   agent:            AgentType
   session_id?:      string
+  started_at?:      number   // defaults to Date.now()
   scorer_config?:   Partial<ScorerConfig>
   takeover_config?: Partial<TakeoverConfig>
 }
@@ -61,7 +62,7 @@ export class SessionManager {
   constructor(options: SessionManagerOptions) {
     this.session_id = options.session_id ?? generateId('sess')
     this.agent      = options.agent
-    this.started_at = Date.now()
+    this.started_at = options.started_at ?? Date.now()
 
     this.store     = new GoalStore(this.session_id)
     this.ingestion = new EventIngestion()

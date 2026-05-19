@@ -1,0 +1,24 @@
+{
+  "name": "@drift/core",
+  "version": "0.1.0",
+  "description": "Git Blame for Autonomous Agents — detect when an agent drifts from its original goal",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build":     "tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "demo":      "ts-node examples/readme-typo-drift.ts",
+    "eval":      "ts-node eval/runner.ts",
+    "clean":     "rm -rf dist"
+  },
+  "keywords": [
+    "agent", "drift", "observability",
+    "goal-tracking", "llm", "ai-safety", "runtime-governance"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}

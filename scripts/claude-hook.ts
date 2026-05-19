@@ -1,5 +1,5 @@
 /**
- * Claude Code / CodeFuse CLI hook script.
+ * Claude Code / CCLI hook script.
  *
  * Handles two hook events:
  *   - UserPromptSubmit: captures user prompt as the active goal (auto goal)

@@ -74,6 +74,23 @@ const DEFAULT_CONFIG: ScorerConfig = {
 }
 
 // ---------------------------------------------------------------------------
+// System/infrastructure tools that should not affect drift scoring.
+// These are agent framework utilities, not goal-directed actions.
+// ---------------------------------------------------------------------------
+
+const SYSTEM_TOOL_PATTERNS = [
+  /^mcp__/,              // MCP infrastructure tools
+  /^TaskCreate$/,        // Task management
+  /^TaskUpdate$/,
+  /^TaskComplete$/,
+  /^Agent$/,             // Sub-agent delegation (framework-level)
+]
+
+function isSystemTool(toolName: string): boolean {
+  return SYSTEM_TOOL_PATTERNS.some(pattern => pattern.test(toolName))
+}
+
+// ---------------------------------------------------------------------------
 // Scorer
 // ---------------------------------------------------------------------------
 
@@ -149,7 +166,8 @@ export class DriftScorer {
 
   /**
    * Signal 1: semantic divergence
-   * Average embedding distance between recent tool_call events and the active goal.
+   * Token-set similarity between recent tool_call events and the active goal.
+   * Uses goal-term recall + Jaccard instead of cosine on sparse vectors.
    */
   private async computeSemanticDivergence(
     events: RuntimeEvent[],
@@ -157,7 +175,7 @@ export class DriftScorer {
   ): Promise<number> {
     if (!activeGoal) return 1.0
 
-    // Include allowed_domains in goal embedding so domain-relevant
+    // Include allowed_domains in goal text so domain-relevant
     // actions (e.g. auth/login.ts for "fix login bug") score as aligned.
     const goalText = activeGoal.normalized
       ? [
@@ -166,28 +184,18 @@ export class DriftScorer {
         ].join(' ')
       : activeGoal.raw
 
-    // Cache goal embedding
-    if (!this.goalEmbeddings.has(activeGoal.id)) {
-      const vec = await this.embedding.embed(goalText)
-      this.goalEmbeddings.set(activeGoal.id, vec)
-    }
-    const goalVec = this.goalEmbeddings.get(activeGoal.id)!
-
-    // Score recent tool_call events
+    // Score recent tool_call events (exclude system/infrastructure tools)
     const recentToolCalls = events
-      .filter(e => e.type === 'tool_call')
+      .filter(e => e.type === 'tool_call' && !isSystemTool(String(e.payload['tool_name'] ?? '')))
       .slice(-this.config.entropy_window_size)
 
     if (recentToolCalls.length === 0) return 0
 
-    const divergences = await Promise.all(
-      recentToolCalls.map(async e => {
-        const actionText = this.extractActionText(e)
-        const actionVec  = await this.embedding.embed(actionText)
-        const [padGoal, padAction] = this.embedding.padToSameLength(goalVec, actionVec)
-        return semanticDivergence(padGoal, padAction)
-      })
-    )
+    const divergences = recentToolCalls.map(e => {
+      const actionText = this.extractActionText(e)
+      const similarity = this.embedding.tokenSimilarity(goalText, actionText)
+      return 1 - similarity  // divergence = 1 - similarity
+    })
 
     const avg = divergences.reduce((s, d) => s + d, 0) / divergences.length
 
@@ -230,10 +238,13 @@ export class DriftScorer {
   /**
    * Signal 3: consecutive unrelated events
    * Count the current run of unrelated events from the tail of the stream.
+   * System/infrastructure tools are skipped (not counted, don't break the run).
    */
   private computeConsecutiveUnrelated(events: RuntimeEvent[]): number {
     let count = 0
     for (let i = events.length - 1; i >= 0; i--) {
+      const toolName = String(events[i].payload['tool_name'] ?? '')
+      if (isSystemTool(toolName)) continue     // skip system tools entirely
       const rel = events[i].goal_relation
       if (rel === undefined) continue          // not yet scored — skip, don't break
       if (rel === 'unrelated') count++
@@ -256,10 +267,11 @@ export class DriftScorer {
    * Signal 5: exploratory entropy
    * Shannon entropy of tool names in the rolling window.
    * High entropy = agent is using many different tools = scattered/exploratory.
+   * System/infrastructure tools are excluded.
    */
   private computeExploratoryEntropy(events: RuntimeEvent[]): number {
     const window = events
-      .filter(e => e.type === 'tool_call')
+      .filter(e => e.type === 'tool_call' && !isSystemTool(String(e.payload['tool_name'] ?? '')))
       .slice(-this.config.entropy_window_size)
 
     if (window.length === 0) return 0
@@ -309,9 +321,9 @@ export class DriftScorer {
   }
 
   private classifyRelation(divergence: number): GoalRelation {
-    if (divergence < 0.25) return 'aligned'
-    if (divergence < 0.45) return 'refinement'
-    if (divergence < 0.70) return 'expansion'
+    if (divergence < 0.35) return 'aligned'
+    if (divergence < 0.55) return 'refinement'
+    if (divergence < 0.75) return 'expansion'
     return 'unrelated'
   }
 
@@ -350,12 +362,39 @@ export class DriftScorer {
 
   private extractActionText(event: RuntimeEvent): string {
     const p = event.payload
-    const parts = [
-      p['tool_name'],
-      p['message'],
-      p['target'],
-      p['tool_input'] ? JSON.stringify(p['tool_input']) : null,
-    ].filter(Boolean)
+    const parts: string[] = []
+
+    // Tool name
+    if (p['tool_name']) parts.push(String(p['tool_name']))
+
+    // Prefer description field (most semantically rich)
+    const toolInput = p['tool_input'] as Record<string, unknown> | undefined
+    if (toolInput) {
+      if (toolInput['description']) {
+        parts.push(String(toolInput['description']))
+      }
+      if (toolInput['command']) {
+        parts.push(String(toolInput['command']))
+      }
+      if (toolInput['file_path']) {
+        parts.push(String(toolInput['file_path']))
+      }
+      if (toolInput['query']) {
+        parts.push(String(toolInput['query']))
+      }
+    }
+
+    // Message from adapter
+    if (p['message']) parts.push(String(p['message']))
+    if (p['target']) parts.push(String(p['target']))
+
+    // Tool response — extract stdout for bash commands (limited to avoid noise)
+    const toolResponse = p['tool_response'] as Record<string, unknown> | undefined
+    if (toolResponse && toolResponse['stdout']) {
+      const stdout = String(toolResponse['stdout']).slice(0, 200)
+      parts.push(stdout)
+    }
+
     return parts.join(' ') || 'unknown action'
   }
 

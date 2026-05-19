@@ -16,7 +16,10 @@ import * as readline from 'readline'
 import { SessionManager } from '../src/session/manager'
 
 // Files written to project root (where `claude` is run)
+// Falls back to global config if not found in project root
 const CWD          = process.cwd()
+const HOME         = process.env.HOME || process.env.USERPROFILE || ''
+const GLOBAL_SESSION_FILE = path.join(HOME, '.drift-session.json')
 const SESSION_FILE = path.join(CWD, '.drift-session.json')
 const STATE_FILE   = path.join(CWD, '.drift-state.json')
 
@@ -41,9 +44,14 @@ interface DriftState {
 // ---------------------------------------------------------------------------
 
 function loadGoalConfig(): GoalConfig | null {
+  // Try project-level first, then fallback to global
   try {
     return JSON.parse(fs.readFileSync(SESSION_FILE, 'utf-8')) as GoalConfig
-  } catch { return null }
+  } catch {
+    try {
+      return JSON.parse(fs.readFileSync(GLOBAL_SESSION_FILE, 'utf-8')) as GoalConfig
+    } catch { return null }
+  }
 }
 
 function loadState(): DriftState | null {

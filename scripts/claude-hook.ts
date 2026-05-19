@@ -64,6 +64,12 @@ function saveState(state: DriftState): void {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2))
 }
 
+const EVENTS_FILE = path.join(CWD, '.drift-events.jsonl')
+
+function appendEvent(entry: Record<string, unknown>): void {
+  fs.appendFileSync(EVENTS_FILE, JSON.stringify(entry) + '\n')
+}
+
 function log(msg: string): void {
   process.stderr.write(`[Drift] ${msg}\n`)
 }
@@ -142,6 +148,19 @@ async function main(): Promise<void> {
 
   state.event_count++
   saveState(state)
+
+  // Append full event to .drift-events.jsonl for fixture generation
+  appendEvent({
+    event_index:  state.event_count,
+    timestamp:    Date.now(),
+    tool_name:    toolName,
+    tool_input:   payload['tool_input'],
+    tool_result:  payload['tool_result'] ?? payload['tool_response'],
+    message:      payload['message'],
+    drift_score:  result.drift_score.score,
+    status:       result.drift_score.status,
+    takeover:     result.takeover.recommended,
+  })
 
   // ---------------------------------------------------------------------------
   // Print status

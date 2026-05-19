@@ -216,15 +216,24 @@ export class NarrativeEngine {
   build(session_id: string): SessionNarrative {
     const sessionSegments = this.segments.filter(s => s.session_id === session_id)
 
-    const driftCount    = sessionSegments.filter(s => s.category === 'drift').length
-    const takeoverCount = sessionSegments.filter(s => s.category === 'takeover').length
-    const alignCount    = sessionSegments.filter(s => s.category === 'alignment').length
+    const driftCount       = sessionSegments.filter(s => s.category === 'drift').length
+    const takeoverCount    = sessionSegments.filter(s => s.category === 'takeover').length
+    const alignCount       = sessionSegments.filter(s => s.category === 'alignment').length
+    const explorationCount = sessionSegments.filter(s => s.category === 'exploration').length
+
+    const lastScore = sessionSegments.length > 0
+      ? sessionSegments[sessionSegments.length - 1].drift_score_at_time ?? 0
+      : 0
+    const finallyDrifting = lastScore >= 0.5
 
     let overall: string
     if (takeoverCount > 0) {
       overall = `Session drifted and required human intervention. ${driftCount} drift event(s) detected across ${sessionSegments.length} narrative segments.`
-    } else if (driftCount > 0) {
-      overall = `Session showed drift signals (${driftCount} event(s)) but remained below takeover threshold.`
+    } else if (finallyDrifting || driftCount > 0) {
+      overall = `Session drifted from original goal (final score: ${lastScore.toFixed(2)}). ` +
+        `${explorationCount} unrelated action(s) detected, ${alignCount} aligned action(s) recorded.`
+    } else if (explorationCount > 0) {
+      overall = `Session showed exploratory behavior (${explorationCount} unrelated action(s)) but remained within acceptable drift threshold.`
     } else {
       overall = `Session stayed aligned with goal throughout. ${alignCount} aligned action(s) recorded.`
     }

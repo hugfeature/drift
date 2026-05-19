@@ -80,7 +80,7 @@ npm run eval
 ```
 
 ```
-Results:   2/2 passed
+Results:   3/3 passed
 Precision: 1
 Recall:    1
 F1:        1
@@ -129,6 +129,7 @@ Only humans may create, replace, or cancel goals. Agents may refine within scope
 | Agent | Status |
 |-------|--------|
 | Claude Code | ✅ Available — [setup guide](docs/integrations/claude-code.md) |
+| CodeFuse CLI | ✅ Available — same hook mechanism as Claude Code |
 | Cursor | 🔜 Planned |
 | OpenAI Agent SDK | 🔜 Planned |
 | Cline | 🔜 Planned |
@@ -187,16 +188,18 @@ Early stage. Core pipeline works. Eval benchmark running.
 
 What's working:
 - Goal Lifecycle state machine
-- 5-signal drift scorer
+- 5-signal drift scorer (domain-hit similarity + system tool filtering)
 - Runtime narrative generation
 - Human takeover recommendations
-- Claude Code adapter
-- Eval benchmark with labeled fixtures
+- Claude Code / CodeFuse CLI adapter with auto-goal from UserPromptSubmit
+- Eval benchmark with labeled fixtures (including real sessions)
+- Auto goal extraction — no manual `.drift-session.json` required
 
 What's next:
-- More eval fixtures (real Claude Code sessions)
+- More eval fixtures (real drift sessions as positive cases)
 - Cursor adapter
 - Web timeline UI
+- Real embedding model (nomic-embed / text-embedding-3-small)
 
 ---
 

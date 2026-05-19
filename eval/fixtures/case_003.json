@@ -1,0 +1,604 @@
+{
+  "id": "fixture_003",
+  "description": "Real session (no drift): agent verifies and debugs mini-app preview runtime — stays aligned throughout",
+  "agent": "claude-code",
+  "created_at": 1779180544424,
+  "source": "real_session",
+  "session": {
+    "id": "sess_1779180544423_e9r36z",
+    "started_at": 1779180544423,
+    "agent": "claude-code",
+    "active_goal_id": "goal_1779180544423_f2ees2",
+    "goals": [
+      {
+        "id": "goal_1779180544423_f2ees2",
+        "created_at": 1779180544423,
+        "source": "human",
+        "raw": "verify and debug mini-app preview runtime",
+        "normalized": {
+          "observable_targets": [
+            "verify mini-app preview runtime",
+            "debug preview pages",
+            "check syntax and serving"
+          ],
+          "allowed_domains": [
+            "preview",
+            "mini-runtime",
+            "pages",
+            "debug",
+            "syntax-check",
+            "http-serve"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_301",
+        "timestamp": 1779180544424,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check special-node page registration"
+        },
+        "drift_score_at_event": 0.39
+      },
+      {
+        "id": "evt_302",
+        "timestamp": 1779180569382,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Syntax check pages.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_303",
+        "timestamp": 1779180571662,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Syntax check other JS files"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_304",
+        "timestamp": 1779180578501,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Syntax check mini-runtime.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_305",
+        "timestamp": 1779180587129,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify pages.js is served correctly"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_306",
+        "timestamp": 1779180589867,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify mini-runtime.js is served"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_307",
+        "timestamp": 1779180598431,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check _currentPageInstance references"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_308",
+        "timestamp": 1779180605430,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check scenario injection references in pages.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_309",
+        "timestamp": 1779180615014,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check debug panel onclick handlers"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_310",
+        "timestamp": 1779180624017,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check scenario key names in mock module"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_311",
+        "timestamp": 1779180633187,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/index.html"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_312",
+        "timestamp": 1779180646895,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/pages.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_313",
+        "timestamp": 1779180686906,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/pages.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_314",
+        "timestamp": 1779180703609,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/pages.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_315",
+        "timestamp": 1779180720961,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Final syntax check"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_316",
+        "timestamp": 1779180723177,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Final syntax check"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_317",
+        "timestamp": 1779180772104,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check inline script start"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_318",
+        "timestamp": 1779180880715,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_319",
+        "timestamp": 1779180882755,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-Desktop-you_and_me/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_320",
+        "timestamp": 1779180944892,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List preview directory structure"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_321",
+        "timestamp": 1779180990626,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check git status of preview directory"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_322",
+        "timestamp": 1779181077888,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/index.html"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_323",
+        "timestamp": 1779181077992,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/canvas-proxy.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_324",
+        "timestamp": 1779181078102,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/mock-api.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_325",
+        "timestamp": 1779181078116,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/pages.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_326",
+        "timestamp": 1779181078106,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/my-shim.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_327",
+        "timestamp": 1779181078125,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/require.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_328",
+        "timestamp": 1779181078167,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/mini-runtime.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_329",
+        "timestamp": 1779181187092,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Check preview code status"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_330",
+        "timestamp": 1779181203931,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "mcp__engram__create_task",
+          "message": ""
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_331",
+        "timestamp": 1779183238666,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/pages.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_332",
+        "timestamp": 1779183238801,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/index.html"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_333",
+        "timestamp": 1779183239070,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "Read",
+          "message": "/Users/wangzhaoxian/Desktop/you_and_me/preview/mini-runtime.js"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_334",
+        "timestamp": 1779183313992,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "给节点卡片加 data-event-tap=\"handleNodeTap\" 和 data-id，补全详情弹窗、留言框、添加节点弹窗、toast"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_335",
+        "timestamp": 1779183320470,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "给设置项加 data-event-tap=\"onToggleSetting\" 和 data-key，补 toggle 开关视觉"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_336",
+        "timestamp": 1779183327522,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "catchTap=\"\" 空处理导致弹窗内容区点击冒泡到遮罩关闭弹窗"
+        },
+        "drift_score_at_event": 0.35
+      },
+      {
+        "id": "evt_337",
+        "timestamp": 1779183332806,
+        "session_id": "sess_1779180544423_e9r36z",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_1779180544423_f2ees2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0.35
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_1779180544423_e9r36z",
+    "drift": false,
+    "takeover_required": false,
+    "annotator_notes": "Real CodeFuse CLI session (37 events, ~46min). Agent verified mini-app preview runtime: syntax checks, HTTP serving, grep for handlers, read/edit pages. All actions traceable to goal. KNOWN ISSUE: scorer false-positive because it cannot semantically parse tool_input content (bash commands, file paths) to determine goal relevance. This fixture intentionally exposes scorer weakness on real sessions.",
+    "annotated_by": "human",
+    "known_scorer_limitation": true
+  }
+}

@@ -134,9 +134,12 @@ export class DriftScorer {
     events: RuntimeEvent[],
     activeGoal: Goal | null
   ): Promise<DriftSignals> {
+    // Use latest event timestamp as "now" so replay works correctly.
+    // Using Date.now() would break historical session analysis.
+    const latestTs = events.length > 0 ? events[events.length - 1].timestamp : Date.now()
     return {
       semantic_divergence:    await this.computeSemanticDivergence(events, activeGoal),
-      inactive_duration_minutes: this.computeInactiveDuration(activeGoal),
+      inactive_duration_minutes: this.computeInactiveDuration(activeGoal, latestTs),
       consecutive_unrelated:  this.computeConsecutiveUnrelated(events),
       subgoal_depth:          this.computeSubgoalDepthRisk(activeGoal),
       exploratory_entropy:    this.computeExploratoryEntropy(events),
@@ -183,15 +186,18 @@ export class DriftScorer {
 
     const avg = divergences.reduce((s, d) => s + d, 0) / divergences.length
 
-    // Update goal_relation on events (lazy computation as designed)
+    // Update goal_relation on all events in window (lazy computation).
+    // Always update — ensures events processed across multiple score() calls
+    // get classified, keeping consecutive_unrelated accurate.
     recentToolCalls.forEach((e, i) => {
-      if (!e.goal_relation) {
-        e.goal_relation = this.classifyRelation(divergences[i])
-        e.relation_confidence = 1 - Math.abs(divergences[i] - 0.5) * 2
-        e.goal_relation_computed_at = Date.now()
+      e.goal_relation           = this.classifyRelation(divergences[i])
+      e.relation_confidence     = 1 - Math.abs(divergences[i] - 0.5) * 2
+      e.goal_relation_computed_at = Date.now()
 
-        // Update lastAlignedAt if this event is aligned
-        if (e.goal_relation === 'aligned' || e.goal_relation === 'refinement') {
+      // Track last aligned action time
+      if (e.goal_relation === 'aligned' || e.goal_relation === 'refinement') {
+        const current = this.lastAlignedAt.get(activeGoal.id)
+        if (!current || e.timestamp > current) {
           this.lastAlignedAt.set(activeGoal.id, e.timestamp)
         }
       }
@@ -204,15 +210,15 @@ export class DriftScorer {
    * Signal 2: inactive duration
    * How many minutes since the active goal received an aligned action.
    */
-  private computeInactiveDuration(activeGoal: Goal | null): number {
+  private computeInactiveDuration(activeGoal: Goal | null, asOfTs: number): number {
     if (!activeGoal) return 0
     const lastAligned = this.lastAlignedAt.get(activeGoal.id)
     if (!lastAligned) {
       // Never had an aligned action — measure from goal creation
-      const minutesSinceCreated = (Date.now() - activeGoal.created_at) / 60_000
+      const minutesSinceCreated = (asOfTs - activeGoal.created_at) / 60_000
       return Math.round(minutesSinceCreated * 10) / 10
     }
-    const minutes = (Date.now() - lastAligned) / 60_000
+    const minutes = (asOfTs - lastAligned) / 60_000
     return Math.round(minutes * 10) / 10
   }
 
@@ -223,7 +229,9 @@ export class DriftScorer {
   private computeConsecutiveUnrelated(events: RuntimeEvent[]): number {
     let count = 0
     for (let i = events.length - 1; i >= 0; i--) {
-      if (events[i].goal_relation === 'unrelated') count++
+      const rel = events[i].goal_relation
+      if (rel === undefined) continue          // not yet scored — skip, don't break
+      if (rel === 'unrelated') count++
       else break
     }
     return count

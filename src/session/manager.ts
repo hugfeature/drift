@@ -75,8 +75,8 @@ export class SessionManager {
   // Goal management
   // ---------------------------------------------------------------------------
 
-  setGoal(raw: string): string {
-    const goal = this.store.create(raw)
+  setGoal(raw: string, created_at?: number): string {
+    const goal = this.store.create(raw, created_at)
     return goal.id
   }
 

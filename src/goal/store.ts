@@ -57,10 +57,10 @@ export class GoalStore {
    * Create a new goal from human input.
    * Only humans may create goals.
    */
-  create(raw: string): Goal {
+  create(raw: string, created_at?: number): Goal {
     const goal: Goal = {
       id: generateId('goal'),
-      created_at: Date.now(),
+      created_at: created_at ?? Date.now(),
       source: 'human',
       raw,
       confirmed: false,

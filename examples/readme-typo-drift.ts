@@ -159,10 +159,10 @@ async function run(): Promise<void> {
       takeoverPrinted = true
       console.log()
       console.log(`${C.red}${C.bold}  ⚠️  Human Takeover Recommended${C.reset}`)
-      result.takeover.reasons.forEach(r =>
+      result.takeover.reasons.forEach((r: string) =>
         console.log(`${C.red}     - ${r}${C.reset}`)
       )
-      result.takeover.suggested_actions.forEach(a =>
+      result.takeover.suggested_actions.forEach((a: string) =>
         console.log(`${C.yellow}     → ${a}${C.reset}`)
       )
       console.log()

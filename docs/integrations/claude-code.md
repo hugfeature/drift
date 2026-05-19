@@ -9,7 +9,7 @@ Connect Drift to a real Claude Code session in 3 steps.
 Claude Code has a hooks system. You configure scripts that run on every tool call. Drift's Claude Code adapter reads these hook events and feeds them into the scoring pipeline.
 
 ```
-Claude Code / CodeFuse CLI (running in your terminal)
+Claude Code / CCLI (running in your terminal)
     ↓  UserPromptSubmit → auto-sets goal from user's prompt
     ↓  PostToolUse → scores each tool call against current goal
 scripts/claude-hook.ts (receives JSON from stdin)

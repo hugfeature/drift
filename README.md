@@ -1,272 +1,209 @@
-# drift
+# Drift
 
-> Runtime governance for autonomous coding agents.
+**Git Blame for Autonomous Agents.**
 
-Drift helps developers understand when agents stop pursuing the original goal.
+Drift detects when an agent stops working toward your goal and starts working toward its own.
+
+```
+Goal: "fix README typo"
+
+T+1m   Read README.md              0.10  ✓ aligned
+T+2m   Fix typo in README          0.26  ✓ aligned
+T+5m   Read .eslintrc              0.42  ✓ aligned
+T+8m   Upgrade eslint to v9        0.56  ⚡ drifting
+
+⚠️  Human Takeover Recommended
+   - Tool usage entropy critically high for 3+ consecutive evaluations
+   → Verify agent has not lost focus
+
+T+18m  Fix lint errors in auth.ts  0.79  ✗ lost
+T+26m  Fix broken tests            0.65  ⚡ drifting
+```
+
+The agent was asked to fix a typo. 26 minutes later it's fixing broken tests caused by an eslint major version upgrade it introduced on its own.
+
+Drift catches this at T+8m.
 
 ---
 
-# Core Definition
+## The Problem
 
-```txt
+Every autonomous agent has this failure mode:
+
+- User: "fix README typo"
+- Agent fixes typo, notices lint warning
+- Agent upgrades eslint
+- Build breaks
+- Agent fixes build errors
+- Tests break
+- Agent fixes tests
+- 45 minutes later: three files changed, original task buried
+
+This is **Goal Drift** — not a crash, not a loop, not a hallucination. The agent is working hard. Just not on what you asked.
+
+Current tools catch runtime failures. None of them track whether the agent is still doing what you asked.
+
+---
+
+## Core Concept
+
+```
 Drift = Goal Alignment Failure
 ```
 
-Drift is not:
-- latency
-- token usage
-- observability health
-- infrastructure monitoring
+A runtime failure is not always drift.
 
-Drift happens when an agent gradually diverges from the original human intent.
-
-Examples:
-- fixing unrelated files after the original task completed
-- expanding scope without approval
-- entering exploratory loops
-- replacing the user goal with self-generated work
-
-This project focuses on intent continuity.
-
-Not generic observability.
+| Runtime Behavior       | Drift? |
+|------------------------|--------|
+| tool retry             | not necessarily |
+| token explosion        | not necessarily |
+| failed tests           | not necessarily |
+| unrelated exploration  | likely |
+| forgotten original task | yes |
+| unauthorized scope expansion | yes |
 
 ---
 
-# Why Drift Exists
+## Quick Start
 
-Coding agents are becoming increasingly autonomous.
-
-They:
-- rewrite implementation paths
-- retry failed actions
-- generate new subgoals
-- search documentation endlessly
-- mutate execution plans over time
-
-Humans eventually lose visibility into:
-- whether the original task is still active
-- whether exploration is still legitimate
-- when intervention is required
-- whether the agent is still aligned with user intent
-
-Operational systems require runtime governance.
-
----
-
-# Core Concepts
-
-## Goal Lifecycle
-
-```txt
-Goal Created
-    ↓
-Goal Refined
-    ↓
-Goal Expanded
-    ↓
-Goal Forgotten
-    ↓
-Goal Replaced
+```bash
+git clone https://github.com/hugfeature/drift
+cd drift
+npm install
+npm run demo
 ```
 
-Drift tracks how goals evolve during long-running execution.
+To run the eval benchmark:
+
+```bash
+npm run eval
+```
+
+```
+Results:   2/2 passed
+Precision: 1
+Recall:    1
+F1:        1
+```
 
 ---
 
-## Goal Authority Model
+## How It Works
 
-```txt
+```
 Human Goal
     ↓
-System Goal
+Session Manager
     ↓
-Agent Subgoal
+Event Stream (tool_call, subgoal_created, ...)
+    ↓
+Drift Scorer  ←── 5 signals
+    ↓
+Narrative Engine  ←── "T+18m goal forgotten"
+    ↓
+Takeover Engine  ←── "human intervention recommended"
 ```
 
-Only humans can:
-- create goals
-- replace goals
-- cancel goals
+**Five scoring signals:**
 
-Agents may generate subgoals.
+| Signal | What it measures |
+|--------|-----------------|
+| Semantic divergence | Embedding distance: current actions vs original goal |
+| Inactive duration | Minutes since goal received an aligned action |
+| Consecutive unrelated | Run of actions with no goal connection |
+| Exploratory entropy | Shannon entropy of tool usage (scattered = high risk) |
+| Subgoal depth | Nesting depth of agent-created subgoals |
 
-Agents must not silently replace the original intent.
+**Goal Lifecycle:**
+
+```
+Goal Created → Refined → Expanded → Forgotten → Replaced
+```
+
+Only humans may create, replace, or cancel goals. Agents may refine within scope. Unauthorized mutations are tracked as governance events.
 
 ---
 
-## Runtime Narrative
+## Integrations
 
-Drift converts noisy execution traces into understandable runtime stories.
-
-Example:
-
-```txt
-14:32 Agent started drifting after dependency upgrade.
-
-Reason:
-- original task became inactive
-- exploratory actions increased
-- unrelated files were modified
-```
-
-The objective is not just replay.
-
-The objective is explainability.
+| Agent | Status |
+|-------|--------|
+| Claude Code | ✅ Available — [setup guide](docs/integrations/claude-code.md) |
+| Cursor | 🔜 Planned |
+| OpenAI Agent SDK | 🔜 Planned |
+| Cline | 🔜 Planned |
 
 ---
 
-## Human Takeover
+## Project Structure
 
-Autonomy should not mean invisibility.
-
-Drift helps determine:
-- when agents are still aligned
-- when exploration becomes risky
-- when humans should intervene
-
-Example:
-
-```txt
-Drift Score: 0.82
-
-Recommendation:
-Human intervention suggested.
 ```
+src/
+├── types/        Goal, Session, Event, DriftScore, Narrative, Eval
+├── goal/         GoalStore — state machine for Goal Lifecycle
+├── events/       EventIngestion — agent event pipeline
+├── scoring/      DriftScorer — 5-signal weighted scoring
+├── narrative/    NarrativeEngine — runtime story reconstruction
+├── governance/   TakeoverEngine — human intervention layer
+├── session/      SessionManager — orchestrates all modules
+└── adapters/     Claude Code, Cursor (planned)
 
----
+eval/
+├── fixtures/     Labeled real agent sessions
+└── runner.ts     Benchmark: precision / recall / F1
 
-# Architecture
-
-```txt
-Agent Runtime
-      ↓
-Collector Layer
-      ↓
-Normalized Events
-      ↓
-Goal Tracker
-      ↓
-Divergence Scoring
-      ↓
-Runtime Narrative Engine
-      ↓
-Human Takeover Recommendation
+examples/
+└── readme-typo-drift.ts   End-to-end demo
 ```
 
 ---
 
-# Project Structure
+## Eval Benchmark
 
-```txt
-drift/
- ├── goal/
- │    ├── extractor/
- │    ├── tracker/
- │    └── continuity/
- │
- ├── events/
- │    ├── parser/
- │    └── schema/
- │
- ├── scoring/
- │    ├── divergence/
- │    ├── entropy/
- │    └── takeover/
- │
- ├── narrative/
- │    └── generator/
- │
- ├── replay/
- │
- └── eval/
-```
+Drift ships with a labeled fixture benchmark.
 
----
-
-# Event Model
+Each fixture is a real agent session with human annotations:
 
 ```json
 {
-  "id": "evt_001",
-  "timestamp": 1747051200,
-  "agent": "claude-code",
-  "goal_id": "goal_001",
-  "type": "tool_call",
-  "tool": "edit_file",
-  "target": "src/auth.ts",
-  "semantic_intent": "upgrade dependency",
-  "drift_score": 0.71,
-  "message": "Agent started modifying unrelated build configuration"
+  "drift": true,
+  "drift_type": "scope_expansion",
+  "drift_started_at": 1747051500000,
+  "goal_forgotten_at": 1747051740000,
+  "takeover_required": true,
+  "annotated_by": "human"
 }
 ```
 
----
+Run it: `npm run eval`
 
-# MVP
-
-Initial scope:
-
-- goal tracking
-- runtime event normalization
-- divergence scoring
-- runtime narrative generation
-- replay timeline
-- human takeover recommendation
-
-Not building:
-- another agent framework
-- another chat UI
-- full observability platform
+Contributing fixtures: open a PR adding a JSON file to `eval/fixtures/`. Real sessions only — synthetic traces not accepted.
 
 ---
 
-# Roadmap
+## Status
 
-## Phase 1
-- Goal Schema v0
-- runtime event schema
-- local embedding divergence scoring
-- runtime narrative prototype
-- replay timeline
+Early stage. Core pipeline works. Eval benchmark running.
 
-## Phase 2
-- drift benchmark dataset
-- takeover recommendation engine
-- multi-session evaluation
+What's working:
+- Goal Lifecycle state machine
+- 5-signal drift scorer
+- Runtime narrative generation
+- Human takeover recommendations
 - Claude Code adapter
+- Eval benchmark with labeled fixtures
+
+What's next:
+- More eval fixtures (real Claude Code sessions)
 - Cursor adapter
-
-## Phase 3
-- goal graph modeling
-- runtime governance policies
-- OpenTelemetry integration
-- multi-agent coordination
-- drift benchmark publication
+- Web timeline UI
 
 ---
 
-# Vision
+## Definition
 
-AI agents are evolving from assistants into operational systems.
-
-Operational systems require:
-- observability
-- accountability
-- governance
-- intent continuity
-
-Drift aims to become the runtime governance layer for autonomous software agents.
+> Drift is not a crash. It's the agent doing the wrong thing well.
 
 ---
 
-# Status
-
-Early research prototype.
-
-Current focus:
-- goal continuity tracking
-- runtime drift detection
-- runtime narrative generation
-- human takeover boundaries
-
-Contributions and discussions are welcome.
+MIT License

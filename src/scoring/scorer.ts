@@ -157,8 +157,13 @@ export class DriftScorer {
   ): Promise<number> {
     if (!activeGoal) return 1.0
 
+    // Include allowed_domains in goal embedding so domain-relevant
+    // actions (e.g. auth/login.ts for "fix login bug") score as aligned.
     const goalText = activeGoal.normalized
-      ? activeGoal.normalized.observable_targets.join(' ')
+      ? [
+          ...activeGoal.normalized.observable_targets,
+          ...activeGoal.normalized.allowed_domains,
+        ].join(' ')
       : activeGoal.raw
 
     // Cache goal embedding

@@ -50,12 +50,13 @@ async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
   const session = new SessionManager({
     agent:      fixture.agent,
     session_id: fixture.session.id,
+    started_at: fixture.session.started_at,
   })
 
   // Register the first goal
   const firstGoal = fixture.session.goals[0]
   if (firstGoal) {
-    const goalId = session.setGoal(firstGoal.raw)
+    const goalId = session.setGoal(firstGoal.raw, firstGoal.created_at)
     if (firstGoal.normalized) {
       await session.confirmGoal(goalId, firstGoal.normalized)
     }

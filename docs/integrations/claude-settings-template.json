@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx ts-node DRIFT_PATH/scripts/claude-hook.ts"
+          }
+        ]
+      }
+    ]
+  }
+}

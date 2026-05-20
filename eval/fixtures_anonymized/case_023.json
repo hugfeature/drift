@@ -1,0 +1,1914 @@
+{
+  "id": "fixture_mpdemx7d",
+  "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
+  "agent": "claude-code",
+  "created_at": 0,
+  "session": {
+    "id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+    "started_at": 0,
+    "agent": "claude-code",
+    "active_goal_id": "goal_19de64d6",
+    "goals": [
+      {
+        "id": "goal_19de64d6",
+        "created_at": 0,
+        "source": "human",
+        "raw": "[Request interrupted by user for tool use]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user for tool use]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user",
+            "tool"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 0,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 31619,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram repo git status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 31620,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check recent commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 31622,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current version in pyproject.toml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 133440,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check pyproject.toml changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 133441,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check new untracked files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 134061,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check commits ahead of remote"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 154588,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check commits ahead of remote"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 154589,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check demo/continuity contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 154590,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check runtime init"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 163895,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Fetch remote and check commits ahead"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 169238,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if remote is ahead of local"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 190964,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current PyPI version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 199728,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "runtime/startup.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 199730,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "runtime/injector.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 209716,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find version location in pyproject.toml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 228653,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check version config"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 231731,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current version in __init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 235441,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 237797,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 241346,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 244219,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Stage all changes and check status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 931532,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit all changes with version bump"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 985580,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 994129,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build package"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1005373,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upload to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1018273,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Engram v0.9.1 已发布 PyPI + GitHub (2026-05-09)。新增 runtime 模块：engram-session-hook 入口点 + Active Context injector（SessionStart hook 自动注入 handofffailures/memories 到 Claude Code 系统提示）。版本历史：0.9.1→runti"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1018276,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1042296,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1048859,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1245809,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade locally installed mcp-engram to latest"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1258716,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify installed version and new entry point"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1426764,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check running engram processes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1431493,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Restart engram HTTP daemon with new version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1476736,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify engram daemon is healthy after restart"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1572107,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1572108,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1572109,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__list_tasks",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1595493,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram database files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 1602139,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Inspect engram database contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 1609335,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check all tables and find the stored memory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 1634665,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Engram v0.9.1 发布验证 — runtime session hook + injector 已上线 PyPI，本地 daemon 0.9.1 运行正常"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 1640486,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify memory was written to DB"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 1644729,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check daemon stats for DB path info"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 1649189,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check health and stats endpoint"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 1664773,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check for WAL files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 1669210,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check which DB file the daemon has open"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 1673668,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Recall memories via HTTP API"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 1932772,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find all MEMORY.md files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 1936558,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find all memory .md files (not just MEMORY.md index)"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 1961043,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Batch import all memory files into Engram"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 2440208,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 2440210,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 4507493,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__create_task",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 4507498,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Continuity验证方案：4步链路 — ①task持久化 ②handoff交接 ③session hook注入 ④checkpoint恢复。每步用独立API调用模拟\"新会话\"场景，验证数据不丢失。"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_057",
+        "timestamp": 4901326,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__session_handoff",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_058",
+        "timestamp": 5122783,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_059",
+        "timestamp": 5122784,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__get_task",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_060",
+        "timestamp": 5122785,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__list_checkpoints",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_061",
+        "timestamp": 5133289,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run session hook manually to test Active Context injection"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_062",
+        "timestamp": 5133291,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__restore_checkpoint",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_063",
+        "timestamp": 5142525,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_task",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_064",
+        "timestamp": 5169658,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check source vs installed version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_065",
+        "timestamp": 5173909,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check git status and recent commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_066",
+        "timestamp": 5179971,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check scope of changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_067",
+        "timestamp": 5189092,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check new modules"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_068",
+        "timestamp": 5197978,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit v0.10.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_069",
+        "timestamp": 5208618,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_070",
+        "timestamp": 5233479,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build v0.10.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_071",
+        "timestamp": 5282382,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upload v0.10.0 to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_072",
+        "timestamp": 5292441,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade local install to 0.10.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_073",
+        "timestamp": 5323117,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify installed version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_074",
+        "timestamp": 5333563,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Restart daemon with v0.10.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_075",
+        "timestamp": 5346302,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Engram v0.10.0 已发布 (2026-05-09)。核心变更：Event Log 作为唯一持久化原语（Two Laws: 1.Event log is the only durability primitive 2.If it cannot be replayed, it is not critical state）。新增 event_log.py（append-only JSONL+"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_076",
+        "timestamp": 5348846,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_077",
+        "timestamp": 5675549,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_078",
+        "timestamp": 5675550,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__list_tasks",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_079",
+        "timestamp": 5686526,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check DuckDB contents directly"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_080",
+        "timestamp": 5692631,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check event log files and backups"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_081",
+        "timestamp": 5698939,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check last backup for our imported memories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_082",
+        "timestamp": 5705785,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check corrupt DB for original memories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_083",
+        "timestamp": 5711397,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check event log contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_084",
+        "timestamp": 5718139,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Count event types in log"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_085",
+        "timestamp": 5724399,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check recover CLI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_086",
+        "timestamp": 5782839,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find recover module usage"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_087",
+        "timestamp": 5789259,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run recover to replay event log and rebuild DB"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_088",
+        "timestamp": 5795925,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check RecoverReport fields"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_089",
+        "timestamp": 5800617,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run recover again and check report"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_090",
+        "timestamp": 5810177,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Restart daemon after recover"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_091",
+        "timestamp": 5820929,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_092",
+        "timestamp": 5820930,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__list_tasks",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_093",
+        "timestamp": 5826259,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_094",
+        "timestamp": 5841390,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Full DB inspection after recover"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_095",
+        "timestamp": 5847564,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find actual DB location"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_096",
+        "timestamp": 5851833,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find all duckdb files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_097",
+        "timestamp": 5856670,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check what DB file the running daemon uses"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_098",
+        "timestamp": 5873141,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check recovered DB content"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_099",
+        "timestamp": 5889357,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Inspect memory.store events in event log"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_100",
+        "timestamp": 5897706,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check the 8MB backup for real memories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_101",
+        "timestamp": 8062347,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Clean up and start fresh daemon"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_102",
+        "timestamp": 8144011,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check installed version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_103",
+        "timestamp": 8147609,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Re-import all memory files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_104",
+        "timestamp": 8178628,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_105",
+        "timestamp": 8181625,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_106",
+        "timestamp": 8269356,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check uncommitted changes and recent commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_107",
+        "timestamp": 8371789,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check change scope"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_108",
+        "timestamp": 8371790,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check new modules"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_109",
+        "timestamp": 8388888,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit v0.11.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_110",
+        "timestamp": 8479157,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_111",
+        "timestamp": 8612878,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build v0.11.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_112",
+        "timestamp": 8741177,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upload v0.11.0 to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_113",
+        "timestamp": 8751259,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade local pip package"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_114",
+        "timestamp": 8756886,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Restart daemon with v0.11.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_115",
+        "timestamp": 8818896,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_116",
+        "timestamp": 8824313,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check DB file state after restart"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_117",
+        "timestamp": 8828470,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check which DB file daemon has open"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_118",
+        "timestamp": 8880082,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Create fresh DB and clean up corrupt files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_119",
+        "timestamp": 8903231,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Start daemon and verify DB file"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_120",
+        "timestamp": 8921812,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check daemon startup log"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_121",
+        "timestamp": 8925730,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Kill all engram processes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_122",
+        "timestamp": 8931190,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Force kill remaining process"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_123",
+        "timestamp": 8938401,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Clean start with single daemon"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_124",
+        "timestamp": 8963261,
+        "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_19de64d6",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Re-import all memories into clean DB"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_19de64d6-6903-49ab-8552-7063cc9951fa",
+    "drift": true,
+    "takeover_required": false,
+    "annotator_notes": "124 tool calls with 1 interrupt, no visible user goal. Agent ran extensively without clear direction. cleanup_spiral: self-sustaining execution loop.",
+    "annotated_by": "human",
+    "drift_type": "cleanup_spiral"
+  }
+}

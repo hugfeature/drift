@@ -1,0 +1,705 @@
+{
+  "id": "fixture_mpden0bo",
+  "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
+  "agent": "claude-code",
+  "created_at": 0,
+  "session": {
+    "id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+    "started_at": 0,
+    "agent": "claude-code",
+    "active_goal_id": "goal_161b8dd3",
+    "goals": [
+      {
+        "id": "goal_161b8dd3",
+        "created_at": 0,
+        "source": "human",
+        "raw": "[Request interrupted by user]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 0,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_resolve_url",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 29,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_resolve_url",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 13173,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 115090,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_create",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 294581,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "查看现有 Observ CLI 验收材料以及 agent-help、dashboard 解读相关内容，确认可补充的验收项。"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 315067,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 329022,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "探索 Observ CLI Skill 相关文件"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 452209,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 529597,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 612179,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "测试 agent-help JSON 输出"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 612181,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "测试 dashboard get 并解析面板结构"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 654933,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "检查 dashboard get 原始输出"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 654934,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "统计 MCP tools 数量"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 709039,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "修正参数名后获取大盘标题"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 709040,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "测试 dashboard parse 解析能力"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 709042,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "列出前 10 个 MCP tools"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 750367,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 dashboard get 原始输出前几行"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 750368,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 agent-help 默认文本输出"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 804476,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 dashboard get 的正确参数名"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 804477,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "列出后 12 个 MCP tools"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 816150,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "带 workspace-id 获取大盘"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 829939,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "检查原始输出"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 863175,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 dashboard get 完整帮助"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 885106,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "正确参数获取大盘标题"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 905491,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看大盘 JSON 顶层结构"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 929629,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 data 层结构"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 929631,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "测试 dashboard parse 解析"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 942650,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "获取大盘名称"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 942651,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 parse 输出结构"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1028856,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 parse 数据条数"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1028858,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 parse 第一条数据"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1042362,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 parse data 结构"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1057314,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "获取 parse summary"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1057315,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "带 validate 的 parse summary"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1072180,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "查看 parse 提取的 metric queries"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1179268,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "完整 MCP tools 列表"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1262691,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "统计 agent-help 指南分区数量"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1262692,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "agent-help 指南分区名称"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1645020,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1967621,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_get",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 2734960,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/project-observ-cli-acceptance.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 2977772,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Observ CLI 预发验收测试\ndescription: v0.5.0-beta.19 全量验收，预发环境，15个公开命令+2个Skill，探索式测试\ntype: project\noriginSessionId: 875b5cbe-ac98-4801-bb97-d701429919f8\n---\nObserv CLI v0.5.0-beta.19 预发验收（04-23）。\n\n",
+          "target": "memory/project-observ-cli-acceptance.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 3057285,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 3071724,
+        "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_161b8dd3",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_161b8dd3-0c49-4e4f-82e5-964133a75aef",
+    "drift": false,
+    "takeover_required": false,
+    "annotator_notes": "44 tool calls with 1 interrupt. Normal-sized coding session. Single interrupt is common in interactive development.",
+    "annotated_by": "human"
+  }
+}

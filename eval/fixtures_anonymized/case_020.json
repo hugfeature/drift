@@ -1,0 +1,1460 @@
+{
+  "id": "fixture_mpdemvcx",
+  "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
+  "agent": "claude-code",
+  "created_at": 0,
+  "session": {
+    "id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+    "started_at": 0,
+    "agent": "claude-code",
+    "active_goal_id": "goal_796277b7",
+    "goals": [
+      {
+        "id": "goal_796277b7",
+        "created_at": 0,
+        "source": "human",
+        "raw": "[Request interrupted by user for tool use]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user for tool use]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user",
+            "tool"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 0,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check Claude Code settings for sandbox configuration"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 45,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List Claude Code config"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 53574,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check sandbox mode status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 135985,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if sandbox-exec is available on this macOS"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 136020,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check running Claude processes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 310833,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check all locations where OBSERVAI_LF_HOST and related env vars might be defined"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 352453,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check observ credential files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 358033,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read credential and config files before removing"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 364788,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Remove observ credential and config files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 574689,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 582215,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 582524,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 976460,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current top-level keys in settings"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 976462,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if claude binary supports sandbox flag"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1017246,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check for sandbox-related options"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1017248,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if sandbox is a configurable option"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1096736,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1208623,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1274911,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1501810,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1566426,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": ".claude/settings.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1932652,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "observ-cli/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 2377295,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/project-observ-cli.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 2449256,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/project-observ-cli.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 2727441,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_resolve_url",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 2748149,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 3249734,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/project-observ-cli.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 3391840,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check existing auth test cases in acceptance script"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 3465231,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Count auth-related test cases"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 3617235,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Glob",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 3617236,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Glob",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 3676198,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find magi-creator skill files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 3844293,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__query_filepath_with_keyword",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 3844294,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__query_code_with_keyword",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 5094039,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Explore eval framework and harness patterns"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 5094041,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Explore observ CLI skill and MCP tool coverage"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 5402268,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Theta 多模型评测任务集扩展方案\n\n## Context\n\n现有 `observ-cli-acceptance.sh` 以功能回归为目标设计（128P/0F），场景偏向\"命令能不能跑通\"。\nTheta 多模型评测的目标不同：**对比不同模型在 tool 选择准确率、参数填写质量、上下文串联能力上的差异**。\n\n需要把任务集从\"验收脚本\"升级为\"模型对比基准\"，同时补充 auth/权限全覆盖",
+          "target": "plans/gentle-popping-teacup.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 5712292,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "ExitPlanMode",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 7766462,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "创建 ~/skill/theta-eval/ 目录，编写 tasks.yaml（横向30+场景 + 纵向3档 + 5条组合链路 + 预留槽）"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 7766495,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "定义 Theta 平台可用模型列表，含 endpoint、参数、优先级"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 7766496,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "5维评分体系：tool选择准确率30% + 参数填写质量25% + 覆盖率20% + 用例质量15% + 成本效率10%"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 7766992,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "参考 observ-cli-acceptance.sh 的 harness 模式，实现 load_modelsgen_report/notify"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 7782341,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 7795952,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Create theta-eval directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 7887860,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "version: \"1.0\"\ntask_set_id: theta-observ-multi-model\ncreated_at: \"2026-04-29\"\ndescription: |\n  Observ CLI/MCP 多模型评测任务集\n  横向(Horizontal): 按命令域覆盖广度\n  纵向(Vertical): 同命令 Easy/Medium/Hard 三档\n  组合链路(Chain):",
+          "target": "theta-eval/tasks.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 7995355,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 7995356,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 8083841,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Theta 多模型评测 — 模型列表\n# base_url: [REDACTED_INTERNAL_URL] (OpenAI-compatible)\n# 筛选标准: 支持 function calling (tool use)\n\nversion: \"1.0\"\nbase_url: \"[REDACTED_INTERNAL_URL]\"\n\n# ─── 优先级1: 首批5个（覆盖",
+          "target": "theta-eval/models.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 8102077,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 8102079,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 8190614,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Theta 多模型评测 — 评分规则\n\n## 评分体系总览\n\n5 个维度，加权总分 100 分。\n\n| 维度 | 权重 | 满分 | 计算方式 |\n|------|------|------|---------|\n| Tool 选择准确率 | 30% | 30 | 正确选中工具数 / 应选工具总数 |\n| 参数填写质量 | 25% | 25 | 必填完整率×0.6 + 值合法率×0.4 |\n|",
+          "target": "theta-eval/scoring.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 8213921,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 8213923,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 8227365,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "skill/observ-cli-acceptance.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 8245815,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "skill/observ-cli-acceptance.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 8292085,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "#!bin/env bash\n# Theta 多模型评测脚本 — Observ CLI/MCP\n# 用法:\n#   bash theta-eval.sh                          # 跑 priority_1 全模型 × 全任务\n#   bash theta-eval.sh --model kimi-K2.5        # 单模型\n#   bash theta",
+          "target": "theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_057",
+        "timestamp": 8305690,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_058",
+        "timestamp": 8518860,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_059",
+        "timestamp": 8563923,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Make theta-eval.sh executable"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_060",
+        "timestamp": 8711613,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test theta-eval.sh dry-run mode"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_061",
+        "timestamp": 8784127,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Install yq for YAML parsing"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_062",
+        "timestamp": 8853586,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Re-test theta-eval.sh dry-run"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_063",
+        "timestamp": 8905562,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_064",
+        "timestamp": 9034910,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Re-test dry-run without auth check"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_065",
+        "timestamp": 9155532,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_066",
+        "timestamp": 9195239,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/project-observ-cli.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_067",
+        "timestamp": 9428859,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/project-observ-cli.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_068",
+        "timestamp": 10187398,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "diting/diting-watcher.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_069",
+        "timestamp": 10331140,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_070",
+        "timestamp": 11016966,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_071",
+        "timestamp": 11255680,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check claude CLI help"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_072",
+        "timestamp": 11322214,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check claude model and output options"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_073",
+        "timestamp": 11568494,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test claude stream-json output format"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_074",
+        "timestamp": 11627888,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test claude JSON output format"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_075",
+        "timestamp": 11681408,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check stream-json event types"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_076",
+        "timestamp": 11805757,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test with observ tool prompt via stream-json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_077",
+        "timestamp": 11846305,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test basic claude -p json output"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_078",
+        "timestamp": 11944427,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test MCP tool call capture in stream-json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_079",
+        "timestamp": 12022695,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test tool_use event in stream-json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_080",
+        "timestamp": 12610989,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check raw stream-json output"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_081",
+        "timestamp": 12820405,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check raw stream-json verbose output"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_082",
+        "timestamp": 13632241,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_083",
+        "timestamp": 13832120,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Theta多模型评测方案\ndescription: observ CLI/MCP多模型评测：52任务集+本地Claude Code执行+stream-json抓tool_calls+独立evaluator评分\ntype: project\n---\n\n## 方案概要（2026-04-29 设计完成）\n- 目标：在本地 Claude Code 里切换模型，验证各模型对 observ ",
+          "target": "memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_084",
+        "timestamp": 14197505,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_085",
+        "timestamp": 14229530,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_086",
+        "timestamp": 14484551,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_087",
+        "timestamp": 14683813,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "diting/diting-eval-prompt-template.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_088",
+        "timestamp": 15810040,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "diting/failure-taxonomy.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_089",
+        "timestamp": 16107551,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "diting/diting-watcher.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_090",
+        "timestamp": 16770388,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "diting/diting-watcher.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_091",
+        "timestamp": 16803915,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "你是 Observ CLI/MCP 的测试工程师。你的任务是使用 observ MCP 工具完成指定的可观测性查询任务。\n\n## 任务\n\n{{TASK_DESC}}\n\n## 约束\n\n1. 只使用 `mcp__observmcp__` 前缀的工具完成任务\n2. 如果任务需要先查信息再用查到的信息做下一步查询，请按步骤串联\n3. 参数必须准确：时间戳用毫秒级（13位），product/entity_s",
+          "target": "theta-eval/theta-eval-prompt.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_092",
+        "timestamp": 18300088,
+        "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_796277b7",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_796277b7-aed6-45b7-a472-a59b0ef96fba",
+    "drift": true,
+    "takeover_required": false,
+    "annotator_notes": "92 tool calls with 3 user interrupts. No clear user goal visible in transcript. Multiple interrupts suggest agent repeatedly went in wrong direction. rabbit_hole pattern.",
+    "annotated_by": "human",
+    "drift_type": "rabbit_hole"
+  }
+}

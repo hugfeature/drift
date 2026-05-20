@@ -50,6 +50,14 @@ export interface DriftSignals {
    * Each unauthorized GoalMutation increments this.
    */
   unauthorized_mutations: number
+
+  /**
+   * Ratio of tool_call events to total events in the session window.
+   * High autonomy (close to 1.0) = agent running without user direction.
+   * Normalized: tool_calls / (tool_calls + user_events).
+   * This is the strongest structural signal for drift detection.
+   */
+  autonomy_momentum: number
 }
 
 export interface DriftScore {

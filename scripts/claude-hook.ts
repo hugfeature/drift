@@ -146,8 +146,9 @@ async function main(): Promise<void> {
   if (eventType === 'session_start') {
     // Clean previous session state — new Claude Code session = new drift session
     try { fs.unlinkSync(STATE_FILE) } catch { /* no previous state */ }
+    try { fs.unlinkSync(EVENTS_FILE) } catch { /* no previous events */ }
 
-    log('🔄 New session started (state reset)')
+    log('🔄 New session started (state + events reset)')
 
     appendEvent({
       event_index: 0,

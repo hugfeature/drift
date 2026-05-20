@@ -75,7 +75,7 @@ const DEFAULT_CONFIG: ScorerConfig = {
   forgotten_consecutive_threshold:  5,
   forgotten_inactive_minutes:       10,
   depth_risk_threshold:             3,
-  drifting_score_threshold:         0.5,
+  drifting_score_threshold:         0.45,
   lost_score_threshold:             0.75,
   entropy_window_size:              20,
   autonomy_tools_per_prompt_threshold: 30,

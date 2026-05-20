@@ -1,5 +1,5 @@
 {
-  "id": "fixture_y3kailun",
+  "id": "fixture_5erno4bu",
   "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
   "agent": "claude-code",
   "created_at": 0,
@@ -188,7 +188,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "mcp__memory-service__store_memory",
-          "message": "[独安伴·AI可信生命守护网 黑客松方案评审建议]\n语雀文档：digital-engine/myv0vz/orozy2iisityx8ta，作者伊城，数字马力质量四组。\n核心产品：独居者安全守护，AI被动监测+三级风险判定+救援包闭环。\n\nP0建议：\n1. 名字换掉，建议\"安在\"或\"在\"（\"独安伴\"有孤独感，产品名应传递安全感而非孤独）\n2. LLM做风险判定→改成规则引擎+LLM做解释（生命安全"
+          "message": "[独安伴·AI可信生命守护网 黑客松方案评审建议]\n语雀文档：[REDACTED]\n核心产品：独居者安全守护，AI被动监测+三级风险判定+救援包闭环。\n\nP0建议：\n1. 名字换掉，建议\"安在\"或\"在\"（\"独安伴\"有孤独感，产品名应传递安全感而非孤独）\n2. LLM做风险判定→改成规则引擎+LLM做解释（生命安全"
         },
         "drift_score_at_event": 0
       },
@@ -203,7 +203,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "---\nname: 独安伴黑客松方案评审\ndescription: 蚂蚁内部黑客松\"独安伴·AI可信生命守护网\"方案评审建议（P0/P1/P2）\ntype: project\n---\n\n# 独安伴·AI可信生命守护网 — 黑客松方案评审\n\n## 文档位置\n- 语雀：digital-engine/myv0vz/orozy2iisityx8ta\n- 作者：伊城\n- 知识库：数字马力/质量四组\n\n## 产",
+          "message": "---\nname: 独安伴黑客松方案评审\ndescription: [REDACTED_EVENT]\"独安伴·AI可信生命守护网\"方案评审建议（P0/P1/P2）\ntype: project\n---\n\n# 独安伴·AI可信生命守护网 — 黑客松方案评审\n\n## 文档位置\n- 语雀：[REDACTED]\n- 作者：[REDACTED_USER]\n- 知识库：[REDACTED_ORG]/质量四组\n\n## 产",
           "target": "/~memory/project-hackathon-duanban.md"
         },
         "drift_score_at_event": 0
@@ -583,7 +583,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "mcp__memory-service__store_memory",
-          "message": "[安在·AI可信生命守护网 黑客松方案 — 最终版]\n语雀文档：digital-engine/myv0vz/orozy2iisityx8ta，作者伊城，数字马力质量四组。\n产品名已从\"独安伴\"改为\"安在\"。\n\n核心改动（对标2026蚂蚁黑客松评审维度）：\n- 问题定义50%：开头改为第一人称场景(\"凌晨2点17分\")+新增\"为什么是现在\"三变量交汇+新增\"你可能就是用户\"评审代入\n- 方案设计30"
+          "message": "[安在·AI可信生命守护网 黑客松方案 — 最终版]\n语雀文档：[REDACTED]\n产品名已从\"独安伴\"改为\"安在\"。\n\n核心改动（对标[REDACTED_EVENT]评审维度）：\n- 问题定义50%：开头改为第一人称场景(\"凌晨2点17分\")+新增\"为什么是现在\"三变量交汇+新增\"你可能就是用户\"评审代入\n- 方案设计30"
         },
         "drift_score_at_event": 0
       },
@@ -598,7 +598,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "---\nname: 安在黑客松方案\ndescription: 蚂蚁2026黑客松\"安在·AI可信生命守护网\"方案，对标评审维度优化完成(05-14)\ntype: project\n---\n\n# 安在·AI可信生命守护网 — 黑客松方案\n\n## 文档位置\n- 语雀：digital-engine/myv0vz/orozy2iisityx8ta\n- 作者：伊城\n- 知识库：数字马力/质量四组\n\n## 评审",
+          "message": "---\nname: 安在黑客松方案\ndescription: [REDACTED_EVENT]\"安在·AI可信生命守护网\"方案，对标评审维度优化完成(05-14)\ntype: project\n---\n\n# 安在·AI可信生命守护网 — 黑客松方案\n\n## 文档位置\n- 语雀：[REDACTED]\n- 作者：[REDACTED_USER]\n- 知识库：[REDACTED_ORG]/质量四组\n\n## 评审",
           "target": "/~memory/project-hackathon-duanban.md"
         },
         "drift_score_at_event": 0

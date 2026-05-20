@@ -17,6 +17,8 @@ export type DriftType =
   | 'unauthorized_replacement'  // agent replaced goal without human authority
   | 'depth_escalation'          // subgoal depth exceeded safe threshold
   | 'orphan_subgoal'            // subgoal cannot trace lineage to active goal
+  | 'interrupted_workflow'      // agent resumes after interruption but diverges from original goal
+  | 'conflicting_context'       // contradictory information in context causes agent confusion
 
 export interface DriftLabel {
   session_id: string

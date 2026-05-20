@@ -51,6 +51,8 @@ async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
     agent:      fixture.agent,
     session_id: fixture.session.id,
     started_at: fixture.session.started_at,
+    langsmith:    false,
+    verification: false,
   })
 
   // Register the first goal
@@ -110,6 +112,14 @@ interface EvalMetrics {
   f1:        number
 }
 
+interface PerTypeMetrics {
+  type:      string
+  total:     number
+  detected:  number
+  missed:    number
+  recall:    number
+}
+
 function computeMetrics(
   fixtures: EvalFixture[],
   results:  ReplayResult[]
@@ -136,10 +146,73 @@ function computeMetrics(
     total:  fixtures.length,
     passed: tp + tn,
     failed: fp + fn,
-    precision: Math.round(precision * 100) / 100,
-    recall:    Math.round(recall    * 100) / 100,
-    f1:        Math.round(f1        * 100) / 100,
+    precision: Math.round(precision * 1000) / 1000,
+    recall:    Math.round(recall    * 1000) / 1000,
+    f1:        Math.round(f1        * 1000) / 1000,
   }
+}
+
+function computePerTypeMetrics(
+  fixtures: EvalFixture[],
+  results:  ReplayResult[]
+): PerTypeMetrics[] {
+  const typeMap = new Map<string, { total: number; detected: number }>()
+
+  for (let i = 0; i < fixtures.length; i++) {
+    const driftType = fixtures[i].label.drift_type ?? 'none'
+    if (!fixtures[i].label.drift) continue
+
+    const entry = typeMap.get(driftType) ?? { total: 0, detected: 0 }
+    entry.total++
+    if (results[i].drift_detected) entry.detected++
+    typeMap.set(driftType, entry)
+  }
+
+  const perType: PerTypeMetrics[] = []
+  for (const [type, { total, detected }] of typeMap.entries()) {
+    perType.push({
+      type,
+      total,
+      detected,
+      missed: total - detected,
+      recall: Math.round((detected / total) * 1000) / 1000,
+    })
+  }
+
+  return perType.sort((a, b) => a.type.localeCompare(b.type))
+}
+
+// ---------------------------------------------------------------------------
+// JSON Report
+// ---------------------------------------------------------------------------
+
+interface EvalReport {
+  timestamp:    string
+  fixture_dir:  string
+  total:        number
+  metrics:      EvalMetrics
+  per_type:     PerTypeMetrics[]
+  results:      Array<{
+    fixture_id:     string
+    description:    string
+    drift_type:     string | undefined
+    expected_drift: boolean
+    detected_drift: boolean
+    final_score:    number
+    drift_status:   string
+    passed:         boolean
+  }>
+}
+
+function writeReport(report: EvalReport): string {
+  const reportsDir = path.join(__dirname, 'reports')
+  if (!fs.existsSync(reportsDir)) {
+    fs.mkdirSync(reportsDir, { recursive: true })
+  }
+  const filename = `eval-${new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-')}.json`
+  const filePath = path.join(reportsDir, filename)
+  fs.writeFileSync(filePath, JSON.stringify(report, null, 2))
+  return filePath
 }
 
 // ---------------------------------------------------------------------------
@@ -188,6 +261,7 @@ async function run(): Promise<void> {
   }
 
   const metrics = computeMetrics(fixtures, results)
+  const perType = computePerTypeMetrics(fixtures, results)
 
   console.log('\n' + '─'.repeat(60))
   console.log(`Results:   ${metrics.passed}/${metrics.total} passed`)
@@ -195,6 +269,37 @@ async function run(): Promise<void> {
   console.log(`Recall:    ${metrics.recall}`)
   console.log(`F1:        ${metrics.f1}`)
   console.log('─'.repeat(60))
+
+  if (perType.length > 0) {
+    console.log('\nPer-type breakdown:')
+    for (const pt of perType) {
+      console.log(
+        `  ${pt.type.padEnd(28)} ${pt.detected}/${pt.total} detected  recall=${pt.recall}`
+      )
+    }
+  }
+
+  // Write structured JSON report
+  const report: EvalReport = {
+    timestamp:   new Date().toISOString(),
+    fixture_dir: fixtureDir,
+    total:       fixtures.length,
+    metrics,
+    per_type:    perType,
+    results:     fixtures.map((f, i) => ({
+      fixture_id:     f.id,
+      description:    f.description,
+      drift_type:     f.label.drift_type,
+      expected_drift: f.label.drift,
+      detected_drift: results[i].drift_detected,
+      final_score:    results[i].final_score,
+      drift_status:   results[i].drift_status,
+      passed:         f.label.drift === results[i].drift_detected,
+    })),
+  }
+
+  const reportPath = writeReport(report)
+  console.log(`\n📄 Report saved: ${reportPath}`)
 }
 
 run().catch(err => {

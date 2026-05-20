@@ -533,7 +533,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "# Skill 项目记忆\n\n> 本地文件记忆 + memory-service MCP 语义检索，双系统互补。\n> 本地文件用于结构化索引，memory-service 用于语义召回。\n\n## 用户画像\n- [基本情况](./user-profile.md) — 35岁，数字马力测试开发，目标北京/天津\n- [家庭情况](./user-family.md) — 两个儿子(5岁+1岁4个月)\n- [职业规划与求职](./caree",
+          "message": "# Skill 项目记忆\n\n> 本地文件记忆 + memory-service MCP 语义检索，双系统互补。\n> 本地文件用于结构化索引，memory-service 用于语义召回。\n\n## 用户画像\n- [基本情况](./user-profile.md) — 35岁，[REDACTED_ORG]测试开发，目标北京/天津\n- [家庭情况](./user-family.md) — 两个儿子(5岁+1岁4个月)\n- [职业规划与求职](./caree",
           "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0

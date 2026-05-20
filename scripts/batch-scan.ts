@@ -21,7 +21,7 @@ interface SessionCandidate {
   alreadyImported: boolean
 }
 
-const HOME = process.env.HOME || '/Users/wangzhaoxian'
+const HOME = process.env.HOME || '/home/user'
 
 const CLAUDE_DIRS = [
   path.join(HOME, '.codefuse/engine/cc/projects'),

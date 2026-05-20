@@ -32,6 +32,7 @@ export type TakeoverTrigger =
   | 'depth_critical'
   | 'unauthorized_mutation'
   | 'entropy_spike'
+  | 'safety_violation'
 
 export interface TakeoverRecommendation {
   session_id:        string
@@ -78,7 +79,7 @@ export class TakeoverEngine {
    * Evaluate current state and return a TakeoverRecommendation.
    * Called after every DriftScore is computed.
    */
-  evaluate(session_id: string, score: DriftScore): TakeoverRecommendation {
+  evaluate(session_id: string, score: DriftScore, safetyViolation = false): TakeoverRecommendation {
     const activeGoal = this.store.getActive()
     const triggers: TakeoverTrigger[] = []
     const reasons: string[] = []
@@ -133,6 +134,13 @@ export class TakeoverEngine {
       triggers.push('entropy_spike')
       reasons.push(`Tool usage entropy has been critically high for ${this.config.entropy_spike_consecutive}+ consecutive evaluations`)
       actions.push('Agent appears to be exploring broadly — verify it has not lost focus')
+    }
+
+    // --- Trigger: safety violation ---
+    if (safetyViolation) {
+      triggers.push('safety_violation')
+      reasons.push('Agent performed a potentially dangerous operation that requires human approval')
+      actions.push('Review the flagged operation before allowing the agent to continue')
     }
 
     const recommended = triggers.length > 0

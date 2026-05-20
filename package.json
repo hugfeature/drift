@@ -7,10 +7,15 @@
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:verification": "jest tests/verification/",
+    "test:safety": "jest tests/safety/",
     "demo": "ts-node examples/readme-typo-drift.ts",
-    "eval": "ts-node eval/runner.ts",
+    "eval": "ts-node --transpile-only eval/runner.ts",
+    "eval:deepeval": "ts-node --transpile-only eval/metrics/drift-detection-metric.ts",
     "clean": "rm -rf dist",
     "timeline": "ts-node scripts/generate-timeline.ts",
+    "anonymize": "ts-node --transpile-only scripts/anonymize-session.ts",
     "drift:reset": "rm -f .drift-state.json && echo \"Session reset.\"",
     "drift:narrative": "ts-node scripts/drift-narrative.ts"
   },
@@ -25,7 +30,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.0.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.0"
   },

@@ -230,7 +230,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor 蚂蚁智能监控登录测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\ntest.describe('AntMonit",
+          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor [REDACTED_PRODUCT]登录测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\ntest.describe('AntMonit",
           "target": "登录专用/AntMonitor登录测试.spec.js"
         },
         "drift_score_at_event": 0
@@ -398,7 +398,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\n\n/**\n * AntMonitor 蚂蚁智能监控 - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\ntest.describe('AntMonitor登录并切换租户测试', () => {\n",
+          "message": "const { test, expect } = require('@playwright/test');\n\n/**\n * AntMonitor [REDACTED_PRODUCT] - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\ntest.describe('AntMonitor登录并切换租户测试', () => {\n",
           "target": "登录专用/AntMonitor登录切换租户.spec.js"
         },
         "drift_score_at_event": 0
@@ -522,7 +522,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\n\n/**\n * AntMonitor 蚂蚁智能监控 - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\ntest.describe('AntMonitor登录并切换租户测试', () => {\n",
+          "message": "const { test, expect } = require('@playwright/test');\n\n/**\n * AntMonitor [REDACTED_PRODUCT] - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\ntest.describe('AntMonitor登录并切换租户测试', () => {\n",
           "target": "登录专用/AntMonitor登录切换租户.spec.js"
         },
         "drift_score_at_event": 0
@@ -568,7 +568,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\nconst { request } = require('@playwright/test');\n\n/**\n * AntMonitor 蚂蚁智能监控 - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n",
+          "message": "const { test, expect } = require('@playwright/test');\nconst { request } = require('@playwright/test');\n\n/**\n * AntMonitor [REDACTED_PRODUCT] - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n",
           "target": "登录专用/AntMonitor登录切换租户.spec.js"
         },
         "drift_score_at_event": 0
@@ -629,7 +629,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor 蚂蚁智能监控 - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\n\ntest.describe(",
+          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor [REDACTED_PRODUCT] - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\n\ntest.describe(",
           "target": "登录专用/AntMonitor登录切换租户.spec.js"
         },
         "drift_score_at_event": 0
@@ -675,7 +675,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor 蚂蚁智能监控 - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n *\n * 使用说明：\n * 1. 首",
+          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor [REDACTED_PRODUCT] - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n *\n * 使用说明：\n * 1. 首",
           "target": "登录专用/AntMonitor登录切换租户.spec.js"
         },
         "drift_score_at_event": 0
@@ -782,7 +782,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor 蚂蚁智能监控 - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\n\nconst targetUr",
+          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor [REDACTED_PRODUCT] - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\n\nconst targetUr",
           "target": "登录专用/AntMonitor登录切换租户.spec.js"
         },
         "drift_score_at_event": 0
@@ -813,7 +813,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor 蚂蚁智能监控 - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\n\nconst targetUr",
+          "message": "const { test, expect } = require('@playwright/test');\nconst path = require('path');\n\n/**\n * AntMonitor [REDACTED_PRODUCT] - 登录并切换租户测试\n * 网站: [REDACTED_INTERNAL_URL]\n */\n\nconst targetUr",
           "target": "登录专用/AntMonitor登录切换租户.spec.js"
         },
         "drift_score_at_event": 0

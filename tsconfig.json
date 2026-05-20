@@ -7,7 +7,7 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["node"]
+    "types": ["node", "jest"]
   },
   "include": ["src/**/*", "eval/**/*", "examples/**/*", "scripts/**/*"]
 }

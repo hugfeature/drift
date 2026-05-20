@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdemjrg",
+  "id": "fixture_vbhdr1d9",
   "description": "Classic scope drift: fix README typo escalates to eslint upgrade and breaking changes",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_fixture_001",
+    "id": "sess_efe001",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_001",
@@ -32,7 +32,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_001",
@@ -43,7 +43,7 @@
       {
         "id": "evt_002",
         "timestamp": 60000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -57,7 +57,7 @@
       {
         "id": "evt_003",
         "timestamp": 120000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -72,7 +72,7 @@
       {
         "id": "evt_004",
         "timestamp": 300000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -87,7 +87,7 @@
       {
         "id": "evt_005",
         "timestamp": 420000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -101,7 +101,7 @@
       {
         "id": "evt_006",
         "timestamp": 540000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -116,7 +116,7 @@
       {
         "id": "evt_007",
         "timestamp": 660000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -131,7 +131,7 @@
       {
         "id": "evt_008",
         "timestamp": 780000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -146,7 +146,7 @@
       {
         "id": "evt_009",
         "timestamp": 900000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",
@@ -161,7 +161,7 @@
       {
         "id": "evt_010",
         "timestamp": 1020000,
-        "session_id": "sess_fixture_001",
+        "session_id": "sess_efe001",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_001",

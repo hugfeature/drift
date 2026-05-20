@@ -39,6 +39,20 @@ const INTERNAL_DOMAIN_PATTERN = /(?:alibaba|alipay|antfin|taobao|alicdn|aliyun|d
 const INTERNAL_BRAND_PATTERN = /\b(?:Alipay|AliPay|Alibaba|AntFin|Taobao|DingTalk)\b/g
 const INTERNAL_URL_PATTERN = /https?:\/\/[\w.-]*(?:alibaba|alipay|antfin|taobao|alicdn|aliyun|dingtalk|1688)[^"'\s]*/gi
 
+// --- Enhanced: personal identity (no \b for Chinese) ---
+const PERSONAL_ID_PATTERN = /wangzhaoxian|探渊|503175/g
+const GITHUB_USER_PATTERN = /hugfeature/g
+
+// --- Enhanced: internal project names ---
+const INTERNAL_PROJECT_OPENCLAW = /openclaw|OpenClaw|open-claw/gi
+const INTERNAL_PROJECT_DITING = /谛听|diting|project-diting/gi
+const INTERNAL_PROJECT_ENGRAM = /engram|mcp-engram/gi
+const INTERNAL_PROJECT_CODE_PATTERN = /pbc-[a-z0-9]+/gi
+const INTERNAL_PROJECT_OBSERV = /\bobserv(?:mcp)?\b/gi
+
+// --- Enhanced: service names in message context (no \b for Chinese) ---
+const SERVICE_NAME_IN_MSG = /alipay|dingtalk|钉钉/gi
+
 interface AnonymizeOptions {
   /** Keep the last N path segments (default: 2) */
   keepPathSegments: number
@@ -80,6 +94,20 @@ function sanitizeText(text: string, options: AnonymizeOptions): string {
   result = result.replace(INTERNAL_DOMAIN_PATTERN, '[internal].com')
   result = result.replace(INTERNAL_BRAND_PATTERN, '[InternalCo]')
 
+  // Enhanced: personal identity
+  result = result.replace(PERSONAL_ID_PATTERN, 'user_001')
+  result = result.replace(GITHUB_USER_PATTERN, 'anon-dev')
+
+  // Enhanced: internal project names
+  result = result.replace(INTERNAL_PROJECT_OPENCLAW, 'agent-system')
+  result = result.replace(INTERNAL_PROJECT_DITING, 'monitor-system')
+  result = result.replace(INTERNAL_PROJECT_ENGRAM, 'memory-service')
+  result = result.replace(INTERNAL_PROJECT_CODE_PATTERN, 'project-xxx')
+  result = result.replace(INTERNAL_PROJECT_OBSERV, 'obs-tool')
+
+  // Enhanced: service names in message context
+  result = result.replace(SERVICE_NAME_IN_MSG, '[redacted-service]')
+
   // Anonymize home directories
   result = result.replace(HOME_DIR_PATTERN, '/~')
 
@@ -103,8 +131,8 @@ function anonymizePayload(
 
   for (const [key, value] of Object.entries(payload)) {
     if (key === 'tool_name') {
-      // Keep tool names — they're structural, not sensitive
-      result[key] = value
+      // Sanitize tool names that contain internal project references
+      result[key] = sanitizeText(String(value), options)
       continue
     }
 
@@ -123,7 +151,9 @@ function anonymizePayload(
     }
 
     if (key === 'target' && typeof value === 'string') {
-      result[key] = anonymizePath(value, options.keepPathSegments)
+      // Sanitize sensitive names first, then anonymize path
+      const sanitizedTarget = sanitizeText(value, options)
+      result[key] = anonymizePath(sanitizedTarget, options.keepPathSegments)
       continue
     }
 
@@ -132,9 +162,15 @@ function anonymizePayload(
       continue
     }
 
-    // Default: sanitize strings, pass through others
+    // Default: sanitize strings, recurse objects, pass through others
     if (typeof value === 'string') {
       result[key] = sanitizeText(value, options)
+    } else if (Array.isArray(value)) {
+      result[key] = value.map(item =>
+        typeof item === 'string' ? sanitizeText(item, options) : item
+      )
+    } else if (typeof value === 'object' && value !== null) {
+      result[key] = anonymizePayload(value as Record<string, unknown>, options)
     } else {
       result[key] = value
     }
@@ -149,13 +185,30 @@ function anonymizeSession(raw: any, options: AnonymizeOptions): any {
   const timeOffset = options.normalizeTimestamps ? session.session.started_at : 0
 
   // Anonymize session metadata
-  session.id = `fixture_${Date.now().toString(36)}`
+  const fixtureHash = Math.random().toString(36).slice(2, 10)
+  session.id = `fixture_${fixtureHash}`
+  if (session.description) {
+    session.description = sanitizeText(session.description, options)
+  }
   if (session.created_at && options.normalizeTimestamps) {
     session.created_at = session.created_at - timeOffset
   }
 
   // Anonymize session-level fields
   const sess = session.session
+
+  // Generate a stable anonymized session_id from original (deterministic per run)
+  const origSessionId = sess.id || ''
+  const anonSessionId = `sess_${origSessionId.replace(/[^a-f0-9-]/g, '').slice(0, 8) || fixtureHash}`
+  sess.id = anonSessionId
+
+  // Replace session_id in all events
+  for (const event of sess.events || []) {
+    if (event.session_id) {
+      event.session_id = anonSessionId
+    }
+  }
+
   if (options.normalizeTimestamps) {
     sess.started_at = 0
   }
@@ -165,13 +218,18 @@ function anonymizeSession(raw: any, options: AnonymizeOptions): any {
     if (options.normalizeTimestamps) {
       goal.created_at = goal.created_at - timeOffset
     }
-    if (!options.preserveGoalText) {
-      goal.raw = sanitizeText(goal.raw, options)
-    }
-    // Keep normalized structure but sanitize targets
+    // Always sanitize goal text for sensitive patterns (personal/project names)
+    // even when preserveGoalText is true — preserveGoalText only skips generic path anonymization
+    goal.raw = sanitizeText(goal.raw, options)
+    // Keep normalized structure but sanitize targets and domains
     if (goal.normalized?.observable_targets) {
       goal.normalized.observable_targets = goal.normalized.observable_targets.map(
         (t: string) => sanitizeText(t, options)
+      )
+    }
+    if (goal.normalized?.allowed_domains) {
+      goal.normalized.allowed_domains = goal.normalized.allowed_domains.map(
+        (d: string) => sanitizeText(d, options)
       )
     }
   }
@@ -183,6 +241,13 @@ function anonymizeSession(raw: any, options: AnonymizeOptions): any {
     }
     if (event.payload) {
       event.payload = anonymizePayload(event.payload, options)
+    }
+    // Sanitize all top-level string fields on events (e.g. _turn_prompt, description)
+    for (const key of Object.keys(event)) {
+      if (key === 'payload' || key === 'id' || key === 'session_id' || key === 'type' || key === 'source') continue
+      if (typeof event[key] === 'string') {
+        event[key] = sanitizeText(event[key], options)
+      }
     }
   }
 

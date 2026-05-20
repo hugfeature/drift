@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdemo35",
-  "description": "Imported OpenClaw trajectory: \"[Thu 2026-05-07 10:02 GMT+8] 看下AI早茶为什么失败\"",
+  "id": "fixture_5tahjz44",
+  "description": "Imported agent-system trajectory: \"[Thu 2026-05-07 10:02 GMT+8] 看下AI早茶为什么失败\"",
   "agent": "main",
   "created_at": 0,
   "session": {
-    "id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+    "id": "sess_eae25a70",
     "started_at": 0,
     "agent": "main",
     "active_goal_id": "goal_ae25a70a",
@@ -34,7 +34,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -51,7 +51,7 @@
       {
         "id": "evt_002",
         "timestamp": 1000,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -68,7 +68,7 @@
       {
         "id": "evt_003",
         "timestamp": 2000,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -85,7 +85,7 @@
       {
         "id": "evt_004",
         "timestamp": 3000,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -102,7 +102,7 @@
       {
         "id": "evt_005",
         "timestamp": 4000,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -119,7 +119,7 @@
       {
         "id": "evt_006",
         "timestamp": 5000,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -136,7 +136,7 @@
       {
         "id": "evt_007",
         "timestamp": 6000,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -153,7 +153,7 @@
       {
         "id": "evt_008",
         "timestamp": 2179898,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -170,7 +170,7 @@
       {
         "id": "evt_009",
         "timestamp": 14583776,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -187,7 +187,7 @@
       {
         "id": "evt_010",
         "timestamp": 14584776,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -195,7 +195,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw gateway"
+          "message": "run agent-system gateway"
         },
         "drift_score_at_event": 0,
         "_turn_index": 6,
@@ -204,7 +204,7 @@
       {
         "id": "evt_011",
         "timestamp": 14585776,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -212,7 +212,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw status"
+          "message": "run agent-system status"
         },
         "drift_score_at_event": 0,
         "_turn_index": 6,
@@ -221,7 +221,7 @@
       {
         "id": "evt_012",
         "timestamp": 24501466,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -238,7 +238,7 @@
       {
         "id": "evt_013",
         "timestamp": 24502466,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -255,7 +255,7 @@
       {
         "id": "evt_014",
         "timestamp": 84671534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -267,12 +267,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_015",
         "timestamp": 84672534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -284,12 +284,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_016",
         "timestamp": 84673534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -301,12 +301,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_017",
         "timestamp": 84674534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -314,16 +314,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "list files in ~/.openclaw/plugin-skills/"
+          "message": "list files in ~/.agent-system/plugin-skills/"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_018",
         "timestamp": 84675534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -331,16 +331,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "list files in ~plugin-skills/dingtalk-channel-rules/ → list files in ~plugin-skills/dingtalk-troubleshoot/ → list files in ~plugin-skills/dws-cli/"
+          "message": "list files in ~/.agent-system/plugin-skills/[redacted-service]-channel-rules/ → list files in ~/.agent-system/plugin-skills/[redacted-service]-troubleshoot/ → list files in ~plugin-skills/dws-cli/"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_019",
         "timestamp": 84676534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -352,12 +352,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_020",
         "timestamp": 84677534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -365,16 +365,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "# The plugin-skills dirs are plain directories but OpenClaw expects them to be symlinks # Since the actual content alre…"
+          "message": "# The plugin-skills dirs are plain directories but agent-system expects them to be symlinks # Since the actual content alre…"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_021",
         "timestamp": 84678534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -386,12 +386,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_022",
         "timestamp": 84679534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -403,12 +403,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_023",
         "timestamp": 84680534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -420,12 +420,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_024",
         "timestamp": 84681534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -437,12 +437,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_025",
         "timestamp": 84682534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -454,12 +454,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_026",
         "timestamp": 84683534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -471,12 +471,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_027",
         "timestamp": 84684534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -488,12 +488,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_028",
         "timestamp": 84685534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -505,12 +505,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_029",
         "timestamp": 84686534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -522,12 +522,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_030",
         "timestamp": 84687534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -539,12 +539,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_031",
         "timestamp": 84688534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -556,12 +556,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_032",
         "timestamp": 84689534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -573,12 +573,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_033",
         "timestamp": 84690534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -590,12 +590,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_034",
         "timestamp": 84691534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -607,12 +607,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_035",
         "timestamp": 84692534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -624,12 +624,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_036",
         "timestamp": 84693534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -641,12 +641,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_037",
         "timestamp": 84694534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -658,12 +658,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_038",
         "timestamp": 84695534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -675,12 +675,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_039",
         "timestamp": 84696534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -692,12 +692,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_040",
         "timestamp": 84697534,
-        "session_id": "sess_ae25a70a-6e07-4c0e-85b7-5a0b21e14e6e",
+        "session_id": "sess_eae25a70",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ae25a70a",
@@ -709,7 +709,7 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       }
     ]
   },

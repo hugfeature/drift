@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpden84i",
+  "id": "fixture_dxvjyg7n",
   "description": "Imported Claude Code session: \"unknown goal\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+    "id": "sess_ee6e32fe",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_e6e32fe6",
@@ -32,7 +32,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -47,7 +47,7 @@
       {
         "id": "evt_002",
         "timestamp": 12463,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -62,7 +62,7 @@
       {
         "id": "evt_003",
         "timestamp": 19889,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -77,7 +77,7 @@
       {
         "id": "evt_004",
         "timestamp": 23067,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -92,7 +92,7 @@
       {
         "id": "evt_005",
         "timestamp": 28772,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -107,7 +107,7 @@
       {
         "id": "evt_006",
         "timestamp": 32222,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -116,14 +116,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "tool-results/b8e4rzsga.txt"
+          "target": "/~tool-results/b8e4rzsga.txt"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_007",
         "timestamp": 37404,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -138,7 +138,7 @@
       {
         "id": "evt_008",
         "timestamp": 40128,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -147,14 +147,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "page-cache/_alarm_cloudNative.md"
+          "target": "/~page-cache/_alarm_cloudNative.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_009",
         "timestamp": 48053,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -169,7 +169,7 @@
       {
         "id": "evt_010",
         "timestamp": 55784,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -184,7 +184,7 @@
       {
         "id": "evt_011",
         "timestamp": 59498,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -199,7 +199,7 @@
       {
         "id": "evt_012",
         "timestamp": 63110,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -214,7 +214,7 @@
       {
         "id": "evt_013",
         "timestamp": 66980,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -229,7 +229,7 @@
       {
         "id": "evt_014",
         "timestamp": 70067,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -244,7 +244,7 @@
       {
         "id": "evt_015",
         "timestamp": 73699,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -259,7 +259,7 @@
       {
         "id": "evt_016",
         "timestamp": 77055,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -274,7 +274,7 @@
       {
         "id": "evt_017",
         "timestamp": 81593,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -289,7 +289,7 @@
       {
         "id": "evt_018",
         "timestamp": 86108,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -304,7 +304,7 @@
       {
         "id": "evt_019",
         "timestamp": 90015,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -319,7 +319,7 @@
       {
         "id": "evt_020",
         "timestamp": 95284,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -334,7 +334,7 @@
       {
         "id": "evt_021",
         "timestamp": 98730,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -349,7 +349,7 @@
       {
         "id": "evt_022",
         "timestamp": 103400,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -364,7 +364,7 @@
       {
         "id": "evt_023",
         "timestamp": 107670,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -379,7 +379,7 @@
       {
         "id": "evt_024",
         "timestamp": 112511,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -394,7 +394,7 @@
       {
         "id": "evt_025",
         "timestamp": 124783,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -409,7 +409,7 @@
       {
         "id": "evt_026",
         "timestamp": 128806,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -424,7 +424,7 @@
       {
         "id": "evt_027",
         "timestamp": 131810,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -439,7 +439,7 @@
       {
         "id": "evt_028",
         "timestamp": 135617,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -454,7 +454,7 @@
       {
         "id": "evt_029",
         "timestamp": 139057,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -469,7 +469,7 @@
       {
         "id": "evt_030",
         "timestamp": 143847,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -484,7 +484,7 @@
       {
         "id": "evt_031",
         "timestamp": 146835,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -499,7 +499,7 @@
       {
         "id": "evt_032",
         "timestamp": 151912,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -514,7 +514,7 @@
       {
         "id": "evt_033",
         "timestamp": 157954,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -529,7 +529,7 @@
       {
         "id": "evt_034",
         "timestamp": 161386,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -544,7 +544,7 @@
       {
         "id": "evt_035",
         "timestamp": 166154,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -559,7 +559,7 @@
       {
         "id": "evt_036",
         "timestamp": 174352,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -574,7 +574,7 @@
       {
         "id": "evt_037",
         "timestamp": 178710,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -589,7 +589,7 @@
       {
         "id": "evt_038",
         "timestamp": 182945,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -604,7 +604,7 @@
       {
         "id": "evt_039",
         "timestamp": 189720,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -619,7 +619,7 @@
       {
         "id": "evt_040",
         "timestamp": 193657,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -634,7 +634,7 @@
       {
         "id": "evt_041",
         "timestamp": 197797,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -649,7 +649,7 @@
       {
         "id": "evt_042",
         "timestamp": 202508,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -664,7 +664,7 @@
       {
         "id": "evt_043",
         "timestamp": 207193,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -679,7 +679,7 @@
       {
         "id": "evt_044",
         "timestamp": 210893,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -694,7 +694,7 @@
       {
         "id": "evt_045",
         "timestamp": 215399,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -709,7 +709,7 @@
       {
         "id": "evt_046",
         "timestamp": 221324,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -724,7 +724,7 @@
       {
         "id": "evt_047",
         "timestamp": 225218,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -739,7 +739,7 @@
       {
         "id": "evt_048",
         "timestamp": 228748,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -754,7 +754,7 @@
       {
         "id": "evt_049",
         "timestamp": 233242,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -769,7 +769,7 @@
       {
         "id": "evt_050",
         "timestamp": 237276,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -784,7 +784,7 @@
       {
         "id": "evt_051",
         "timestamp": 242067,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -799,7 +799,7 @@
       {
         "id": "evt_052",
         "timestamp": 245906,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -814,7 +814,7 @@
       {
         "id": "evt_053",
         "timestamp": 252586,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -829,7 +829,7 @@
       {
         "id": "evt_054",
         "timestamp": 257978,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -844,7 +844,7 @@
       {
         "id": "evt_055",
         "timestamp": 262457,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -859,7 +859,7 @@
       {
         "id": "evt_056",
         "timestamp": 267013,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -874,7 +874,7 @@
       {
         "id": "evt_057",
         "timestamp": 273869,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -889,7 +889,7 @@
       {
         "id": "evt_058",
         "timestamp": 278106,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -904,7 +904,7 @@
       {
         "id": "evt_059",
         "timestamp": 282018,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -919,7 +919,7 @@
       {
         "id": "evt_060",
         "timestamp": 292434,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -934,7 +934,7 @@
       {
         "id": "evt_061",
         "timestamp": 300328,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -949,7 +949,7 @@
       {
         "id": "evt_062",
         "timestamp": 305629,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -964,7 +964,7 @@
       {
         "id": "evt_063",
         "timestamp": 308875,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -979,7 +979,7 @@
       {
         "id": "evt_064",
         "timestamp": 312221,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -994,7 +994,7 @@
       {
         "id": "evt_065",
         "timestamp": 316481,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1009,7 +1009,7 @@
       {
         "id": "evt_066",
         "timestamp": 320323,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1024,7 +1024,7 @@
       {
         "id": "evt_067",
         "timestamp": 324586,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1039,7 +1039,7 @@
       {
         "id": "evt_068",
         "timestamp": 330403,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1054,7 +1054,7 @@
       {
         "id": "evt_069",
         "timestamp": 334550,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1069,7 +1069,7 @@
       {
         "id": "evt_070",
         "timestamp": 338834,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1084,7 +1084,7 @@
       {
         "id": "evt_071",
         "timestamp": 343802,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1099,7 +1099,7 @@
       {
         "id": "evt_072",
         "timestamp": 348855,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1114,7 +1114,7 @@
       {
         "id": "evt_073",
         "timestamp": 353435,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1129,7 +1129,7 @@
       {
         "id": "evt_074",
         "timestamp": 358138,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1144,7 +1144,7 @@
       {
         "id": "evt_075",
         "timestamp": 363457,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1159,7 +1159,7 @@
       {
         "id": "evt_076",
         "timestamp": 368933,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1174,7 +1174,7 @@
       {
         "id": "evt_077",
         "timestamp": 373254,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1189,7 +1189,7 @@
       {
         "id": "evt_078",
         "timestamp": 378132,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1204,7 +1204,7 @@
       {
         "id": "evt_079",
         "timestamp": 384538,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1219,7 +1219,7 @@
       {
         "id": "evt_080",
         "timestamp": 388644,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1234,7 +1234,7 @@
       {
         "id": "evt_081",
         "timestamp": 394868,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1249,7 +1249,7 @@
       {
         "id": "evt_082",
         "timestamp": 398520,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1264,7 +1264,7 @@
       {
         "id": "evt_083",
         "timestamp": 402525,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1279,7 +1279,7 @@
       {
         "id": "evt_084",
         "timestamp": 412142,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1294,7 +1294,7 @@
       {
         "id": "evt_085",
         "timestamp": 418158,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1309,7 +1309,7 @@
       {
         "id": "evt_086",
         "timestamp": 423191,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1324,7 +1324,7 @@
       {
         "id": "evt_087",
         "timestamp": 428406,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1339,7 +1339,7 @@
       {
         "id": "evt_088",
         "timestamp": 432621,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1354,7 +1354,7 @@
       {
         "id": "evt_089",
         "timestamp": 436513,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1369,7 +1369,7 @@
       {
         "id": "evt_090",
         "timestamp": 444278,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1384,7 +1384,7 @@
       {
         "id": "evt_091",
         "timestamp": 448010,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1399,7 +1399,7 @@
       {
         "id": "evt_092",
         "timestamp": 453881,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1414,7 +1414,7 @@
       {
         "id": "evt_093",
         "timestamp": 458445,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1429,7 +1429,7 @@
       {
         "id": "evt_094",
         "timestamp": 462175,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1444,7 +1444,7 @@
       {
         "id": "evt_095",
         "timestamp": 466346,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1459,7 +1459,7 @@
       {
         "id": "evt_096",
         "timestamp": 470520,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1474,7 +1474,7 @@
       {
         "id": "evt_097",
         "timestamp": 476337,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1489,7 +1489,7 @@
       {
         "id": "evt_098",
         "timestamp": 480303,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1504,7 +1504,7 @@
       {
         "id": "evt_099",
         "timestamp": 484798,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1519,7 +1519,7 @@
       {
         "id": "evt_100",
         "timestamp": 488251,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1534,7 +1534,7 @@
       {
         "id": "evt_101",
         "timestamp": 494356,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1549,7 +1549,7 @@
       {
         "id": "evt_102",
         "timestamp": 498005,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1564,7 +1564,7 @@
       {
         "id": "evt_103",
         "timestamp": 504432,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1579,7 +1579,7 @@
       {
         "id": "evt_104",
         "timestamp": 510534,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1594,7 +1594,7 @@
       {
         "id": "evt_105",
         "timestamp": 514647,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1609,7 +1609,7 @@
       {
         "id": "evt_106",
         "timestamp": 521520,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1624,7 +1624,7 @@
       {
         "id": "evt_107",
         "timestamp": 541715,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1639,7 +1639,7 @@
       {
         "id": "evt_108",
         "timestamp": 547145,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",
@@ -1654,7 +1654,7 @@
       {
         "id": "evt_109",
         "timestamp": 556098,
-        "session_id": "sess_e6e32fe6-ea4b-49b9-99e3-e39b18c7d104",
+        "session_id": "sess_ee6e32fe",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6e32fe6",

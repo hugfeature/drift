@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpden1s2",
+  "id": "fixture_vetiqojn",
   "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+    "id": "sess_e57a5f19",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_57a5f196",
@@ -33,7 +33,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -48,7 +48,7 @@
       {
         "id": "evt_002",
         "timestamp": 3862,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -57,14 +57,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_003",
         "timestamp": 3864,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -73,14 +73,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/retrieve.py"
+          "target": "/~memory-service/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_004",
         "timestamp": 3865,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -89,14 +89,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/consolidator.py"
+          "target": "/~memory-service/consolidator.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_005",
         "timestamp": 10897,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -105,14 +105,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_006",
         "timestamp": 10899,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -121,14 +121,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/decay.py"
+          "target": "/~memory-service/decay.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_007",
         "timestamp": 10900,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -137,14 +137,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/graph.py"
+          "target": "/~memory-service/graph.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_008",
         "timestamp": 17506,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -153,14 +153,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/server.py"
+          "target": "/~memory-service/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_009",
         "timestamp": 17508,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -169,14 +169,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/tools.py"
+          "target": "/~memory-service/tools.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_010",
         "timestamp": 20764,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -185,14 +185,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/handlers.py"
+          "target": "/~memory-service/handlers.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_011",
         "timestamp": 20766,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -201,14 +201,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/pruner.py"
+          "target": "/~memory-service/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_012",
         "timestamp": 23915,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -217,14 +217,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/resolve.py"
+          "target": "/~memory-service/resolve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_013",
         "timestamp": 23916,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -239,7 +239,7 @@
       {
         "id": "evt_014",
         "timestamp": 26960,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -248,14 +248,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "results/locomo_turn_20260427_204332.json"
+          "target": "/~results/locomo_turn_20260427_204332.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_015",
         "timestamp": 217250,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -264,14 +264,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_016",
         "timestamp": 222194,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -280,14 +280,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_017",
         "timestamp": 228813,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -296,14 +296,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/retrieve.py"
+          "target": "/~memory-service/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_018",
         "timestamp": 233048,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -312,14 +312,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/retrieve.py"
+          "target": "/~memory-service/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_019",
         "timestamp": 244430,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -328,14 +328,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_020",
         "timestamp": 252299,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -344,14 +344,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_021",
         "timestamp": 255541,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -366,7 +366,7 @@
       {
         "id": "evt_022",
         "timestamp": 259228,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -375,14 +375,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_023",
         "timestamp": 262590,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -390,14 +390,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Run engram tests to verify changes"
+          "message": "Run memory-service tests to verify changes"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_024",
         "timestamp": 266384,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -405,14 +405,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Run engram tests with python3"
+          "message": "Run memory-service tests with python3"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_025",
         "timestamp": 300944,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -427,7 +427,7 @@
       {
         "id": "evt_026",
         "timestamp": 310266,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -436,14 +436,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_027",
         "timestamp": 313766,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -452,14 +452,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_028",
         "timestamp": 317195,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -474,7 +474,7 @@
       {
         "id": "evt_029",
         "timestamp": 349379,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -483,14 +483,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_030",
         "timestamp": 352674,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -499,14 +499,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_031",
         "timestamp": 356016,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -521,7 +521,7 @@
       {
         "id": "evt_032",
         "timestamp": 379393,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -536,7 +536,7 @@
       {
         "id": "evt_033",
         "timestamp": 382851,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",
@@ -551,7 +551,7 @@
       {
         "id": "evt_034",
         "timestamp": 386168,
-        "session_id": "sess_57a5f196-5c8a-43f2-bd05-aa445702e40c",
+        "session_id": "sess_e57a5f19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_57a5f196",

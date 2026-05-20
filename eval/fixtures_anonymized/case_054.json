@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdengjn",
+  "id": "fixture_z937lh1a",
   "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+    "id": "sess_e11c6b04",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_11c6b04d",
@@ -34,7 +34,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -49,7 +49,7 @@
       {
         "id": "evt_002",
         "timestamp": 688251,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -64,7 +64,7 @@
       {
         "id": "evt_003",
         "timestamp": 701963,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -79,7 +79,7 @@
       {
         "id": "evt_004",
         "timestamp": 1041586,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -94,7 +94,7 @@
       {
         "id": "evt_005",
         "timestamp": 1064581,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -109,7 +109,7 @@
       {
         "id": "evt_006",
         "timestamp": 1116333,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -124,7 +124,7 @@
       {
         "id": "evt_007",
         "timestamp": 1123673,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -139,7 +139,7 @@
       {
         "id": "evt_008",
         "timestamp": 1140938,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -154,7 +154,7 @@
       {
         "id": "evt_009",
         "timestamp": 1836475,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -163,14 +163,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# LocalMemory — 本地独立 MCP 记忆服务\n\n## Context\n\n当前 YourMemory MCP 不可用（被 hook 拦截或配置问题），且它是第三方云/本地服务。\n用户希望参考 YourMemory 的核心机制（Ebbinghaus 遗忘曲线 + 向量检索 + 图谱扩展），\n自己造一个完全本地、独立的 MCP Server，可给多个项目复用。\n\n当前环境已具备全部依赖：P",
-          "target": "plans/tender-tinkering-micali.md"
+          "target": "/~plans/tender-tinkering-micali.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_010",
         "timestamp": 1998774,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -185,7 +185,7 @@
       {
         "id": "evt_011",
         "timestamp": 3869090,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -200,7 +200,7 @@
       {
         "id": "evt_012",
         "timestamp": 3877613,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -215,7 +215,7 @@
       {
         "id": "evt_013",
         "timestamp": 3890487,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -230,7 +230,7 @@
       {
         "id": "evt_014",
         "timestamp": 3897356,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -245,7 +245,7 @@
       {
         "id": "evt_015",
         "timestamp": 3911815,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -260,7 +260,7 @@
       {
         "id": "evt_016",
         "timestamp": 3918577,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -275,7 +275,7 @@
       {
         "id": "evt_017",
         "timestamp": 3930495,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -284,14 +284,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "[build-system]\nrequires = [\"hatchling\"]\nbuild-backend = \"hatchling.build\"\n\n[project]\nname = \"local-memory\"\nversion = \"0.1.0\"\ndescription = \"Persistent memory MCP server with Ebbinghaus decay, vector s",
-          "target": "local-memory/pyproject.toml"
+          "target": "/~local-memory/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_018",
         "timestamp": 3939163,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -300,14 +300,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"LocalMemory — Persistent memory MCP server with biological decay.\"\"\"\n\n__version__ = \"0.1.0\"\n",
-          "target": "local_memory/__init__.py"
+          "target": "/~local_memory/__init__.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_019",
         "timestamp": 3946086,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -322,7 +322,7 @@
       {
         "id": "evt_020",
         "timestamp": 3954463,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -337,7 +337,7 @@
       {
         "id": "evt_021",
         "timestamp": 3968045,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -346,14 +346,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Ebbinghaus forgetting curve — strength decay with importance modulation.\"\"\"\n\nimport math\n\nDECAY_RATES = {\n    \"fact\": 0.16,        # ~24 days\n    \"assumption\": 0.20,  # ~19 days\n    \"failure\": 0.35",
-          "target": "local_memory/decay.py"
+          "target": "/~local_memory/decay.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_022",
         "timestamp": 3983407,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -362,14 +362,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Sentence-transformer embedding with lazy model loading.\"\"\"\n\nfrom __future__ import annotations\n\nimport os\nfrom typing import TYPE_CHECKING\n\nif TYPE_CHECKING:\n    from sentence_transformers import S",
-          "target": "local_memory/embedding.py"
+          "target": "/~local_memory/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_023",
         "timestamp": 4017895,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -378,14 +378,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"DuckDB storage layer — schema, CRUD, vector search, FTS.\"\"\"\n\nfrom __future__ import annotations\n\nimport os\nfrom datetime import datetime, timezone\nfrom dataclasses import dataclass\n\nimport duckdb\n\n",
-          "target": "local_memory/db.py"
+          "target": "/~local_memory/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_024",
         "timestamp": 4045227,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -394,14 +394,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"NetworkX graph layer — semantic edges, BFS expansion, chain-safe pruning.\"\"\"\n\nfrom __future__ import annotations\n\nimport os\nimport pickle\nimport threading\nfrom collections import deque\n\nimport netw",
-          "target": "local_memory/graph.py"
+          "target": "/~local_memory/graph.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_025",
         "timestamp": 4053037,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -416,7 +416,7 @@
       {
         "id": "evt_026",
         "timestamp": 4061092,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -431,7 +431,7 @@
       {
         "id": "evt_027",
         "timestamp": 4083772,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -440,14 +440,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Deduplication and contradiction resolution for incoming memories.\"\"\"\n\nfrom __future__ import annotations\n\nfrom dataclasses import dataclass\nfrom enum import Enum\n\nimport numpy as np\n\nDEDUP_THRESHOL",
-          "target": "local_memory/resolve.py"
+          "target": "/~local_memory/resolve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_028",
         "timestamp": 4113452,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -456,14 +456,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Hybrid retrieval — vector search + graph expansion + BM25.\"\"\"\n\nfrom __future__ import annotations\n\nfrom datetime import datetime, timezone\nfrom dataclasses import dataclass\n\nfrom .db import MemoryD",
-          "target": "local_memory/retrieve.py"
+          "target": "/~local_memory/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_029",
         "timestamp": 4134542,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -472,14 +472,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Automatic pruning — decay scan + chain-safe deletion.\"\"\"\n\nfrom __future__ import annotations\n\nimport logging\nfrom datetime import datetime, timezone\n\nfrom .db import MemoryDB\nfrom .decay import com",
-          "target": "local_memory/pruner.py"
+          "target": "/~local_memory/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_030",
         "timestamp": 4148390,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -494,7 +494,7 @@
       {
         "id": "evt_031",
         "timestamp": 4157503,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -509,7 +509,7 @@
       {
         "id": "evt_032",
         "timestamp": 4193644,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -518,14 +518,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"LocalMemory MCP Server — stdio mode, 3 tools.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport logging\nimport os\nimport sys\n\nfrom mcp.server import Server\nfrom mcp.server.stdio import std",
-          "target": "local_memory/server.py"
+          "target": "/~local_memory/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_033",
         "timestamp": 4224603,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -534,14 +534,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Core tests for LocalMemory — decay, resolve, db, graph.\"\"\"\n\nimport math\nimport os\nimport tempfile\nimport shutil\n\nimport pytest\n\n\nclass TestDecay:\n    def test_strength_decreases_over_time(self):\n  ",
-          "target": "tests/test_core.py"
+          "target": "/~tests/test_core.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_034",
         "timestamp": 4234405,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -556,7 +556,7 @@
       {
         "id": "evt_035",
         "timestamp": 4272174,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -571,7 +571,7 @@
       {
         "id": "evt_036",
         "timestamp": 4278953,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -586,7 +586,7 @@
       {
         "id": "evt_037",
         "timestamp": 4290731,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -595,14 +595,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "tests/test_core.py"
+          "target": "/~tests/test_core.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_038",
         "timestamp": 4302102,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -611,14 +611,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "tests/test_core.py"
+          "target": "/~tests/test_core.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_039",
         "timestamp": 4312439,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -633,7 +633,7 @@
       {
         "id": "evt_040",
         "timestamp": 4322371,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -648,7 +648,7 @@
       {
         "id": "evt_041",
         "timestamp": 4331750,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -663,7 +663,7 @@
       {
         "id": "evt_042",
         "timestamp": 4350868,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -678,7 +678,7 @@
       {
         "id": "evt_043",
         "timestamp": 4531890,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -693,7 +693,7 @@
       {
         "id": "evt_044",
         "timestamp": 4664574,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -708,7 +708,7 @@
       {
         "id": "evt_045",
         "timestamp": 4671877,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -717,14 +717,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/embedding.py"
+          "target": "/~local_memory/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_046",
         "timestamp": 4683422,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -733,14 +733,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Sentence-transformer embedding with lazy model loading.\"\"\"\n\nfrom __future__ import annotations\n\nimport os\nfrom typing import TYPE_CHECKING\n\nif TYPE_CHECKING:\n    from sentence_transformers import S",
-          "target": "local_memory/embedding.py"
+          "target": "/~local_memory/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_047",
         "timestamp": 4693875,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -755,7 +755,7 @@
       {
         "id": "evt_048",
         "timestamp": 4940475,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -770,7 +770,7 @@
       {
         "id": "evt_049",
         "timestamp": 4975365,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -785,7 +785,7 @@
       {
         "id": "evt_050",
         "timestamp": 5020400,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -800,7 +800,7 @@
       {
         "id": "evt_051",
         "timestamp": 5035704,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -815,7 +815,7 @@
       {
         "id": "evt_052",
         "timestamp": 5046958,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -830,7 +830,7 @@
       {
         "id": "evt_053",
         "timestamp": 5057705,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -845,7 +845,7 @@
       {
         "id": "evt_054",
         "timestamp": 5070880,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -860,7 +860,7 @@
       {
         "id": "evt_055",
         "timestamp": 5175886,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -875,7 +875,7 @@
       {
         "id": "evt_056",
         "timestamp": 5307506,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -890,7 +890,7 @@
       {
         "id": "evt_057",
         "timestamp": 5320264,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -905,7 +905,7 @@
       {
         "id": "evt_058",
         "timestamp": 5518195,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -920,7 +920,7 @@
       {
         "id": "evt_059",
         "timestamp": 5635654,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -929,14 +929,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_060",
         "timestamp": 5645706,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -945,14 +945,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_061",
         "timestamp": 5673995,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -961,14 +961,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"One-time setup — download model, init DB, print config.\"\"\"\n\nimport os\nimport sys\nimport json\n\n\ndef main():\n    print(\"LocalMemory Setup\")\n    print(\"=\" * 40)\n\n    data_dir = os.path.join(os.path.ex",
-          "target": "local_memory/setup_cli.py"
+          "target": "/~local_memory/setup_cli.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_062",
         "timestamp": 5685368,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -977,14 +977,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/pyproject.toml"
+          "target": "/~local-memory/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_063",
         "timestamp": 5694126,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -993,14 +993,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/pyproject.toml"
+          "target": "/~local-memory/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_064",
         "timestamp": 5730603,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1009,14 +1009,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# LocalMemory\n\nPersistent memory MCP server for AI agents — inspired by [YourMemory](https:/sachitrafa/YourMemory), fully local, zero cloud dependency.\n\n## Features\n\n- **Ebbinghaus forgett",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_065",
         "timestamp": 5742120,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1025,14 +1025,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "__pycache__/\n*.pyc\n*.pyo\n*.egg-info/\ndist/\nbuild/\n.pytest_cache/\n*.duckdb\n*.pkl\n.eggs/\n",
-          "target": "local-memory/.gitignore"
+          "target": "/~local-memory/.gitignore"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_066",
         "timestamp": 5751414,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1047,7 +1047,7 @@
       {
         "id": "evt_067",
         "timestamp": 5764806,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1062,7 +1062,7 @@
       {
         "id": "evt_068",
         "timestamp": 5850102,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1077,7 +1077,7 @@
       {
         "id": "evt_069",
         "timestamp": 5930968,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1086,14 +1086,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "---\nname: LocalMemory MCP Server\ndescription: 自研本地记忆MCP Server，参考YourMemory，DuckDB+NetworkX+sentence-transformers，已完成开发和验证\ntype: project\n---\n\nLocalMemory — 本地独立 MCP 记忆服务，参考 YourMemory 核心机制自研。\n\n## 状态\n-",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_070",
         "timestamp": 5948005,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1102,14 +1102,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "---\nname: YourMemory权限修复\ndescription: YourMemory MCP不可用的根因是settings.local.json白名单只放行了recall，缺store/update\ntype: feedback\n---\n\nYourMemory MCP 装了却不能用，根因不是安装问题，而是 Claude Code 权限白名单不全。\n\n**Why:** settings.",
-          "target": "memory/feedback-yourmemory-permission.md"
+          "target": "/~memory/feedback-yourmemory-permission.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_071",
         "timestamp": 5962656,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1118,14 +1118,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_072",
         "timestamp": 5981277,
-        "session_id": "sess_11c6b04d-5a6e-42ac-8d0c-3c46eb99950c",
+        "session_id": "sess_e11c6b04",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_11c6b04d",
@@ -1134,7 +1134,7 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       }

@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdemmuv",
-  "description": "Imported OpenClaw trajectory: \"[Sat 2026-05-09 08:59 GMT+8] 改好了吗\"",
+  "id": "fixture_p3bu6hau",
+  "description": "Imported agent-system trajectory: \"[Sat 2026-05-09 08:59 GMT+8] 改好了吗\"",
   "agent": "main",
   "created_at": 0,
   "session": {
-    "id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+    "id": "sess_e3df953b",
     "started_at": 0,
     "agent": "main",
     "active_goal_id": "goal_3df953b5",
@@ -34,7 +34,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -51,7 +51,7 @@
       {
         "id": "evt_002",
         "timestamp": 1000,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -68,7 +68,7 @@
       {
         "id": "evt_003",
         "timestamp": 2000,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -85,7 +85,7 @@
       {
         "id": "evt_004",
         "timestamp": 3000,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -102,7 +102,7 @@
       {
         "id": "evt_005",
         "timestamp": 169619,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -114,12 +114,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 2,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_006",
         "timestamp": 170619,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -131,12 +131,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 2,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_007",
         "timestamp": 171619,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -148,12 +148,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 2,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_008",
         "timestamp": 172619,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -165,12 +165,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 2,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_009",
         "timestamp": 173619,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -182,12 +182,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 2,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_010",
         "timestamp": 174619,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -199,12 +199,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 2,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_011",
         "timestamp": 386907,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -221,7 +221,7 @@
       {
         "id": "evt_012",
         "timestamp": 387907,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -238,7 +238,7 @@
       {
         "id": "evt_013",
         "timestamp": 2099806,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -250,12 +250,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 4,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_014",
         "timestamp": 2900376,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -272,7 +272,7 @@
       {
         "id": "evt_015",
         "timestamp": 3769447,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -284,12 +284,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 6,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_016",
         "timestamp": 5097021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -297,7 +297,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "find files in ~/.engram -> show first 30 lines"
+          "message": "find files in ~/.memory-service -> show first 30 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -306,7 +306,7 @@
       {
         "id": "evt_017",
         "timestamp": 5098021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -314,7 +314,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "memory_search",
-          "message": "engram DuckDB memory store"
+          "message": "memory-service DuckDB memory store"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -323,7 +323,7 @@
       {
         "id": "evt_018",
         "timestamp": 5099021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -331,7 +331,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "list files in ~/.engram/memories.duckdb*"
+          "message": "list files in ~/.memory-service/memories.duckdb*"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -340,7 +340,7 @@
       {
         "id": "evt_019",
         "timestamp": 5100021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -348,7 +348,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "show ~/.engram/.dim_cache"
+          "message": "show ~/.memory-service/.dim_cache"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -357,7 +357,7 @@
       {
         "id": "evt_020",
         "timestamp": 5101021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -374,7 +374,7 @@
       {
         "id": "evt_021",
         "timestamp": 5102021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -382,7 +382,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "which engram 2>/dev/null; pip3 list 2>/dev/null | grep -i engram"
+          "message": "which memory-service 2>/dev/null; pip3 list 2>/dev/null | grep -i memory-service"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -391,7 +391,7 @@
       {
         "id": "evt_022",
         "timestamp": 5103021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -399,7 +399,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "find files in ~/Library → find files named \"engram\" in /opt/homebrew -> show first 5 lines"
+          "message": "find files in ~/Library → find files named \"memory-service\" in /opt/homebrew -> show first 5 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -408,7 +408,7 @@
       {
         "id": "evt_023",
         "timestamp": 5104021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -416,7 +416,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "find files named \"db.py\" in ~/skill/engram -> show first 20 lines"
+          "message": "find files named \"db.py\" in ~/skill/memory-service -> show first 20 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -425,7 +425,7 @@
       {
         "id": "evt_024",
         "timestamp": 5105021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -433,7 +433,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "from ~engram/db.py"
+          "message": "from ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -442,7 +442,7 @@
       {
         "id": "evt_025",
         "timestamp": 5106021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -450,7 +450,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "from ~engram/config.py"
+          "message": "from ~memory-service/config.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -459,7 +459,7 @@
       {
         "id": "evt_026",
         "timestamp": 5107021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -467,7 +467,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "show ~engram/embedding.py"
+          "message": "show ~memory-service/embedding.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -476,7 +476,7 @@
       {
         "id": "evt_027",
         "timestamp": 5108021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -484,7 +484,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run python3 inline script → list files in ~/.engram/memories.duckdb.corrupt"
+          "message": "run python3 inline script → list files in ~/.memory-service/memories.duckdb.corrupt"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -493,7 +493,7 @@
       {
         "id": "evt_028",
         "timestamp": 5109021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -510,7 +510,7 @@
       {
         "id": "evt_029",
         "timestamp": 5110021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -527,7 +527,7 @@
       {
         "id": "evt_030",
         "timestamp": 5111021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -535,7 +535,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "# Engram server is holding the lock; let's check its PID ps aux | grep -i engram | grep -v grep"
+          "message": "# memory-service server is holding the lock; let's check its PID ps aux | grep -i memory-service | grep -v grep"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -544,7 +544,7 @@
       {
         "id": "evt_031",
         "timestamp": 5112021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -561,7 +561,7 @@
       {
         "id": "evt_032",
         "timestamp": 5113021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -578,7 +578,7 @@
       {
         "id": "evt_033",
         "timestamp": 5114021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -595,7 +595,7 @@
       {
         "id": "evt_034",
         "timestamp": 5115021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -603,7 +603,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "view git history → check git diff -> show first 80 lines (in ~/skill/engram)"
+          "message": "view git history → check git diff -> show first 80 lines (in ~/skill/memory-service)"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -612,7 +612,7 @@
       {
         "id": "evt_035",
         "timestamp": 5116021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -620,7 +620,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "lines 1-80 from ~engram/db.py"
+          "message": "lines 1-80 from ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -629,7 +629,7 @@
       {
         "id": "evt_036",
         "timestamp": 5117021,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -637,7 +637,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "update_plan",
-          "message": "explanation 修复 Engram db.py 中的三个数据丢失风险：维度迁移、DuckDB 版本兼容、WAL 处理和安全兜底, step 修复 _dim() 增加维度不匹配检测与自动迁移"
+          "message": "explanation 修复 memory-service db.py 中的三个数据丢失风险：维度迁移、DuckDB 版本兼容、WAL 处理和安全兜底, step 修复 _dim() 增加维度不匹配检测与自动迁移"
         },
         "drift_score_at_event": 0,
         "_turn_index": 8,
@@ -646,7 +646,7 @@
       {
         "id": "evt_037",
         "timestamp": 5569412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -654,16 +654,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "lines 81-110 from ~engram/db.py"
+          "message": "lines 81-110 from ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_038",
         "timestamp": 5570412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -671,16 +671,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "lines 220-279 from ~engram/db.py"
+          "message": "lines 220-279 from ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_039",
         "timestamp": 5571412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -688,16 +688,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "lines 280-329 from ~engram/db.py"
+          "message": "lines 280-329 from ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_040",
         "timestamp": 5572412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -705,16 +705,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "edit",
-          "message": "in ~engram/db.py"
+          "message": "in ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_041",
         "timestamp": 5573412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -722,16 +722,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "lines 340-379 from ~engram/db.py"
+          "message": "lines 340-379 from ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_042",
         "timestamp": 5574412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -739,16 +739,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "search \"_init_schema\" in ~engram/db.py -> show first 5 lines"
+          "message": "search \"_init_schema\" in ~memory-service/db.py -> show first 5 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_043",
         "timestamp": 5575412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -756,16 +756,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "read",
-          "message": "lines 431-480 from ~engram/db.py"
+          "message": "lines 431-480 from ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_044",
         "timestamp": 5576412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -773,16 +773,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "edit",
-          "message": "in ~engram/db.py"
+          "message": "in ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_045",
         "timestamp": 5577412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -790,16 +790,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "edit",
-          "message": "in ~engram/db.py"
+          "message": "in ~memory-service/db.py"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_046",
         "timestamp": 5578412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -811,12 +811,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_047",
         "timestamp": 5579412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -824,16 +824,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run python3 inline script (in ~/skill/engram)"
+          "message": "run python3 inline script (in ~/skill/memory-service)"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_048",
         "timestamp": 5580412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -841,16 +841,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "# Try to recover data from the .corrupt file by stopping engram and trying a standalone read # First check if we can ex…"
+          "message": "# Try to recover data from the .corrupt file by stopping memory-service and trying a standalone read # First check if we can ex…"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_049",
         "timestamp": 5581412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -862,12 +862,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_050",
         "timestamp": 5582412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -875,16 +875,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "# The corrupt DB has 1 memory, current DB has 0 — let's try to recover # First, stop the engram server, then we can wor…"
+          "message": "# The corrupt DB has 1 memory, current DB has 0 — let's try to recover # First, stop the memory-service server, then we can wor…"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_051",
         "timestamp": 5583412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -896,12 +896,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_052",
         "timestamp": 5584412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -913,12 +913,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_053",
         "timestamp": 5585412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -930,12 +930,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_054",
         "timestamp": 5586412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -947,12 +947,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_055",
         "timestamp": 5587412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -964,12 +964,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_056",
         "timestamp": 5588412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -981,12 +981,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_057",
         "timestamp": 5589412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -998,12 +998,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_058",
         "timestamp": 5590412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1015,12 +1015,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_059",
         "timestamp": 5591412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1028,16 +1028,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "# Restart engram with the updated db.py # Kill the old process kill $(pgrep -f \"engram.http_server\") 2>/dev/null sleep …"
+          "message": "# Restart memory-service with the updated db.py # Kill the old process kill $(pgrep -f \"memory-service.http_server\") 2>/dev/null sleep …"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_060",
         "timestamp": 5592412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1045,16 +1045,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "# Check the server log for any migration/warning messages tail -30 ~/.engram/server.log 2>&1"
+          "message": "# Check the server log for any migration/warning messages tail -30 ~/.memory-service/server.log 2>&1"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_061",
         "timestamp": 5593412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1066,12 +1066,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_062",
         "timestamp": 5594412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1083,12 +1083,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_063",
         "timestamp": 5595412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1100,12 +1100,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_064",
         "timestamp": 5596412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1113,16 +1113,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "# It auto-restarted (probably via openclaw or a service manager). # Let's check which code it loaded - is it using the …"
+          "message": "# It auto-restarted (probably via agent-system or a service manager). # Let's check which code it loaded - is it using the …"
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_065",
         "timestamp": 5597412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1134,12 +1134,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_066",
         "timestamp": 5598412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1151,12 +1151,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_067",
         "timestamp": 5599412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1168,12 +1168,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_068",
         "timestamp": 5600412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1185,12 +1185,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_069",
         "timestamp": 5601412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1202,12 +1202,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_070",
         "timestamp": 5602412,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1219,12 +1219,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_071",
         "timestamp": 25369437,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1236,12 +1236,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 10,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_072",
         "timestamp": 25370437,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1253,12 +1253,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 10,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_073",
         "timestamp": 29191139,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1270,12 +1270,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_074",
         "timestamp": 29192139,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1287,12 +1287,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_075",
         "timestamp": 29193139,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1300,16 +1300,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron → print text"
+          "message": "run agent-system cron → print text"
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_076",
         "timestamp": 29194139,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1317,16 +1317,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron"
+          "message": "run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_077",
         "timestamp": 30769467,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1338,12 +1338,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 16,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_078",
         "timestamp": 31759551,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1360,7 +1360,7 @@
       {
         "id": "evt_079",
         "timestamp": 31906391,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1377,7 +1377,7 @@
       {
         "id": "evt_080",
         "timestamp": 32569441,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1385,16 +1385,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron -> run python3 inline script → run openclaw cron"
+          "message": "run agent-system cron -> run python3 inline script → run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 19,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_081",
         "timestamp": 32570441,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1406,12 +1406,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 19,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_082",
         "timestamp": 33740812,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1428,7 +1428,7 @@
       {
         "id": "evt_083",
         "timestamp": 33741812,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1445,7 +1445,7 @@
       {
         "id": "evt_084",
         "timestamp": 261231833,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1457,12 +1457,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 21,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_085",
         "timestamp": 261232833,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1474,12 +1474,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 21,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_086",
         "timestamp": 261233833,
-        "session_id": "sess_3df953b5-948c-4829-8fda-f2bb594cf8b2",
+        "session_id": "sess_e3df953b",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_3df953b5",
@@ -1487,11 +1487,11 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron -> search \"runtime\""
+          "message": "run agent-system cron -> search \"runtime\""
         },
         "drift_score_at_event": 0,
         "_turn_index": 21,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       }
     ]
   },

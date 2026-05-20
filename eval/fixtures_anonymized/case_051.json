@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdeneqh",
+  "id": "fixture_5i2q8kg3",
   "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+    "id": "sess_e8a5a9b9",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_8a5a9b97",
@@ -33,7 +33,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -42,14 +42,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-action-plan-202604.md"
+          "target": "/~memory/project-action-plan-202604.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_002",
         "timestamp": 2,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -58,14 +58,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-diting-issues-20260413.md"
+          "target": "/~memory/monitor-system-issues-20260413.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_003",
         "timestamp": 4,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -74,14 +74,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-hackathon-2026.md"
+          "target": "/~memory/project-hackathon-2026.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_004",
         "timestamp": 49417,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -90,14 +90,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-repo-watch.md"
+          "target": "/~memory/project-repo-watch.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_005",
         "timestamp": 49419,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -106,14 +106,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_006",
         "timestamp": 1097728,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -122,14 +122,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-diting-roadmap.md"
+          "target": "/~memory/monitor-system-roadmap.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_007",
         "timestamp": 1097730,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -138,14 +138,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/diting-watcher.sh"
+          "target": "/~monitor-system/monitor-system-watcher.sh"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_008",
         "timestamp": 1121923,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -160,7 +160,7 @@
       {
         "id": "evt_009",
         "timestamp": 1121925,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -175,7 +175,7 @@
       {
         "id": "evt_010",
         "timestamp": 1333100,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -190,7 +190,7 @@
       {
         "id": "evt_011",
         "timestamp": 1464080,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -198,14 +198,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Agent",
-          "message": "Explore diting skill structure"
+          "message": "Explore monitor-system skill structure"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_012",
         "timestamp": 1680114,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -220,7 +220,7 @@
       {
         "id": "evt_013",
         "timestamp": 1861787,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -235,7 +235,7 @@
       {
         "id": "evt_014",
         "timestamp": 4429666,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -250,7 +250,7 @@
       {
         "id": "evt_015",
         "timestamp": 5313987,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -259,14 +259,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/diting-submit.sh"
+          "target": "/~monitor-system/monitor-system-submit.sh"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_016",
         "timestamp": 5313989,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -281,7 +281,7 @@
       {
         "id": "evt_017",
         "timestamp": 15216466,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -290,14 +290,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# UI脚本生成 Skill 实现计划\n\n## Context\n\nroadmap 要求第2-3周启动 UI 自动化脚本生成 Skill。核心差异点：**三段式 session 架构**（侦察→生成→验证），session 间 JSON 文件交接，实现 Harness 原则 1-4。AntMonitor 优先，架构预留通用扩展。\n\n## 目录结构\n\n```\n~/skill/ui-script-gen",
-          "target": "plans/transient-knitting-starlight.md"
+          "target": "/~plans/transient-knitting-starlight.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_018",
         "timestamp": 15224843,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -312,7 +312,7 @@
       {
         "id": "evt_019",
         "timestamp": 15400470,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -327,7 +327,7 @@
       {
         "id": "evt_020",
         "timestamp": 15400472,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -342,7 +342,7 @@
       {
         "id": "evt_021",
         "timestamp": 15400501,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -357,7 +357,7 @@
       {
         "id": "evt_022",
         "timestamp": 15400502,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -372,7 +372,7 @@
       {
         "id": "evt_023",
         "timestamp": 15400503,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -387,7 +387,7 @@
       {
         "id": "evt_024",
         "timestamp": 15401761,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -402,7 +402,7 @@
       {
         "id": "evt_025",
         "timestamp": 15401763,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -417,7 +417,7 @@
       {
         "id": "evt_026",
         "timestamp": 15421775,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -432,7 +432,7 @@
       {
         "id": "evt_027",
         "timestamp": 15427892,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -447,7 +447,7 @@
       {
         "id": "evt_028",
         "timestamp": 15645648,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -456,14 +456,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "---\nname: ui-script-gen\ndescription: UI脚本生成 — 三段式架构（侦察→生成→验证）生成 Playwright .spec.js 测试脚本\ntrigger: auto\nactivationKeywords:\n  - 生成UI脚本\n  - 生成测试脚本\n  - 写测试脚本\n  - 生成playwright\n  - 自动化脚本\n  - ui-script-gen\n",
-          "target": "ui-script-gen/SKILL.md"
+          "target": "/~ui-script-gen/SKILL.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_029",
         "timestamp": 15646684,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -472,14 +472,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "#!/bin/bash\n# UI脚本生成任务提交 — 写入 trigger.json 后立即退出\n\nset -uo pipefail\n\nURL=\"${1:?用法: $0 <url> <scenario> [tenant]}\"\nSCENARIO=\"${2:?用法: $0 <url> <scenario> [tenant]}\"\nTENANT=\"${3:-U1}\"\n\nSCRIPT_DIR=\"$(cd \"",
-          "target": "ui-script-gen/ui-script-gen-submit.sh"
+          "target": "/~ui-script-gen/ui-script-gen-submit.sh"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_030",
         "timestamp": 15673469,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -494,7 +494,7 @@
       {
         "id": "evt_031",
         "timestamp": 15744236,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -509,7 +509,7 @@
       {
         "id": "evt_032",
         "timestamp": 15744238,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -524,7 +524,7 @@
       {
         "id": "evt_033",
         "timestamp": 15816935,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -533,14 +533,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/diting-prompt-template.md"
+          "target": "/~monitor-system/monitor-system-prompt-template.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_034",
         "timestamp": 15891277,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -549,14 +549,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "你是 UI 脚本生成的侦察 agent。你的唯一任务：打开目标页面，提取页面结构和选择器，输出 selector-map.json。\n\n## 输入\n\n{{TRIGGER_JSON}}\n\n## 第一步：检查侦察缓存\n\n取 URL 路径部分（去掉协议、域名、查询参数），`/` 替换为 `_`，得到缓存文件名。\n- 例：`[REDACTED_INTERNAL_URL]",
-          "target": "prompts/recon-prompt-template.md"
+          "target": "/~prompts/recon-prompt-template.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_035",
         "timestamp": 15920211,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -571,7 +571,7 @@
       {
         "id": "evt_036",
         "timestamp": 15920213,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -586,7 +586,7 @@
       {
         "id": "evt_user_002",
         "timestamp": 16214055,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_8a5a9b97",
@@ -597,7 +597,7 @@
       {
         "id": "evt_037",
         "timestamp": 16214056,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -612,7 +612,7 @@
       {
         "id": "evt_038",
         "timestamp": 16346255,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -621,14 +621,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "references/templates.md"
+          "target": "/~references/templates.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_039",
         "timestamp": 16616927,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -637,14 +637,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "你是 UI 脚本生成器。你的唯一任务：基于 selector-map.json 生成可运行的 Playwright .spec.js 测试脚本。\n\n**你不碰浏览器，不执行测试，只写代码文件。**\n\n## 输入\n\nselector-map.json 位于 `{{RUN_DIR}}/selector-map.json`，用 Read 工具加载。\n\n## 生成规则\n\n### 模板选择\n- 单个验证点 ",
-          "target": "prompts/generator-prompt-template.md"
+          "target": "/~prompts/generator-prompt-template.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_040",
         "timestamp": 16674548,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -659,7 +659,7 @@
       {
         "id": "evt_041",
         "timestamp": 16674550,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -674,7 +674,7 @@
       {
         "id": "evt_042",
         "timestamp": 16844494,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -683,14 +683,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "#!/bin/bash\n# UI脚本生成 lint 检查器\n# 用法: lint-spec.sh <spec-file> <output-json>\n# 对生成的 .spec.js 做 7 条规则硬检查\n\nset -uo pipefail\n\nSPEC_FILE=\"${1:?用法: $0 <spec-file> <output-json>}\"\nOUTPUT_FILE=\"${2:?用法: $0 <sp",
-          "target": "bin/lint-spec.sh"
+          "target": "/~bin/lint-spec.sh"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_043",
         "timestamp": 16844668,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -699,14 +699,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "你是 UI 脚本验证器。你的唯一任务：运行生成的 Playwright 脚本，确认能通过，输出验证结果。\n\n## 输入\n\n- 生成的脚本：`{{RUN_DIR}}/generated.spec.js`\n- 元信息：`{{RUN_DIR}}/generator-meta.json`\n\n## 执行步骤\n\n### 1. 部署脚本\n\n将生成的脚本复制到 Playwright 项目中：\n\n```bash\n#",
-          "target": "prompts/validator-prompt-template.md"
+          "target": "/~prompts/validator-prompt-template.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_044",
         "timestamp": 16851756,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -721,7 +721,7 @@
       {
         "id": "evt_045",
         "timestamp": 16851757,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -736,7 +736,7 @@
       {
         "id": "evt_046",
         "timestamp": 16851758,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -751,7 +751,7 @@
       {
         "id": "evt_047",
         "timestamp": 16851760,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -766,7 +766,7 @@
       {
         "id": "evt_048",
         "timestamp": 16911766,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -775,14 +775,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# 选择器优先级策略\n\n## 优先级（从高到低）\n\n| 优先级 | 方法 | 适用场景 | 示例 |\n|--------|------|----------|------|\n| 1 | `getByRole` | 按钮、链接、文本框、Tab | `page.getByRole('button', { name: '查询' })` |\n| 2 | `getByText` / `getByLabel`",
-          "target": "references/selector-strategy.md"
+          "target": "/~references/selector-strategy.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_049",
         "timestamp": 16933544,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -791,14 +791,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# 脚本模板\n\n## Template A：单测试（简单场景）\n\n```javascript\nconst { test, expect } = require(\"@playwright/test\");\nconst { setupAntMonitor } = require(\"../base/antmonitor-auth\");\n\nconst targetUrl = \"{{TARGET_URL}}\"",
-          "target": "references/script-templates.md"
+          "target": "/~references/script-templates.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_050",
         "timestamp": 16936547,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -807,14 +807,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# Lint 规则说明\n\n`bin/lint-spec.sh` 对生成的 .spec.js 执行以下检查。error 级别阻断流程，warn 级别仅提醒。\n\n## Error 级别（必须修复）\n\n### L001: 必须 import setupAntMonitor\n- **检查**：文件中包含 `setupAntMonitor`\n- **原因**：AntMonitor 页面需要无痕模式登录 + ",
-          "target": "references/lint-rules.md"
+          "target": "/~references/lint-rules.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_051",
         "timestamp": 16943179,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -829,7 +829,7 @@
       {
         "id": "evt_052",
         "timestamp": 16943180,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -844,7 +844,7 @@
       {
         "id": "evt_053",
         "timestamp": 17016814,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -853,14 +853,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "#!/bin/bash\n# UI脚本生成 - 三段式编排守护进程\n# 监听 /tmp/ui-script-gen-task.txt，串行执行 侦察→生成→验证\n#\n# 用法：./ui-script-gen-watcher.sh\n\nset -uo pipefail\n\nSCRIPT_DIR=\"$(cd \"$(dirname \"$0\")\" && pwd)\"\n\n# ── 可配置参数 ──\nSTATE_FI",
-          "target": "ui-script-gen/ui-script-gen-watcher.sh"
+          "target": "/~ui-script-gen/ui-script-gen-watcher.sh"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_054",
         "timestamp": 17069424,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -875,7 +875,7 @@
       {
         "id": "evt_055",
         "timestamp": 17095422,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -890,7 +890,7 @@
       {
         "id": "evt_056",
         "timestamp": 17109855,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -905,7 +905,7 @@
       {
         "id": "evt_057",
         "timestamp": 17110054,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -920,7 +920,7 @@
       {
         "id": "evt_058",
         "timestamp": 17585191,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -935,7 +935,7 @@
       {
         "id": "evt_059",
         "timestamp": 17760849,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -950,7 +950,7 @@
       {
         "id": "evt_060",
         "timestamp": 17841861,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -965,7 +965,7 @@
       {
         "id": "evt_061",
         "timestamp": 17842658,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -974,14 +974,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "---\nname: UI脚本生成 Skill\ndescription: 三段式架构(侦察→生成→验证)的 Playwright 脚本生成 Skill，AntMonitor 优先\ntype: project\n---\n\n## 状态：骨架完成（2026-04-23）\n\n代码位置：`~/skill/ui-script-gen/`\n\n### 已完成\n- 目录结构 + SKILL.md + submit.sh",
-          "target": "memory/project-ui-script-gen.md"
+          "target": "/~memory/project-ui-script-gen.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_062",
         "timestamp": 18223885,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -990,14 +990,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_063",
         "timestamp": 18233655,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -1006,14 +1006,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_064",
         "timestamp": 19788158,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -1022,14 +1022,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-diting-roadmap.md"
+          "target": "/~memory/monitor-system-roadmap.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_065",
         "timestamp": 19793272,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -1038,14 +1038,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-action-plan-202604.md"
+          "target": "/~memory/project-action-plan-202604.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_066",
         "timestamp": 19809485,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -1054,14 +1054,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-action-plan-202604.md"
+          "target": "/~memory/project-action-plan-202604.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_067",
         "timestamp": 19817498,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -1070,14 +1070,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_068",
         "timestamp": 20817624,
-        "session_id": "sess_8a5a9b97-0509-4f3e-bb2f-1db11457bb44",
+        "session_id": "sess_e8a5a9b9",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8a5a9b97",
@@ -1086,7 +1086,7 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       }

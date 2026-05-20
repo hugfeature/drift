@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdemkdx",
+  "id": "fixture_oxp0uui2",
   "description": "No drift: agent fixes login bug and stays fully aligned throughout",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_fixture_002",
+    "id": "sess_efe002",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_002",
@@ -34,7 +34,7 @@
       {
         "id": "evt_201",
         "timestamp": 60000,
-        "session_id": "sess_fixture_002",
+        "session_id": "sess_efe002",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_002",
@@ -48,7 +48,7 @@
       {
         "id": "evt_202",
         "timestamp": 120000,
-        "session_id": "sess_fixture_002",
+        "session_id": "sess_efe002",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_002",
@@ -62,7 +62,7 @@
       {
         "id": "evt_203",
         "timestamp": 180000,
-        "session_id": "sess_fixture_002",
+        "session_id": "sess_efe002",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_002",
@@ -76,7 +76,7 @@
       {
         "id": "evt_204",
         "timestamp": 240000,
-        "session_id": "sess_fixture_002",
+        "session_id": "sess_efe002",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_002",
@@ -91,7 +91,7 @@
       {
         "id": "evt_205",
         "timestamp": 300000,
-        "session_id": "sess_fixture_002",
+        "session_id": "sess_efe002",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_002",
@@ -106,7 +106,7 @@
       {
         "id": "evt_206",
         "timestamp": 360000,
-        "session_id": "sess_fixture_002",
+        "session_id": "sess_efe002",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_002",
@@ -121,7 +121,7 @@
       {
         "id": "evt_207",
         "timestamp": 420000,
-        "session_id": "sess_fixture_002",
+        "session_id": "sess_efe002",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_002",

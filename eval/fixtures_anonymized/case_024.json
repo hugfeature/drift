@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdemxv2",
+  "id": "fixture_pl6dqe0i",
   "description": "Imported Claude Code session: \"Base directory for this skill: /~/.claude/p\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+    "id": "sess_e726d8cf",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_726d8cf5",
@@ -13,7 +13,7 @@
         "id": "goal_726d8cf5",
         "created_at": 0,
         "source": "human",
-        "raw": "Base directory for this skill: /~/.claude/plugins/cache/claude-plugins-official/superpowers/4.3.1/skills/brainstorming\n\n# Brainstorming Ideas Into Designs\n\n## Overview\n\nHelp turn idea",
+        "raw": "Base directory for this skill: /~skills/brainstorming\n\n# Brainstorming Ideas Into Designs\n\n## Overview\n\nHelp turn idea",
         "normalized": {
           "observable_targets": [
             "Base directory for this skill: /~claude-plugins-official/sup"
@@ -24,7 +24,7 @@
             "this",
             "skill",
             "users",
-            "wangzhaoxian",
+            "user_001",
             "claude",
             "plugins",
             "cache",
@@ -40,7 +40,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -56,7 +56,7 @@
       {
         "id": "evt_002",
         "timestamp": 9460,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -72,7 +72,7 @@
       {
         "id": "evt_003",
         "timestamp": 42372,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -88,7 +88,7 @@
       {
         "id": "evt_004",
         "timestamp": 249745,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -104,7 +104,7 @@
       {
         "id": "evt_005",
         "timestamp": 323544,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -120,7 +120,7 @@
       {
         "id": "evt_006",
         "timestamp": 694038,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -136,7 +136,7 @@
       {
         "id": "evt_007",
         "timestamp": 918842,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -152,7 +152,7 @@
       {
         "id": "evt_008",
         "timestamp": 1019679,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -168,7 +168,7 @@
       {
         "id": "evt_009",
         "timestamp": 1066239,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -183,7 +183,7 @@
       {
         "id": "evt_010",
         "timestamp": 1512562,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -199,7 +199,7 @@
       {
         "id": "evt_011",
         "timestamp": 1531779,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -214,7 +214,7 @@
       {
         "id": "evt_012",
         "timestamp": 1874941,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -229,7 +229,7 @@
       {
         "id": "evt_013",
         "timestamp": 2510626,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -244,7 +244,7 @@
       {
         "id": "evt_014",
         "timestamp": 3060414,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -260,7 +260,7 @@
       {
         "id": "evt_015",
         "timestamp": 3203680,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -275,7 +275,7 @@
       {
         "id": "evt_016",
         "timestamp": 3231705,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -290,7 +290,7 @@
       {
         "id": "evt_017",
         "timestamp": 3329482,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -305,7 +305,7 @@
       {
         "id": "evt_018",
         "timestamp": 3438636,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -320,7 +320,7 @@
       {
         "id": "evt_019",
         "timestamp": 7710681,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -335,7 +335,7 @@
       {
         "id": "evt_020",
         "timestamp": 8027347,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -350,7 +350,7 @@
       {
         "id": "evt_021",
         "timestamp": 8085975,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -365,7 +365,7 @@
       {
         "id": "evt_022",
         "timestamp": 9022781,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -380,7 +380,7 @@
       {
         "id": "evt_023",
         "timestamp": 64404761,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -396,7 +396,7 @@
       {
         "id": "evt_024",
         "timestamp": 64699674,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -412,7 +412,7 @@
       {
         "id": "evt_025",
         "timestamp": 64777326,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -428,7 +428,7 @@
       {
         "id": "evt_026",
         "timestamp": 65029757,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -444,7 +444,7 @@
       {
         "id": "evt_027",
         "timestamp": 67129013,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -459,7 +459,7 @@
       {
         "id": "evt_028",
         "timestamp": 67222831,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -475,7 +475,7 @@
       {
         "id": "evt_029",
         "timestamp": 67231009,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -490,7 +490,7 @@
       {
         "id": "evt_030",
         "timestamp": 67791319,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -506,7 +506,7 @@
       {
         "id": "evt_031",
         "timestamp": 67802070,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -521,7 +521,7 @@
       {
         "id": "evt_032",
         "timestamp": 67886399,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -536,7 +536,7 @@
       {
         "id": "evt_033",
         "timestamp": 68182200,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -552,7 +552,7 @@
       {
         "id": "evt_034",
         "timestamp": 68201857,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -568,7 +568,7 @@
       {
         "id": "evt_035",
         "timestamp": 68251234,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -584,7 +584,7 @@
       {
         "id": "evt_036",
         "timestamp": 68276661,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -600,7 +600,7 @@
       {
         "id": "evt_037",
         "timestamp": 68297687,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -616,7 +616,7 @@
       {
         "id": "evt_038",
         "timestamp": 68326198,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -632,7 +632,7 @@
       {
         "id": "evt_039",
         "timestamp": 68342477,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -648,7 +648,7 @@
       {
         "id": "evt_040",
         "timestamp": 68426130,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -664,7 +664,7 @@
       {
         "id": "evt_041",
         "timestamp": 68548060,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -680,7 +680,7 @@
       {
         "id": "evt_042",
         "timestamp": 68588742,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -696,7 +696,7 @@
       {
         "id": "evt_043",
         "timestamp": 68653277,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -711,7 +711,7 @@
       {
         "id": "evt_044",
         "timestamp": 68665347,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -727,7 +727,7 @@
       {
         "id": "evt_045",
         "timestamp": 68828476,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -743,7 +743,7 @@
       {
         "id": "evt_046",
         "timestamp": 69133033,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -758,7 +758,7 @@
       {
         "id": "evt_047",
         "timestamp": 69192299,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -773,7 +773,7 @@
       {
         "id": "evt_048",
         "timestamp": 69437151,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -788,7 +788,7 @@
       {
         "id": "evt_049",
         "timestamp": 70034960,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -803,7 +803,7 @@
       {
         "id": "evt_050",
         "timestamp": 70117799,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -818,7 +818,7 @@
       {
         "id": "evt_051",
         "timestamp": 70236745,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -833,7 +833,7 @@
       {
         "id": "evt_052",
         "timestamp": 70291368,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -848,7 +848,7 @@
       {
         "id": "evt_053",
         "timestamp": 70613623,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -863,7 +863,7 @@
       {
         "id": "evt_054",
         "timestamp": 70628913,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -878,7 +878,7 @@
       {
         "id": "evt_055",
         "timestamp": 70766862,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -893,7 +893,7 @@
       {
         "id": "evt_056",
         "timestamp": 72192170,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -908,7 +908,7 @@
       {
         "id": "evt_057",
         "timestamp": 72244139,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -923,7 +923,7 @@
       {
         "id": "evt_058",
         "timestamp": 73143829,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -938,7 +938,7 @@
       {
         "id": "evt_059",
         "timestamp": 73840355,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -953,7 +953,7 @@
       {
         "id": "evt_060",
         "timestamp": 74509338,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -968,7 +968,7 @@
       {
         "id": "evt_061",
         "timestamp": 74748445,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -983,7 +983,7 @@
       {
         "id": "evt_062",
         "timestamp": 74763005,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -998,7 +998,7 @@
       {
         "id": "evt_063",
         "timestamp": 75149543,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1013,7 +1013,7 @@
       {
         "id": "evt_064",
         "timestamp": 75348820,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1028,7 +1028,7 @@
       {
         "id": "evt_065",
         "timestamp": 75566816,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1044,7 +1044,7 @@
       {
         "id": "evt_066",
         "timestamp": 82900937,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1059,7 +1059,7 @@
       {
         "id": "evt_067",
         "timestamp": 83239129,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1074,7 +1074,7 @@
       {
         "id": "evt_068",
         "timestamp": 83475879,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1089,7 +1089,7 @@
       {
         "id": "evt_069",
         "timestamp": 83514716,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1104,7 +1104,7 @@
       {
         "id": "evt_070",
         "timestamp": 83604065,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1119,7 +1119,7 @@
       {
         "id": "evt_071",
         "timestamp": 83949410,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1134,7 +1134,7 @@
       {
         "id": "evt_072",
         "timestamp": 83993173,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1149,7 +1149,7 @@
       {
         "id": "evt_073",
         "timestamp": 84082231,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1165,7 +1165,7 @@
       {
         "id": "evt_074",
         "timestamp": 84101684,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1181,7 +1181,7 @@
       {
         "id": "evt_075",
         "timestamp": 84117020,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1197,7 +1197,7 @@
       {
         "id": "evt_076",
         "timestamp": 84172985,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1213,7 +1213,7 @@
       {
         "id": "evt_077",
         "timestamp": 91311629,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",
@@ -1228,7 +1228,7 @@
       {
         "id": "evt_078",
         "timestamp": 96552147,
-        "session_id": "sess_726d8cf5-9dda-4fb7-b84a-4c117b6140ea",
+        "session_id": "sess_e726d8cf",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_726d8cf5",

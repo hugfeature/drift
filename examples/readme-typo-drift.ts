@@ -52,7 +52,7 @@ async function run(): Promise<void> {
   // ─── Setup ────────────────────────────────────────────────────────────────
 
   const sessionStart = Date.now() - 30 * 60_000
-  const session = new SessionManager({ agent: 'claude-code', started_at: sessionStart })
+  const session = new SessionManager({ agent: 'claude-code', started_at: sessionStart, langsmith: true })
 
   // Human sets the goal
   const goalId = session.setGoal('fix README typo')
@@ -224,6 +224,9 @@ async function run(): Promise<void> {
     `${statusIcon(finalScore.status)} ${finalScore.status}${C.reset}`
   )
   console.log()
+
+  // Finalize LangSmith session run (closes the trace with final outputs)
+  await session.finalize()
 }
 
 run().catch(err => {

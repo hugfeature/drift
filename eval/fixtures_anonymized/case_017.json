@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdemtjp",
+  "id": "fixture_653s6bja",
   "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+    "id": "sess_e794961f",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_794961fd",
@@ -34,7 +34,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -49,7 +49,7 @@
       {
         "id": "evt_002",
         "timestamp": 3,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -64,7 +64,7 @@
       {
         "id": "evt_003",
         "timestamp": 32322,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -79,7 +79,7 @@
       {
         "id": "evt_004",
         "timestamp": 32324,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -88,14 +88,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/pyproject.toml"
+          "target": "/~local-memory/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_005",
         "timestamp": 37189,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -110,7 +110,7 @@
       {
         "id": "evt_006",
         "timestamp": 42380,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -125,7 +125,7 @@
       {
         "id": "evt_007",
         "timestamp": 48113,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -140,7 +140,7 @@
       {
         "id": "evt_008",
         "timestamp": 57943,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -155,7 +155,7 @@
       {
         "id": "evt_009",
         "timestamp": 65124,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -170,7 +170,7 @@
       {
         "id": "evt_010",
         "timestamp": 72765,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -185,7 +185,7 @@
       {
         "id": "evt_011",
         "timestamp": 81548,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -200,7 +200,7 @@
       {
         "id": "evt_012",
         "timestamp": 88514,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -215,7 +215,7 @@
       {
         "id": "evt_013",
         "timestamp": 95316,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -230,7 +230,7 @@
       {
         "id": "evt_014",
         "timestamp": 408953,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -245,7 +245,7 @@
       {
         "id": "evt_015",
         "timestamp": 681794,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -260,7 +260,7 @@
       {
         "id": "evt_016",
         "timestamp": 778536,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -275,7 +275,7 @@
       {
         "id": "evt_017",
         "timestamp": 778537,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -290,7 +290,7 @@
       {
         "id": "evt_018",
         "timestamp": 778539,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -305,7 +305,7 @@
       {
         "id": "evt_019",
         "timestamp": 797139,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -320,7 +320,7 @@
       {
         "id": "evt_020",
         "timestamp": 797141,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -335,7 +335,7 @@
       {
         "id": "evt_021",
         "timestamp": 819748,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -350,7 +350,7 @@
       {
         "id": "evt_022",
         "timestamp": 1017935,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -365,7 +365,7 @@
       {
         "id": "evt_023",
         "timestamp": 1069675,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -380,7 +380,7 @@
       {
         "id": "evt_024",
         "timestamp": 1395617,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -389,14 +389,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/resolve.py"
+          "target": "/~local_memory/resolve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_025",
         "timestamp": 1395619,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -405,14 +405,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/server.py"
+          "target": "/~local_memory/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_026",
         "timestamp": 1403791,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -421,14 +421,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/db.py"
+          "target": "/~local_memory/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_027",
         "timestamp": 1403793,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -437,14 +437,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/pruner.py"
+          "target": "/~local_memory/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_028",
         "timestamp": 1403795,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -453,14 +453,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/retrieve.py"
+          "target": "/~local_memory/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_029",
         "timestamp": 1441026,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -469,14 +469,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/graph.py"
+          "target": "/~local_memory/graph.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_030",
         "timestamp": 1441009,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -485,14 +485,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/decay.py"
+          "target": "/~local_memory/decay.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_031",
         "timestamp": 1446769,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -501,14 +501,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/embedding.py"
+          "target": "/~local_memory/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_032",
         "timestamp": 1486027,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -517,14 +517,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Auto-consolidation — find similar memory clusters and merge them.\"\"\"\n\nfrom __future__ import annotations\n\nimport logging\nfrom datetime import datetime, timezone\nfrom itertools import combinations\n\n",
-          "target": "local_memory/consolidator.py"
+          "target": "/~local_memory/consolidator.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_033",
         "timestamp": 1502118,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -533,14 +533,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local_memory/pruner.py"
+          "target": "/~local_memory/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_034",
         "timestamp": 1507981,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -549,14 +549,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local_memory/server.py"
+          "target": "/~local_memory/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_035",
         "timestamp": 1521501,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -565,14 +565,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local_memory/server.py"
+          "target": "/~local_memory/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_036",
         "timestamp": 1531070,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -581,14 +581,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local_memory/server.py"
+          "target": "/~local_memory/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_037",
         "timestamp": 1537067,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -597,14 +597,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "tests/test_core.py"
+          "target": "/~tests/test_core.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_038",
         "timestamp": 1554359,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -613,14 +613,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "tests/test_core.py"
+          "target": "/~tests/test_core.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_039",
         "timestamp": 1561334,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -635,7 +635,7 @@
       {
         "id": "evt_040",
         "timestamp": 1601671,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -644,14 +644,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "tests/test_core.py"
+          "target": "/~tests/test_core.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_041",
         "timestamp": 1614536,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -666,7 +666,7 @@
       {
         "id": "evt_042",
         "timestamp": 1648377,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -681,7 +681,7 @@
       {
         "id": "evt_043",
         "timestamp": 1648378,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -696,7 +696,7 @@
       {
         "id": "evt_044",
         "timestamp": 1663540,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -711,7 +711,7 @@
       {
         "id": "evt_045",
         "timestamp": 3080926,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -726,7 +726,7 @@
       {
         "id": "evt_046",
         "timestamp": 3092693,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -741,7 +741,7 @@
       {
         "id": "evt_047",
         "timestamp": 3105685,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -756,7 +756,7 @@
       {
         "id": "evt_048",
         "timestamp": 3113288,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -771,7 +771,7 @@
       {
         "id": "evt_049",
         "timestamp": 3125046,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -786,7 +786,7 @@
       {
         "id": "evt_050",
         "timestamp": 3489519,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -801,7 +801,7 @@
       {
         "id": "evt_051",
         "timestamp": 3612445,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -816,7 +816,7 @@
       {
         "id": "evt_user_001",
         "timestamp": 4118805,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_794961fd",
@@ -827,7 +827,7 @@
       {
         "id": "evt_052",
         "timestamp": 4118806,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -842,7 +842,7 @@
       {
         "id": "evt_053",
         "timestamp": 4118808,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -857,7 +857,7 @@
       {
         "id": "evt_054",
         "timestamp": 4128999,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -872,7 +872,7 @@
       {
         "id": "evt_055",
         "timestamp": 4129001,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -887,7 +887,7 @@
       {
         "id": "evt_056",
         "timestamp": 4136055,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -903,7 +903,7 @@
       {
         "id": "evt_057",
         "timestamp": 4136057,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -912,14 +912,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": ".claude/settings.json"
+          "target": "/~.claude/settings.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_058",
         "timestamp": 4143627,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -934,7 +934,7 @@
       {
         "id": "evt_059",
         "timestamp": 4143628,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -949,7 +949,7 @@
       {
         "id": "evt_060",
         "timestamp": 4153699,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -964,7 +964,7 @@
       {
         "id": "evt_061",
         "timestamp": 4197944,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -979,7 +979,7 @@
       {
         "id": "evt_062",
         "timestamp": 4209724,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -994,7 +994,7 @@
       {
         "id": "evt_063",
         "timestamp": 4892345,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1009,7 +1009,7 @@
       {
         "id": "evt_064",
         "timestamp": 4901731,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1024,7 +1024,7 @@
       {
         "id": "evt_065",
         "timestamp": 4910125,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1039,7 +1039,7 @@
       {
         "id": "evt_066",
         "timestamp": 4925331,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1054,7 +1054,7 @@
       {
         "id": "evt_067",
         "timestamp": 4932082,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1069,7 +1069,7 @@
       {
         "id": "evt_068",
         "timestamp": 5232247,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1084,7 +1084,7 @@
       {
         "id": "evt_069",
         "timestamp": 5233037,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1099,7 +1099,7 @@
       {
         "id": "evt_070",
         "timestamp": 5239889,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1108,14 +1108,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_071",
         "timestamp": 5249306,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1130,7 +1130,7 @@
       {
         "id": "evt_072",
         "timestamp": 5249310,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1145,7 +1145,7 @@
       {
         "id": "evt_073",
         "timestamp": 5259018,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1160,7 +1160,7 @@
       {
         "id": "evt_074",
         "timestamp": 5267237,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1175,7 +1175,7 @@
       {
         "id": "evt_075",
         "timestamp": 5276460,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1190,7 +1190,7 @@
       {
         "id": "evt_076",
         "timestamp": 5291932,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1205,7 +1205,7 @@
       {
         "id": "evt_077",
         "timestamp": 5403287,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1220,7 +1220,7 @@
       {
         "id": "evt_078",
         "timestamp": 5410606,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1235,7 +1235,7 @@
       {
         "id": "evt_079",
         "timestamp": 5418946,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1250,7 +1250,7 @@
       {
         "id": "evt_080",
         "timestamp": 5930681,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1265,7 +1265,7 @@
       {
         "id": "evt_081",
         "timestamp": 6165326,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1280,7 +1280,7 @@
       {
         "id": "evt_082",
         "timestamp": 6173890,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1295,7 +1295,7 @@
       {
         "id": "evt_083",
         "timestamp": 6225998,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1310,7 +1310,7 @@
       {
         "id": "evt_084",
         "timestamp": 6235075,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1325,7 +1325,7 @@
       {
         "id": "evt_085",
         "timestamp": 6244270,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1340,7 +1340,7 @@
       {
         "id": "evt_086",
         "timestamp": 6264393,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1355,7 +1355,7 @@
       {
         "id": "evt_087",
         "timestamp": 6274234,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1370,7 +1370,7 @@
       {
         "id": "evt_088",
         "timestamp": 6322571,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1385,7 +1385,7 @@
       {
         "id": "evt_089",
         "timestamp": 6343775,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1400,7 +1400,7 @@
       {
         "id": "evt_090",
         "timestamp": 6358126,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1415,7 +1415,7 @@
       {
         "id": "evt_091",
         "timestamp": 6367169,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1430,7 +1430,7 @@
       {
         "id": "evt_092",
         "timestamp": 6375702,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1445,7 +1445,7 @@
       {
         "id": "evt_093",
         "timestamp": 6393876,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1460,7 +1460,7 @@
       {
         "id": "evt_094",
         "timestamp": 7283709,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1475,7 +1475,7 @@
       {
         "id": "evt_095",
         "timestamp": 7360903,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1491,7 +1491,7 @@
       {
         "id": "evt_096",
         "timestamp": 7360904,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1507,7 +1507,7 @@
       {
         "id": "evt_097",
         "timestamp": 7360906,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1516,14 +1516,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "cc/.claude.json"
+          "target": "/~cc/.claude.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_098",
         "timestamp": 7360907,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1532,14 +1532,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_099",
         "timestamp": 7514554,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1555,7 +1555,7 @@
       {
         "id": "evt_100",
         "timestamp": 7514865,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1564,14 +1564,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "cc/.claude.json"
+          "target": "/~cc/.claude.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_101",
         "timestamp": 7547999,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1587,7 +1587,7 @@
       {
         "id": "evt_102",
         "timestamp": 7650852,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1596,14 +1596,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_103",
         "timestamp": 7650883,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1612,14 +1612,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_104",
         "timestamp": 7653436,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1628,14 +1628,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_105",
         "timestamp": 7653438,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1644,14 +1644,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_106",
         "timestamp": 7653789,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1660,14 +1660,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_107",
         "timestamp": 7708800,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1683,7 +1683,7 @@
       {
         "id": "evt_108",
         "timestamp": 7725141,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1699,7 +1699,7 @@
       {
         "id": "evt_109",
         "timestamp": 7741746,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1708,14 +1708,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/feedback-yourmemory-permission.md"
+          "target": "/~memory/feedback-yourmemory-permission.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_110",
         "timestamp": 7797949,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1724,14 +1724,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "---\nname: YourMemory已移除，切换到local-memory\ndescription: yourmemory因DuckDB单文件锁导致多会话冲突，已移除配置，全面切换到自研local-memory\ntype: feedback\n---\nYourMemory MCP 已于 04-27 完全移除，根因：多个 Claude 会话同时启动 yourmemory，DuckDB 单文件锁导致",
-          "target": "memory/feedback-yourmemory-permission.md"
+          "target": "/~memory/feedback-yourmemory-permission.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_111",
         "timestamp": 7895903,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1746,7 +1746,7 @@
       {
         "id": "evt_112",
         "timestamp": 7929583,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1755,14 +1755,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_113",
         "timestamp": 8231802,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1771,14 +1771,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_114",
         "timestamp": 8332616,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1787,14 +1787,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": ".claude/settings.local.json"
+          "target": "/~.claude/settings.local.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_115",
         "timestamp": 8341518,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1809,7 +1809,7 @@
       {
         "id": "evt_116",
         "timestamp": 8703384,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1824,7 +1824,7 @@
       {
         "id": "evt_117",
         "timestamp": 8824131,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1833,14 +1833,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_118",
         "timestamp": 8921266,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1849,14 +1849,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/decay.py"
+          "target": "/~local_memory/decay.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_119",
         "timestamp": 8921267,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1865,14 +1865,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/resolve.py"
+          "target": "/~local_memory/resolve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_120",
         "timestamp": 8921269,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1881,14 +1881,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/retrieve.py"
+          "target": "/~local_memory/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_121",
         "timestamp": 8929654,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1897,14 +1897,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/consolidator.py"
+          "target": "/~local_memory/consolidator.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_122",
         "timestamp": 8929656,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1913,14 +1913,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/graph.py"
+          "target": "/~local_memory/graph.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_123",
         "timestamp": 9111252,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1929,14 +1929,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# LocalMemory\n\n给 AI Agent 装一颗会遗忘的大脑。\n\nLocalMemory 是一个完全本地运行的 MCP 记忆服务。它不只是\"存取\"——它模拟人类记忆的遗忘、强化、联想机制，让 Agent 跨会话记住真正重要的事，自然忘掉不再需要的细节。\n\n**零云端依赖，数据永远在你的机器上。**\n\n---\n\n## 为什么需要它\n\nAI Agent 的每次对话都是一张白纸。你昨天告诉它的",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_124",
         "timestamp": 9264697,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1951,7 +1951,7 @@
       {
         "id": "evt_125",
         "timestamp": 9270736,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1966,7 +1966,7 @@
       {
         "id": "evt_126",
         "timestamp": 9280512,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1975,14 +1975,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_127",
         "timestamp": 9368997,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -1997,7 +1997,7 @@
       {
         "id": "evt_128",
         "timestamp": 9379989,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2012,7 +2012,7 @@
       {
         "id": "evt_129",
         "timestamp": 9387057,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2021,14 +2021,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_130",
         "timestamp": 9399162,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2037,14 +2037,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "---\nname: LocalMemory MCP Server\ndescription: 自研本地记忆MCP Server，DuckDB+NetworkX+sentence-transformers，已完成开发并发布技术分享文档\ntype: project\noriginSessionId: 11c6b04d-5a6e-42ac-8d0c-3c46eb99950c\n---\nLocalMemory ",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_131",
         "timestamp": 9543309,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2059,7 +2059,7 @@
       {
         "id": "evt_132",
         "timestamp": 9543333,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2074,7 +2074,7 @@
       {
         "id": "evt_133",
         "timestamp": 9677951,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2089,7 +2089,7 @@
       {
         "id": "evt_134",
         "timestamp": 9683497,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2104,7 +2104,7 @@
       {
         "id": "evt_135",
         "timestamp": 9687181,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2119,7 +2119,7 @@
       {
         "id": "evt_136",
         "timestamp": 9705793,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2134,7 +2134,7 @@
       {
         "id": "evt_137",
         "timestamp": 9705977,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2149,7 +2149,7 @@
       {
         "id": "evt_138",
         "timestamp": 9779764,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2164,7 +2164,7 @@
       {
         "id": "evt_139",
         "timestamp": 9786043,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2179,7 +2179,7 @@
       {
         "id": "evt_140",
         "timestamp": 9792016,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2194,7 +2194,7 @@
       {
         "id": "evt_141",
         "timestamp": 9803926,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2209,7 +2209,7 @@
       {
         "id": "evt_142",
         "timestamp": 9916381,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2224,7 +2224,7 @@
       {
         "id": "evt_143",
         "timestamp": 10222174,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2240,7 +2240,7 @@
       {
         "id": "evt_144",
         "timestamp": 10239370,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2255,7 +2255,7 @@
       {
         "id": "evt_145",
         "timestamp": 10350375,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2270,7 +2270,7 @@
       {
         "id": "evt_146",
         "timestamp": 10358540,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2285,7 +2285,7 @@
       {
         "id": "evt_147",
         "timestamp": 10387586,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2300,7 +2300,7 @@
       {
         "id": "evt_148",
         "timestamp": 10395911,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2315,7 +2315,7 @@
       {
         "id": "evt_149",
         "timestamp": 10514960,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2330,7 +2330,7 @@
       {
         "id": "evt_150",
         "timestamp": 10522402,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2345,7 +2345,7 @@
       {
         "id": "evt_151",
         "timestamp": 10569933,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2354,14 +2354,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# LocalMemory × LoCoMo Benchmark 评测方案\n\n## Context\n\n用户想用 LoCoMo（Snap Research 的长期对话记忆基准）评测 local-memory 的检索能力。LoCoMo 是业界公认的 Agent 记忆评测标准，Mem0Memobase/MemMachine 等产品都用它跑分。跑一次能直接给 local-memory 一个可比较",
-          "target": "plans/misty-baking-nest.md"
+          "target": "/~plans/misty-baking-nest.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_152",
         "timestamp": 10581034,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2376,7 +2376,7 @@
       {
         "id": "evt_153",
         "timestamp": 10671579,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2391,7 +2391,7 @@
       {
         "id": "evt_154",
         "timestamp": 10770434,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2406,7 +2406,7 @@
       {
         "id": "evt_155",
         "timestamp": 10814225,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2421,7 +2421,7 @@
       {
         "id": "evt_156",
         "timestamp": 10814227,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2436,7 +2436,7 @@
       {
         "id": "evt_157",
         "timestamp": 10820477,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2451,7 +2451,7 @@
       {
         "id": "evt_158",
         "timestamp": 10827024,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2459,14 +2459,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Search OpenClaw config for GLM settings"
+          "message": "Search agent-system config for GLM settings"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_159",
         "timestamp": 11051264,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2474,14 +2474,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Find current openclaw config files"
+          "message": "Find current agent-system config files"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_160",
         "timestamp": 11051265,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2496,7 +2496,7 @@
       {
         "id": "evt_161",
         "timestamp": 11051266,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2511,7 +2511,7 @@
       {
         "id": "evt_162",
         "timestamp": 11072008,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2520,14 +2520,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": ".openclaw/openclaw.json"
+          "target": ".agent-system/agent-system.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_163",
         "timestamp": 11108469,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2536,14 +2536,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "plans/misty-baking-nest.md"
+          "target": "/~plans/misty-baking-nest.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_164",
         "timestamp": 11135473,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2552,14 +2552,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "plans/misty-baking-nest.md"
+          "target": "/~plans/misty-baking-nest.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_165",
         "timestamp": 11144169,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2568,14 +2568,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "plans/misty-baking-nest.md"
+          "target": "/~plans/misty-baking-nest.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_166",
         "timestamp": 11151091,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2584,14 +2584,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/db.py"
+          "target": "/~local_memory/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_167",
         "timestamp": 11151092,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2600,14 +2600,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/embedding.py"
+          "target": "/~local_memory/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_168",
         "timestamp": 11155585,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2616,14 +2616,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/db.py"
+          "target": "/~local_memory/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_169",
         "timestamp": 11155587,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2632,14 +2632,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/retrieve.py"
+          "target": "/~local_memory/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_170",
         "timestamp": 11173623,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2648,14 +2648,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "plans/misty-baking-nest.md"
+          "target": "/~plans/misty-baking-nest.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_171",
         "timestamp": 11179798,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2670,7 +2670,7 @@
       {
         "id": "evt_172",
         "timestamp": 11192695,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2685,7 +2685,7 @@
       {
         "id": "evt_173",
         "timestamp": 11194942,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2700,7 +2700,7 @@
       {
         "id": "evt_174",
         "timestamp": 11194943,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2715,7 +2715,7 @@
       {
         "id": "evt_175",
         "timestamp": 11194944,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2730,7 +2730,7 @@
       {
         "id": "evt_176",
         "timestamp": 11200202,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2745,7 +2745,7 @@
       {
         "id": "evt_177",
         "timestamp": 11206855,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2760,7 +2760,7 @@
       {
         "id": "evt_178",
         "timestamp": 11206856,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2769,14 +2769,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/graph.py"
+          "target": "/~local_memory/graph.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_179",
         "timestamp": 11218129,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2785,14 +2785,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/db.py"
+          "target": "/~local_memory/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_180",
         "timestamp": 11224829,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2807,7 +2807,7 @@
       {
         "id": "evt_181",
         "timestamp": 11224830,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2822,7 +2822,7 @@
       {
         "id": "evt_182",
         "timestamp": 11295660,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2831,14 +2831,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "#!bin/env python3\n\"\"\"LocalMemory × LoCoMo Benchmark — evaluate retrieval quality against the\nLoCoMo long-term conversational memory dataset (Snap Research).\n\nUsage:\n    # retrieval-only (no LLM n",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_183",
         "timestamp": 11300464,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2853,7 +2853,7 @@
       {
         "id": "evt_184",
         "timestamp": 11300466,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2868,7 +2868,7 @@
       {
         "id": "evt_185",
         "timestamp": 11307094,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2883,7 +2883,7 @@
       {
         "id": "evt_186",
         "timestamp": 11320692,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2898,7 +2898,7 @@
       {
         "id": "evt_187",
         "timestamp": 11329857,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2913,7 +2913,7 @@
       {
         "id": "evt_188",
         "timestamp": 11406298,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2922,14 +2922,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_189",
         "timestamp": 11413521,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2944,7 +2944,7 @@
       {
         "id": "evt_190",
         "timestamp": 11500769,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2953,14 +2953,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_191",
         "timestamp": 11509337,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2975,7 +2975,7 @@
       {
         "id": "evt_192",
         "timestamp": 11516335,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -2990,7 +2990,7 @@
       {
         "id": "evt_193",
         "timestamp": 11604490,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3005,7 +3005,7 @@
       {
         "id": "evt_194",
         "timestamp": 11793997,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3020,7 +3020,7 @@
       {
         "id": "evt_195",
         "timestamp": 11815553,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3029,14 +3029,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_196",
         "timestamp": 11822922,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3051,7 +3051,7 @@
       {
         "id": "evt_197",
         "timestamp": 11950004,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3066,7 +3066,7 @@
       {
         "id": "evt_198",
         "timestamp": 11950005,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3081,7 +3081,7 @@
       {
         "id": "evt_199",
         "timestamp": 11955745,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3096,7 +3096,7 @@
       {
         "id": "evt_200",
         "timestamp": 11960998,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3111,7 +3111,7 @@
       {
         "id": "evt_201",
         "timestamp": 11966921,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3127,7 +3127,7 @@
       {
         "id": "evt_202",
         "timestamp": 11973966,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3143,7 +3143,7 @@
       {
         "id": "evt_203",
         "timestamp": 11981035,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3152,14 +3152,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/.gitignore"
+          "target": "/~local-memory/.gitignore"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_204",
         "timestamp": 11987343,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3168,14 +3168,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/.gitignore"
+          "target": "/~local-memory/.gitignore"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_205",
         "timestamp": 11993730,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3191,7 +3191,7 @@
       {
         "id": "evt_206",
         "timestamp": 12010671,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3206,7 +3206,7 @@
       {
         "id": "evt_207",
         "timestamp": 12021344,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3221,7 +3221,7 @@
       {
         "id": "evt_208",
         "timestamp": 12031504,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3230,14 +3230,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_209",
         "timestamp": 12038390,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3246,14 +3246,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_210",
         "timestamp": 12045759,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3268,7 +3268,7 @@
       {
         "id": "evt_211",
         "timestamp": 12054165,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3283,7 +3283,7 @@
       {
         "id": "evt_212",
         "timestamp": 12060197,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3298,7 +3298,7 @@
       {
         "id": "evt_213",
         "timestamp": 12073816,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3313,7 +3313,7 @@
       {
         "id": "evt_214",
         "timestamp": 12092192,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3328,7 +3328,7 @@
       {
         "id": "evt_215",
         "timestamp": 12102709,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3343,7 +3343,7 @@
       {
         "id": "evt_216",
         "timestamp": 12117490,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3358,7 +3358,7 @@
       {
         "id": "evt_217",
         "timestamp": 12126779,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3373,7 +3373,7 @@
       {
         "id": "evt_218",
         "timestamp": 12137170,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3388,7 +3388,7 @@
       {
         "id": "evt_219",
         "timestamp": 12157018,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3403,7 +3403,7 @@
       {
         "id": "evt_220",
         "timestamp": 12164267,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3418,7 +3418,7 @@
       {
         "id": "evt_221",
         "timestamp": 12171677,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3433,7 +3433,7 @@
       {
         "id": "evt_222",
         "timestamp": 12182860,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3448,7 +3448,7 @@
       {
         "id": "evt_223",
         "timestamp": 12456137,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3463,7 +3463,7 @@
       {
         "id": "evt_224",
         "timestamp": 12463470,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3478,7 +3478,7 @@
       {
         "id": "evt_225",
         "timestamp": 12473393,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3493,7 +3493,7 @@
       {
         "id": "evt_226",
         "timestamp": 12529413,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3508,7 +3508,7 @@
       {
         "id": "evt_227",
         "timestamp": 12540054,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3523,7 +3523,7 @@
       {
         "id": "evt_228",
         "timestamp": 12681734,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3538,7 +3538,7 @@
       {
         "id": "evt_229",
         "timestamp": 12692689,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3553,7 +3553,7 @@
       {
         "id": "evt_230",
         "timestamp": 12700002,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3568,7 +3568,7 @@
       {
         "id": "evt_231",
         "timestamp": 12707845,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3583,7 +3583,7 @@
       {
         "id": "evt_232",
         "timestamp": 12807184,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3598,7 +3598,7 @@
       {
         "id": "evt_233",
         "timestamp": 12815702,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3613,7 +3613,7 @@
       {
         "id": "evt_234",
         "timestamp": 12838457,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3628,7 +3628,7 @@
       {
         "id": "evt_235",
         "timestamp": 12851611,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3643,7 +3643,7 @@
       {
         "id": "evt_236",
         "timestamp": 12873882,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3658,7 +3658,7 @@
       {
         "id": "evt_237",
         "timestamp": 12873884,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3673,7 +3673,7 @@
       {
         "id": "evt_238",
         "timestamp": 12881723,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3682,14 +3682,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_239",
         "timestamp": 12891769,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3704,7 +3704,7 @@
       {
         "id": "evt_240",
         "timestamp": 12892115,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3719,7 +3719,7 @@
       {
         "id": "evt_241",
         "timestamp": 12899801,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3734,7 +3734,7 @@
       {
         "id": "evt_242",
         "timestamp": 12906678,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3749,7 +3749,7 @@
       {
         "id": "evt_243",
         "timestamp": 12912595,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3764,7 +3764,7 @@
       {
         "id": "evt_244",
         "timestamp": 12918691,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3779,7 +3779,7 @@
       {
         "id": "evt_245",
         "timestamp": 12928388,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3794,7 +3794,7 @@
       {
         "id": "evt_246",
         "timestamp": 12937733,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3809,7 +3809,7 @@
       {
         "id": "evt_247",
         "timestamp": 12946292,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3824,7 +3824,7 @@
       {
         "id": "evt_248",
         "timestamp": 12956844,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3839,7 +3839,7 @@
       {
         "id": "evt_249",
         "timestamp": 12966350,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3854,7 +3854,7 @@
       {
         "id": "evt_250",
         "timestamp": 12979789,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3869,7 +3869,7 @@
       {
         "id": "evt_251",
         "timestamp": 12984666,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3884,7 +3884,7 @@
       {
         "id": "evt_252",
         "timestamp": 12997902,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3899,7 +3899,7 @@
       {
         "id": "evt_253",
         "timestamp": 13006144,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3914,7 +3914,7 @@
       {
         "id": "evt_254",
         "timestamp": 13016940,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3929,7 +3929,7 @@
       {
         "id": "evt_255",
         "timestamp": 13027657,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3944,7 +3944,7 @@
       {
         "id": "evt_256",
         "timestamp": 13039236,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3959,7 +3959,7 @@
       {
         "id": "evt_257",
         "timestamp": 13063666,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3974,7 +3974,7 @@
       {
         "id": "evt_258",
         "timestamp": 13071382,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -3989,7 +3989,7 @@
       {
         "id": "evt_259",
         "timestamp": 13083409,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4004,7 +4004,7 @@
       {
         "id": "evt_260",
         "timestamp": 13091700,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4019,7 +4019,7 @@
       {
         "id": "evt_261",
         "timestamp": 13100134,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4034,7 +4034,7 @@
       {
         "id": "evt_262",
         "timestamp": 13118347,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4049,7 +4049,7 @@
       {
         "id": "evt_263",
         "timestamp": 13509822,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4064,7 +4064,7 @@
       {
         "id": "evt_264",
         "timestamp": 13533157,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4079,7 +4079,7 @@
       {
         "id": "evt_265",
         "timestamp": 13541256,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4094,7 +4094,7 @@
       {
         "id": "evt_266",
         "timestamp": 13563898,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4109,7 +4109,7 @@
       {
         "id": "evt_267",
         "timestamp": 13582830,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4124,7 +4124,7 @@
       {
         "id": "evt_268",
         "timestamp": 13596050,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4139,7 +4139,7 @@
       {
         "id": "evt_269",
         "timestamp": 13603930,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4154,7 +4154,7 @@
       {
         "id": "evt_270",
         "timestamp": 13611701,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4169,7 +4169,7 @@
       {
         "id": "evt_271",
         "timestamp": 13622054,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4184,7 +4184,7 @@
       {
         "id": "evt_272",
         "timestamp": 13629226,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4199,7 +4199,7 @@
       {
         "id": "evt_273",
         "timestamp": 13635894,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4214,7 +4214,7 @@
       {
         "id": "evt_274",
         "timestamp": 13645715,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4229,7 +4229,7 @@
       {
         "id": "evt_275",
         "timestamp": 13694455,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4244,7 +4244,7 @@
       {
         "id": "evt_276",
         "timestamp": 13707152,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4259,7 +4259,7 @@
       {
         "id": "evt_277",
         "timestamp": 13713047,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4274,7 +4274,7 @@
       {
         "id": "evt_278",
         "timestamp": 13721300,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4289,7 +4289,7 @@
       {
         "id": "evt_279",
         "timestamp": 13735159,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4304,7 +4304,7 @@
       {
         "id": "evt_280",
         "timestamp": 13741892,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4319,7 +4319,7 @@
       {
         "id": "evt_281",
         "timestamp": 13747945,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4334,7 +4334,7 @@
       {
         "id": "evt_282",
         "timestamp": 13755030,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4349,7 +4349,7 @@
       {
         "id": "evt_283",
         "timestamp": 13761519,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4364,7 +4364,7 @@
       {
         "id": "evt_284",
         "timestamp": 13771812,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4379,7 +4379,7 @@
       {
         "id": "evt_285",
         "timestamp": 14172894,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4394,7 +4394,7 @@
       {
         "id": "evt_286",
         "timestamp": 14189178,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4409,7 +4409,7 @@
       {
         "id": "evt_287",
         "timestamp": 14321527,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4424,7 +4424,7 @@
       {
         "id": "evt_288",
         "timestamp": 14321529,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4439,7 +4439,7 @@
       {
         "id": "evt_289",
         "timestamp": 14341258,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4454,7 +4454,7 @@
       {
         "id": "evt_290",
         "timestamp": 14341260,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4469,7 +4469,7 @@
       {
         "id": "evt_291",
         "timestamp": 14362678,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4484,7 +4484,7 @@
       {
         "id": "evt_292",
         "timestamp": 14387375,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4499,7 +4499,7 @@
       {
         "id": "evt_293",
         "timestamp": 14610482,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4514,7 +4514,7 @@
       {
         "id": "evt_294",
         "timestamp": 14610483,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4529,7 +4529,7 @@
       {
         "id": "evt_295",
         "timestamp": 14623629,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4544,7 +4544,7 @@
       {
         "id": "evt_296",
         "timestamp": 14827380,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4559,7 +4559,7 @@
       {
         "id": "evt_297",
         "timestamp": 14827421,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4574,7 +4574,7 @@
       {
         "id": "evt_298",
         "timestamp": 14842609,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4583,14 +4583,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "results/locomo_observation_20260427_182704.json"
+          "target": "/~results/locomo_observation_20260427_182704.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_299",
         "timestamp": 14871958,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4605,7 +4605,7 @@
       {
         "id": "evt_300",
         "timestamp": 15078526,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4620,7 +4620,7 @@
       {
         "id": "evt_301",
         "timestamp": 15088116,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4629,14 +4629,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "results/locomo_turn_20260427_183151.json"
+          "target": "/~results/locomo_turn_20260427_183151.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_302",
         "timestamp": 15121815,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4645,14 +4645,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_303",
         "timestamp": 15121972,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4667,7 +4667,7 @@
       {
         "id": "evt_304",
         "timestamp": 15158214,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4676,14 +4676,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_305",
         "timestamp": 15168702,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4692,14 +4692,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_306",
         "timestamp": 15203815,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4708,14 +4708,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_307",
         "timestamp": 15234461,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4730,7 +4730,7 @@
       {
         "id": "evt_308",
         "timestamp": 15409074,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4745,7 +4745,7 @@
       {
         "id": "evt_309",
         "timestamp": 15547606,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4760,7 +4760,7 @@
       {
         "id": "evt_310",
         "timestamp": 15572947,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4775,7 +4775,7 @@
       {
         "id": "evt_311",
         "timestamp": 15624964,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4790,7 +4790,7 @@
       {
         "id": "evt_312",
         "timestamp": 15634716,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4805,7 +4805,7 @@
       {
         "id": "evt_313",
         "timestamp": 15762847,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4820,7 +4820,7 @@
       {
         "id": "evt_314",
         "timestamp": 16512891,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4829,14 +4829,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_315",
         "timestamp": 16526350,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4845,14 +4845,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_316",
         "timestamp": 16533829,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4861,14 +4861,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_317",
         "timestamp": 16533831,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4877,14 +4877,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_318",
         "timestamp": 16555559,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4893,14 +4893,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_319",
         "timestamp": 16573446,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4909,14 +4909,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_320",
         "timestamp": 16673510,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4931,7 +4931,7 @@
       {
         "id": "evt_321",
         "timestamp": 16762571,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4946,7 +4946,7 @@
       {
         "id": "evt_322",
         "timestamp": 16928269,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4955,14 +4955,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/embedding.py"
+          "target": "/~local_memory/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_323",
         "timestamp": 16928270,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4971,14 +4971,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/db.py"
+          "target": "/~local_memory/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_324",
         "timestamp": 16949273,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -4987,14 +4987,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/retrieve.py"
+          "target": "/~local_memory/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_325",
         "timestamp": 16974520,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5003,14 +5003,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_326",
         "timestamp": 17004191,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5019,14 +5019,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_327",
         "timestamp": 17092347,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5035,14 +5035,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_328",
         "timestamp": 17119038,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5051,14 +5051,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_329",
         "timestamp": 17128332,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5067,14 +5067,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_330",
         "timestamp": 17148035,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5083,14 +5083,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_331",
         "timestamp": 17162871,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5099,14 +5099,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_332",
         "timestamp": 17176499,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5115,14 +5115,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_333",
         "timestamp": 17185466,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5131,14 +5131,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_334",
         "timestamp": 17196394,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5147,14 +5147,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_335",
         "timestamp": 17207713,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5163,14 +5163,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_336",
         "timestamp": 17228002,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5179,14 +5179,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_337",
         "timestamp": 17240654,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5195,14 +5195,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_338",
         "timestamp": 17318281,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5211,14 +5211,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_339",
         "timestamp": 17332433,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5233,7 +5233,7 @@
       {
         "id": "evt_340",
         "timestamp": 17410771,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5242,14 +5242,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_341",
         "timestamp": 17433141,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5258,14 +5258,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_342",
         "timestamp": 17457585,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5274,14 +5274,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_343",
         "timestamp": 17468624,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5296,7 +5296,7 @@
       {
         "id": "evt_344",
         "timestamp": 17479943,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5305,14 +5305,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_345",
         "timestamp": 17493213,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5327,7 +5327,7 @@
       {
         "id": "evt_346",
         "timestamp": 17519604,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5342,7 +5342,7 @@
       {
         "id": "evt_347",
         "timestamp": 17777955,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5351,14 +5351,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_348",
         "timestamp": 17804921,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5367,14 +5367,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_349",
         "timestamp": 17817243,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5383,14 +5383,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_350",
         "timestamp": 17848185,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5399,14 +5399,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_351",
         "timestamp": 18521575,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5415,14 +5415,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_352",
         "timestamp": 18534690,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5437,7 +5437,7 @@
       {
         "id": "evt_353",
         "timestamp": 18809186,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5446,14 +5446,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_354",
         "timestamp": 18871778,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5462,14 +5462,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_355",
         "timestamp": 18883907,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5478,14 +5478,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_356",
         "timestamp": 18896379,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5494,14 +5494,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_357",
         "timestamp": 18902534,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5510,14 +5510,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_358",
         "timestamp": 18915625,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5526,14 +5526,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_359",
         "timestamp": 18921549,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5548,7 +5548,7 @@
       {
         "id": "evt_360",
         "timestamp": 19227679,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5563,7 +5563,7 @@
       {
         "id": "evt_361",
         "timestamp": 19539743,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5578,7 +5578,7 @@
       {
         "id": "evt_362",
         "timestamp": 19556390,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5587,14 +5587,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_363",
         "timestamp": 19695007,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5609,7 +5609,7 @@
       {
         "id": "evt_364",
         "timestamp": 20337073,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5624,7 +5624,7 @@
       {
         "id": "evt_365",
         "timestamp": 20760577,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5633,14 +5633,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_366",
         "timestamp": 20775225,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5649,14 +5649,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_367",
         "timestamp": 20784625,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5665,14 +5665,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_368",
         "timestamp": 20793065,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5681,14 +5681,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_369",
         "timestamp": 20801545,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5697,14 +5697,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_370",
         "timestamp": 20900000,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5713,14 +5713,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_371",
         "timestamp": 20918847,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5729,14 +5729,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_372",
         "timestamp": 20928748,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5745,14 +5745,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_373",
         "timestamp": 21412820,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5761,14 +5761,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/retrieve.py"
+          "target": "/~local_memory/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_374",
         "timestamp": 21412821,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5777,14 +5777,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local_memory/db.py"
+          "target": "/~local_memory/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_375",
         "timestamp": 21419382,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5793,14 +5793,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_376",
         "timestamp": 21534072,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5809,14 +5809,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local_memory/retrieve.py"
+          "target": "/~local_memory/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_377",
         "timestamp": 21541162,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5825,14 +5825,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_378",
         "timestamp": 21546181,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5847,7 +5847,7 @@
       {
         "id": "evt_379",
         "timestamp": 21551616,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5856,14 +5856,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_380",
         "timestamp": 21559721,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5872,14 +5872,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_381",
         "timestamp": 21567671,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5888,14 +5888,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_382",
         "timestamp": 21574206,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5904,14 +5904,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_383",
         "timestamp": 21581112,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5926,7 +5926,7 @@
       {
         "id": "evt_384",
         "timestamp": 21710115,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5941,7 +5941,7 @@
       {
         "id": "evt_385",
         "timestamp": 22319696,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5956,7 +5956,7 @@
       {
         "id": "evt_user_002",
         "timestamp": 22344669,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_794961fd",
@@ -5967,7 +5967,7 @@
       {
         "id": "evt_386",
         "timestamp": 22344670,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5982,7 +5982,7 @@
       {
         "id": "evt_387",
         "timestamp": 22412481,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -5991,14 +5991,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_388",
         "timestamp": 22429194,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6007,14 +6007,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_389",
         "timestamp": 22437785,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6023,14 +6023,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "local-memory/README.md"
+          "target": "/~local-memory/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_390",
         "timestamp": 22450141,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6039,14 +6039,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_391",
         "timestamp": 22459689,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6055,14 +6055,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_392",
         "timestamp": 22534952,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6071,14 +6071,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_393",
         "timestamp": 22541439,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6087,14 +6087,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_394",
         "timestamp": 22546212,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6103,14 +6103,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_395",
         "timestamp": 22570155,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6119,14 +6119,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_396",
         "timestamp": 22582350,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6135,14 +6135,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_397",
         "timestamp": 22657703,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6151,14 +6151,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_398",
         "timestamp": 22665516,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6167,14 +6167,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_399",
         "timestamp": 22671200,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6183,14 +6183,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_400",
         "timestamp": 22681351,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6199,14 +6199,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_401",
         "timestamp": 22686644,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6215,14 +6215,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_402",
         "timestamp": 22692426,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6231,14 +6231,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "benchmark/locomo_eval.py"
+          "target": "/~benchmark/locomo_eval.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_403",
         "timestamp": 22700985,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6253,7 +6253,7 @@
       {
         "id": "evt_404",
         "timestamp": 22818880,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6268,7 +6268,7 @@
       {
         "id": "evt_user_003",
         "timestamp": 23463365,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_794961fd",
@@ -6279,7 +6279,7 @@
       {
         "id": "evt_405",
         "timestamp": 23463366,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6288,14 +6288,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_406",
         "timestamp": 23477024,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6304,14 +6304,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_407",
         "timestamp": 23484475,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6320,14 +6320,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_408",
         "timestamp": 23562345,
-        "session_id": "sess_794961fd-27a6-4f06-9a65-e82fe3b3af86",
+        "session_id": "sess_e794961f",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_794961fd",
@@ -6336,7 +6336,7 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       }

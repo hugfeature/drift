@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdemqj5",
+  "id": "fixture_t59x09z9",
   "description": "Imported Claude Code session: \"Please analyze this codebase and create a CLAUDE.md file, wh\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+    "id": "sess_ece7c30c",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_ce7c30c4",
@@ -40,14 +40,14 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__recall_memory",
+          "tool_name": "mcp__memory-service__recall_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -55,7 +55,7 @@
       {
         "id": "evt_002",
         "timestamp": 23,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -64,14 +64,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_003",
         "timestamp": 16753,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -80,14 +80,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/you-and-me-project-status.md"
+          "target": "/~memory/you-and-me-project-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_004",
         "timestamp": 16755,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -96,21 +96,21 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/you-and-me-next-steps.md"
+          "target": "/~memory/you-and-me-next-steps.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_005",
         "timestamp": 20813,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__create_task",
+          "tool_name": "mcp__memory-service__create_task",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -118,7 +118,7 @@
       {
         "id": "evt_006",
         "timestamp": 220748,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -133,7 +133,7 @@
       {
         "id": "evt_007",
         "timestamp": 220750,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -148,7 +148,7 @@
       {
         "id": "evt_008",
         "timestamp": 220752,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -163,7 +163,7 @@
       {
         "id": "evt_009",
         "timestamp": 236022,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -178,7 +178,7 @@
       {
         "id": "evt_010",
         "timestamp": 236023,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -193,7 +193,7 @@
       {
         "id": "evt_011",
         "timestamp": 236025,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -208,7 +208,7 @@
       {
         "id": "evt_012",
         "timestamp": 246204,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -223,7 +223,7 @@
       {
         "id": "evt_013",
         "timestamp": 248729,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -238,7 +238,7 @@
       {
         "id": "evt_014",
         "timestamp": 496865,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -253,7 +253,7 @@
       {
         "id": "evt_015",
         "timestamp": 500969,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -268,7 +268,7 @@
       {
         "id": "evt_016",
         "timestamp": 504362,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -283,7 +283,7 @@
       {
         "id": "evt_017",
         "timestamp": 504377,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -298,7 +298,7 @@
       {
         "id": "evt_018",
         "timestamp": 508259,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -313,7 +313,7 @@
       {
         "id": "evt_019",
         "timestamp": 512751,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -328,7 +328,7 @@
       {
         "id": "evt_020",
         "timestamp": 517551,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -337,14 +337,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.js"
+          "target": "/~checkin-sheet/checkin-sheet.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_021",
         "timestamp": 517553,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -353,14 +353,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.axml"
+          "target": "/~checkin-sheet/checkin-sheet.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_022",
         "timestamp": 517555,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -369,14 +369,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.acss"
+          "target": "/~checkin-sheet/checkin-sheet.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_023",
         "timestamp": 524867,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -385,14 +385,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "light-orb/light-orb.js"
+          "target": "/~light-orb/light-orb.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_024",
         "timestamp": 524868,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -401,14 +401,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "index/index.js"
+          "target": "/~index/index.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_025",
         "timestamp": 535924,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -417,14 +417,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "light-orb/light-orb.axml"
+          "target": "/~light-orb/light-orb.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_026",
         "timestamp": 535925,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -433,14 +433,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "index/index.axml"
+          "target": "/~index/index.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_027",
         "timestamp": 551334,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -449,14 +449,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "light-orb/light-orb.js"
+          "target": "/~light-orb/light-orb.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_028",
         "timestamp": 1015993,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -465,14 +465,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "light-orb/light-orb.js"
+          "target": "/~light-orb/light-orb.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_029",
         "timestamp": 1023920,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -481,14 +481,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "light-orb/light-orb.js"
+          "target": "/~light-orb/light-orb.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_030",
         "timestamp": 1038494,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -497,14 +497,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "light-orb/light-orb.js"
+          "target": "/~light-orb/light-orb.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_031",
         "timestamp": 1045042,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -513,14 +513,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "light-orb/light-orb.js"
+          "target": "/~light-orb/light-orb.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_032",
         "timestamp": 1051398,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -529,14 +529,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.js"
+          "target": "/~index/index.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_033",
         "timestamp": 1065564,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -545,14 +545,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.js"
+          "target": "/~index/index.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_034",
         "timestamp": 1072806,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -561,14 +561,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.axml"
+          "target": "/~index/index.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_035",
         "timestamp": 1081737,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -577,14 +577,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.js"
+          "target": "/~checkin-sheet/checkin-sheet.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_036",
         "timestamp": 1093164,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -593,14 +593,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.js"
+          "target": "/~checkin-sheet/checkin-sheet.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_037",
         "timestamp": 1099600,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -609,14 +609,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.js"
+          "target": "/~checkin-sheet/checkin-sheet.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_038",
         "timestamp": 1105264,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -625,14 +625,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.acss"
+          "target": "/~checkin-sheet/checkin-sheet.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_039",
         "timestamp": 1111450,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -641,14 +641,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.acss"
+          "target": "/~checkin-sheet/checkin-sheet.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_040",
         "timestamp": 1118679,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -657,14 +657,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "checkin-sheet/checkin-sheet.axml"
+          "target": "/~checkin-sheet/checkin-sheet.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_041",
         "timestamp": 1124334,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -679,7 +679,7 @@
       {
         "id": "evt_042",
         "timestamp": 1129361,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -694,7 +694,7 @@
       {
         "id": "evt_043",
         "timestamp": 1129363,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -709,7 +709,7 @@
       {
         "id": "evt_044",
         "timestamp": 1134973,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -718,14 +718,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "special-node/special-node.js"
+          "target": "/~special-node/special-node.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_045",
         "timestamp": 1134975,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -734,14 +734,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "special-node/special-node.axml"
+          "target": "/~special-node/special-node.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_046",
         "timestamp": 1134976,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -750,14 +750,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "special-node/special-node.acss"
+          "target": "/~special-node/special-node.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_047",
         "timestamp": 1134978,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -766,14 +766,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "special-node/special-node.json"
+          "target": "/~special-node/special-node.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_048",
         "timestamp": 1147422,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -782,14 +782,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "protected/app.json"
+          "target": "/~protected/app.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_049",
         "timestamp": 1147423,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -798,14 +798,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "styles/global.acss"
+          "target": "/~styles/global.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_050",
         "timestamp": 1152132,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -814,14 +814,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "constants/colors.js"
+          "target": "/~constants/colors.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_051",
         "timestamp": 1157219,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -836,7 +836,7 @@
       {
         "id": "evt_052",
         "timestamp": 1162030,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -845,14 +845,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "constants/colors.js"
+          "target": "/~constants/colors.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_053",
         "timestamp": 1169316,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -867,7 +867,7 @@
       {
         "id": "evt_054",
         "timestamp": 1175216,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -876,14 +876,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "{\n  \"usingComponents\": {\n    \"custom-toast\": \"..toast/toast\"\n  },\n  \"defaultTitle\": \"特殊节点\",\n  \"titleBarColor\": \"#0A0A0F\",\n  \"backgroundColor\": \"#0A0A0F\"\n}",
-          "target": "special-node/special-node.json"
+          "target": "/~special-node/special-node.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_055",
         "timestamp": 1236246,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -892,14 +892,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "/**\n * 独安伴·特殊节点页 (protected版)\n *\n * 生日、节日等特殊节点 - 金色光晕状态 + 双向留言互动\n * R8: 除夕/母亲节/父亲节 + 双向留言\n * R3: 节点互动非强制，总有跳过选项\n */\n\nconst { appStore } = require('..utils/store')\nconst api = require('../../utils/",
-          "target": "special-node/special-node.js"
+          "target": "/~special-node/special-node.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_056",
         "timestamp": 1279030,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -908,14 +908,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "<!-- 独安伴·特殊节点页 (protected版)\n  R8: 除夕/母亲节/父亲节 + 双向留言互动\n  R3: 节点互动非强制，总有跳过选项\n-->\n<view class=\"special-node-page\">\n\n  <!-- 页面标题 -->\n  <view class=\"page-header\">\n    <text class=\"page-title\">特殊节点</text>\n ",
-          "target": "special-node/special-node.axml"
+          "target": "/~special-node/special-node.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_057",
         "timestamp": 1351680,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -924,14 +924,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "/* 独安伴·特殊节点页样式 (protected版) */\n@import \"..styles/global.acss\";\n\n.special-node-page {\n  min-height: 100vh;\n  background: var(--color-bg-primary);\n  padding: var(--spacing-lg);\n  padding-bottom: cal",
-          "target": "special-node/special-node.acss"
+          "target": "/~special-node/special-node.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_058",
         "timestamp": 1360255,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -940,14 +940,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "protected/app.json"
+          "target": "/~protected/app.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_059",
         "timestamp": 1384940,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -956,14 +956,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.js"
+          "target": "/~index/index.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_060",
         "timestamp": 1390506,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -978,7 +978,7 @@
       {
         "id": "evt_061",
         "timestamp": 1396440,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -993,7 +993,7 @@
       {
         "id": "evt_062",
         "timestamp": 1401304,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1008,7 +1008,7 @@
       {
         "id": "evt_063",
         "timestamp": 1401306,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1023,7 +1023,7 @@
       {
         "id": "evt_064",
         "timestamp": 1441855,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1038,7 +1038,7 @@
       {
         "id": "evt_065",
         "timestamp": 1447831,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1053,7 +1053,7 @@
       {
         "id": "evt_066",
         "timestamp": 1459423,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1062,14 +1062,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "you_and_me/app.json"
+          "target": "/~you_and_me/app.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_067",
         "timestamp": 1467350,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1078,14 +1078,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "you_and_me/start.sh"
+          "target": "/~you_and_me/start.sh"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_068",
         "timestamp": 1484802,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1100,7 +1100,7 @@
       {
         "id": "evt_069",
         "timestamp": 1491483,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1115,7 +1115,7 @@
       {
         "id": "evt_070",
         "timestamp": 1498194,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1130,7 +1130,7 @@
       {
         "id": "evt_071",
         "timestamp": 1507874,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1145,7 +1145,7 @@
       {
         "id": "evt_072",
         "timestamp": 2422276,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1160,7 +1160,7 @@
       {
         "id": "evt_073",
         "timestamp": 2422277,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1175,7 +1175,7 @@
       {
         "id": "evt_074",
         "timestamp": 2429568,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1184,14 +1184,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "home/home.js"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_075",
         "timestamp": 2435952,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1200,14 +1200,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "home/home.axml"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_076",
         "timestamp": 2441979,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1216,14 +1216,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "home/home.acss"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_077",
         "timestamp": 2463295,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1232,14 +1232,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "index/index.axml"
+          "target": "/~index/index.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_078",
         "timestamp": 2473612,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1248,14 +1248,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.js"
+          "target": "/~index/index.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_079",
         "timestamp": 2480331,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1264,14 +1264,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.js"
+          "target": "/~index/index.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_080",
         "timestamp": 2496499,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1280,14 +1280,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.js"
+          "target": "/~index/index.js"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_081",
         "timestamp": 2511483,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1296,14 +1296,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.axml"
+          "target": "/~index/index.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_082",
         "timestamp": 2516578,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1312,14 +1312,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "index/index.axml"
+          "target": "/~index/index.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_083",
         "timestamp": 2530737,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1328,14 +1328,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.axml"
+          "target": "/~index/index.axml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_084",
         "timestamp": 2580111,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1344,14 +1344,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "index/index.acss"
+          "target": "/~index/index.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_085",
         "timestamp": 2585869,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1366,7 +1366,7 @@
       {
         "id": "evt_086",
         "timestamp": 2594601,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1375,14 +1375,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "index/index.acss"
+          "target": "/~index/index.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_087",
         "timestamp": 2608740,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1391,14 +1391,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "index/index.acss"
+          "target": "/~index/index.acss"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_088",
         "timestamp": 2617324,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1407,14 +1407,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "home/home.js"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_089",
         "timestamp": 2632099,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1423,14 +1423,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "home/home.js"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_090",
         "timestamp": 2644381,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1439,14 +1439,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "home/home.axml"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_091",
         "timestamp": 2657652,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1455,14 +1455,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "home/home.js"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_092",
         "timestamp": 2666217,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1471,14 +1471,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "home/home.acss"
+          "target": "pages/~"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_093",
         "timestamp": 2672026,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1493,14 +1493,14 @@
       {
         "id": "evt_094",
         "timestamp": 2679486,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__track_progress",
+          "tool_name": "mcp__memory-service__track_progress",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -1508,14 +1508,14 @@
       {
         "id": "evt_095",
         "timestamp": 2734492,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__session_handoff",
+          "tool_name": "mcp__memory-service__session_handoff",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -1523,7 +1523,7 @@
       {
         "id": "evt_096",
         "timestamp": 2793390,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1532,14 +1532,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/you-and-me-next-steps.md"
+          "target": "/~memory/you-and-me-next-steps.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_097",
         "timestamp": 4031252,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",
@@ -1554,7 +1554,7 @@
       {
         "id": "evt_user_001",
         "timestamp": 4043072,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_ce7c30c4",
@@ -1565,7 +1565,7 @@
       {
         "id": "evt_098",
         "timestamp": 4043073,
-        "session_id": "sess_ce7c30c4-dbd3-4aa5-b228-29c4b2c86bbb",
+        "session_id": "sess_ece7c30c",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_ce7c30c4",

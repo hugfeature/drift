@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpden7ht",
+  "id": "fixture_8x3wkyz3",
   "description": "Imported Claude Code session: \"[Image #2] 这是之前文章的数据\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+    "id": "sess_e8e3f118",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_8e3f1184",
@@ -31,7 +31,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -40,14 +40,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/article-writing-standards.md"
+          "target": "/~memory/article-writing-standards.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_002",
         "timestamp": 2,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -56,14 +56,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/article-viral-formula.md"
+          "target": "/~memory/article-viral-formula.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_003",
         "timestamp": 36,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -72,14 +72,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/article-upgrade-techniques.md"
+          "target": "/~memory/article-upgrade-techniques.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_004",
         "timestamp": 37,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -88,14 +88,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/feedback-delivery.md"
+          "target": "/~memory/feedback-delivery.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_005",
         "timestamp": 4835,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -104,14 +104,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_006",
         "timestamp": 161896,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -126,7 +126,7 @@
       {
         "id": "evt_007",
         "timestamp": 166535,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -141,7 +141,7 @@
       {
         "id": "evt_008",
         "timestamp": 203321,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -157,7 +157,7 @@
       {
         "id": "evt_009",
         "timestamp": 207703,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -173,7 +173,7 @@
       {
         "id": "evt_010",
         "timestamp": 212298,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -188,7 +188,7 @@
       {
         "id": "evt_011",
         "timestamp": 215864,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -203,7 +203,7 @@
       {
         "id": "evt_012",
         "timestamp": 218931,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -219,7 +219,7 @@
       {
         "id": "evt_013",
         "timestamp": 222911,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -234,7 +234,7 @@
       {
         "id": "evt_014",
         "timestamp": 315976,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -250,7 +250,7 @@
       {
         "id": "evt_015",
         "timestamp": 339602,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -266,7 +266,7 @@
       {
         "id": "evt_016",
         "timestamp": 380257,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -282,7 +282,7 @@
       {
         "id": "evt_017",
         "timestamp": 412895,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -298,7 +298,7 @@
       {
         "id": "evt_018",
         "timestamp": 442962,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -314,7 +314,7 @@
       {
         "id": "evt_019",
         "timestamp": 478804,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -330,7 +330,7 @@
       {
         "id": "evt_020",
         "timestamp": 502021,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -345,14 +345,14 @@
       {
         "id": "evt_021",
         "timestamp": 1918694,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__recall_memory",
+          "tool_name": "mcp__memory-service__recall_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -360,7 +360,7 @@
       {
         "id": "evt_022",
         "timestamp": 1918733,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -368,14 +368,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Locate engram project directory"
+          "message": "Locate memory-service project directory"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_023",
         "timestamp": 1959846,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -390,7 +390,7 @@
       {
         "id": "evt_024",
         "timestamp": 2276887,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -405,7 +405,7 @@
       {
         "id": "evt_025",
         "timestamp": 2281688,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -420,7 +420,7 @@
       {
         "id": "evt_026",
         "timestamp": 2285486,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -435,7 +435,7 @@
       {
         "id": "evt_027",
         "timestamp": 2289584,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -450,7 +450,7 @@
       {
         "id": "evt_028",
         "timestamp": 2293365,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -465,7 +465,7 @@
       {
         "id": "evt_029",
         "timestamp": 2350619,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -480,7 +480,7 @@
       {
         "id": "evt_030",
         "timestamp": 2354607,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -495,7 +495,7 @@
       {
         "id": "evt_031",
         "timestamp": 3912338,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -504,14 +504,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/README.md"
+          "target": "/~memory-service/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_032",
         "timestamp": 3948863,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -526,7 +526,7 @@
       {
         "id": "evt_033",
         "timestamp": 3953996,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -541,7 +541,7 @@
       {
         "id": "evt_034",
         "timestamp": 4179192,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -549,15 +549,15 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "# Engram\n\n**Durable Agent Runtime — cross-session task continuity for MCP-aware coding agents**\n\n> Engram lets agents recover **task execution state and working context** after interruptions, restarts",
-          "target": "engram/README.md"
+          "message": "# memory-service\n\n**Durable Agent Runtime — cross-session task continuity for MCP-aware coding agents**\n\n> memory-service lets agents recover **task execution state and working context** after interruptions, restarts",
+          "target": "/~memory-service/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_035",
         "timestamp": 4184103,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -572,7 +572,7 @@
       {
         "id": "evt_036",
         "timestamp": 4188094,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -587,7 +587,7 @@
       {
         "id": "evt_037",
         "timestamp": 4224819,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -602,7 +602,7 @@
       {
         "id": "evt_038",
         "timestamp": 4228809,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -617,7 +617,7 @@
       {
         "id": "evt_039",
         "timestamp": 4262105,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -632,7 +632,7 @@
       {
         "id": "evt_040",
         "timestamp": 4265889,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -647,7 +647,7 @@
       {
         "id": "evt_041",
         "timestamp": 4272900,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -662,7 +662,7 @@
       {
         "id": "evt_042",
         "timestamp": 4276639,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -677,7 +677,7 @@
       {
         "id": "evt_043",
         "timestamp": 4281923,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -692,7 +692,7 @@
       {
         "id": "evt_044",
         "timestamp": 4287715,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -701,14 +701,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/__init__.py"
+          "target": "/~memory-service/__init__.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_045",
         "timestamp": 4292124,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -717,14 +717,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/__init__.py"
+          "target": "/~memory-service/__init__.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_046",
         "timestamp": 4296340,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -739,7 +739,7 @@
       {
         "id": "evt_047",
         "timestamp": 4341799,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -754,7 +754,7 @@
       {
         "id": "evt_048",
         "timestamp": 4354091,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -769,22 +769,22 @@
       {
         "id": "evt_049",
         "timestamp": 4427853,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
-          "message": "[Engram v0.13.2 released] README i18n: English README as primary (README.md), Chinese moved to README_CN.md with cross-link. Version bumped from 0.13.1 to 0.13.2 for PyPI republish. GitHub pushed, PyP"
+          "tool_name": "mcp__memory-service__store_memory",
+          "message": "[memory-service v0.13.2 released] README i18n: English README as primary (README.md), Chinese moved to README_CN.md with cross-link. Version bumped from 0.13.1 to 0.13.2 for PyPI republish. GitHub pushed, PyP"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_050",
         "timestamp": 24164579,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -793,14 +793,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_051",
         "timestamp": 24164580,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -809,14 +809,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_052",
         "timestamp": 24164613,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -825,21 +825,21 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_053",
         "timestamp": 24221373,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__update_memory",
+          "tool_name": "mcp__memory-service__update_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -847,7 +847,7 @@
       {
         "id": "evt_054",
         "timestamp": 24309500,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -856,14 +856,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-local-memory.md"
+          "target": "/~memory/project-local-memory.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_055",
         "timestamp": 24347905,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -872,14 +872,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_056",
         "timestamp": 24354335,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -888,14 +888,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_057",
         "timestamp": 24360673,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -904,21 +904,21 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_058",
         "timestamp": 24376016,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__update_memory",
+          "tool_name": "mcp__memory-service__update_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -926,14 +926,14 @@
       {
         "id": "evt_059",
         "timestamp": 26962010,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__recall_memory",
+          "tool_name": "mcp__memory-service__recall_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -941,7 +941,7 @@
       {
         "id": "evt_060",
         "timestamp": 26962012,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -950,14 +950,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-diting-skill.md"
+          "target": "/~memory/monitor-system-skill.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_061",
         "timestamp": 26962047,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -966,14 +966,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-diting-roadmap.md"
+          "target": "/~memory/monitor-system-roadmap.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_062",
         "timestamp": 27011003,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -981,14 +981,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check diting recent commits and core file sizes"
+          "message": "Check monitor-system recent commits and core file sizes"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_063",
         "timestamp": 27011005,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1003,7 +1003,7 @@
       {
         "id": "evt_064",
         "timestamp": 27393363,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1018,7 +1018,7 @@
       {
         "id": "evt_065",
         "timestamp": 27440438,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1027,14 +1027,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-diting-issues-20260413.md"
+          "target": "/~memory/monitor-system-issues-20260413.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_066",
         "timestamp": 27448403,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1049,7 +1049,7 @@
       {
         "id": "evt_067",
         "timestamp": 27454239,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1064,7 +1064,7 @@
       {
         "id": "evt_068",
         "timestamp": 27460635,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1079,7 +1079,7 @@
       {
         "id": "evt_069",
         "timestamp": 27466546,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1087,14 +1087,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Find diting run data in other locations"
+          "message": "Find monitor-system run data in other locations"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_070",
         "timestamp": 31864161,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1109,7 +1109,7 @@
       {
         "id": "evt_071",
         "timestamp": 32411507,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1124,7 +1124,7 @@
       {
         "id": "evt_072",
         "timestamp": 32417399,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1139,7 +1139,7 @@
       {
         "id": "evt_073",
         "timestamp": 32426173,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1154,7 +1154,7 @@
       {
         "id": "evt_074",
         "timestamp": 32444835,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1169,7 +1169,7 @@
       {
         "id": "evt_075",
         "timestamp": 32451046,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1184,7 +1184,7 @@
       {
         "id": "evt_076",
         "timestamp": 32458049,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1200,7 +1200,7 @@
       {
         "id": "evt_077",
         "timestamp": 32458067,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1216,7 +1216,7 @@
       {
         "id": "evt_078",
         "timestamp": 32464035,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1231,7 +1231,7 @@
       {
         "id": "evt_079",
         "timestamp": 32470393,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1247,7 +1247,7 @@
       {
         "id": "evt_080",
         "timestamp": 32470394,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1263,7 +1263,7 @@
       {
         "id": "evt_081",
         "timestamp": 32476364,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1279,7 +1279,7 @@
       {
         "id": "evt_082",
         "timestamp": 32484348,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1295,7 +1295,7 @@
       {
         "id": "evt_083",
         "timestamp": 32522235,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1311,7 +1311,7 @@
       {
         "id": "evt_084",
         "timestamp": 32549444,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1327,7 +1327,7 @@
       {
         "id": "evt_085",
         "timestamp": 32578450,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1343,7 +1343,7 @@
       {
         "id": "evt_086",
         "timestamp": 32609005,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1359,7 +1359,7 @@
       {
         "id": "evt_087",
         "timestamp": 32647963,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1375,7 +1375,7 @@
       {
         "id": "evt_088",
         "timestamp": 32665610,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1390,7 +1390,7 @@
       {
         "id": "evt_089",
         "timestamp": 32676629,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1405,7 +1405,7 @@
       {
         "id": "evt_090",
         "timestamp": 32682109,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1420,7 +1420,7 @@
       {
         "id": "evt_091",
         "timestamp": 32687524,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1435,7 +1435,7 @@
       {
         "id": "evt_092",
         "timestamp": 32693571,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1450,14 +1450,14 @@
       {
         "id": "evt_093",
         "timestamp": 32826429,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
+          "tool_name": "mcp__memory-service__store_memory",
           "message": "[公众号配图深色背景规范]\n所有内文配图HTML统一使用深色背景，与封面图风格一致。\n核心色值：body #000, card #0D1B2A + border 1px solid rgba(255,255,255,0.06), box-shadow rgba(0,0,0,0.3), title #fff, 正文 rgba(255,255,255,0.6-0.8), footer rgba(255"
         },
         "drift_score_at_event": 0
@@ -1465,7 +1465,7 @@
       {
         "id": "evt_094",
         "timestamp": 32838326,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1474,14 +1474,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/article-writing-standards.md"
+          "target": "/~memory/article-writing-standards.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_095",
         "timestamp": 33148152,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1496,7 +1496,7 @@
       {
         "id": "evt_096",
         "timestamp": 33159235,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1511,7 +1511,7 @@
       {
         "id": "evt_097",
         "timestamp": 33166064,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1526,7 +1526,7 @@
       {
         "id": "evt_098",
         "timestamp": 33174931,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1541,7 +1541,7 @@
       {
         "id": "evt_099",
         "timestamp": 33289106,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1556,14 +1556,14 @@
       {
         "id": "evt_100",
         "timestamp": 33297484,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
+          "tool_name": "mcp__memory-service__store_memory",
           "message": "[公众号改名] 2026-05-12 公众号从\"测试进化论\"改为\"runtime质量论\"。所有文章HTML配图brand文字和MD正文已批量替换。文章目录名和文件夹名仍为\"测试进化论\"未改（影响太大且不影响发布）。slogan待确认是否更新（原：测试不会消失，只会进化）"
         },
         "drift_score_at_event": 0
@@ -1571,7 +1571,7 @@
       {
         "id": "evt_101",
         "timestamp": 33437735,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1587,7 +1587,7 @@
       {
         "id": "evt_102",
         "timestamp": 33449682,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1603,7 +1603,7 @@
       {
         "id": "evt_103",
         "timestamp": 33459817,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1619,7 +1619,7 @@
       {
         "id": "evt_104",
         "timestamp": 33473829,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1635,7 +1635,7 @@
       {
         "id": "evt_105",
         "timestamp": 33482827,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1651,7 +1651,7 @@
       {
         "id": "evt_106",
         "timestamp": 33489118,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1667,7 +1667,7 @@
       {
         "id": "evt_107",
         "timestamp": 33495278,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1682,7 +1682,7 @@
       {
         "id": "evt_108",
         "timestamp": 33501927,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1698,14 +1698,14 @@
       {
         "id": "evt_109",
         "timestamp": 33693737,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
+          "tool_name": "mcp__memory-service__store_memory",
           "message": "[公众号内容策略：深度够了，缺传播]\n用户2026-05-12给出的关键判断：已有深度但不会传播，太像\"认真写文章的人\"。\n核心问题：文章全是对的、深的、工程视角，但没有情绪入口。读者不会转发\"这篇很厉害\"，只转发\"说出了我的焦虑/恐惧/不安\"。\n**真正被转发的是**：说出了焦虑、说出了恐惧、说出了行业变化、说出了隐隐不安。天然有\"失控感\"的话题（权限失控/Eval失效/AI变脆/Tool投毒/"
         },
         "drift_score_at_event": 0
@@ -1713,7 +1713,7 @@
       {
         "id": "evt_110",
         "timestamp": 33739714,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1729,7 +1729,7 @@
       {
         "id": "evt_111",
         "timestamp": 33747796,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1745,7 +1745,7 @@
       {
         "id": "evt_112",
         "timestamp": 33755413,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1754,14 +1754,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_113",
         "timestamp": 33766555,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1770,21 +1770,21 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_114",
         "timestamp": 33841923,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
+          "tool_name": "mcp__memory-service__store_memory",
           "message": "[公众号流量篇写法公式]\n用户2026-05-12明确的流量篇结构，区别于深度篇：\n\n**流量篇三段式**：\n1. 开头（情绪）：真实场景+数据砸脸，3段内到情绪顶点，不要铺垫\n2. 中间（冲突）：本以为会更好→结果更失控，制造\"越做越好但越做越怕\"的张力，不急着讲方案\n3. 后半段（认知升级）：读者被情绪带进来了，这时再讲技术才有人看\n\n**流量篇标题公式**：具体数字 + 读者自我代入 + 损"
         },
         "drift_score_at_event": 0
@@ -1792,7 +1792,7 @@
       {
         "id": "evt_115",
         "timestamp": 33848643,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1801,14 +1801,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_116",
         "timestamp": 33949274,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1817,14 +1817,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_117",
         "timestamp": 33961209,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1833,14 +1833,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_118",
         "timestamp": 33965678,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1849,14 +1849,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_119",
         "timestamp": 33971015,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1865,14 +1865,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_120",
         "timestamp": 33979799,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1881,14 +1881,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_121",
         "timestamp": 34378590,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1903,7 +1903,7 @@
       {
         "id": "evt_122",
         "timestamp": 34382495,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1912,21 +1912,21 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "8e3f1184-ea32-402f-9f64-d4e293c9d85b/2.png"
+          "target": "/~8e3f1184-ea32-402f-9f64-d4e293c9d85b/2.png"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_123",
         "timestamp": 34439859,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
+          "tool_name": "mcp__memory-service__store_memory",
           "message": "用户分享了公众号文章数据截图(2026-05-12)，待确认具体阅读数。已发布15篇中：流量篇(0611b/15)预计阅读最高(标题带焦虑/冲突)，深度篇(02/10/14)预计阅读最低。数据将用于验证内容策略(流量篇vs深度篇vs信号篇)并决定待发5篇的发布顺序。"
         },
         "drift_score_at_event": 0
@@ -1934,14 +1934,14 @@
       {
         "id": "evt_124",
         "timestamp": 34706209,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
+          "tool_name": "mcp__memory-service__store_memory",
           "message": "公众号文章数据(2026-05-12)因新号流量奖励可能失真，早期文章阅读量虚高，不能用于验证流量篇vs深度篇策略。应等新号红利消退后用后续文章数据验证。发布策略：流量篇深度篇交替发，用真实数据自然对比。"
         },
         "drift_score_at_event": 0
@@ -1949,7 +1949,7 @@
       {
         "id": "evt_125",
         "timestamp": 34766074,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1958,14 +1958,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_126",
         "timestamp": 34774323,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1974,14 +1974,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_127",
         "timestamp": 34781203,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -1990,14 +1990,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_128",
         "timestamp": 34872787,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2012,7 +2012,7 @@
       {
         "id": "evt_129",
         "timestamp": 34876211,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2027,7 +2027,7 @@
       {
         "id": "evt_130",
         "timestamp": 34880155,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2042,7 +2042,7 @@
       {
         "id": "evt_131",
         "timestamp": 34903810,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2057,7 +2057,7 @@
       {
         "id": "evt_132",
         "timestamp": 34908218,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2073,7 +2073,7 @@
       {
         "id": "evt_133",
         "timestamp": 34908219,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2089,7 +2089,7 @@
       {
         "id": "evt_134",
         "timestamp": 34914763,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2104,7 +2104,7 @@
       {
         "id": "evt_135",
         "timestamp": 34921837,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2119,7 +2119,7 @@
       {
         "id": "evt_136",
         "timestamp": 34926490,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2134,7 +2134,7 @@
       {
         "id": "evt_137",
         "timestamp": 34931042,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2149,7 +2149,7 @@
       {
         "id": "evt_138",
         "timestamp": 34934980,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2164,7 +2164,7 @@
       {
         "id": "evt_139",
         "timestamp": 34947592,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2173,14 +2173,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_140",
         "timestamp": 34951125,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2189,14 +2189,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_141",
         "timestamp": 34968717,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2205,14 +2205,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_142",
         "timestamp": 34977619,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2221,14 +2221,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/project-article-publish-status.md"
+          "target": "/~memory/project-article-publish-status.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_143",
         "timestamp": 34988304,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
@@ -2237,21 +2237,21 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_144",
         "timestamp": 35030874,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__recall_memory",
+          "tool_name": "mcp__memory-service__recall_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -2259,14 +2259,14 @@
       {
         "id": "evt_145",
         "timestamp": 35051779,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__update_memory",
+          "tool_name": "mcp__memory-service__update_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -2274,14 +2274,14 @@
       {
         "id": "evt_146",
         "timestamp": 35058121,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__update_memory",
+          "tool_name": "mcp__memory-service__update_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -2289,14 +2289,14 @@
       {
         "id": "evt_147",
         "timestamp": 35079307,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__update_memory",
+          "tool_name": "mcp__memory-service__update_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -2304,14 +2304,14 @@
       {
         "id": "evt_148",
         "timestamp": 35086892,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__update_memory",
+          "tool_name": "mcp__memory-service__update_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -2319,15 +2319,15 @@
       {
         "id": "evt_149",
         "timestamp": 35179197,
-        "session_id": "sess_8e3f1184-ea32-402f-9f64-d4e293c9d85b",
+        "session_id": "sess_e8e3f118",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_8e3f1184",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
-          "message": "[记忆更新优先级] 优先更新Engram MCP记忆，本地文件记忆(MEMORY.md等)看情况更新。Engram是语义检索的主力，本地文件只是静态索引。以后每次有重要信息变更，先存Engram，本地文件不急就跳过。"
+          "tool_name": "mcp__memory-service__store_memory",
+          "message": "[记忆更新优先级] 优先更新memory-service MCP记忆，本地文件记忆(MEMORY.md等)看情况更新。memory-service是语义检索的主力，本地文件只是静态索引。以后每次有重要信息变更，先存memory-service，本地文件不急就跳过。"
         },
         "drift_score_at_event": 0
       }

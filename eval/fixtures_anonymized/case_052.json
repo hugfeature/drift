@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdenfc6",
+  "id": "fixture_5h32h49x",
   "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+    "id": "sess_e07c41ee",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_07c41ee2",
@@ -33,14 +33,14 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__recall_memory",
+          "tool_name": "mcp__memory-service__recall_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -48,7 +48,7 @@
       {
         "id": "evt_002",
         "timestamp": 1826,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -56,14 +56,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Agent",
-          "message": "Explore engram codebase structure"
+          "message": "Explore memory-service codebase structure"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_003",
         "timestamp": 417450,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -72,14 +72,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_004",
         "timestamp": 499746,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -94,7 +94,7 @@
       {
         "id": "evt_005",
         "timestamp": 1949565,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -109,7 +109,7 @@
       {
         "id": "evt_006",
         "timestamp": 2081516,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -124,7 +124,7 @@
       {
         "id": "evt_007",
         "timestamp": 2473256,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -139,7 +139,7 @@
       {
         "id": "evt_008",
         "timestamp": 2477394,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -154,7 +154,7 @@
       {
         "id": "evt_009",
         "timestamp": 2481229,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -169,7 +169,7 @@
       {
         "id": "evt_010",
         "timestamp": 2485283,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -184,7 +184,7 @@
       {
         "id": "evt_011",
         "timestamp": 2517342,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -199,7 +199,7 @@
       {
         "id": "evt_012",
         "timestamp": 2522904,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -214,7 +214,7 @@
       {
         "id": "evt_013",
         "timestamp": 2526467,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -229,7 +229,7 @@
       {
         "id": "evt_014",
         "timestamp": 2531316,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -238,14 +238,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_015",
         "timestamp": 2531318,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -254,14 +254,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/pruner.py"
+          "target": "/~memory-service/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_016",
         "timestamp": 2531320,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -270,14 +270,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/retrieve.py"
+          "target": "/~memory-service/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_017",
         "timestamp": 2537160,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -286,14 +286,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_018",
         "timestamp": 2537162,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -302,14 +302,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/server.py"
+          "target": "/~memory-service/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_019",
         "timestamp": 2537163,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -318,14 +318,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_020",
         "timestamp": 2543866,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -334,14 +334,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/handlers.py"
+          "target": "/~memory-service/handlers.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_021",
         "timestamp": 2543869,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -350,14 +350,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/consolidator.py"
+          "target": "/~memory-service/consolidator.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_022",
         "timestamp": 2543871,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -366,14 +366,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/graph.py"
+          "target": "/~memory-service/graph.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_023",
         "timestamp": 2565375,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -382,14 +382,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_024",
         "timestamp": 2572692,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -398,14 +398,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_025",
         "timestamp": 2577941,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -414,14 +414,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_026",
         "timestamp": 2583347,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -430,14 +430,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_027",
         "timestamp": 2589514,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -446,14 +446,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_028",
         "timestamp": 2632606,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -462,14 +462,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/pruner.py"
+          "target": "/~memory-service/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_029",
         "timestamp": 2640172,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -478,14 +478,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/handlers.py"
+          "target": "/~memory-service/handlers.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_030",
         "timestamp": 2649369,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -494,14 +494,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_031",
         "timestamp": 2662874,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -509,14 +509,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Run engram tests to verify FTS fix"
+          "message": "Run memory-service tests to verify FTS fix"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_032",
         "timestamp": 2685991,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -525,14 +525,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "tests/test_integration.py"
+          "target": "/~tests/test_integration.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_033",
         "timestamp": 2689596,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -541,14 +541,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "tests/conftest.py"
+          "target": "/~tests/conftest.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_034",
         "timestamp": 2713439,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -556,15 +556,15 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "\"\"\"Tests for FTS index freshness — verifies BM25 search works after writes.\"\"\"\n\nimport pytest\n\nfrom engram.db import MemoryDB\n\n\n@pytest.fixture\ndef fts_db(tmp_path):\n    return MemoryDB(str(tmp_path /",
-          "target": "tests/test_fts_fix.py"
+          "message": "\"\"\"Tests for FTS index freshness — verifies BM25 search works after writes.\"\"\"\n\nimport pytest\n\nfrom memory-service.db import MemoryDB\n\n\n@pytest.fixture\ndef fts_db(tmp_path):\n    return MemoryDB(str(tmp_path /",
+          "target": "/~tests/test_fts_fix.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_035",
         "timestamp": 2717543,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -579,7 +579,7 @@
       {
         "id": "evt_036",
         "timestamp": 2725350,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -588,14 +588,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "tests/test_fts_fix.py"
+          "target": "/~tests/test_fts_fix.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_037",
         "timestamp": 2731223,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -610,7 +610,7 @@
       {
         "id": "evt_038",
         "timestamp": 2737182,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -625,7 +625,7 @@
       {
         "id": "evt_039",
         "timestamp": 2756175,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -640,7 +640,7 @@
       {
         "id": "evt_040",
         "timestamp": 2756177,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -655,7 +655,7 @@
       {
         "id": "evt_041",
         "timestamp": 2756178,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -670,7 +670,7 @@
       {
         "id": "evt_042",
         "timestamp": 2763044,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -679,14 +679,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_043",
         "timestamp": 2802452,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -695,14 +695,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_044",
         "timestamp": 2806755,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -717,7 +717,7 @@
       {
         "id": "evt_045",
         "timestamp": 2811336,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -732,7 +732,7 @@
       {
         "id": "evt_046",
         "timestamp": 2811338,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -747,7 +747,7 @@
       {
         "id": "evt_047",
         "timestamp": 2822424,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -756,14 +756,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "\"\"\"Shared singletons and dispatch logic for MCP stdio and HTTP servers.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport logging\n\nfrom mcp.types import TextContent\n\nfrom .db import MemoryDB\n",
-          "target": "engram/shared.py"
+          "target": "/~memory-service/shared.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_048",
         "timestamp": 2833455,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -771,15 +771,15 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "\"\"\"Engram MCP Server — stdio mode, 8 tools.\"\"\"\n\nfrom __future__ import annotations\n\nimport asyncio\nimport logging\nimport sys\n\nfrom mcp.server import Server\nfrom mcp.server.stdio import stdio_server\nfr",
-          "target": "engram/server.py"
+          "message": "\"\"\"memory-service MCP Server — stdio mode, 8 tools.\"\"\"\n\nfrom __future__ import annotations\n\nimport asyncio\nimport logging\nimport sys\n\nfrom mcp.server import Server\nfrom mcp.server.stdio import stdio_server\nfr",
+          "target": "/~memory-service/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_049",
         "timestamp": 2883245,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -787,15 +787,15 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "\"\"\"Engram Unified Server — FastAPI REST + MCP StreamableHTTP.\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport logging\nimport sys\nfrom contextlib import asynccontextmanager\n\nfrom fastapi",
-          "target": "engram/http_server.py"
+          "message": "\"\"\"memory-service Unified Server — FastAPI REST + MCP StreamableHTTP.\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport logging\nimport sys\nfrom contextlib import asynccontextmanager\n\nfrom fastapi",
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_050",
         "timestamp": 2889478,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -804,14 +804,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_051",
         "timestamp": 2893284,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -820,14 +820,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_052",
         "timestamp": 2898113,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -842,7 +842,7 @@
       {
         "id": "evt_053",
         "timestamp": 2902389,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -851,14 +851,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_054",
         "timestamp": 2924730,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -867,14 +867,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_055",
         "timestamp": 2929547,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -883,14 +883,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_056",
         "timestamp": 2933363,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -905,7 +905,7 @@
       {
         "id": "evt_057",
         "timestamp": 2939705,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -920,7 +920,7 @@
       {
         "id": "evt_058",
         "timestamp": 2944978,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -935,7 +935,7 @@
       {
         "id": "evt_059",
         "timestamp": 2982916,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -944,14 +944,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_060",
         "timestamp": 2987685,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -966,7 +966,7 @@
       {
         "id": "evt_061",
         "timestamp": 2992219,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -981,7 +981,7 @@
       {
         "id": "evt_062",
         "timestamp": 2995990,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -990,14 +990,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_063",
         "timestamp": 3039228,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1006,14 +1006,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_064",
         "timestamp": 3046120,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1022,14 +1022,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_065",
         "timestamp": 3053344,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1038,14 +1038,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_066",
         "timestamp": 3059220,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1054,14 +1054,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_067",
         "timestamp": 3064422,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1070,14 +1070,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_068",
         "timestamp": 3068544,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1086,14 +1086,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_069",
         "timestamp": 3079854,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1102,14 +1102,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_070",
         "timestamp": 3107347,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1118,14 +1118,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_071",
         "timestamp": 3111925,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1140,7 +1140,7 @@
       {
         "id": "evt_072",
         "timestamp": 3157985,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1155,7 +1155,7 @@
       {
         "id": "evt_073",
         "timestamp": 3164755,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1164,14 +1164,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "tests/test_http.py"
+          "target": "/~tests/test_http.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_074",
         "timestamp": 3173960,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1180,14 +1180,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "tests/test_http.py"
+          "target": "/~tests/test_http.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_075",
         "timestamp": 3181321,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1196,14 +1196,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "tests/test_http.py"
+          "target": "/~tests/test_http.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_076",
         "timestamp": 3185722,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1218,7 +1218,7 @@
       {
         "id": "evt_077",
         "timestamp": 3202441,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1233,7 +1233,7 @@
       {
         "id": "evt_078",
         "timestamp": 3221513,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1242,14 +1242,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_079",
         "timestamp": 3225929,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1264,7 +1264,7 @@
       {
         "id": "evt_080",
         "timestamp": 3241018,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1273,14 +1273,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_081",
         "timestamp": 3245559,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1289,14 +1289,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/http_server.py"
+          "target": "/~memory-service/http_server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_082",
         "timestamp": 3249975,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1311,7 +1311,7 @@
       {
         "id": "evt_083",
         "timestamp": 3264359,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1326,7 +1326,7 @@
       {
         "id": "evt_084",
         "timestamp": 3304370,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1341,7 +1341,7 @@
       {
         "id": "evt_085",
         "timestamp": 3309521,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1350,14 +1350,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "tests/test_v02_features.py"
+          "target": "/~tests/test_v02_features.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_086",
         "timestamp": 3314443,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1372,7 +1372,7 @@
       {
         "id": "evt_087",
         "timestamp": 3402527,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1387,7 +1387,7 @@
       {
         "id": "evt_088",
         "timestamp": 3421027,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1402,7 +1402,7 @@
       {
         "id": "evt_089",
         "timestamp": 3421028,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1417,7 +1417,7 @@
       {
         "id": "evt_090",
         "timestamp": 3452650,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1426,14 +1426,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/consolidator.py"
+          "target": "/~memory-service/consolidator.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_091",
         "timestamp": 3466888,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1442,14 +1442,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/pruner.py"
+          "target": "/~memory-service/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_092",
         "timestamp": 3506536,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1464,7 +1464,7 @@
       {
         "id": "evt_093",
         "timestamp": 3524323,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1479,7 +1479,7 @@
       {
         "id": "evt_094",
         "timestamp": 3524325,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1494,7 +1494,7 @@
       {
         "id": "evt_095",
         "timestamp": 3529684,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1503,14 +1503,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_096",
         "timestamp": 3540054,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1519,14 +1519,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_097",
         "timestamp": 3545376,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1535,14 +1535,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_098",
         "timestamp": 3550216,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1551,14 +1551,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_099",
         "timestamp": 3555066,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1573,7 +1573,7 @@
       {
         "id": "evt_100",
         "timestamp": 3559766,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1582,14 +1582,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_101",
         "timestamp": 3565266,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1598,14 +1598,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_102",
         "timestamp": 3570784,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1614,14 +1614,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_103",
         "timestamp": 3576048,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1630,14 +1630,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_104",
         "timestamp": 3580802,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1646,14 +1646,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/db.py"
+          "target": "/~memory-service/db.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_105",
         "timestamp": 3587275,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1662,14 +1662,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/retrieve.py"
+          "target": "/~memory-service/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_106",
         "timestamp": 3592717,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1678,14 +1678,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/retrieve.py"
+          "target": "/~memory-service/retrieve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_107",
         "timestamp": 3598384,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1694,14 +1694,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/server.py"
+          "target": "/~memory-service/server.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_108",
         "timestamp": 3604244,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1710,14 +1710,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_109",
         "timestamp": 3609804,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1726,14 +1726,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_110",
         "timestamp": 3615503,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1742,14 +1742,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_111",
         "timestamp": 3620781,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1758,14 +1758,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/embedding.py"
+          "target": "/~memory-service/embedding.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_112",
         "timestamp": 3665336,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1774,14 +1774,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/consolidator.py"
+          "target": "/~memory-service/consolidator.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_113",
         "timestamp": 3669933,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1790,14 +1790,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/resolve.py"
+          "target": "/~memory-service/resolve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_114",
         "timestamp": 3675326,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1812,7 +1812,7 @@
       {
         "id": "evt_115",
         "timestamp": 3679973,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1821,14 +1821,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/resolve.py"
+          "target": "/~memory-service/resolve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_116",
         "timestamp": 3685472,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1837,14 +1837,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/resolve.py"
+          "target": "/~memory-service/resolve.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_117",
         "timestamp": 3690684,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1853,14 +1853,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/pruner.py"
+          "target": "/~memory-service/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_118",
         "timestamp": 3724319,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1869,14 +1869,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/pruner.py"
+          "target": "/~memory-service/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_119",
         "timestamp": 3729807,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1885,14 +1885,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/pruner.py"
+          "target": "/~memory-service/pruner.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_120",
         "timestamp": 3789847,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1907,7 +1907,7 @@
       {
         "id": "evt_121",
         "timestamp": 3808171,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1916,14 +1916,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/__init__.py"
+          "target": "/~memory-service/__init__.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_122",
         "timestamp": 3813281,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1932,14 +1932,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/__init__.py"
+          "target": "/~memory-service/__init__.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_123",
         "timestamp": 3817819,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1954,7 +1954,7 @@
       {
         "id": "evt_124",
         "timestamp": 3823144,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1963,14 +1963,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/pyproject.toml"
+          "target": "/~memory-service/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_125",
         "timestamp": 3827141,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1979,14 +1979,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/pyproject.toml"
+          "target": "/~memory-service/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_126",
         "timestamp": 3832482,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -1995,14 +1995,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/pyproject.toml"
+          "target": "/~memory-service/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_127",
         "timestamp": 3845014,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2017,7 +2017,7 @@
       {
         "id": "evt_128",
         "timestamp": 3861998,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2032,22 +2032,22 @@
       {
         "id": "evt_129",
         "timestamp": 3869067,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
-          "message": "Engram v0.5.1: P0 FTS fix (dirty flag + on-demand rebuild), embedding cache thread safety (_cache_lock), shared server module (shared.py), FTS observability (fts_available in stats/health), consolidat"
+          "tool_name": "mcp__memory-service__store_memory",
+          "message": "memory-service v0.5.1: P0 FTS fix (dirty flag + on-demand rebuild), embedding cache thread safety (_cache_lock), shared server module (shared.py), FTS observability (fts_available in stats/health), consolidat"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_130",
         "timestamp": 3936349,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2056,14 +2056,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/README.md"
+          "target": "/~memory-service/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_131",
         "timestamp": 4026887,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2071,15 +2071,15 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "# Engram\n\n**Every task leaves a trace.**\n\nEngram 是一个面向 AI Agent 的**会话接力与记忆系统**，让任务可以跨会话、跨 Agent 持续推进，而不是每次从零开始。\n\n它本地运行，提供记忆检索、会话交接、工程状态管理和自动整理能力。\n\n---\n\n## 🚨 The Real Problem\n\nAI Agent 已经很强，但在真实工程中有三个",
-          "target": "engram/README.md"
+          "message": "# memory-service\n\n**Every task leaves a trace.**\n\nmemory-service 是一个面向 AI Agent 的**会话接力与记忆系统**，让任务可以跨会话、跨 Agent 持续推进，而不是每次从零开始。\n\n它本地运行，提供记忆检索、会话交接、工程状态管理和自动整理能力。\n\n---\n\n## 🚨 The Real Problem\n\nAI Agent 已经很强，但在真实工程中有三个",
+          "target": "/~memory-service/README.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_132",
         "timestamp": 4034136,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2088,14 +2088,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/pyproject.toml"
+          "target": "/~memory-service/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_133",
         "timestamp": 4041021,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2104,14 +2104,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "engram/pyproject.toml"
+          "target": "/~memory-service/pyproject.toml"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_134",
         "timestamp": 4046123,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2126,7 +2126,7 @@
       {
         "id": "evt_135",
         "timestamp": 4066533,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",
@@ -2141,7 +2141,7 @@
       {
         "id": "evt_136",
         "timestamp": 4075632,
-        "session_id": "sess_07c41ee2-7554-4b46-bced-dd8a41ab7baf",
+        "session_id": "sess_e07c41ee",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_07c41ee2",

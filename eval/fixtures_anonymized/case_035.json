@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpden51l",
+  "id": "fixture_u5x3femd",
   "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+    "id": "sess_ee837217",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_e8372176",
@@ -33,7 +33,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -42,14 +42,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/SKILL.md"
+          "target": "/~monitor-system/SKILL.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_002",
         "timestamp": 1,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -58,14 +58,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/diting-prompt-template.md"
+          "target": "/~monitor-system/monitor-system-prompt-template.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_003",
         "timestamp": 6176,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -80,7 +80,7 @@
       {
         "id": "evt_004",
         "timestamp": 6178,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -95,7 +95,7 @@
       {
         "id": "evt_005",
         "timestamp": 12284,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -104,14 +104,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "page-cache/_alarm_cloudNative.md"
+          "target": "/~page-cache/_alarm_cloudNative.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_006",
         "timestamp": 12286,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -120,14 +120,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "references/antmonitor-browser-patterns.md"
+          "target": "/~references/antmonitor-browser-patterns.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_007",
         "timestamp": 65798,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -136,14 +136,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/diting-submit.sh"
+          "target": "/~monitor-system/monitor-system-submit.sh"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_008",
         "timestamp": 65800,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -151,14 +151,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Search for Mybank-related references in diting"
+          "message": "Search for Mybank-related references in monitor-system"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_009",
         "timestamp": 76841,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -173,7 +173,7 @@
       {
         "id": "evt_010",
         "timestamp": 76844,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -188,14 +188,14 @@
       {
         "id": "evt_011",
         "timestamp": 80328,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__recall_memory",
+          "tool_name": "mcp__memory-service__recall_memory",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -203,7 +203,7 @@
       {
         "id": "evt_012",
         "timestamp": 101271,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -218,7 +218,7 @@
       {
         "id": "evt_013",
         "timestamp": 111201,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -233,7 +233,7 @@
       {
         "id": "evt_014",
         "timestamp": 1262112,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -248,7 +248,7 @@
       {
         "id": "evt_015",
         "timestamp": 1265500,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -257,14 +257,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "page-cache/_business_domain_1.md"
+          "target": "/~page-cache/_business_domain_1.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_016",
         "timestamp": 1312500,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -273,14 +273,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "# 网商环境冒烟测试\n\n## 基本信息\n- 环境：网商预发\n- 基础URL：https://antmonitor-pre.mybank.cn\n- tenantName：my\n- 目标：验证5个核心模块功能可用（页面能加载、数据能展示、基本交互正常）\n\n## 测试模块\n\n### 1. 大盘\n- 访问大盘列表页，确认页面加载，能看到大盘卡片/列表\n- 点进一个大盘，确认大盘内容渲染（图表/数据不为空）",
-          "target": "diting/mybank-smoke.md"
+          "target": "/~monitor-system/mybank-smoke.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_017",
         "timestamp": 3333866,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -295,7 +295,7 @@
       {
         "id": "evt_018",
         "timestamp": 3365163,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -311,7 +311,7 @@
       {
         "id": "evt_019",
         "timestamp": 3404774,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -326,7 +326,7 @@
       {
         "id": "evt_020",
         "timestamp": 3427420,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -342,7 +342,7 @@
       {
         "id": "evt_021",
         "timestamp": 3431617,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -357,7 +357,7 @@
       {
         "id": "evt_022",
         "timestamp": 3435411,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -373,7 +373,7 @@
       {
         "id": "evt_023",
         "timestamp": 3460736,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -388,7 +388,7 @@
       {
         "id": "evt_user_001",
         "timestamp": 3504767,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_e8372176",
@@ -399,7 +399,7 @@
       {
         "id": "evt_024",
         "timestamp": 3504768,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -415,7 +415,7 @@
       {
         "id": "evt_025",
         "timestamp": 3526986,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -431,7 +431,7 @@
       {
         "id": "evt_026",
         "timestamp": 3532644,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -446,7 +446,7 @@
       {
         "id": "evt_027",
         "timestamp": 3536416,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -455,14 +455,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/failure-taxonomy.md"
+          "target": "/~monitor-system/failure-taxonomy.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_028",
         "timestamp": 3544811,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -478,7 +478,7 @@
       {
         "id": "evt_029",
         "timestamp": 3549033,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -494,7 +494,7 @@
       {
         "id": "evt_030",
         "timestamp": 3609976,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -510,7 +510,7 @@
       {
         "id": "evt_031",
         "timestamp": 3763954,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -525,7 +525,7 @@
       {
         "id": "evt_032",
         "timestamp": 3763956,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -540,7 +540,7 @@
       {
         "id": "evt_033",
         "timestamp": 3798982,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -555,7 +555,7 @@
       {
         "id": "evt_034",
         "timestamp": 3798984,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -570,7 +570,7 @@
       {
         "id": "evt_035",
         "timestamp": 3824806,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -585,7 +585,7 @@
       {
         "id": "evt_036",
         "timestamp": 3824808,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -600,7 +600,7 @@
       {
         "id": "evt_037",
         "timestamp": 3832428,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -616,7 +616,7 @@
       {
         "id": "evt_038",
         "timestamp": 10935401,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -625,14 +625,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/mybank-smoke.md"
+          "target": "/~monitor-system/mybank-smoke.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_039",
         "timestamp": 11840054,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -641,14 +641,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "diting/mybank-smoke.md"
+          "target": "/~monitor-system/mybank-smoke.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_040",
         "timestamp": 11879474,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -656,14 +656,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Submit diting smoke test task for Mybank"
+          "message": "Submit monitor-system smoke test task for Mybank"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_041",
         "timestamp": 11941903,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -671,14 +671,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check if diting watcher is running"
+          "message": "Check if monitor-system watcher is running"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_042",
         "timestamp": 11952003,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -693,7 +693,7 @@
       {
         "id": "evt_043",
         "timestamp": 11985321,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -701,14 +701,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Start diting watcher"
+          "message": "Start monitor-system watcher"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_044",
         "timestamp": 11989248,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -723,7 +723,7 @@
       {
         "id": "evt_045",
         "timestamp": 12047424,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -738,7 +738,7 @@
       {
         "id": "evt_046",
         "timestamp": 13681519,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -747,14 +747,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_047",
         "timestamp": 13691623,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -763,14 +763,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/project-diting-skill.md"
+          "target": "/~memory/monitor-system-skill.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_048",
         "timestamp": 13699893,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -778,15 +778,15 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "---\nname: 网商环境冒烟测试\ndescription: 网商(Mybank)预发环境冒烟测试用例+触发方式，5模块一键验证\ntype: project\n---\n\n## 基本信息\n\n- 环境：网商预发\n- 基础URL：https://antmonitor-pre.mybank.cn\n- tenantName：登录后默认即可，不需要手动拼\n- 用例文件：`~diting/myba",
-          "target": "memory/project-mybank-smoke.md"
+          "message": "---\nname: 网商环境冒烟测试\ndescription: 网商(Mybank)预发环境冒烟测试用例+触发方式，5模块一键验证\ntype: project\n---\n\n## 基本信息\n\n- 环境：网商预发\n- 基础URL：https://antmonitor-pre.mybank.cn\n- tenantName：登录后默认即可，不需要手动拼\n- 用例文件：`~monitor-system/myba",
+          "target": "/~memory/project-mybank-smoke.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_049",
         "timestamp": 13705453,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -795,14 +795,14 @@
         "payload": {
           "tool_name": "Write",
           "message": "---\nname: Obsidian runtime reliability模板\ndescription: 测试进化论vault的runtime reliability记录模板，含4核心板块+失败分类+基础设施启发\ntype: project\n---\n\n## 模板文件\n\n- 路径：`/~/Desktop/个人/测试进化论/_templates/runtime re",
-          "target": "memory/project-obsidian-runtime-template.md"
+          "target": "/~memory/project-obsidian-runtime-template.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_050",
         "timestamp": 13715793,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -811,36 +811,36 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_051",
         "timestamp": 13729202,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
-          "message": "[网商环境冒烟测试] 网商预发环境 https://antmonitor-pre.mybank.cn，用例文件 ~diting/mybank-smoke.md，5模块(大盘/自定义监控/应用监控/云原生监控/告警管理)一键验证。tenantName登录后默认即可不需手动拼。同一套代码两环境，网商偶尔发布但需验证功能可用，用谛听冒烟替代手动验证。"
+          "tool_name": "mcp__memory-service__store_memory",
+          "message": "[网商环境冒烟测试] 网商预发环境 https://antmonitor-pre.mybank.cn，用例文件 ~monitor-system/mybank-smoke.md，5模块(大盘/自定义监控/应用监控/云原生监控/告警管理)一键验证。tenantName登录后默认即可不需手动拼。同一套代码两环境，网商偶尔发布但需验证功能可用，用monitor-system冒烟替代手动验证。"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_052",
         "timestamp": 13729204,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
+          "tool_name": "mcp__memory-service__store_memory",
           "message": "[Obsidian runtime reliability模板] 测试进化论vault的模板，路径 _templates/runtime reliablity 模版.md，Obsidian核心模板插件已配置模板文件夹_templates。4核心板块：runtime行为→failure行为→根因(含L1-L5失败分类)→对基础设施的启发(约束化/检测/恢复三维度)。用于runtime质量论系列文章素"
         },
         "drift_score_at_event": 0
@@ -848,22 +848,22 @@
       {
         "id": "evt_053",
         "timestamp": 13772755,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
-          "message": "[记忆更新顺序] 优先更新Engram MCP，再更新本地文件记忆。用户明确要求这个顺序，不要反着来。**Why:** Engram是语义检索的主系统，本地是索引，主系统应先写保证一致性。**How to apply:** 每次保存记忆时，先调store_memory/update_memory，再Write本地文件。"
+          "tool_name": "mcp__memory-service__store_memory",
+          "message": "[记忆更新顺序] 优先更新memory-service MCP，再更新本地文件记忆。用户明确要求这个顺序，不要反着来。**Why:** memory-service是语义检索的主系统，本地是索引，主系统应先写保证一致性。**How to apply:** 每次保存记忆时，先调store_memory/update_memory，再Write本地文件。"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_054",
         "timestamp": 13777061,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -871,15 +871,15 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Write",
-          "message": "---\nname: 记忆更新顺序\ndescription: 优先Engram再本地，不要反着来\ntype: feedback\n---\n\n记忆更新顺序：**先Engram，后本地文件**。\n\n- 先调 `store_memory` / `update_memory` 写Engram\n- 再 `Write` / `Edit` 写本地文件\n\n**Why:** Engram是语义检索主系统，应先写保证一致",
-          "target": "memory/feedback-memory-update-order.md"
+          "message": "---\nname: 记忆更新顺序\ndescription: 优先memory-service再本地，不要反着来\ntype: feedback\n---\n\n记忆更新顺序：**先memory-service，后本地文件**。\n\n- 先调 `store_memory` / `update_memory` 写memory-service\n- 再 `Write` / `Edit` 写本地文件\n\n**Why:** memory-service是语义检索主系统，应先写保证一致",
+          "target": "/~memory/feedback-memory-update-order.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_055",
         "timestamp": 13789024,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -888,14 +888,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_056",
         "timestamp": 13825341,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -904,14 +904,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "memory/feedback-memory-update-order.md"
+          "target": "/~memory/feedback-memory-update-order.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_057",
         "timestamp": 13827926,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -927,7 +927,7 @@
       {
         "id": "evt_058",
         "timestamp": 13832592,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -943,7 +943,7 @@
       {
         "id": "evt_059",
         "timestamp": 13910769,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -958,7 +958,7 @@
       {
         "id": "evt_060",
         "timestamp": 13910770,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -967,14 +967,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "cc/CLAUDE.md"
+          "target": "/~cc/CLAUDE.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_061",
         "timestamp": 13917695,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -983,14 +983,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "cc/CLAUDE.md"
+          "target": "/~cc/CLAUDE.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_062",
         "timestamp": 13923853,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -999,14 +999,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_063",
         "timestamp": 14089973,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1014,14 +1014,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check if Engram is configured as MCP server"
+          "message": "Check if memory-service is configured as MCP server"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_064",
         "timestamp": 14090008,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1029,14 +1029,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check Engram installation method"
+          "message": "Check memory-service installation method"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_065",
         "timestamp": 14094276,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1044,14 +1044,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check Engram CLI interface"
+          "message": "Check memory-service CLI interface"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_066",
         "timestamp": 14100653,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1059,14 +1059,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check Engram package structure"
+          "message": "Check memory-service package structure"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_067",
         "timestamp": 14104318,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1074,14 +1074,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check Engram client/SDK structure"
+          "message": "Check memory-service client/SDK structure"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_068",
         "timestamp": 14107179,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1089,14 +1089,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check if Engram has HTTP API"
+          "message": "Check if memory-service has HTTP API"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_069",
         "timestamp": 14110658,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1104,14 +1104,14 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "Bash",
-          "message": "Check Engram REST API endpoints"
+          "message": "Check memory-service REST API endpoints"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_070",
         "timestamp": 14113714,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1126,7 +1126,7 @@
       {
         "id": "evt_071",
         "timestamp": 14116582,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1135,21 +1135,21 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "engram/shared.py"
+          "target": "/~memory-service/shared.py"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_072",
         "timestamp": 14190046,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__session_handoff",
+          "tool_name": "mcp__memory-service__session_handoff",
           "message": ""
         },
         "drift_score_at_event": 0
@@ -1157,22 +1157,22 @@
       {
         "id": "evt_073",
         "timestamp": 14195154,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
         "goal_relation": "aligned",
         "relation_confidence": 0.5,
         "payload": {
-          "tool_name": "mcp__engram__store_memory",
-          "message": "[Engram双通道] Engram同时支持MCP和REST API两种调用方式。REST端点：POST /v1/store、/v1/recall、/v1/update、/v1/handoff等，完整映射见engram/shared.py TOOL_REST_MAP。任何能发HTTP请求的agent（包括Codex）都能通过curl调用Engram，不依赖MCP支持。"
+          "tool_name": "mcp__memory-service__store_memory",
+          "message": "[memory-service双通道] memory-service同时支持MCP和REST API两种调用方式。REST端点：POST /v1/store、/v1/recall、/v1/update、/v1/handoff等，完整映射见memory-service/shared.py TOOL_REST_MAP。任何能发HTTP请求的agent（包括Codex）都能通过curl调用memory-service，不依赖MCP支持。"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_074",
         "timestamp": 14214040,
-        "session_id": "sess_e8372176-c667-4797-8c07-1aaa3b3e0780",
+        "session_id": "sess_ee837217",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e8372176",
@@ -1181,7 +1181,7 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "memory/MEMORY.md"
+          "target": "/~memory/MEMORY.md"
         },
         "drift_score_at_event": 0
       }

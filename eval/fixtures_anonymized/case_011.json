@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdempxk",
-  "description": "Imported OpenClaw trajectory: \"[Wed 2026-05-06 09:57 GMT+8] 帮我解决，skill符号链接逃逸这个我们需要讨论下再说怎么处理\"",
+  "id": "fixture_it4g72zd",
+  "description": "Imported agent-system trajectory: \"[Wed 2026-05-06 09:57 GMT+8] 帮我解决，skill符号链接逃逸这个我们需要讨论下再说怎么处理\"",
   "agent": "main",
   "created_at": 0,
   "session": {
-    "id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+    "id": "sess_ee6eaa19",
     "started_at": 0,
     "agent": "main",
     "active_goal_id": "goal_e6eaa19a",
@@ -35,7 +35,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -52,7 +52,7 @@
       {
         "id": "evt_002",
         "timestamp": 1000,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -69,7 +69,7 @@
       {
         "id": "evt_003",
         "timestamp": 2000,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -86,7 +86,7 @@
       {
         "id": "evt_004",
         "timestamp": 3000,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -94,7 +94,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "find files in ~/.openclaw/plugin-skills/ → print text → list files in ~/.openclaw/plugin-skills/"
+          "message": "find files in ~/.agent-system/plugin-skills/ → print text → list files in ~/.agent-system/plugin-skills/"
         },
         "drift_score_at_event": 0,
         "_turn_index": 1,
@@ -103,7 +103,7 @@
       {
         "id": "evt_005",
         "timestamp": 4000,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -120,7 +120,7 @@
       {
         "id": "evt_006",
         "timestamp": 1337975,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -128,7 +128,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run for skill → run do → print text → print text → list files (in ~/.openclaw/plugin-skills)"
+          "message": "run for skill → run do → print text → print text → list files (in ~/.agent-system/plugin-skills)"
         },
         "drift_score_at_event": 0,
         "_turn_index": 4,
@@ -137,7 +137,7 @@
       {
         "id": "evt_007",
         "timestamp": 1338975,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -145,7 +145,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run # → find files in ~/.openclaw/plugin-skills/ -> run xargs echo (+1 steps) → print text → print text → run for skill → run do if → run then echo"
+          "message": "run # → find files in ~/.agent-system/plugin-skills/ -> run xargs echo (+1 steps) → print text → print text → run for skill → run do if → run then echo"
         },
         "drift_score_at_event": 0,
         "_turn_index": 4,
@@ -154,7 +154,7 @@
       {
         "id": "evt_008",
         "timestamp": 5816111,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -166,12 +166,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 9,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_009",
         "timestamp": 8896213,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -179,7 +179,7 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "cron",
-          "message": "dingtalk-skills-sync"
+          "message": "[redacted-service]-skills-sync"
         },
         "drift_score_at_event": 0,
         "_turn_index": 10,
@@ -188,7 +188,7 @@
       {
         "id": "evt_010",
         "timestamp": 9299347,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -196,16 +196,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron"
+          "message": "run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 11,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_011",
         "timestamp": 9300347,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -213,16 +213,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron"
+          "message": "run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 11,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_012",
         "timestamp": 9301347,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -230,16 +230,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron"
+          "message": "run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 11,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_013",
         "timestamp": 9302347,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -247,16 +247,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron"
+          "message": "run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 11,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_014",
         "timestamp": 9303347,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -264,16 +264,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron"
+          "message": "run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 11,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_015",
         "timestamp": 9304347,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -281,16 +281,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw cron"
+          "message": "run agent-system cron"
         },
         "drift_score_at_event": 0,
         "_turn_index": 11,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_016",
         "timestamp": 14690750,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -302,12 +302,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 12,
-        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在钉钉给你发消息，你回很慢啊"
+        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在[redacted-service]给你发消息，你回很慢啊"
       },
       {
         "id": "evt_017",
         "timestamp": 14691750,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -315,16 +315,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "memory_search",
-          "message": "钉钉 响应慢 延迟"
+          "message": "[redacted-service] 响应慢 延迟"
         },
         "drift_score_at_event": 0,
         "_turn_index": 12,
-        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在钉钉给你发消息，你回很慢啊"
+        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在[redacted-service]给你发消息，你回很慢啊"
       },
       {
         "id": "evt_018",
         "timestamp": 14692750,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -332,16 +332,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "sessions_list",
-          "message": "kinds dingtalk, limit 5, include last message true"
+          "message": "kinds [redacted-service], limit 5, include last message true"
         },
         "drift_score_at_event": 0,
         "_turn_index": 12,
-        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在钉钉给你发消息，你回很慢啊"
+        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在[redacted-service]给你发消息，你回很慢啊"
       },
       {
         "id": "evt_019",
         "timestamp": 14693750,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -353,12 +353,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 12,
-        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在钉钉给你发消息，你回很慢啊"
+        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在[redacted-service]给你发消息，你回很慢啊"
       },
       {
         "id": "evt_020",
         "timestamp": 14694750,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -370,12 +370,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 12,
-        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在钉钉给你发消息，你回很慢啊"
+        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在[redacted-service]给你发消息，你回很慢啊"
       },
       {
         "id": "evt_021",
         "timestamp": 14695750,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -383,16 +383,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw status -> show first 40 lines"
+          "message": "run agent-system status -> show first 40 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 12,
-        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在钉钉给你发消息，你回很慢啊"
+        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在[redacted-service]给你发消息，你回很慢啊"
       },
       {
         "id": "evt_022",
         "timestamp": 14696750,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -400,16 +400,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw status -> show last 40 lines"
+          "message": "run agent-system status -> show last 40 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 12,
-        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在钉钉给你发消息，你回很慢啊"
+        "_turn_prompt": "[Wed 2026-05-06 14:01 GMT+8] 我在[redacted-service]给你发消息，你回很慢啊"
       },
       {
         "id": "evt_023",
         "timestamp": 15072624,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -421,12 +421,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_024",
         "timestamp": 15073624,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -438,12 +438,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_025",
         "timestamp": 15074624,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -455,12 +455,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_026",
         "timestamp": 15075624,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -472,12 +472,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 14,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_027",
         "timestamp": 21895187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -485,16 +485,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "show ~config/models.json → show ~/.openclaw/models.json → print text"
+          "message": "show ~config/models.json → show ~/.agent-system/models.json → print text"
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_028",
         "timestamp": 21896187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -502,16 +502,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw config → print text"
+          "message": "run agent-system config → print text"
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_029",
         "timestamp": 21897187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -519,16 +519,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "find files named \"models*\" in ~/.openclaw -> show first 20 lines"
+          "message": "find files named \"models*\" in ~/.agent-system -> show first 20 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_030",
         "timestamp": 21898187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -536,16 +536,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "show ~/.openclaw/config.yaml"
+          "message": "show ~/.agent-system/config.yaml"
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_031",
         "timestamp": 21899187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -557,12 +557,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_032",
         "timestamp": 21900187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -570,16 +570,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "search \"dingtalk\" in 2>/dev/null → print text → find files in ~/.openclaw -> show first 10 lines"
+          "message": "search \"[redacted-service]\" in 2>/dev/null → print text → find files in ~/.agent-system -> show first 10 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_033",
         "timestamp": 21901187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -587,16 +587,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw help → run openclaw sessions → run openclaw 2>/dev/null -> show first 30 lines"
+          "message": "run agent-system help → run agent-system sessions → run agent-system 2>/dev/null -> show first 30 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_034",
         "timestamp": 21902187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -608,12 +608,12 @@
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_035",
         "timestamp": 21903187,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -621,16 +621,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw 2>/dev/null -> search \"model\""
+          "message": "run agent-system 2>/dev/null -> search \"model\""
         },
         "drift_score_at_event": 0,
         "_turn_index": 22,
-        "_turn_prompt": "[OpenClaw heartbeat poll]"
+        "_turn_prompt": "[agent-system heartbeat poll]"
       },
       {
         "id": "evt_036",
         "timestamp": 26937598,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -638,16 +638,16 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw logs -> show last 80 lines"
+          "message": "run agent-system logs -> show last 80 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 25,
-        "_turn_prompt": "[Wed 2026-05-06 17:26 GMT+8] [219fc0d817780593876133161e20d6] 服务不可用 钉钉消息"
+        "_turn_prompt": "[Wed 2026-05-06 17:26 GMT+8] [219fc0d817780593876133161e20d6] 服务不可用 [redacted-service]消息"
       },
       {
         "id": "evt_037",
         "timestamp": 26938598,
-        "session_id": "sess_e6eaa19a-778d-4ab1-9e6c-6c11ec4e346b",
+        "session_id": "sess_ee6eaa19",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_e6eaa19a",
@@ -655,11 +655,11 @@
         "relation_confidence": 0.5,
         "payload": {
           "tool_name": "exec",
-          "message": "run openclaw status -> show first 60 lines"
+          "message": "run agent-system status -> show first 60 lines"
         },
         "drift_score_at_event": 0,
         "_turn_index": 25,
-        "_turn_prompt": "[Wed 2026-05-06 17:26 GMT+8] [219fc0d817780593876133161e20d6] 服务不可用 钉钉消息"
+        "_turn_prompt": "[Wed 2026-05-06 17:26 GMT+8] [219fc0d817780593876133161e20d6] 服务不可用 [redacted-service]消息"
       }
     ]
   },

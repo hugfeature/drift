@@ -1,10 +1,10 @@
 {
-  "id": "fixture_mpdenix6",
+  "id": "fixture_pxqxat9g",
   "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
   "agent": "claude-code",
   "created_at": 0,
   "session": {
-    "id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+    "id": "sess_e9d39729",
     "started_at": 0,
     "agent": "claude-code",
     "active_goal_id": "goal_9d39729b",
@@ -34,7 +34,7 @@
       {
         "id": "evt_001",
         "timestamp": 0,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -49,7 +49,7 @@
       {
         "id": "evt_002",
         "timestamp": 28,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -64,7 +64,7 @@
       {
         "id": "evt_user_001",
         "timestamp": 1213556,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_9d39729b",
@@ -75,7 +75,7 @@
       {
         "id": "evt_003",
         "timestamp": 1213557,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -90,7 +90,7 @@
       {
         "id": "evt_user_002",
         "timestamp": 1414643,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_9d39729b",
@@ -101,7 +101,7 @@
       {
         "id": "evt_004",
         "timestamp": 1414644,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -116,7 +116,7 @@
       {
         "id": "evt_005",
         "timestamp": 1426370,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -131,7 +131,7 @@
       {
         "id": "evt_user_003",
         "timestamp": 1656605,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_9d39729b",
@@ -142,7 +142,7 @@
       {
         "id": "evt_006",
         "timestamp": 1656606,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -157,7 +157,7 @@
       {
         "id": "evt_user_004",
         "timestamp": 1667410,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "goal_created",
         "source": "human",
         "goal_id": "goal_9d39729b",
@@ -168,7 +168,7 @@
       {
         "id": "evt_007",
         "timestamp": 1667411,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -183,7 +183,7 @@
       {
         "id": "evt_008",
         "timestamp": 1667416,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -198,7 +198,7 @@
       {
         "id": "evt_009",
         "timestamp": 1683979,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -213,7 +213,7 @@
       {
         "id": "evt_010",
         "timestamp": 1681822,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -228,7 +228,7 @@
       {
         "id": "evt_011",
         "timestamp": 1683956,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -243,7 +243,7 @@
       {
         "id": "evt_012",
         "timestamp": 1727545,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -258,7 +258,7 @@
       {
         "id": "evt_013",
         "timestamp": 1735337,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -273,7 +273,7 @@
       {
         "id": "evt_014",
         "timestamp": 1751234,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -288,7 +288,7 @@
       {
         "id": "evt_015",
         "timestamp": 1786634,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -303,7 +303,7 @@
       {
         "id": "evt_016",
         "timestamp": 1787110,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -318,7 +318,7 @@
       {
         "id": "evt_017",
         "timestamp": 1802113,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -334,7 +334,7 @@
       {
         "id": "evt_018",
         "timestamp": 1809805,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -350,7 +350,7 @@
       {
         "id": "evt_019",
         "timestamp": 1839083,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -359,14 +359,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "cc/.claude.json"
+          "target": "/~cc/.claude.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_020",
         "timestamp": 1891087,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -375,14 +375,14 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "cc/.claude.json"
+          "target": "/~cc/.claude.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_021",
         "timestamp": 1903656,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -391,14 +391,14 @@
         "payload": {
           "tool_name": "Read",
           "message": "",
-          "target": "cc/.claude.json"
+          "target": "/~cc/.claude.json"
         },
         "drift_score_at_event": 0
       },
       {
         "id": "evt_022",
         "timestamp": 1913487,
-        "session_id": "sess_9d39729b-bcde-4f99-b034-d21c1adb0002",
+        "session_id": "sess_e9d39729",
         "type": "tool_call",
         "source": "agent",
         "goal_id": "goal_9d39729b",
@@ -407,7 +407,7 @@
         "payload": {
           "tool_name": "Edit",
           "message": "",
-          "target": "cc/.claude.json"
+          "target": "/~cc/.claude.json"
         },
         "drift_score_at_event": 0
       }

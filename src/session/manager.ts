@@ -29,7 +29,8 @@ import { NarrativeEngine } from '../narrative/engine'
 import { TakeoverEngine } from '../governance/takeover'
 import { LangSmithExporter, type LangSmithExporterConfig } from '../exporters/langsmith'
 import { ClaimChecker, type ClaimCheckerConfig } from '../verification/claim-checker'
-import { SafetyScanner, type SafetyScannerConfig } from '../safety/scanner'
+import { SafetyScanner } from '../safety/scanner'
+import type { SafetyScannerConfig } from '../safety/types'
 
 function generateId(prefix: string): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`

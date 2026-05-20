@@ -30,6 +30,8 @@ const RISK_SEVERITY: Record<SafetyRiskLevel, number> = {
   low: 1,
 }
 
+export type { SafetyScannerConfig } from './types'
+
 export class SafetyScanner {
   private config: SafetyScannerConfig
   private rules: SafetyRule[]

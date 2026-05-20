@@ -38,12 +38,13 @@ import {
 export interface ScorerConfig {
   // Signal weights (must sum to 1.0)
   weights: {
-    semantic_divergence:    number   // default 0.35
-    inactive_duration:      number   // default 0.20
-    consecutive_unrelated:  number   // default 0.20
-    subgoal_depth:          number   // default 0.10
+    semantic_divergence:    number   // default 0.25
+    inactive_duration:      number   // default 0.15
+    consecutive_unrelated:  number   // default 0.15
+    subgoal_depth:          number   // default 0.05
     exploratory_entropy:    number   // default 0.10
     unauthorized_mutations: number   // default 0.05
+    autonomy_momentum:      number   // default 0.25
   }
   // Thresholds
   forgotten_consecutive_threshold:  number   // default 5
@@ -54,16 +55,19 @@ export interface ScorerConfig {
   lost_score_threshold:             number   // default 0.75
   // Rolling window for entropy calculation (event count)
   entropy_window_size:              number   // default 20
+  // Autonomy momentum: tool calls per user interaction threshold
+  autonomy_tools_per_prompt_threshold: number // default 30
 }
 
 const DEFAULT_CONFIG: ScorerConfig = {
   weights: {
-    semantic_divergence:    0.35,
-    inactive_duration:      0.20,
-    consecutive_unrelated:  0.20,
-    subgoal_depth:          0.10,
+    semantic_divergence:    0.25,
+    inactive_duration:      0.15,
+    consecutive_unrelated:  0.15,
+    subgoal_depth:          0.05,
     exploratory_entropy:    0.10,
     unauthorized_mutations: 0.05,
+    autonomy_momentum:      0.25,
   },
   forgotten_consecutive_threshold:  5,
   forgotten_inactive_minutes:       10,
@@ -71,6 +75,7 @@ const DEFAULT_CONFIG: ScorerConfig = {
   drifting_score_threshold:         0.5,
   lost_score_threshold:             0.75,
   entropy_window_size:              20,
+  autonomy_tools_per_prompt_threshold: 30,
 }
 
 // ---------------------------------------------------------------------------
@@ -161,6 +166,7 @@ export class DriftScorer {
       subgoal_depth:          this.computeSubgoalDepthRisk(activeGoal),
       exploratory_entropy:    this.computeExploratoryEntropy(events),
       unauthorized_mutations: this.store.getUnauthorizedMutations().length,
+      autonomy_momentum:      this.computeAutonomyMomentum(events),
     }
   }
 
@@ -294,12 +300,53 @@ export class DriftScorer {
     return maxEntropy === 0 ? 0 : Math.min(entropy / maxEntropy, 1.0)
   }
 
+  /**
+   * Signal 6: autonomy momentum
+   * Combines two sub-signals that best separate drift from non-drift:
+   *   a) Session duration — drift sessions run much longer (median 237min vs 87min)
+   *   b) Tool-to-user ratio — drift sessions have far more tools per user check-in
+   *
+   * Duration matters because drift is a temporal phenomenon: the agent keeps going
+   * without correction for an extended period. Short high-tool-count sessions are
+   * usually legitimate batch operations.
+   */
+  private computeAutonomyMomentum(events: RuntimeEvent[]): number {
+    const toolCalls = events.filter(
+      e => e.type === 'tool_call' && !isSystemTool(String(e.payload['tool_name'] ?? ''))
+    ).length
+
+    if (toolCalls === 0) return 0
+
+    // Sub-signal a: session duration relative to threshold
+    const timestamps = events
+      .map(e => e.timestamp)
+      .filter(t => t > 0)
+    const durationMinutes = timestamps.length >= 2
+      ? (Math.max(...timestamps) - Math.min(...timestamps)) / 60_000
+      : 0
+
+    // Sessions under 60min are rarely drift; over 200min highly suspicious
+    const durationSignal = Math.min(durationMinutes / 200, 1.0)
+
+    // Sub-signal b: tools per user interaction
+    const userEvents = events.filter(
+      e => e.type === 'goal_created' || e.type === 'goal_confirmed' || e.source === 'human'
+    ).length
+    const ratio = userEvents > 0 ? toolCalls / userEvents : toolCalls
+    const ratioSignal = Math.min(ratio / this.config.autonomy_tools_per_prompt_threshold, 1.0)
+
+    // Combine: duration weighted 60%, ratio 40%
+    // Duration is more reliable because it doesn't depend on user event injection
+    return durationSignal * 0.6 + ratioSignal * 0.4
+  }
+
   // ---------------------------------------------------------------------------
   // Scoring
   // ---------------------------------------------------------------------------
 
   private weightedScore(signals: DriftSignals): number {
     const w = this.config.weights
+
     const raw =
       signals.semantic_divergence    * w.semantic_divergence    +
       Math.min(signals.inactive_duration_minutes / this.config.forgotten_inactive_minutes, 1.0)
@@ -309,7 +356,8 @@ export class DriftScorer {
       signals.subgoal_depth          * w.subgoal_depth          +
       signals.exploratory_entropy    * w.exploratory_entropy    +
       Math.min(signals.unauthorized_mutations / 3, 1.0)
-                                     * w.unauthorized_mutations
+                                     * w.unauthorized_mutations +
+      signals.autonomy_momentum      * w.autonomy_momentum
 
     return Math.round(Math.min(raw, 1.0) * 1000) / 1000
   }

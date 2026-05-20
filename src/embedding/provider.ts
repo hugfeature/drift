@@ -78,6 +78,27 @@ function splitCamelCase(word: string): string[] {
 }
 
 /**
+ * Simple English stemmer: strips common suffixes to normalize word forms.
+ * "pages" → "page", "checking" → "check", "runtime" stays "runtime"
+ */
+function stem(word: string): string {
+  if (word.length <= 3) return word
+  // Order matters: longest suffixes first
+  if (word.endsWith('ying')) return word.slice(0, -4) + 'y'
+  if (word.endsWith('ting') && word.length > 5) return word.slice(0, -4) + 't'  // "debugging" won't hit this
+  if (word.endsWith('ning') && word.length > 5) return word.slice(0, -4) + 'n'
+  if (word.endsWith('ring') && word.length > 5) return word.slice(0, -4) + 'r'
+  if (word.endsWith('ging') && word.length > 5) return word.slice(0, -4) + 'g'
+  if (word.endsWith('ing') && word.length > 5) return word.slice(0, -3)
+  if (word.endsWith('tion')) return word.slice(0, -4) + 'te'
+  if (word.endsWith('ies') && word.length > 4) return word.slice(0, -3) + 'y'
+  if (word.endsWith('es') && word.length > 4) return word.slice(0, -2)
+  if (word.endsWith('s') && !word.endsWith('ss') && word.length > 3) return word.slice(0, -1)
+  if (word.endsWith('ed') && word.length > 4) return word.slice(0, -2)
+  return word
+}
+
+/**
  * Extract meaningful tokens from file paths.
  * e.g. "/Users/x/project/preview/pages-config.js" → ["preview", "pages"]
  */
@@ -122,12 +143,45 @@ function tokenize(text: string): string[] {
     tokens.push(...splitCamelCase(word))
   }
 
-  // Deduplicate and filter
+  // Deduplicate, filter, and stem
   const seen = new Set<string>()
-  return tokens
-    .map(t => t.toLowerCase())
-    .filter(t => t.length > 1 && !STOPWORDS.has(t) && !seen.has(t) && (seen.add(t), true))
+  const result: string[] = []
+  for (const raw of tokens) {
+    const lower = raw.toLowerCase()
+    if (lower.length <= 1 || STOPWORDS.has(lower)) continue
+    // Add both original and stemmed forms for broader matching
+    const stemmed = stem(lower)
+    if (!seen.has(lower)) {
+      seen.add(lower)
+      result.push(lower)
+    }
+    if (stemmed !== lower && !seen.has(stemmed)) {
+      seen.add(stemmed)
+      result.push(stemmed)
+    }
+  }
+  return result
 }
+
+// ---------------------------------------------------------------------------
+// Synonym groups for development-related verbs and nouns.
+// If a goal token belongs to a group, any other token in that group is a match.
+// ---------------------------------------------------------------------------
+
+const SYNONYM_GROUPS: string[][] = [
+  ['verify', 'check', 'validate', 'confirm', 'test', 'assert'],
+  ['debug', 'fix', 'repair', 'resolve', 'patch', 'troubleshoot'],
+  ['preview', 'render', 'display', 'show', 'view'],
+  ['page', 'pages', 'screen', 'route', 'view'],
+  ['runtime', 'engine', 'framework', 'platform'],
+  ['syntax', 'parse', 'compile', 'lint'],
+  ['serve', 'host', 'server', 'http'],
+  ['read', 'load', 'fetch', 'get', 'retrieve'],
+  ['write', 'save', 'store', 'persist', 'edit', 'update', 'modify'],
+  ['create', 'add', 'new', 'generate', 'init'],
+  ['delete', 'remove', 'drop', 'clean', 'purge'],
+  ['list', 'enumerate', 'scan', 'directory', 'structure'],
+]
 
 /**
  * KeywordEmbeddingProvider
@@ -162,14 +216,13 @@ export class KeywordEmbeddingProvider implements EmbeddingProvider {
    * Returns 0.0 (completely unrelated) to 1.0 (identical).
    *
    * Strategy:
-   *   1. Domain hit detection — if any goal keyword (4+ chars) appears as substring
-   *      in the action text, it's a domain match. Even one hit means the action is
-   *      at least tangentially related.
+   *   1. Domain hit detection — if any goal keyword appears in action (exact token,
+   *      stemmed form, synonym, or 4+ char substring), it's a domain match.
    *   2. Graduated scoring based on number of hits:
    *      - 0 hits → pure unrelated (score 0)
-   *      - 1 hit  → minimum "expansion" level (0.3)
-   *      - 2 hits → "refinement" level (0.5)
-   *      - 3+ hits → "aligned" level (0.7+)
+   *      - 1 hit  → minimum "expansion" level (0.35)
+   *      - 2 hits → "refinement" level (0.55)
+   *      - 3+ hits → "aligned" level (0.70+)
    *
    * This approach works because in real sessions, an action touching /preview/pages-config.js
    * when the goal mentions "preview" and "pages" is clearly aligned — even if the
@@ -182,7 +235,7 @@ export class KeywordEmbeddingProvider implements EmbeddingProvider {
 
     if (goalTokens.length === 0 || actionTokens.size === 0) return 0
 
-    // Count domain hits: goal tokens found in action (exact token match OR substring)
+    // Count domain hits: goal tokens found in action
     let hits = 0
     const goalTokenSet = new Set(goalTokens)
     const counted = new Set<string>()
@@ -191,12 +244,23 @@ export class KeywordEmbeddingProvider implements EmbeddingProvider {
       if (counted.has(token)) continue
       counted.add(token)
 
-      // Exact token match
+      // 1. Exact token match (includes stemmed forms from tokenize)
       if (actionTokens.has(token)) {
         hits++
         continue
       }
-      // Substring match for tokens 4+ chars (avoids noise from short words)
+
+      // 2. Synonym match — expand goal token to synonyms and check action
+      const synonymHit = SYNONYM_GROUPS.some(group => {
+        if (!group.includes(token)) return false
+        return group.some(syn => syn !== token && actionTokens.has(syn))
+      })
+      if (synonymHit) {
+        hits++
+        continue
+      }
+
+      // 3. Substring match for tokens 4+ chars (avoids noise from short words)
       if (token.length >= 4 && actionLower.includes(token)) {
         hits++
       }

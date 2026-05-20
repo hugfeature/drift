@@ -1,5 +1,9 @@
 drift-timeline.html
+drift-viewer.html
 node_modules
 
 .DS_Store
 .aone_copilot/
+
+# Raw fixtures contain non-anonymized data - only anonymized versions are published
+eval/fixtures/

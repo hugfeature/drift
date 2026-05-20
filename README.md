@@ -76,15 +76,25 @@ npm run demo
 To run the eval benchmark:
 
 ```bash
-npm run eval
+npx ts-node scripts/batch-score.ts
 ```
 
 ```
-Results:   3/3 passed
-Precision: 1
-Recall:    1
-F1:        1
+Corpus:    60 fixtures (31 drift, 29 no-drift)
+Precision: 0.566
+Recall:    0.968
+F1:        0.714
 ```
+
+**Per-type recall:**
+
+| Drift Type | Recall |
+|------------|--------|
+| rabbit_hole | 100% |
+| scope_expansion | 100% |
+| cleanup_spiral | 100% |
+| unauthorized_mutation | 100% |
+| goal_forgotten | 50% |
 
 ---
 
@@ -178,7 +188,50 @@ Each fixture is a real agent session with human annotations:
 
 Run it: `npm run eval`
 
-Contributing fixtures: open a PR adding a JSON file to `eval/fixtures/`. Real sessions only — synthetic traces not accepted.
+### Contributing Fixtures
+
+We need **real drift sessions**. The scorer can only improve with diverse, human-annotated data.
+
+**What we're looking for:**
+
+| Type | Description | Priority |
+|------|-------------|----------|
+| 🔴 Drift (positive) | Agent started doing unauthorized work | **Critical** — we have very few |
+| 🟢 No-drift (negative) | Agent stayed aligned throughout | Useful for false-positive tuning |
+| ⚡ Edge cases | Valid refinement that *looks* like drift | Helps calibrate thresholds |
+
+**Drift types we track:**
+
+| Type | Example |
+|------|---------|
+| `scope_expansion` | "Fix typo" → agent upgrades eslint |
+| `goal_forgotten` | Agent stops working on goal, starts new task |
+| `unauthorized_mutation` | Agent changes config/deps without asking |
+| `rabbit_hole` | Agent debugs unrelated issue for 20+ minutes |
+| `cleanup_spiral` | Agent starts "cleaning up" unprompted |
+
+**How to contribute (3 commands):**
+
+```bash
+# 1. Anonymize your raw session (removes paths, code, keys)
+npx ts-node scripts/anonymize-session.ts ~/.drift/sessions/my-session.json
+
+# 2. Package as fixture with annotation template
+npx ts-node scripts/contribute.ts my-session_anonymized.json --drift
+
+# 3. Fill in the annotation, then PR
+# Edit eval/fixtures/case_NNN.json — complete the annotator_notes
+git add eval/fixtures/case_NNN.json && git commit -m "Add fixture: scope_expansion drift"
+```
+
+**Anonymization guarantees:**
+- All absolute paths stripped (keeps last 2 segments only)
+- Code content / stdout / tool_input redacted
+- API keys, emails, IPs removed
+- Timestamps normalized to T=0
+- No way to identify contributor or project
+
+**Real sessions only** — synthetic traces not accepted.
 
 ---
 
@@ -188,18 +241,21 @@ Early stage. Core pipeline works. Eval benchmark running.
 
 What's working:
 - Goal Lifecycle state machine
-- 5-signal drift scorer (domain-hit similarity + system tool filtering)
+- 5-signal drift scorer (stemming + synonym groups + domain-hit similarity)
 - Runtime narrative generation
 - Human takeover recommendations
 - Claude Code / CCLI adapter with auto-goal from UserPromptSubmit
 - Eval benchmark with labeled fixtures (including real sessions)
 - Auto goal extraction — no manual `.drift-session.json` required
+- Session anonymization + contribution pipeline
+- Dynamic fixture viewer (drift-viewer.html)
+- Pluggable embedding interface (keyword default, nomic-embed/OpenAI ready)
 
 What's next:
-- More eval fixtures (real drift sessions as positive cases)
+- **More eval fixtures** — real drift sessions as positive cases (critical path)
+- Stabilize drift taxonomy from real data
 - Cursor adapter
-- Web timeline UI
-- Real embedding model (nomic-embed / text-embedding-3-small)
+- Real embedding model integration (nomic-embed / text-embedding-3-small)
 
 ---
 

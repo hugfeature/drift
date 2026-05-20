@@ -13,6 +13,8 @@ import * as fs from 'fs'
 import * as path from 'path'
 import { DriftScorer } from '../src/scoring/scorer'
 import { GoalStore } from '../src/goal/store'
+import { createEmbeddingProvider } from '../src/embedding/nomic-adapter'
+import type { EmbeddingProvider } from '../src/embedding/provider'
 import type { RuntimeEvent } from '../src/types/event'
 
 interface FixtureData {
@@ -59,7 +61,10 @@ function loadFixtures(): FixtureData[] {
   return fixtures
 }
 
-async function scoreFixture(fixture: FixtureData): Promise<ScoredResult> {
+async function scoreFixture(
+  fixture: FixtureData,
+  embeddingProvider?: EmbeddingProvider
+): Promise<ScoredResult> {
   const sessionId = fixture.session.id || 'unknown'
   const store = new GoalStore(sessionId)
 
@@ -75,7 +80,7 @@ async function scoreFixture(fixture: FixtureData): Promise<ScoredResult> {
     store.create(goalText, firstEvent?.timestamp || Date.now())
   }
 
-  const scorer = new DriftScorer(store)
+  const scorer = new DriftScorer(store, embeddingProvider)
   const events = fixture.session.events as RuntimeEvent[]
 
   // Score using full event stream so autonomy_momentum sees all user interactions
@@ -176,6 +181,16 @@ async function main() {
   const thresholdIdx = args.indexOf('--threshold')
   const threshold = thresholdIdx >= 0 ? parseFloat(args[thresholdIdx + 1] || '0.5') : 0.5
   const verbose = args.includes('--verbose')
+  const embeddingIdx = args.indexOf('--embedding')
+  const embeddingType = embeddingIdx >= 0 ? args[embeddingIdx + 1] : 'keyword'
+
+  // Initialize embedding provider
+  let embeddingProvider: EmbeddingProvider | undefined
+  if (embeddingType && embeddingType !== 'keyword') {
+    console.log(`Initializing ${embeddingType} embedding provider...`)
+    embeddingProvider = await createEmbeddingProvider({ provider: embeddingType as 'nomic' | 'openai' })
+    console.log('  Embedding provider ready\n')
+  }
 
   console.log('Loading fixtures...')
   const fixtures = loadFixtures()
@@ -185,7 +200,7 @@ async function main() {
   const results: ScoredResult[] = []
 
   for (const fixture of fixtures) {
-    const result = await scoreFixture(fixture)
+    const result = await scoreFixture(fixture, embeddingProvider)
     results.push(result)
 
     if (verbose) {

@@ -1,7 +1,7 @@
 {
   "name": "@drift/core",
   "version": "0.1.0",
-  "description": "Git Blame for Autonomous Agents \u2014 detect when an agent drifts from its original goal",
+  "description": "Git Blame for Autonomous Agents — detect when an agent drifts from its original goal",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -28,5 +28,8 @@
     "@types/node": "^20.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "langsmith": "^0.7.1"
   }
 }

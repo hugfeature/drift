@@ -27,6 +27,7 @@ import { EventIngestion, type RawEvent } from '../events/ingestion'
 import { DriftScorer } from '../scoring/scorer'
 import { NarrativeEngine } from '../narrative/engine'
 import { TakeoverEngine } from '../governance/takeover'
+import { LangSmithExporter, type LangSmithExporterConfig } from '../exporters/langsmith'
 
 function generateId(prefix: string): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
@@ -38,6 +39,7 @@ export interface SessionManagerOptions {
   started_at?:      number   // defaults to Date.now()
   scorer_config?:   Partial<ScorerConfig>
   takeover_config?: Partial<TakeoverConfig>
+  langsmith?:       boolean | LangSmithExporterConfig
 }
 
 export interface ProcessResult {
@@ -56,6 +58,7 @@ export class SessionManager {
   private scorer:   DriftScorer
   private narrative: NarrativeEngine
   private takeover: TakeoverEngine
+  private langsmith: LangSmithExporter | null = null
 
   private lastScore: DriftScore | null = null
 
@@ -69,6 +72,14 @@ export class SessionManager {
     this.scorer    = new DriftScorer(this.store, undefined, options.scorer_config)
     this.narrative = new NarrativeEngine(this.started_at)
     this.takeover  = new TakeoverEngine(this.store, options.takeover_config)
+
+    // LangSmith auto-enables when LANGCHAIN_API_KEY is set, unless explicitly disabled
+    const langsmithOpt = options.langsmith
+    const explicitlyDisabled = langsmithOpt === false
+    if (!explicitlyDisabled) {
+      const config = typeof langsmithOpt === 'object' ? langsmithOpt : undefined
+      this.langsmith = new LangSmithExporter(config)
+    }
   }
 
   // ---------------------------------------------------------------------------
@@ -125,6 +136,17 @@ export class SessionManager {
 
     this.lastScore = score
 
+    // Export to LangSmith (awaited to ensure session run is registered before finalize)
+    if (this.langsmith?.isEnabled()) {
+      const goalText = this.store.getActive()?.raw ?? null
+      try {
+        await this.langsmith.ensureSessionRun(this.session_id, this.agent, goalText)
+        await this.langsmith.traceEvent(this.session_id, event, score, takeover)
+      } catch {
+        // LangSmith export failure should never disrupt the drift runtime
+      }
+    }
+
     return { drift_score: score, takeover, new_segments: newSegments }
   }
 
@@ -146,6 +168,20 @@ export class SessionManager {
 
   getGoalStore(): GoalStore {
     return this.store
+  }
+
+  /**
+   * Finalize the session: closes the LangSmith parent run with final outputs.
+   * Call when the session is complete or when you want to flush traces.
+   */
+  async finalize(): Promise<void> {
+    if (!this.langsmith?.isEnabled()) return
+    const narrative = this.narrative.build(this.session_id)
+    await this.langsmith.finalizeSession(
+      this.session_id,
+      this.lastScore,
+      narrative.overall_summary
+    )
   }
 
   /**

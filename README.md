@@ -76,24 +76,25 @@ npm run demo
 To run the eval benchmark:
 
 ```bash
-npx ts-node scripts/batch-score.ts
+npm run eval
 ```
 
 ```
-Corpus:    60 fixtures (31 drift, 29 no-drift)
-Precision: 0.566
-Recall:    0.968
-F1:        0.714
+Corpus:    62 fixtures (33 drift, 29 no-drift)
+Precision: 0.545
+Recall:    0.909
+F1:        0.682
 ```
 
 **Per-type recall:**
 
 | Drift Type | Recall |
 |------------|--------|
-| rabbit_hole | 100% |
 | scope_expansion | 100% |
 | cleanup_spiral | 100% |
 | unauthorized_mutation | 100% |
+| rabbit_hole | 93% |
+| interrupted_workflow | 50% |
 | goal_forgotten | 50% |
 
 ---
@@ -107,14 +108,16 @@ Session Manager
     ↓
 Event Stream (tool_call, subgoal_created, ...)
     ↓
-Drift Scorer  ←── 5 signals
-    ↓
-Narrative Engine  ←── "T+18m goal forgotten"
-    ↓
-Takeover Engine  ←── "human intervention recommended"
+┌─── Drift Scorer  ←── 8 signals
+├─── ClaimChecker  ←── hallucination detection
+├─── SafetyScanner ←── dangerous operation detection
+│
+├─── Narrative Engine  ←── "T+18m goal forgotten"
+├─── Takeover Engine   ←── "human intervention recommended"
+└─── LangSmith Export  ←── trace observability
 ```
 
-**Five scoring signals:**
+**Eight scoring signals:**
 
 | Signal | What it measures |
 |--------|-----------------|
@@ -123,6 +126,9 @@ Takeover Engine  ←── "human intervention recommended"
 | Consecutive unrelated | Run of actions with no goal connection |
 | Exploratory entropy | Shannon entropy of tool usage (scattered = high risk) |
 | Subgoal depth | Nesting depth of agent-created subgoals |
+| Unauthorized mutations | Goal changes without human approval |
+| Autonomy momentum | Session duration × tool-to-user ratio |
+| Hallucinated claims | Count of unverified tool_response claims |
 
 **Goal Lifecycle:**
 
@@ -150,18 +156,28 @@ Only humans may create, replace, or cancel goals. Agents may refine within scope
 
 ```
 src/
-├── types/        Goal, Session, Event, DriftScore, Narrative, Eval
-├── goal/         GoalStore — state machine for Goal Lifecycle
-├── events/       EventIngestion — agent event pipeline
-├── scoring/      DriftScorer — 5-signal weighted scoring
-├── narrative/    NarrativeEngine — runtime story reconstruction
-├── governance/   TakeoverEngine — human intervention layer
-├── session/      SessionManager — orchestrates all modules
-└── adapters/     Claude Code, Cursor (planned)
+├── types/          Goal, Session, Event, DriftScore, Narrative, Eval
+├── goal/           GoalStore — state machine for Goal Lifecycle
+├── events/         EventIngestion — agent event pipeline
+├── scoring/        DriftScorer — 8-signal weighted scoring
+├── narrative/      NarrativeEngine — runtime story reconstruction
+├── governance/     TakeoverEngine — human intervention layer (6 triggers)
+├── verification/   ClaimChecker — hallucinated state detection
+├── safety/         SafetyScanner — dangerous operation detection (25 rules)
+├── exporters/      LangSmith trace exporter
+├── session/        SessionManager — orchestrates all modules
+├── embedding/      Pluggable embedding providers
+└── adapters/       Claude Code, Cursor (planned)
 
 eval/
-├── fixtures/     Labeled real agent sessions
-└── runner.ts     Benchmark: precision / recall / F1
+├── fixtures/       62 labeled real agent sessions
+├── metrics/        DeepEval-compatible metric bridge
+├── reports/        Structured JSON eval reports
+└── runner.ts       Benchmark: precision / recall / F1 / per-type breakdown
+
+tests/
+├── verification/   ClaimChecker unit tests (11 tests)
+└── safety/         SafetyScanner unit tests (20 tests)
 
 examples/
 └── readme-typo-drift.ts   End-to-end demo
@@ -235,27 +251,40 @@ git add eval/fixtures/case_NNN.json && git commit -m "Add fixture: scope_expansi
 
 ---
 
+## Three Runtime Failure Modes
+
+Drift detects three categories of autonomous agent failure:
+
+| Mode | Description | Status |
+|------|-------------|--------|
+| **Goal Drift** | Agent stops pursuing original goal | ✅ Implemented (8 signals) |
+| **Hallucinated State** | Agent claims actions succeeded but they didn't | ✅ Implemented (ClaimChecker) |
+| **Safety Violation** | Agent performs dangerous operations | ✅ Implemented (25 rules) |
+
+---
+
 ## Status
 
-Early stage. Core pipeline works. Eval benchmark running.
+Core pipeline complete. All three failure modes implemented.
 
-What's working:
-- Goal Lifecycle state machine
-- 5-signal drift scorer (stemming + synonym groups + domain-hit similarity)
+**What's working:**
+- 8-signal drift scorer (semantic divergence + autonomy momentum + hallucination + 5 others)
+- Hallucinated State detection (file existence + mtime, command exit code + output contradiction)
+- Safety scanner (25 built-in rules across 6 categories)
+- LangSmith trace integration (auto-export every score event)
+- Goal Lifecycle state machine with governance
 - Runtime narrative generation
-- Human takeover recommendations
-- Claude Code / CCLI adapter with auto-goal from UserPromptSubmit
-- Eval benchmark with labeled fixtures (including real sessions)
-- Auto goal extraction — no manual `.drift-session.json` required
+- Human takeover recommendations (6 trigger types)
+- Claude Code / CCLI adapter with auto-goal extraction
+- Eval benchmark: 62 fixtures, per-type breakdown, JSON reports
+- DeepEval-compatible metric bridge
 - Session anonymization + contribution pipeline
-- Dynamic fixture viewer (drift-viewer.html)
-- Pluggable embedding interface (keyword default, nomic-embed/OpenAI ready)
 
-What's next:
-- **More eval fixtures** — real drift sessions as positive cases (critical path)
-- Stabilize drift taxonomy from real data
-- Cursor adapter
+**What's next:**
+- Cursor / OpenAI Agent SDK adapters
 - Real embedding model integration (nomic-embed / text-embedding-3-small)
+- More eval fixtures — especially `interrupted_workflow` and `conflicting_context`
+- DeepEval full Python integration
 
 ---
 

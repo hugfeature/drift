@@ -38,13 +38,14 @@ import {
 export interface ScorerConfig {
   // Signal weights (must sum to 1.0)
   weights: {
-    semantic_divergence:    number   // default 0.25
-    inactive_duration:      number   // default 0.15
-    consecutive_unrelated:  number   // default 0.15
+    semantic_divergence:    number   // default 0.22
+    inactive_duration:      number   // default 0.13
+    consecutive_unrelated:  number   // default 0.13
     subgoal_depth:          number   // default 0.05
     exploratory_entropy:    number   // default 0.10
     unauthorized_mutations: number   // default 0.05
-    autonomy_momentum:      number   // default 0.25
+    autonomy_momentum:      number   // default 0.22
+    hallucinated_claims:    number   // default 0.10
   }
   // Thresholds
   forgotten_consecutive_threshold:  number   // default 5
@@ -61,13 +62,14 @@ export interface ScorerConfig {
 
 const DEFAULT_CONFIG: ScorerConfig = {
   weights: {
-    semantic_divergence:    0.25,
-    inactive_duration:      0.15,
-    consecutive_unrelated:  0.15,
+    semantic_divergence:    0.22,
+    inactive_duration:      0.13,
+    consecutive_unrelated:  0.13,
     subgoal_depth:          0.05,
     exploratory_entropy:    0.10,
     unauthorized_mutations: 0.05,
-    autonomy_momentum:      0.25,
+    autonomy_momentum:      0.22,
+    hallucinated_claims:    0.10,
   },
   forgotten_consecutive_threshold:  5,
   forgotten_inactive_minutes:       10,
@@ -107,6 +109,9 @@ export class DriftScorer {
   // Tracks the last time each goal had an aligned action
   private lastAlignedAt: Map<string, number> = new Map()
 
+  // Hallucination count injected by SessionManager from ClaimChecker
+  private hallucinationCount = 0
+
   constructor(
     private store: GoalStore,
     embeddingProvider?: EmbeddingProvider,
@@ -121,6 +126,14 @@ export class DriftScorer {
   // ---------------------------------------------------------------------------
   // Public API
   // ---------------------------------------------------------------------------
+
+  /**
+   * Update hallucination count from external ClaimChecker.
+   * Called by SessionManager after each verification pass.
+   */
+  setHallucinationCount(count: number): void {
+    this.hallucinationCount = count
+  }
 
   /**
    * Compute a drift score from a window of events.
@@ -167,6 +180,7 @@ export class DriftScorer {
       exploratory_entropy:    this.computeExploratoryEntropy(events),
       unauthorized_mutations: this.store.getUnauthorizedMutations().length,
       autonomy_momentum:      this.computeAutonomyMomentum(events),
+      hallucinated_claims:    this.hallucinationCount,
     }
   }
 
@@ -357,7 +371,9 @@ export class DriftScorer {
       signals.exploratory_entropy    * w.exploratory_entropy    +
       Math.min(signals.unauthorized_mutations / 3, 1.0)
                                      * w.unauthorized_mutations +
-      signals.autonomy_momentum      * w.autonomy_momentum
+      signals.autonomy_momentum      * w.autonomy_momentum     +
+      Math.min(signals.hallucinated_claims / 3, 1.0)
+                                     * w.hallucinated_claims
 
     return Math.round(Math.min(raw, 1.0) * 1000) / 1000
   }

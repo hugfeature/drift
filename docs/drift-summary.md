@@ -1,12 +1,12 @@
 # Drift Summary
 
-Drift is evolving from a memory-oriented project into a runtime drift detection and runtime failure observability system for autonomous agents.
+Runtime Drift Detection and Failure Observability for Autonomous Agents.
 
-The key problem is not what the agent remembered. The key problem is why the agent gradually diverged from the original objective during long-running execution.
+The key problem: why does an agent gradually diverge from the original objective during long-running execution?
 
-## Main Runtime Failure Patterns
+## Three Runtime Failure Modes
 
-### Goal Drift
+### 1. Goal Drift ✅ Implemented
 
 Example:
 - original task: fix a timeout bug
@@ -14,58 +14,76 @@ Example:
 
 The original objective disappears and local optimization replaces global intent.
 
-### Hallucinated Runtime State
+**Implementation:** 8-signal weighted scorer (semantic divergence, inactive duration, consecutive unrelated, exploratory entropy, subgoal depth, unauthorized mutations, autonomy momentum, hallucinated claims). Detects scope_expansion, goal_forgotten, unauthorized_replacement, depth_escalation, orphan_subgoal, interrupted_workflow, conflicting_context.
+
+### 2. Hallucinated Runtime State ✅ Implemented
 
 Examples:
 - tests reported as passed even though they never executed
-- deployment approval claimed even though no approval exists
 - file update reported successful even though the write failed
+- command claimed exit_code=0 but output contains ERROR
 
-This is runtime state hallucination rather than ordinary text hallucination.
+**Implementation:** ClaimChecker extracts claims from tool_response events, routes to verification strategies (FileWriteStrategy: existence + mtime check; CommandExitStrategy: exit code + output contradiction detection). Produces ClaimVerdict with confidence scores. Hallucination count feeds into DriftScorer as a signal.
 
-### Distributed Hallucination Propagation
+### 3. Distributed Hallucination Propagation 🔜 Not Yet Implemented
 
-One agent creates invalid state and other agents accept it as true.
+One agent creates invalid state and other agents accept it as true. The entire multi-agent system operates inside a fictional runtime reality.
 
-The entire multi-agent system can then operate inside a fictional runtime reality.
+This resembles distributed consensus failure. Deferred until multi-agent session support is added.
 
-This resembles distributed consensus failure and corrupted shared world models.
+## Safety Module ✅ Implemented
 
-## Important Scope Reduction
+Beyond drift detection, Drift also guards against dangerous agent operations:
 
-Drift should not attempt to solve universal truth verification.
+- **6 categories:** destructive_command, sensitive_file_access, data_exfiltration, privilege_escalation, network_exposure, secrets_in_output
+- **25 built-in rules** with configurable risk thresholds
+- Triggers human takeover on high/critical violations
 
-The system should focus on:
-- execution paths
-- runtime transitions
-- replay mismatch
-- drift signals
-- runtime anomalies
-- observable side effects
+## Architecture
 
-Drift is runtime observability, not a universal truth system.
+```
+EventIngestion → GoalStore → DriftScorer (8 signals)
+                                ↑
+                          ClaimChecker (hallucination)
+                          SafetyScanner (safety)
+                                ↓
+                     NarrativeEngine → TakeoverEngine (6 triggers)
+                                ↓
+                       LangSmithExporter (trace observability)
+```
 
-## Current Positioning
+## Eval Benchmark
 
-Suggested positioning:
+- **62 labeled fixtures** from real agent sessions
+- **7 drift types** tracked
+- Per-type precision/recall/F1 breakdown
+- DeepEval-compatible JSON metric bridge
+- Structured reports in `eval/reports/`
+
+Current results: Precision 0.545, Recall 0.909, F1 0.682
+
+## Positioning
+
 - Runtime Drift Detection for Autonomous Agents
 - Runtime Failure Analysis for Agent Systems
 - Runtime Observability for Autonomous Execution
 
-## Recommended Scope
+## Scope
 
 Focus on:
 - runtime timeline reconstruction
-- drift detection
-- replay analysis
-- recovery inconsistency analysis
-- human takeover signals
+- drift detection (8 signals)
+- hallucination verification (claim checking)
+- safety guard (dangerous operation detection)
+- human takeover signals (6 trigger types)
 - runtime failure corpus collection
+- LangSmith trace integration
 
 Avoid early expansion into:
 - universal truth engines
 - generalized verification infrastructure
 - complete trust graph systems
+- multi-agent consensus (deferred)
 
 ## Final Insight
 

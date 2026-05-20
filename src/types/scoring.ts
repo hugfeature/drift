@@ -58,6 +58,14 @@ export interface DriftSignals {
    * This is the strongest structural signal for drift detection.
    */
   autonomy_momentum: number
+
+  /**
+   * Count of hallucinated claims detected by the verification system.
+   * A hallucination = agent claimed something happened that didn't
+   * (e.g. "file written" but file doesn't exist).
+   * 0 = all claims verified or no claims made.
+   */
+  hallucinated_claims: number
 }
 
 export interface DriftScore {

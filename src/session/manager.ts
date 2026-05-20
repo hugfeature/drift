@@ -28,6 +28,8 @@ import { DriftScorer } from '../scoring/scorer'
 import { NarrativeEngine } from '../narrative/engine'
 import { TakeoverEngine } from '../governance/takeover'
 import { LangSmithExporter, type LangSmithExporterConfig } from '../exporters/langsmith'
+import { ClaimChecker, type ClaimCheckerConfig } from '../verification/claim-checker'
+import { SafetyScanner, type SafetyScannerConfig } from '../safety/scanner'
 
 function generateId(prefix: string): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
@@ -40,6 +42,8 @@ export interface SessionManagerOptions {
   scorer_config?:   Partial<ScorerConfig>
   takeover_config?: Partial<TakeoverConfig>
   langsmith?:       boolean | LangSmithExporterConfig
+  verification?:    boolean | ClaimCheckerConfig
+  safety?:          boolean | Partial<SafetyScannerConfig>
 }
 
 export interface ProcessResult {
@@ -59,6 +63,8 @@ export class SessionManager {
   private narrative: NarrativeEngine
   private takeover: TakeoverEngine
   private langsmith: LangSmithExporter | null = null
+  private claimChecker: ClaimChecker | null = null
+  private safetyScanner: SafetyScanner | null = null
 
   private lastScore: DriftScore | null = null
 
@@ -79,6 +85,20 @@ export class SessionManager {
     if (!explicitlyDisabled) {
       const config = typeof langsmithOpt === 'object' ? langsmithOpt : undefined
       this.langsmith = new LangSmithExporter(config)
+    }
+
+    // Verification auto-enables unless explicitly disabled
+    const verifyOpt = options.verification
+    if (verifyOpt !== false) {
+      const config = typeof verifyOpt === 'object' ? verifyOpt : undefined
+      this.claimChecker = new ClaimChecker(config)
+    }
+
+    // Safety scanner auto-enables unless explicitly disabled
+    const safetyOpt = options.safety
+    if (safetyOpt !== false) {
+      const config = typeof safetyOpt === 'object' ? safetyOpt : undefined
+      this.safetyScanner = new SafetyScanner(config)
     }
   }
 
@@ -125,9 +145,26 @@ export class SessionManager {
       goal_id:    raw.goal_id ?? activeGoal?.id,
     })
 
+    // Verify claims in tool_response (hallucination detection)
+    if (this.claimChecker) {
+      try {
+        await this.claimChecker.check(event)
+        this.scorer.setHallucinationCount(this.claimChecker.getHallucinationCount())
+      } catch {
+        // Verification failure should never disrupt the drift runtime
+      }
+    }
+
+    // Safety scan for dangerous operations
+    let safetyRequiresTakeover = false
+    if (this.safetyScanner) {
+      const scanResult = this.safetyScanner.scan(event)
+      safetyRequiresTakeover = scanResult.requires_takeover
+    }
+
     const allEvents  = this.ingestion.getBuffer()
     const score      = await this.scorer.score(allEvents)
-    const takeover   = this.takeover.evaluate(this.session_id, score)
+    const takeover   = this.takeover.evaluate(this.session_id, score, safetyRequiresTakeover)
 
     const newSegments = this.narrative.process(event, score, {
       goal:          this.store.getActive(),
@@ -168,6 +205,18 @@ export class SessionManager {
 
   getGoalStore(): GoalStore {
     return this.store
+  }
+
+  getVerificationSummary(): import('../verification/types').VerificationSummary | null {
+    return this.claimChecker?.getSummary() ?? null
+  }
+
+  getSafetySummary(): import('../safety/types').SafetySummary | null {
+    return this.safetyScanner?.getSummary() ?? null
+  }
+
+  getSafetyViolations(): import('../safety/types').SafetyViolation[] {
+    return this.safetyScanner?.getViolations() ?? []
   }
 
   /**

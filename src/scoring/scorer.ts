@@ -28,6 +28,7 @@ import { GoalStore } from '../goal/store'
 import {
   KeywordEmbeddingProvider,
   type EmbeddingProvider,
+  cosineSimilarity,
   semanticDivergence,
 } from '../embedding/provider'
 
@@ -103,8 +104,9 @@ function isSystemTool(toolName: string): boolean {
 
 export class DriftScorer {
   private config: ScorerConfig
-  private embedding: KeywordEmbeddingProvider
-  private goalEmbeddings: Map<string, number[]> = new Map()
+  private embeddingProvider: EmbeddingProvider
+  private useRealEmbedding: boolean
+  private goalEmbeddingCache: Map<string, number[]> = new Map()
 
   // Tracks the last time each goal had an aligned action
   private lastAlignedAt: Map<string, number> = new Map()
@@ -118,9 +120,9 @@ export class DriftScorer {
     config?: Partial<ScorerConfig>
   ) {
     this.config = { ...DEFAULT_CONFIG, ...config }
-    // KeywordEmbeddingProvider used directly for padToSameLength utility
-    this.embedding = (embeddingProvider as KeywordEmbeddingProvider)
-      ?? new KeywordEmbeddingProvider()
+    this.embeddingProvider = embeddingProvider ?? new KeywordEmbeddingProvider()
+    // Detect if we have a real embedding provider (not keyword-based)
+    this.useRealEmbedding = !(this.embeddingProvider instanceof KeywordEmbeddingProvider)
   }
 
   // ---------------------------------------------------------------------------
@@ -186,8 +188,8 @@ export class DriftScorer {
 
   /**
    * Signal 1: semantic divergence
-   * Token-set similarity between recent tool_call events and the active goal.
-   * Uses goal-term recall + Jaccard instead of cosine on sparse vectors.
+   * When using real embedding (nomic/openai): cosine distance between goal and action vectors.
+   * When using keyword provider: token-set similarity (legacy fallback).
    */
   private async computeSemanticDivergence(
     events: RuntimeEvent[],
@@ -211,11 +213,10 @@ export class DriftScorer {
 
     if (recentToolCalls.length === 0) return 0
 
-    const divergences = recentToolCalls.map(e => {
-      const actionText = this.extractActionText(e)
-      const similarity = this.embedding.tokenSimilarity(goalText, actionText)
-      return 1 - similarity  // divergence = 1 - similarity
-    })
+    // Compute divergences using the appropriate strategy
+    const divergences = this.useRealEmbedding
+      ? await this.computeDivergencesWithEmbedding(goalText, recentToolCalls)
+      : this.computeDivergencesWithKeywords(goalText, recentToolCalls)
 
     const avg = divergences.reduce((s, d) => s + d, 0) / divergences.length
 
@@ -237,6 +238,69 @@ export class DriftScorer {
     })
 
     return Math.min(avg, 1.0)
+  }
+
+  /**
+   * Real embedding path: embed goal + each action, compute cosine distance.
+   * Goal embedding is cached per goal text to avoid redundant API calls.
+   *
+   * Applies calibration: raw cosine similarity in code/tool contexts typically
+   * falls in [0.2, 0.8] range (even unrelated texts share baseline similarity).
+   * We rescale to [0, 1] using empirical bounds so the signal has full dynamic range.
+   */
+  private async computeDivergencesWithEmbedding(
+    goalText: string,
+    events: RuntimeEvent[]
+  ): Promise<number[]> {
+    // Cache goal embedding (same goal text → same vector)
+    const goalCacheKey = goalText.slice(0, 300)
+    let goalVector = this.goalEmbeddingCache.get(goalCacheKey)
+    if (!goalVector) {
+      goalVector = await this.embeddingProvider.embed(goalText)
+      this.goalEmbeddingCache.set(goalCacheKey, goalVector)
+    }
+
+    const divergences: number[] = []
+    for (const event of events) {
+      const actionText = this.extractActionText(event)
+      const actionVector = await this.embeddingProvider.embed(actionText)
+      const rawSimilarity = cosineSimilarity(goalVector, actionVector)
+      const calibrated = this.calibrateEmbeddingDivergence(1 - rawSimilarity)
+      divergences.push(calibrated)
+    }
+    return divergences
+  }
+
+  /**
+   * Calibrate raw embedding divergence to full [0, 1] range.
+   *
+   * Empirical observation: nomic-embed-text cosine similarity for code/tool text:
+   *   - Highly aligned (same file/function): similarity ~0.7-0.85 → divergence 0.15-0.30
+   *   - Somewhat related (same domain):     similarity ~0.5-0.7  → divergence 0.30-0.50
+   *   - Unrelated (different domain):        similarity ~0.2-0.5  → divergence 0.50-0.80
+   *
+   * Rescale: divergence < 0.25 → 0 (aligned), divergence > 0.65 → 1.0 (unrelated)
+   */
+  private calibrateEmbeddingDivergence(rawDivergence: number): number {
+    const LOW = 0.25   // below this = clearly aligned
+    const HIGH = 0.65  // above this = clearly unrelated
+    const calibrated = (rawDivergence - LOW) / (HIGH - LOW)
+    return Math.max(0, Math.min(1, calibrated))
+  }
+
+  /**
+   * Keyword fallback path: uses token-set similarity (zero network calls).
+   */
+  private computeDivergencesWithKeywords(
+    goalText: string,
+    events: RuntimeEvent[]
+  ): number[] {
+    const keywordProvider = this.embeddingProvider as KeywordEmbeddingProvider
+    return events.map(e => {
+      const actionText = this.extractActionText(e)
+      const similarity = keywordProvider.tokenSimilarity(goalText, actionText)
+      return 1 - similarity
+    })
   }
 
   /**

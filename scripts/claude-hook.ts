@@ -101,11 +101,12 @@ function extractPromptText(payload: Record<string, unknown>): string | null {
 // Detect hook event type from CLI args or payload
 // ---------------------------------------------------------------------------
 
-function getHookEventType(payload: Record<string, unknown>): 'user_prompt' | 'tool_call' | 'stop' | 'unknown' {
+function getHookEventType(payload: Record<string, unknown>): 'session_start' | 'user_prompt' | 'tool_call' | 'stop' | 'unknown' {
   // Check CLI args first (--event flag)
   const eventArgIndex = process.argv.indexOf('--event')
   if (eventArgIndex !== -1) {
     const eventType = process.argv[eventArgIndex + 1]
+    if (eventType === 'SessionStart') return 'session_start'
     if (eventType === 'Stop') return 'stop'
     if (eventType === 'UserPromptSubmit') return 'user_prompt'
   }
@@ -137,6 +138,43 @@ async function main(): Promise<void> {
   } catch { return }
 
   const eventType = getHookEventType(payload)
+
+  // ---------------------------------------------------------------------------
+  // Handle SessionStart — reset state, start fresh drift session
+  // ---------------------------------------------------------------------------
+
+  if (eventType === 'session_start') {
+    // Clean previous session state — new Claude Code session = new drift session
+    try { fs.unlinkSync(STATE_FILE) } catch { /* no previous state */ }
+
+    log('🔄 New session started (state reset)')
+
+    appendEvent({
+      event_index: 0,
+      timestamp:   Date.now(),
+      event_type:  'session_start',
+    })
+    return
+  }
+
+  // ---------------------------------------------------------------------------
+  // Handle Stop — finalize drift session
+  // ---------------------------------------------------------------------------
+
+  if (eventType === 'stop') {
+    const savedState = loadState()
+    if (savedState) {
+      appendEvent({
+        event_index: savedState.event_count + 1,
+        timestamp:   Date.now(),
+        event_type:  'session_stop',
+        goal:        savedState.current_goal,
+        total_events: savedState.event_count,
+      })
+      log(`🛑 Session ended. ${savedState.event_count} events scored.`)
+    }
+    return
+  }
 
   // ---------------------------------------------------------------------------
   // Handle UserPromptSubmit — set new goal from user's prompt

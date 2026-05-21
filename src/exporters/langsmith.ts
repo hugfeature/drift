@@ -131,6 +131,7 @@ export class LangSmithExporter {
       },
       end_time: Date.now(),
     })
+    await this.client.createFeedback(childRunId, 'drift_score', { score: score.score })
   }
 
   /**
@@ -158,3 +159,4 @@ export class LangSmithExporter {
     })
   }
 }
+

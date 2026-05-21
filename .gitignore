@@ -1,6 +1,8 @@
 drift-timeline.html
 drift-viewer.html
 node_modules
+.drift-events.jsonl
+.drift-state.json
 
 .DS_Store
 .aone_copilot/

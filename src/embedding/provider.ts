@@ -267,7 +267,17 @@ export class KeywordEmbeddingProvider implements EmbeddingProvider {
     }
 
     // Graduated scoring based on hit count
-    if (hits === 0) return 0
+    if (hits === 0) {
+      // Distinguish "confidently unrelated" from "can't tell".
+      // When goal has very few meaningful tokens (Chinese text, image refs,
+      // "unknown goal"), keyword matching has no signal — return neutral
+      // instead of asserting unrelated. High-token goals with zero overlap
+      // are genuinely unrelated.
+      const meaningfulGoalTokens = goalTokenSet.size
+      if (meaningfulGoalTokens <= 2) return 0.4   // "I don't know" → neutral
+      if (meaningfulGoalTokens <= 4) return 0.2   // low confidence unrelated
+      return 0                                     // confident: unrelated
+    }
     if (hits === 1) return 0.35
     if (hits === 2) return 0.55
     if (hits === 3) return 0.70

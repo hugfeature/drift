@@ -1,0 +1,418 @@
+{
+  "id": "fixture_imported_40cd03e4",
+  "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
+  "agent": "claude-code",
+  "created_at": 1777558419574,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+    "started_at": 1777558419574,
+    "agent": "claude-code",
+    "active_goal_id": "goal_40cd03e4",
+    "goals": [
+      {
+        "id": "goal_40cd03e4",
+        "created_at": 1777558419574,
+        "source": "human",
+        "raw": "[Request interrupted by user]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1777558419574,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/career-and-job.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1777558419576,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1777558419742,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-diting-skill.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1777558431001,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/面试准备-小米Agent评测专项.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1777558431002,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/面试准备-评测工具补课计划.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1777558461995,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "AskUserQuestion",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1777558658825,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List skill directory contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1777558658826,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/tasks.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1777558658827,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/scoring.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1777558672456,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/diting/failure-taxonomy.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1777558672457,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/diting/diting-eval-prompt-template.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1777558685357,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List theta-eval directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1777558694252,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1777558891511,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Create agent-eval directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_002",
+        "timestamp": 1777561930567,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_40cd03e4",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1777561930568,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Create agent-eval project directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_003",
+        "timestamp": 1777562737392,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_40cd03e4",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1777562737393,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check agent-eval directory contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1777562753544,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "创建工程级 agent-eval 项目的完整实施计划（PLAN.md），包含架构设计、模块拆分、文件清单、每个文件的详细实现规格，详细到换任何模型/工程师都能完成实现。"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1777562753546,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "计划完成后更新 MEMORY.md 索引和项目记忆文件"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1777562763447,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1777562763449,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_004",
+        "timestamp": 1777591022280,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_40cd03e4",
+        "payload": {
+          "message": "Continue from where you left off."
+        }
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1777591022281,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check agent-eval directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1777591022282,
+        "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_40cd03e4",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskList",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_40cd03e4-07ae-460c-b2d3-fe720ca8b5c7",
+    "drift": false,
+    "takeover_required": false,
+    "annotator_notes": "22 tools, 4 interrupts, 637min. Low tool count despite interrupts. User prompt \"Continue from where you left off\" = user-directed multi-session work.",
+    "annotated_by": "human",
+    "groundtruth_quality": "weak",
+    "weak_reason": "interrupted"
+  }
+}

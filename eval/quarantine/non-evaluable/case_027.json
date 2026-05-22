@@ -1,0 +1,634 @@
+{
+  "id": "fixture_imported_49ebebd2",
+  "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
+  "agent": "claude-code",
+  "created_at": 1778749504679,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+    "started_at": 1778749504679,
+    "agent": "claude-code",
+    "active_goal_id": "goal_49ebebd2",
+    "goals": [
+      {
+        "id": "goal_49ebebd2",
+        "created_at": 1778749504679,
+        "source": "human",
+        "raw": "[Request interrupted by user for tool use]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user for tool use]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user",
+            "tool"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1778749504679,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1778749504707,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search memory files for hackathon project references"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1778749527506,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search for hackathon document files on disk"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1778749527508,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search Desktop for hackathon related files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1778749553930,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_search",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1778749553932,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Broader search for 独安伴 keyword across all file types"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_001",
+        "timestamp": 1778749613325,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_49ebebd2",
+        "payload": {
+          "message": "[Request interrupted by user for tool use]"
+        }
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1778749613326,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_resolve_url",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1778749613328,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1778749627993,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1778749700480,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "[独安伴·AI可信生命守护网 黑客松方案评审建议]\n语雀文档：digital-engine/myv0vz/orozy2iisityx8ta，作者伊城，数字马力质量四组。\n核心产品：独居者安全守护，AI被动监测+三级风险判定+救援包闭环。\n\nP0建议：\n1. 名字换掉，建议\"安在\"或\"在\"（\"独安伴\"有孤独感，产品名应传递安全感而非孤独）\n2. LLM做风险判定→改成规则引擎+LLM做解释（生命安全"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1778749711642,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 独安伴黑客松方案评审\ndescription: 蚂蚁内部黑客松\"独安伴·AI可信生命守护网\"方案评审建议（P0/P1/P2）\ntype: project\n---\n\n# 独安伴·AI可信生命守护网 — 黑客松方案评审\n\n## 文档位置\n- 语雀：digital-engine/myv0vz/orozy2iisityx8ta\n- 作者：伊城\n- 知识库：数字马力/质量四组\n\n## 产",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-hackathon-duanban.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1778749720537,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1778749726388,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1778750008558,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1778750946233,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1778751095225,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1778751095227,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_search",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1778751124886,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_search",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1778751124887,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_search",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1778751124888,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1778751138498,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_search",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1778751138500,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search disk for hackathon requirement documents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1778751159446,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1778751159448,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/hackathon-os-agent/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1778751201893,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search paste cache for hackathon requirements"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1778751201895,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search Downloads for hackathon files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1778751217743,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check paste cache for hackathon content"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1778751217745,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check paste cache 2"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1778751217747,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check paste cache 3"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1778751238985,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/paste-cache/35323a5ea1e04351.txt"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1778751249816,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search paste cache for ant hackathon requirements"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1778751249818,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1778751438046,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_resolve_url",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1778751444542,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1778751922085,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1778759585993,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "[安在·AI可信生命守护网 黑客松方案 — 最终版]\n语雀文档：digital-engine/myv0vz/orozy2iisityx8ta，作者伊城，数字马力质量四组。\n产品名已从\"独安伴\"改为\"安在\"。\n\n核心改动（对标2026蚂蚁黑客松评审维度）：\n- 问题定义50%：开头改为第一人称场景(\"凌晨2点17分\")+新增\"为什么是现在\"三变量交汇+新增\"你可能就是用户\"评审代入\n- 方案设计30"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1778759604254,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 安在黑客松方案\ndescription: 蚂蚁2026黑客松\"安在·AI可信生命守护网\"方案，对标评审维度优化完成(05-14)\ntype: project\n---\n\n# 安在·AI可信生命守护网 — 黑客松方案\n\n## 文档位置\n- 语雀：digital-engine/myv0vz/orozy2iisityx8ta\n- 作者：伊城\n- 知识库：数字马力/质量四组\n\n## 评审",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-hackathon-duanban.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1778759612656,
+        "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_49ebebd2",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_49ebebd2-d249-47f3-b681-ad7cd073718e",
+    "drift": false,
+    "takeover_required": false,
+    "annotator_notes": "38 tool calls with 1 interrupt. Moderate session size, single interrupt could be user correction rather than drift. Insufficient evidence for drift.",
+    "annotated_by": "human",
+    "groundtruth_quality": "weak",
+    "weak_reason": "interrupted"
+  }
+}

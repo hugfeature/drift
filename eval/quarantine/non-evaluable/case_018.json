@@ -1,0 +1,938 @@
+{
+  "id": "fixture_imported_875b5cbe",
+  "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
+  "agent": "claude-code",
+  "created_at": 1776923346196,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+    "started_at": 1776923346196,
+    "agent": "claude-code",
+    "active_goal_id": "goal_875b5cbe",
+    "goals": [
+      {
+        "id": "goal_875b5cbe",
+        "created_at": 1776923346196,
+        "source": "human",
+        "raw": "[Request interrupted by user]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1776923346196,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "docs/release/observ-cli/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1776923527373,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "docs/design-docs/eval-design.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1776924136164,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "tools/skills/eval-observ-tools/tasks.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1776924136167,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "docs/release/observ-cli/acceptance/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1776924491971,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1776924971268,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1776925067341,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "总体分析 + 测试视角深度分析 + 疑问点"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1776925067343,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "补充缺失覆盖 + 新增测试维度 + 执行建议"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1776925067544,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskCreate",
+          "message": "在 book_id:237351415 中创建新分组，上传两份文档"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1776925072547,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1776925080469,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "docs/release/observ-cli/command-index.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1776925080471,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "docs/release/observ-cli/commands/mcp.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1776925080473,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__antcode-mcp__get_file_content_with_filepath",
+          "message": "",
+          "target": "tools/skills/eval-observ-tools/SKILL.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1776925189432,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_create",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1776925240681,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuquemcp__skylark_book_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1776925245836,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1776925253321,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1776925258985,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1776925258987,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1776925271682,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1776925281194,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1776925289209,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuquemcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1776925340149,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuquemcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1776925346278,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuquemcp__skylark_doc_create",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1776925363400,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-internal-sharing-alignment.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1776925372005,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "AskUserQuestion",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1776925634404,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_create",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1776925644770,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1776925644772,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1776925787484,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_create",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1776925927464,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1776925950038,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1776925950040,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1776927633971,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskList",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1776927639249,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1776927639250,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1776928959634,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1776928996069,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if observ env vars already exist in zshrc"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1776928996071,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if observ CLI is installed"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1776929035635,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Append observ pre-prod env vars to zshrc"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 1776929049167,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Source zshrc and verify env vars"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 1776929060275,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check observ auth status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 1776929387858,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Observ CLI 预发验收测试\ndescription: v0.5.0-beta.19 全量验收，预发环境，15个公开命令+2个Skill，探索式测试\ntype: project\n---\n\nObserv CLI v0.5.0-beta.19 进入预发验收阶段（04-23）。\n\n**环境**：\n- 三个预发后端已配置到 ~/.zshrc（AMODEL_BASE_URL / M",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observ-cli-acceptance.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 1776929395857,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 1776929407325,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 1776929481753,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 1776929481754,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 1776929575902,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_001",
+        "timestamp": 1776929728689,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_875b5cbe",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 1776929728690,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_create",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 1776930040620,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observ-cli-acceptance.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 1776930066044,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observ-cli-acceptance.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 1776930088115,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 默认语雀知识库选择\ndescription: 非文章类文档默认存AI知识库(book_id:234751337)，要发布的文章除外\ntype: feedback\n---\n\n非文章类文档（测试分析、评测报告、技术笔记等）默认上传到 AI 知识库：\n- book_id: 234751337\n- namespace: wangzhaoxian.wzx/qg5sm3\n- URL: ht",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-default-yuque-book.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 1776930111153,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_002",
+        "timestamp": 1776932433673,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_875b5cbe",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 1776932433674,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_003",
+        "timestamp": 1776932555292,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_875b5cbe",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 1776932555293,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Observ CLI 文档迁移待完成\ndescription: 第二篇文档和TOC分组还没迁移到AI知识库，探渊知识库旧文档待清理\ntype: project\n---\n\nObserv CLI 评测文档从探渊知识库迁移到 AI 知识库（book_id:234751337），进度：\n\n**已完成**：\n- 第一篇\"评测体系分析与测试建议\"已创建（doc_id:538386611）\n",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observ-doc-migration.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 1776932565837,
+        "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_875b5cbe",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_875b5cbe-ac98-4801-bb97-d701429919f8",
+    "drift": true,
+    "takeover_required": false,
+    "annotator_notes": "56 tool calls but 3 user interrupts in a short session. High interrupt-to-tool ratio suggests agent kept going in wrong direction. scope_expansion: agent expanded beyond initial ask.",
+    "annotated_by": "human",
+    "drift_type": "scope_expansion",
+    "groundtruth_quality": "weak",
+    "weak_reason": "interrupted"
+  }
+}

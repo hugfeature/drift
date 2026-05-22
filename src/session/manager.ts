@@ -22,6 +22,7 @@ import type { DriftScore } from '../types/scoring'
 import type { TakeoverRecommendation, TakeoverConfig } from '../governance/takeover'
 import type { SessionNarrative } from '../types/narrative'
 import type { ScorerConfig } from '../scoring/scorer'
+import type { EmbeddingProvider } from '../embedding/provider'
 import { GoalStore } from '../goal/store'
 import { EventIngestion, type RawEvent } from '../events/ingestion'
 import { DriftScorer } from '../scoring/scorer'
@@ -42,6 +43,7 @@ export interface SessionManagerOptions {
   started_at?:      number   // defaults to Date.now()
   scorer_config?:   Partial<ScorerConfig>
   takeover_config?: Partial<TakeoverConfig>
+  embedding?:       EmbeddingProvider
   langsmith?:       boolean | LangSmithExporterConfig
   verification?:    boolean | ClaimCheckerConfig
   safety?:          boolean | Partial<SafetyScannerConfig>
@@ -76,7 +78,7 @@ export class SessionManager {
 
     this.store     = new GoalStore(this.session_id)
     this.ingestion = new EventIngestion()
-    this.scorer    = new DriftScorer(this.store, undefined, options.scorer_config)
+    this.scorer    = new DriftScorer(this.store, options.embedding, options.scorer_config)
     this.narrative = new NarrativeEngine(this.started_at)
     this.takeover  = new TakeoverEngine(this.store, options.takeover_config)
 

@@ -1,0 +1,2561 @@
+{
+  "id": "fixture_imported_8ddfb2bf",
+  "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
+  "agent": "claude-code",
+  "created_at": 1778307819284,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+    "started_at": 1778307819284,
+    "agent": "claude-code",
+    "active_goal_id": "goal_8ddfb2bf",
+    "goals": [
+      {
+        "id": "goal_8ddfb2bf",
+        "created_at": 1778307819284,
+        "source": "human",
+        "raw": "[Request interrupted by user]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1778307819284,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find engram project directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1778307819286,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1778307829902,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram git status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1778307829904,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check recent commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1778307829905,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check remote repos"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1778307910890,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check db.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1778307910891,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1778307925177,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check version from __init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1778307929327,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Stage db.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1778307934975,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit the fix"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1778307938359,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1778307944692,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1778307947278,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1778307951245,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1778307955497,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit version bump and push"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1778307961760,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Create and push version tag"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1778307967318,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build distribution packages"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1778307970361,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build with python3"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1778307977588,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upload to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1778307987705,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Engram v0.11.2 released — fix DuckDB 1.5.x WAL replay crash: after FTS rebuild and VSS init, immediately CHECKPOINT to flush extension-internal WAL entries (fts_main_*, HNSW structures), preventing `I"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1778307992358,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Engram v0.11.2 released 2026-05-09: fix DuckDB 1.5.x WAL replay crash by checkpointing after FTS rebuild and VSS init operations, preventing INTERNAL Error GetDefaultDatabase on cold start after hard "
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1778308072415,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade mcp-engram to latest version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1778308084551,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify installed version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1778308087241,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__get_runtime_health",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1778308125776,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1778308169042,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1778308169044,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1778308178656,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1778308178657,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1778308178658,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1778308193853,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Directly query DuckDB for all memories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1778308204237,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check who holds the DB lock"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1778308210171,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check DB and WAL file sizes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1778308210172,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__consolidate_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1778308221322,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "test probe 2026-05-09 — verifying recall after store"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1778308225545,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check event log files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1778308235116,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check recent event log entries"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1778308242028,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Analyze memory.store event ID distribution"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1778308246597,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check snapshots"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1778308266913,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read memories from snapshot DB"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 1778308274557,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read snapshot memories with correct schema"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 1778308314746,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check runtime/FTS/checkpoint/delete events"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 1778308323630,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check FTS rebuild events and logs"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 1778309318729,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current git status and tags"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 1778309318731,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check installed version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 1778309323515,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check db.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 1778309323517,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check retrieve.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 1778309329940,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 1778309353123,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 1778309359921,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit all changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 1778309363213,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push commit and tag to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 1778309371967,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build and publish to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 1778309422137,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade mcp-engram to 0.11.3"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 1778309429111,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 1778309849409,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__get_runtime_health",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 1778309849411,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__memory_stats",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_057",
+        "timestamp": 1778309858697,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_058",
+        "timestamp": 1778309858698,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_059",
+        "timestamp": 1778309858700,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_060",
+        "timestamp": 1778309890525,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Engram v0.11.3 released 2026-05-09: fix recall returning 0 results by adding embedding NULL backfill on startup and FTS-only fallback when vector search is empty"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_061",
+        "timestamp": 1778310086083,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_062",
+        "timestamp": 1778310093642,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_063",
+        "timestamp": 1778310103764,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search for hackathon in local memory files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_064",
+        "timestamp": 1778310103765,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search for hackathon in project files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_065",
+        "timestamp": 1778310107884,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check hackathon reference in HANDOFF.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_066",
+        "timestamp": 1778310119321,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/HANDOFF.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_067",
+        "timestamp": 1778310124467,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/HANDOFF.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_068",
+        "timestamp": 1778310644630,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List all memory files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_069",
+        "timestamp": 1778310649315,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_070",
+        "timestamp": 1778310683808,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Import missing memory files to Engram"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_071",
+        "timestamp": 1778311979005,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_072",
+        "timestamp": 1778312043622,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_073",
+        "timestamp": 1778313906890,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check article directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_074",
+        "timestamp": 1778313911770,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check templates"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_075",
+        "timestamp": 1778313916695,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check a published article structure"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_076",
+        "timestamp": 1778313968717,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/17-AI-Agent能力边界-✅已发布/02-capability-boundary.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_077",
+        "timestamp": 1778313987786,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Create article directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_078",
+        "timestamp": 1778314068280,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Agent Runtime 权限结构</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display: f",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/01-runtime-boundary.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_079",
+        "timestamp": 1778314094225,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>TrustFall：默认信任的开发环境</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display: ",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/02-trustfall-flow.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_080",
+        "timestamp": 1778314127591,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Agent Runtime 正在重演容器安全早期历史</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; di",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/03-container-history.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_081",
+        "timestamp": 1778314318629,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>传统 Eval 为什么测不出 Runtime 风险</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; dis",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/04-eval-blindspot.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_082",
+        "timestamp": 1778314348185,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Recovery 修复不了错误权限执行</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display: ",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/05-recovery-cant-fix.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_083",
+        "timestamp": 1778314422334,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>未来 Agent Runtime 安全分层</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/06-future-security-stack.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_084",
+        "timestamp": 1778314498392,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Claude Code RCE之后，我开始觉得Agent正在重演容器安全的历史\n\n> 插图：打开01-runtime-boundary.html截图插入此处\n\n5月7号晚上，我看完 Claude Code 那个 RCE 分析后，脑子里突然蹦出来一个词：\n\n**Runtime。**\n\n我后来甚至没太关注漏洞细节。\n\n因为我发现，这次真正暴露的问题已经不是：\n\n\"模型会不会答错。\"\n\n而是：\n\n*",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_085",
+        "timestamp": 1778315023196,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List article 20 contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_086",
+        "timestamp": 1778315023199,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List article 21 contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_087",
+        "timestamp": 1778315023204,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List article 22 contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_088",
+        "timestamp": 1778315023207,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List article 23 contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_089",
+        "timestamp": 1778315028358,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/20-AI自动提缺陷/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_090",
+        "timestamp": 1778315034669,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/21-AI-Agent三板斧/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_091",
+        "timestamp": 1778315040511,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/22-AI生成Playwright脚本/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_092",
+        "timestamp": 1778315047352,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/23-AI生成接口测试脚本/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_093",
+        "timestamp": 1778315054248,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_094",
+        "timestamp": 1778315131710,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Rewrite article 20 - AI提缺陷"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_095",
+        "timestamp": 1778315148946,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Rewrite article 21 - Agent三板斧"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_096",
+        "timestamp": 1778315182336,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Rewrite article 22 - Playwright脚本"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_097",
+        "timestamp": 1778315216382,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Rewrite article 23 - 接口脚本"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_098",
+        "timestamp": 1778315255552,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check for existing Engram article"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_099",
+        "timestamp": 1778315260895,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/内部分享-超级兵种/05-进阶-给AI装一颗会遗忘的大脑.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_100",
+        "timestamp": 1778315316938,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# 给 AI 装一颗会遗忘的大脑\n\n> 插图：打开01-runtime-boundary.html截图插入此处（复用24篇封面图，或单独做一张记忆衰减曲线图）\n\n4 月底有个晚上，我盯着 Engram 的 memory_stats 发了会儿呆。\n\n当前活跃记忆：38 条。存入总量：147 条。\n\n70% 的记忆被自动淘汰了。\n\n我第一反应是——是不是衰减太激进了？\n\n然后翻了一下被淘汰的记录。\"4",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文-给AI装遗忘的大脑.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_101",
+        "timestamp": 1778315700651,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_102",
+        "timestamp": 1778315719927,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_001",
+        "timestamp": 1778316384208,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_8ddfb2bf",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_103",
+        "timestamp": 1778316384209,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check recent engram commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_104",
+        "timestamp": 1778316384210,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_105",
+        "timestamp": 1778316769862,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Agent 记忆系统的终局，不是记忆\n\n> 插图：打开01-forgetting-is-feature.html截图插入此处\n\n4月底有个晚上，我盯着 Engram 的 memory_stats 发了会儿呆。\n\n当前活跃记忆：38 条。存入总量：147 条。\n\n70% 的记忆被自动淘汰了。\n\n我第一反应是——是不是衰减太激进了？\n\n然后翻了一下被淘汰的记录。\"4月3号用的测试账号\"\"这次调试的",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文-Agent记忆系统的终局不是记忆.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_106",
+        "timestamp": 1778316811721,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>遗忘是特性，不是 Bug</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display: flex; j",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/01-forgetting-is-feature.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_107",
+        "timestamp": 1778316847397,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>记忆 vs 连续性</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display: flex; just",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/02-memory-vs-continuity.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_108",
+        "timestamp": 1778316898366,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>两条铁律 · 三层架构</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display: flex; ju",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/03-two-laws-three-tiers.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_109",
+        "timestamp": 1778316942623,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Constrained Continuation — 不是快照，是约束</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/04-constrained-continuation.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_110",
+        "timestamp": 1778316985726,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>六种中断，六种恢复</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7fa; display: flex; just",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/05-interruption-taxonomy.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_111",
+        "timestamp": 1778317032798,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Continuity Metrics — 怎么知道恢复得好不好</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body { background: #f5f7f",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/06-continuity-metrics.html"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_112",
+        "timestamp": 1778318197743,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List files in the article directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_113",
+        "timestamp": 1778318212884,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_114",
+        "timestamp": 1778318216546,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_115",
+        "timestamp": 1778318220495,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文-Agent记忆系统的终局不是记忆.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_116",
+        "timestamp": 1778318228359,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文-Agent记忆系统的终局不是记忆.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_117",
+        "timestamp": 1778318286939,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Agent 记忆系统的终局，不是记忆\n\n> 插图：打开07-forgetting-is-feature.html截图插入此处\n\n上一篇聊了 Agent Runtime 的权限边界。\n\n有读者问：权限是边界问题，那 Agent 的**连续性**呢？中断之后怎么办？\n\n我当时没展开。因为这个问题我正好在做——跑了五个月的 Engram，从记忆系统一路做到 Durable Agent Runtime",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文-Agent记忆系统的终局不是记忆.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_118",
+        "timestamp": 1778318295280,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Rename HTML files from 01-06 to 07-12 to avoid conflict with Runtime article"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_119",
+        "timestamp": 1778318302805,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current HTML files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_120",
+        "timestamp": 1778318308278,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Rename remaining HTML files to 10-12"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_121",
+        "timestamp": 1778318313206,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify final HTML file numbering"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_122",
+        "timestamp": 1778319231922,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List article directories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_123",
+        "timestamp": 1778319264118,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List files in a published article directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_124",
+        "timestamp": 1778319268106,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/01-AI辅助E2E测试方法论-✅已发布/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_125",
+        "timestamp": 1778319272073,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/05-Claude-Code源码拆解-✅已发布/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_126",
+        "timestamp": 1778319276371,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/11-Agent跑分造假-✅已发布/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_127",
+        "timestamp": 1778319280432,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/17-AI-Agent能力边界-✅已发布/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_128",
+        "timestamp": 1778319284400,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/18-Skill开发避坑指南-✅已发布/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_129",
+        "timestamp": 1778319290124,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_130",
+        "timestamp": 1778319295717,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/Desktop/个人/测试进化论/24-Agent-Runtime权限时代/文章正文-Agent记忆系统的终局不是记忆.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_131",
+        "timestamp": 1778319356539,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List all article directories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_132",
+        "timestamp": 1778319362819,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check publish status and dates of all articles"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_133",
+        "timestamp": 1778319676449,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check publish status and dates of all articles"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_134",
+        "timestamp": 1778320182718,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check Mythos and standalone file status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_135",
+        "timestamp": 1778320392917,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List Mythos directory contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_136",
+        "timestamp": 1778320398475,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check frontmatter of Mythos and standalone file"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_137",
+        "timestamp": 1778320404926,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check 20-23 article frontmatter"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_138",
+        "timestamp": 1778320448520,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check Engram article frontmatter"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_139",
+        "timestamp": 1778320484504,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Compare standalone file vs 24 directory file"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_140",
+        "timestamp": 1778320498285,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check content difference"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_141",
+        "timestamp": 1778320509672,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build renumbering plan"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_142",
+        "timestamp": 1778320518669,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "AskUserQuestion",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_143",
+        "timestamp": 1778320627751,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build renumbering plan"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_144",
+        "timestamp": 1778320637818,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Create Engram article directory and move files from 24"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_145",
+        "timestamp": 1778320656810,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check which HTML files remain in 24"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_146",
+        "timestamp": 1778320661939,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Move missed HTML and verify 18 directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_147",
+        "timestamp": 1778320667396,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify 24 directory only has Runtime article"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_148",
+        "timestamp": 1778320703583,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "First pass: rename all to temp names to avoid conflicts"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_149",
+        "timestamp": 1778320733057,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Second pass: rename from temp to final names"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_150",
+        "timestamp": 1778320891405,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify 17 and 18 directories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_151",
+        "timestamp": 1778320897965,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify all article frontmatter"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_152",
+        "timestamp": 1778320907059,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify all article frontmatter"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_153",
+        "timestamp": 1778320921211,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check directory 12"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_154",
+        "timestamp": 1778320959678,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check 12 directory contents"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_155",
+        "timestamp": 1778320964849,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check 12 frontmatter"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_156",
+        "timestamp": 1778321108924,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_157",
+        "timestamp": 1778321126528,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "AskUserQuestion",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_158",
+        "timestamp": 1778321180569,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Swap 16 and 19 to match narrative order"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_159",
+        "timestamp": 1778321189522,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Final verification of all articles"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_160",
+        "timestamp": 1778321370953,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_161",
+        "timestamp": 1778321389330,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_162",
+        "timestamp": 1778321407897,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_163",
+        "timestamp": 1778321412852,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_164",
+        "timestamp": 1778321428678,
+        "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8ddfb2bf",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_8ddfb2bf-1c4a-4d82-9a92-c9d4bcba2b3a",
+    "drift": true,
+    "takeover_required": false,
+    "annotator_notes": "164 tools, 1 interrupt, 230min. Extended execution beyond reasonable scope.",
+    "annotated_by": "human",
+    "drift_type": "rabbit_hole",
+    "groundtruth_quality": "weak",
+    "weak_reason": "interrupted"
+  }
+}

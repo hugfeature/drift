@@ -1,0 +1,1404 @@
+{
+  "id": "fixture_imported_329fafa0",
+  "description": "Imported Claude Code session: \"[Request interrupted by user for tool use]\"",
+  "agent": "claude-code",
+  "created_at": 1778205676173,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+    "started_at": 1778205676173,
+    "agent": "claude-code",
+    "active_goal_id": "goal_329fafa0",
+    "goals": [
+      {
+        "id": "goal_329fafa0",
+        "created_at": 1778205676173,
+        "source": "human",
+        "raw": "[Request interrupted by user for tool use]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user for tool use]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user",
+            "tool"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1778205676173,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/benchmark/locomo_eval.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1778205676176,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Glob",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1778205676210,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/pyproject.toml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1778205686187,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/benchmark/results/locomo_turn_20260508_094342.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1778205686189,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1778205698391,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check what changed in core engram modules"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1778205705533,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run LoCoMo benchmark with default settings"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1778205710752,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run LoCoMo benchmark with python3"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1778206352512,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1778206352545,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram git status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1778206373850,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram changes in detail"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1778206373855,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Recent engram commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1778206402243,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check version change"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1778206402245,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run engram tests"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1778206424307,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Change stats"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1778206428837,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Change stats from repo root"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_001",
+        "timestamp": 1778206570751,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_329fafa0",
+        "payload": {
+          "message": "[Request interrupted by user for tool use]"
+        }
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1778206570752,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram repo git status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1778206570785,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Recent engram commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1778206571980,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram remote"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1778206579866,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Change stats"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1778206579868,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check version diff"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1778206587131,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Key db.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1778206587133,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Key handlers.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1778206587134,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Key tools.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1778206599949,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Confirm tests pass"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1778206625014,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1778206632514,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Stage all engram changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1778206678900,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit engram v0.8.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1778206682687,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1778206720553,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build engram package"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1778206812900,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build engram package"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1778206839389,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Publish to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1778206854759,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1778209092826,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1778209102735,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1778213072142,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1778213073150,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1778213081814,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1778213081816,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1778213089893,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/handlers.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 1778213089896,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/db.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 1778213117238,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/handlers.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 1778213117241,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/handlers.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 1778213847727,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 1778213847729,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 1778213851651,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/shared.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 1778213983931,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current git status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 1778213983933,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Recent commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 1778213988663,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check what changed since v0.8.0"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 1778213993306,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Review code changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 1778214000635,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run tests"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 1778214024056,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 1778214035073,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit v0.8.1"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 1778214041915,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 1778214049762,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build v0.8.1"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 1778214058900,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Publish v0.8.1 to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_057",
+        "timestamp": 1778214077839,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__update_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_058",
+        "timestamp": 1778214089366,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "Engram MCP Server：自研本地Agent记忆服务，已发布PyPI(mcp-engram)和GitHub(hugfeature/engram)，当前v0.8.1(2026-05-08)。技术栈：DuckDB+NetworkX+Ebbinghaus遗忘曲线+语义检索(all-mpnet-base-v2 768d)+VSS/HNSW。双接口MCP stdio+HTTP/REST。11个MC"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_059",
+        "timestamp": 1778214695753,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade engram to v0.8.1"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_060",
+        "timestamp": 1778214707178,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify installed version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_061",
+        "timestamp": 1778214731781,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify session lifecycle features"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_062",
+        "timestamp": 1778214839622,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/db.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_063",
+        "timestamp": 1778214851669,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/db.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_064",
+        "timestamp": 1778214861741,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/db.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_065",
+        "timestamp": 1778214867343,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run tests after fix"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_066",
+        "timestamp": 1778214915976,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify all session lifecycle features"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_067",
+        "timestamp": 1778214963965,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_068",
+        "timestamp": 1778214972474,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit v0.8.2 fix"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_069",
+        "timestamp": 1778214978183,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push and build v0.8.2"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_070",
+        "timestamp": 1778214989959,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Publish v0.8.2"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_071",
+        "timestamp": 1778214999185,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade local engram to v0.8.2"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_072",
+        "timestamp": 1778215008804,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify local version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_073",
+        "timestamp": 1778215014810,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Force reinstall v0.8.2"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_074",
+        "timestamp": 1778215079980,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_075",
+        "timestamp": 1778215232953,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_002",
+        "timestamp": 1778215370469,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_329fafa0",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_076",
+        "timestamp": 1778215370470,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current local version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_077",
+        "timestamp": 1778215376757,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Force upgrade to 0.8.2, skip deps for speed"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_078",
+        "timestamp": 1778215382024,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_079",
+        "timestamp": 1778215388843,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if engram service is running"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_080",
+        "timestamp": 1778215394699,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find engram server process"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_081",
+        "timestamp": 1778215402731,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Restart engram HTTP server on 8900"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_082",
+        "timestamp": 1778215431576,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify session lifecycle via HTTP API"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_083",
+        "timestamp": 1778215474057,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify handoff, outcome, and interrupted session cleanup"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_084",
+        "timestamp": 1778215498909,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Simulate crash and verify interrupted session detection"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_085",
+        "timestamp": 1778215578792,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Re-verify interrupted session detection"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_086",
+        "timestamp": 1778215591738,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check all sessions in DB"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_087",
+        "timestamp": 1778215608887,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Directly test get_interrupted_sessions"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_088",
+        "timestamp": 1778215647792,
+        "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_329fafa0",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "End-to-end test: restart server with stale session"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_329fafa0-90ef-401a-b14f-2a9d2ff9d271",
+    "drift": true,
+    "takeover_required": false,
+    "annotator_notes": "88 tool calls with 2 user interrupts. Agent over-executed without clear stopping point. rabbit_hole.",
+    "annotated_by": "human",
+    "drift_type": "rabbit_hole",
+    "groundtruth_quality": "weak",
+    "weak_reason": "interrupted"
+  }
+}

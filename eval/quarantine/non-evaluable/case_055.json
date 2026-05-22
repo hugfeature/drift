@@ -1,0 +1,1702 @@
+{
+  "id": "fixture_imported_14c64a40",
+  "description": "Imported Claude Code session: \"unknown goal\"",
+  "agent": "claude-code",
+  "created_at": 1776654513094,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+    "started_at": 1776654513094,
+    "agent": "claude-code",
+    "active_goal_id": "goal_14c64a40",
+    "goals": [
+      {
+        "id": "goal_14c64a40",
+        "created_at": 1776654513094,
+        "source": "human",
+        "raw": "unknown goal",
+        "normalized": {
+          "observable_targets": [
+            "unknown goal"
+          ],
+          "allowed_domains": [
+            "unknown",
+            "goal"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1776654513094,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1776654854735,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if internal PBC file exists"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1776654854738,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if openpyxl is available"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1776654867400,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read Excel structure and content"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1776654880792,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Modify PBC Excel: adjust weights and ObservAI description"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1776654890298,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify weight sum equals 100%"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1776654905078,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1776654920132,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1776655297875,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Compare original vs backup file"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1776655307196,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List all PBC internal version files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1776655336712,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Modify the renamed PBC file directly"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1776659639822,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_resolve_url",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1776659639823,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_resolve_url",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1776659655899,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1776659655900,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_detail",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1776659691667,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1776659902893,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1776660088775,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_doc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1776663624036,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1776663663711,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1776663672805,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1776663690128,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1776663697997,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1776663705701,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-pbc-cy26s1.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1776664397520,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-action-plan-202604.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1776664397522,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-diting-roadmap.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1776664397556,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-article-publish-status.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1776664405215,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-repo-watch.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1776664405217,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observai-okr.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1776664496882,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-repo-watch.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1776670971664,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-internal-sharing-alignment.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1776670981744,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1776670981745,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_user_book_list",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1776670994145,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1776671033562,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1776672400147,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1776672415697,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1776672422738,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1776672428556,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1776672437746,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 1776672450810,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 1776672450848,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 1776672450849,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 1776672450851,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 1776672453688,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 1776672453690,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 1776672483401,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 1776672483403,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 1776672483407,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 1776672483409,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 1776672491256,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 1776672491258,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 1776672491260,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 1776672491265,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 1776672491267,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 1776672491268,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_057",
+        "timestamp": 1776672518829,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_058",
+        "timestamp": 1776672518831,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_059",
+        "timestamp": 1776672518833,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_060",
+        "timestamp": 1776672527544,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_061",
+        "timestamp": 1776672527571,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_062",
+        "timestamp": 1776672527572,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_063",
+        "timestamp": 1776672527574,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_064",
+        "timestamp": 1776672527575,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_065",
+        "timestamp": 1776672527576,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_066",
+        "timestamp": 1776672533045,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_067",
+        "timestamp": 1776672533047,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_068",
+        "timestamp": 1776672533049,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_069",
+        "timestamp": 1776672533051,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_070",
+        "timestamp": 1776672554717,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Wait for rate limit to reset"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_071",
+        "timestamp": 1776672569891,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_072",
+        "timestamp": 1776672569893,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_073",
+        "timestamp": 1776672569894,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_074",
+        "timestamp": 1776672603924,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_075",
+        "timestamp": 1776672603926,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_076",
+        "timestamp": 1776672603927,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_077",
+        "timestamp": 1776672603929,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_078",
+        "timestamp": 1776672618128,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_079",
+        "timestamp": 1776672618130,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_080",
+        "timestamp": 1776672618131,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_081",
+        "timestamp": 1776672634221,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_082",
+        "timestamp": 1776672634223,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_083",
+        "timestamp": 1776672634225,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_084",
+        "timestamp": 1776672634227,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_085",
+        "timestamp": 1776672635601,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_086",
+        "timestamp": 1776672635603,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_087",
+        "timestamp": 1776672729953,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_088",
+        "timestamp": 1776672729956,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_089",
+        "timestamp": 1776672729958,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_090",
+        "timestamp": 1776672747673,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_091",
+        "timestamp": 1776672782441,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_092",
+        "timestamp": 1776672808593,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_093",
+        "timestamp": 1776672813804,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_094",
+        "timestamp": 1776672848500,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_095",
+        "timestamp": 1776672864388,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_096",
+        "timestamp": 1776672883514,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check yuque CLI availability"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_097",
+        "timestamp": 1776673406121,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check yuque CLI npm package"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_098",
+        "timestamp": 1776673470774,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc_update",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_099",
+        "timestamp": 1776673506555,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__yuque-mcp__skylark_book_toc",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_100",
+        "timestamp": 1776674572841,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 语雀MCP目录移动不生效\ndescription: yuque MCP的appendChild/prependChild/moveAfter对已有DOC节点静默失败，只有创建时指定父节点才生效\ntype: feedback\n---\n\n语雀 MCP 工具 `skylark_book_toc_update` 的 appendChild/prependChild/moveAfter ",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-yuque-toc-move.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_101",
+        "timestamp": 1776674579070,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_102",
+        "timestamp": 1776674596125,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_103",
+        "timestamp": 1776674606846,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_104",
+        "timestamp": 1776674622465,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_105",
+        "timestamp": 1776677000631,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-article-publish-status.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_106",
+        "timestamp": 1776677008691,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-article-publish-status.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_107",
+        "timestamp": 1776677405075,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "WebSearch",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_108",
+        "timestamp": 1776677417323,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Search CC 91 vs 92 diff"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_109",
+        "timestamp": 1776677545786,
+        "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_14c64a40",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Agent",
+          "message": "Fetch CC changelog from GitHub"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_14c64a40-3aed-4e5a-83a0-ff418162e141",
+    "drift": false,
+    "takeover_required": false,
+    "annotator_notes": "109 tools, 0 interrupts, 386min. No interrupts = user did not feel need to intervene. Long but controlled.",
+    "annotated_by": "human",
+    "groundtruth_quality": "weak",
+    "weak_reason": "unknown_goal"
+  }
+}

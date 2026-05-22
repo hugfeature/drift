@@ -20,6 +20,23 @@ export type DriftType =
   | 'interrupted_workflow'      // agent resumes after interruption but diverges from original goal
   | 'conflicting_context'       // contradictory information in context causes agent confusion
 
+/**
+ * Groundtruth quality classification.
+ * Fixtures with weak goals (unknown, image-only, ambiguous short text)
+ * cannot be reliably evaluated — they should be excluded from precision/recall
+ * or reported separately.
+ */
+export type GroundtruthQuality = 'strong' | 'weak'
+
+/**
+ * Reason why a fixture is classified as weak-groundtruth.
+ */
+export type WeakReason =
+  | 'unknown_goal'        // goal text is "unknown goal" or empty
+  | 'image_reference'     // goal references an image that the system cannot see
+  | 'interrupted'         // session was interrupted, no clear task intent
+  | 'ambiguous_short'     // goal text too short/vague to determine intent
+
 export interface DriftLabel {
   session_id: string
   drift: boolean
@@ -41,6 +58,14 @@ export interface DriftLabel {
    * Automated labeling deferred until scoring is validated against human labels.
    */
   annotated_by: 'human'
+
+  /**
+   * Groundtruth quality. Weak fixtures have ambiguous/missing goals
+   * that make drift detection evaluation unreliable.
+   * Defaults to 'strong' if not set.
+   */
+  groundtruth_quality?: GroundtruthQuality
+  weak_reason?: WeakReason
 }
 
 /**

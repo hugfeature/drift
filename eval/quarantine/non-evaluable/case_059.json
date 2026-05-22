@@ -1,0 +1,2113 @@
+{
+  "id": "fixture_imported_0795e18d",
+  "description": "Imported Claude Code session: \"unknown goal\"",
+  "agent": "claude-code",
+  "created_at": 1777341239359,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+    "started_at": 1777341239359,
+    "agent": "claude-code",
+    "active_goal_id": "goal_0795e18d",
+    "goals": [
+      {
+        "id": "goal_0795e18d",
+        "created_at": 1777341239359,
+        "source": "human",
+        "raw": "unknown goal",
+        "normalized": {
+          "observable_targets": [
+            "unknown goal"
+          ],
+          "allowed_domains": [
+            "unknown",
+            "goal"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1777341239359,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Glob",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1777341239360,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1777341287347,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-html-image-style.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1777341287349,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-image-markers.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1777341285223,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-agent-browser.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1777341285225,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-agent-browser-stability.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1777341285226,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/article-standard.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1777341287335,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-deai-writing.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1777341287337,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-article-structure.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1777341287339,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/article-viral-formula.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1777341298706,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-yuque-toc-move.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1777341298708,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-yuque-daily-report.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1777341296602,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/antmonitor-plugin-types.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1777341298710,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-default-yuque-book.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1777341296604,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/antmonitor-delete-pattern.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1777341296606,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/career-positioning.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1777341296608,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/career-growth.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1777341298695,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-job-hunting.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1777341307454,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/reference-harness-engineering.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1777341307456,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/reference-hermes-patterns.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1777341307458,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-hackathon-2026.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1777341307459,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-action-plan-202604.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1777341309482,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-yourmemory-permission.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1777341309490,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-mcp-dual-config.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1777341309491,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/observ-cli-acceptance.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1777341309493,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observ-cli-acceptance.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1777341336040,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-deliver-complete.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1777341336042,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-publish-workflow.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1777341336043,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-article-location.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1777341336045,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observ-doc-migration.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1777341336046,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-internal-sharing-alignment.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1777341336068,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/article-ata-style.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1777341491901,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: agent-browser 使用规范\ndescription: agent-browser登录态方案(Mac/Windows差异)、稳定性注意事项、并发限制\ntype: feedback\n---\n\n## 登录态方案\n\nMac 上企业 Chrome 策略禁止调试端口（--remote-debugging-port），--auto-connect 不可用。\nWindows 上可以正",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-agent-browser.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1777341492360,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 公众号写作全规范\ndescription: 测试进化论公众号的文章结构、去AI味规范、配图HTML标准、插图标记规则\ntype: reference\n---\n\n## 基本信息\n- 公众号名称：**测试进化论**\n- slogan：测试不会消失，只会进化\n- 风格：品牌路线（非个人 IP）\n- 排版工具：doocs.github.io/md\n- 配色：主色 #1976D2（蓝），",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/article-writing-standards.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1777341521699,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 职业规划与求职进展\ndescription: 岗位定位(Skill研发专家+AI测试闭环)、成长路线图、求职目标公司与简历状态\ntype: project\n---\n\n## 岗位定位\n\n**选择：Skill研发专家为主攻方向**（\"Skill为核，评测为底\"）\n\n双层定位策略：\n- **对外标签**：\"AI测试闭环\"——国内能听懂、有业务价值\n- **对内能力**：AI Harn",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/career-and-job.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1777341521702,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 语雀使用规范\ndescription: 语雀MCP/CLI的限制、文档创建规则、默认知识库选择\ntype: feedback\n---\n\n## MCP目录移动不生效\n`skylark_book_toc_update` 的 appendChild/moveAfter 对已有 DOC 节点**返回成功但不生效**。\n- 需要调整目录结构时：网页手动拖拽，或用 CLI(`@antcli",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-yuque.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1777341566441,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: AntMonitor自定义监控速查\ndescription: 8种插件类型(URL/前缀/表单差异)+删除脚本通用流程\ntype: reference\n---\n\n## 插件类型速查\n\n| 插件类型 | URL路径段 | 测试前缀 |\n|---------|----------|---------|\n| 多值多分组/分钟统计 | multiValueGroup | test_mu",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/reference-antmonitor.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1777341583130,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Skill设计方法论\ndescription: Harness Engineering 6原则+Hermes Agent 5大设计支柱+各Skill落地情况\ntype: reference\n---\n\n## Harness Engineering 6原则\n\n核心公式：`Agent = Model + Harness`\n\n### 1. Generator + Evaluator 分",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/reference-skill-design.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1777341595004,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Observ CLI 验收与文档\ndescription: v0.5.0验收结果(128P/0F/21M)、API结构关键发现、文档迁移完成状态\ntype: project\n---\n\n## 验收结果（v0.5.0，2026-04-24）\n- **128 PASS / 0 FAIL / 21 MANUAL / 4 SKIP**（总计 153，自动化率 83.7%）\n- 脚本位置：",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-observ-cli.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1777341596241,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: 文章交付与发布流程\ndescription: 交付习惯(一次出完)、发布流程(只发公众号)、文章存放路径\ntype: feedback\n---\n\n## 交付习惯\n文章+所有配图HTML一次性全部生成完毕后再交付，不要中途停下来让用户review。\n\n## 发布流程\n只发公众号，不发掘金（掘金不给流量）。不需要\"发布版\"文件，直接改原始 markdown。\n1. 正文 markd",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-delivery.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 1777341622833,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: ATA内部分享写作规范\ndescription: ATA热文风格、与公众号差异化写法、必须对齐超级兵种知识库\ntype: feedback\n---\n\n## ATA 热文三种模式\n\n| 类型 | 代表 | 特点 |\n|------|------|------|\n| IC 技术深挖 | 侑夕《你不知道的Agent》13k views | 反直觉开头，系统性深挖，技术判断 |\n| 管",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/article-ata-style.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 1777341635578,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Delete merged and outdated memory files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 1777341648579,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Glob",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 1777341714345,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Skill 项目记忆\n\n## 用户画像\n- [用户基本情况](./user-profile.md) — 35岁，数字马力测试开发，目标北京/天津\n- [家庭情况](./user-family.md) — 两个儿子(5岁+1岁4个月)\n- [职业规划与求职](./career-and-job.md) — Skill研发专家+AI测试闭环，6-7月裁员窗口，目标MiniMax/智谱等\n\n## 谛听",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 1777341890262,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 1777341891192,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Glob",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 1777342089819,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 1777342717894,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/pyproject.toml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 1777342719108,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 1777342719110,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List Python package files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 1777342719112,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Glob",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 1777342730482,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 1777342730484,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 1777342730607,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 1777342866365,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check MCP server config"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 1777342866401,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check codefuse MCP config"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_057",
+        "timestamp": 1777342867163,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/server.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_058",
+        "timestamp": 1777342867164,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_059",
+        "timestamp": 1777342867166,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_060",
+        "timestamp": 1777342882406,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/db.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_061",
+        "timestamp": 1777342882408,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/embedding.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_062",
+        "timestamp": 1777342882410,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/benchmark/locomo_eval.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_063",
+        "timestamp": 1777342882412,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_064",
+        "timestamp": 1777342918114,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/consolidator.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_065",
+        "timestamp": 1777342914640,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_066",
+        "timestamp": 1777342914642,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/db.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_067",
+        "timestamp": 1777342918090,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/embedding.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_068",
+        "timestamp": 1777342918094,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/graph.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_069",
+        "timestamp": 1777342918097,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/pruner.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_070",
+        "timestamp": 1777342928305,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/graph.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_071",
+        "timestamp": 1777342928306,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/pruner.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_072",
+        "timestamp": 1777342928307,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/consolidator.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_073",
+        "timestamp": 1777342928309,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/tests/test_core.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_074",
+        "timestamp": 1777342940798,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/graph.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_075",
+        "timestamp": 1777342940800,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/pruner.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_076",
+        "timestamp": 1777342942382,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/consolidator.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_077",
+        "timestamp": 1777342942385,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/tests/test_core.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_078",
+        "timestamp": 1777342954073,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/server.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_079",
+        "timestamp": 1777342954075,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/server.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_080",
+        "timestamp": 1777342958322,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/server.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_081",
+        "timestamp": 1777342958326,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_082",
+        "timestamp": 1777342958328,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_083",
+        "timestamp": 1777342961283,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_084",
+        "timestamp": 1777342961285,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_085",
+        "timestamp": 1777342961316,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_086",
+        "timestamp": 1777342963373,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_087",
+        "timestamp": 1777342963375,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/src/local_memory/setup_cli.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_088",
+        "timestamp": 1777342977312,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/tests/test_core.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_089",
+        "timestamp": 1777342977313,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/pyproject.toml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_090",
+        "timestamp": 1777342989876,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "[build-system]\nrequires = [\"hatchling\"]\nbuild-backend = \"hatchling.build\"\n\n[project]\nname = \"engram\"\nversion = \"0.1.0\"\ndescription = \"Every thought leaves a trace — persistent memory MCP server with E",
+          "target": "/Users/wangzhaoxian/skill/local-memory/pyproject.toml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_091",
+        "timestamp": 1777343468581,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/benchmark/locomo_eval.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_092",
+        "timestamp": 1777343478229,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/benchmark/locomo_eval.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_093",
+        "timestamp": 1777343489494,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_094",
+        "timestamp": 1777343496140,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/benchmark/locomo_eval.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_095",
+        "timestamp": 1777343504852,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_096",
+        "timestamp": 1777343511392,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/benchmark/locomo_eval.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_097",
+        "timestamp": 1777343519635,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Grep",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_098",
+        "timestamp": 1777343665280,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_099",
+        "timestamp": 1777343671679,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_100",
+        "timestamp": 1777343671681,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_101",
+        "timestamp": 1777343671684,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_102",
+        "timestamp": 1777343676596,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_103",
+        "timestamp": 1777343676598,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_104",
+        "timestamp": 1777343676601,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_105",
+        "timestamp": 1777343679413,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_106",
+        "timestamp": 1777343679415,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/local-memory/README.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_107",
+        "timestamp": 1777343693133,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Rename Python package directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_108",
+        "timestamp": 1777343703921,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Rename project directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_109",
+        "timestamp": 1777343805810,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Migrate data directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_110",
+        "timestamp": 1777344176423,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Install engram package"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_111",
+        "timestamp": 1777344280930,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify CLI commands exist"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_112",
+        "timestamp": 1777344384517,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.claude.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_113",
+        "timestamp": 1777344399930,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Update MCP server configs"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_114",
+        "timestamp": 1777344411115,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.claude/CLAUDE.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_115",
+        "timestamp": 1777344411116,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.claude/settings.local.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_116",
+        "timestamp": 1777344421800,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.claude/CLAUDE.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_117",
+        "timestamp": 1777344799063,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.claude/CLAUDE.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_118",
+        "timestamp": 1777344799089,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.claude/settings.local.json"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_119",
+        "timestamp": 1777345118728,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Engram MCP Server\ndescription: 自研本地记忆MCP Server(原LocalMemory)，DuckDB+NetworkX+Ebbinghaus，已改名Engram\ntype: project\noriginSessionId: 0795e18d-cf38-4d3f-b1bb-c29b39661666\n---\nEngram（原 LocalMemor",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-local-memory.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_120",
+        "timestamp": 1777345118730,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-yourmemory-permission.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_121",
+        "timestamp": 1777345131928,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: YourMemory已移除，切换到Engram\ndescription: yourmemory因DuckDB单文件锁导致多会话冲突，已移除配置，全面切换到自研Engram\ntype: feedback\noriginSessionId: 794961fd-27a6-4f06-9a65-e82fe3b3af86\n---\nYourMemory MCP 已于 04-27 完全移除，根因",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/feedback-yourmemory-permission.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_122",
+        "timestamp": 1777345165483,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_123",
+        "timestamp": 1777345354438,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_124",
+        "timestamp": 1777345354524,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/MEMORY.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_125",
+        "timestamp": 1777345412724,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run tests to verify rename"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_126",
+        "timestamp": 1777345541791,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run tests to verify rename"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_127",
+        "timestamp": 1777346216646,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify CLI commands exist and work"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_128",
+        "timestamp": 1777346216682,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify data directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_129",
+        "timestamp": 1777346216684,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify old artifacts are gone"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_130",
+        "timestamp": 1777346604276,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram startup error"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_131",
+        "timestamp": 1777348652846,
+        "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_0795e18d",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check running processes"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_0795e18d-cf38-4d3f-b1bb-c29b39661666",
+    "drift": false,
+    "takeover_required": false,
+    "annotator_notes": "131 tools, 0 interrupts, 139min. No interrupts = controlled execution.",
+    "annotated_by": "human",
+    "groundtruth_quality": "weak",
+    "weak_reason": "unknown_goal"
+  }
+}

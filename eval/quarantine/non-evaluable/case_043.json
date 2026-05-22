@@ -1,0 +1,2657 @@
+{
+  "id": "fixture_imported_324a5c49",
+  "description": "Imported Claude Code session: \"[Request interrupted by user]\"",
+  "agent": "claude-code",
+  "created_at": 1778305510805,
+  "source": "imported_claude_transcript",
+  "session": {
+    "id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+    "started_at": 1778305510805,
+    "agent": "claude-code",
+    "active_goal_id": "goal_324a5c49",
+    "goals": [
+      {
+        "id": "goal_324a5c49",
+        "created_at": 1778305510805,
+        "source": "human",
+        "raw": "[Request interrupted by user]",
+        "normalized": {
+          "observable_targets": [
+            "[Request interrupted by user]"
+          ],
+          "allowed_domains": [
+            "request",
+            "interrupted",
+            "user"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1778305510805,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find engram project directories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1778305511728,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check for engram in common locations"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1778305517498,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram git status, recent commits, and remotes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1778305616662,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check what files changed and how much"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1778305622590,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "View full diff of all changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1778305622592,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "View new test file"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1778305622594,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current version in pyproject.toml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1778305641126,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run lock conflict and snapshot tests"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1778305641129,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Find version definition"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1778305645856,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run tests with python3"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1778305652672,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run full test suite"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1778305694071,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1778305699449,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/engram/src/engram/__init__.py"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1778305704410,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Stage all changed and new files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1778305715695,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit v0.11.1 with detailed message"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1778305720385,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Tag the release"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1778305720386,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push commit and tag to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1778305740643,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build sdist and wheel"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1778305749103,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upload to PyPI"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1778305802421,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Upgrade local engram to v0.11.1"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1778305829108,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify installed version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1778305829110,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram server status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1778305871898,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Start engram server"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1778305879228,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check server status and health endpoint"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1778305884432,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Try starting a second engram instance, should be rejected"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1778305888082,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Stop engram server"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1778305916217,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Start engram server"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1778305925919,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check health endpoint"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1778305930038,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Recall recent memories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1778305930058,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Recall session handoff memories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1778305940063,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check stats endpoint"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_032",
+        "timestamp": 1778305940065,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List recent memories via REST"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_033",
+        "timestamp": 1778305941190,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Search memories via REST"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_034",
+        "timestamp": 1778305950254,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check root endpoint for available routes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_035",
+        "timestamp": 1778305951320,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List all API routes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_036",
+        "timestamp": 1778305959836,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Get stats via REST API"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_037",
+        "timestamp": 1778305959838,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Recall recent memories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_038",
+        "timestamp": 1778305973664,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram data files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_039",
+        "timestamp": 1778305977126,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Inspect DuckDB tables and row counts"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_040",
+        "timestamp": 1778305986387,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check for corrupt/backup files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_041",
+        "timestamp": 1778305986581,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check for recovered dirs and full listing"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_042",
+        "timestamp": 1778306010431,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Stop server to inspect DB"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_043",
+        "timestamp": 1778306021364,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Inspect DuckDB contents directly"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_044",
+        "timestamp": 1778306047123,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check DB schema and meta data"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_045",
+        "timestamp": 1778306056850,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check event log size and sample"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_046",
+        "timestamp": 1778306063900,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check latest snapshot data"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_047",
+        "timestamp": 1778306090078,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check earlier snapshot and recovered DB"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_048",
+        "timestamp": 1778306119708,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Show recovered memory content"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_049",
+        "timestamp": 1778306132497,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Analyze event log content"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_050",
+        "timestamp": 1778306858994,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify commit, tag, and working tree status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_051",
+        "timestamp": 1778306992764,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram MCP config in Claude Code"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_052",
+        "timestamp": 1778306994093,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram MCP config in CodeFuse"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_053",
+        "timestamp": 1778307017551,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if engram server is running"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_054",
+        "timestamp": 1778307022316,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Start engram server"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_055",
+        "timestamp": 1778307030907,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Health check"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_056",
+        "timestamp": 1778307031878,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test MCP initialize handshake"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_057",
+        "timestamp": 1778307041212,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List available MCP tools"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_058",
+        "timestamp": 1778307125755,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current memory stats"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_059",
+        "timestamp": 1778307127503,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Try recall to see if any memories exist"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_060",
+        "timestamp": 1778307135971,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Quick health check"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_061",
+        "timestamp": 1778307139752,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Direct DB query for memory count"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_062",
+        "timestamp": 1778307146463,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check DB and WAL file sizes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_063",
+        "timestamp": 1778307146465,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if server is still running"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_064",
+        "timestamp": 1778307465964,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List theta-eval directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_065",
+        "timestamp": 1778307465967,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read theta-eval project memory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_066",
+        "timestamp": 1778307494774,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/tasks.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_067",
+        "timestamp": 1778307494776,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/models.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_068",
+        "timestamp": 1778307504801,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if any eval runs exist"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_069",
+        "timestamp": 1778307504804,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check eval script header"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_070",
+        "timestamp": 1778307528219,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check the existing theta run"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_071",
+        "timestamp": 1778307535077,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List each model's run files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_072",
+        "timestamp": 1778307639205,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Parse results.json for each model"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_073",
+        "timestamp": 1778307657110,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read comparison report"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_074",
+        "timestamp": 1778308156330,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Query Theta API for available models"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_075",
+        "timestamp": 1778308164244,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if API keys are set"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_076",
+        "timestamp": 1778308177247,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Query Theta API with OPENAI_API_KEY"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_077",
+        "timestamp": 1778308214217,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Format model list for user review"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_078",
+        "timestamp": 1778308442584,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "---\nname: Theta多模型评测方案\ndescription: observ CLI/MCP多模型评测：52任务集+本地Claude Code执行+stream-json抓tool_calls+独立evaluator评分\ntype: project\noriginSessionId: 796277b7-aed6-45b7-a472-a59b0ef96fba\n---\n\n## 方案概要（2026",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_079",
+        "timestamp": 1778308528021,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/models.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_080",
+        "timestamp": 1778308546476,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Theta 多模型评测 — 模型列表\n# base_url: https://antchat.alipay.com/v1 (OpenAI-compatible)\n# 筛选标准: 支持 function calling (tool use) + 用量高\n\nversion: \"1.0\"\nbase_url: \"https://antchat.alipay.com/v1\"\n\nmodels:\n  - i",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/models.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_081",
+        "timestamp": 1778309371017,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_082",
+        "timestamp": 1778309390912,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_083",
+        "timestamp": 1778309397969,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Dry run to verify model/task loading"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_084",
+        "timestamp": 1778309445554,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run theta eval for all 4 models"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_085",
+        "timestamp": 1778309451628,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_086",
+        "timestamp": 1778309464509,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Test skipping auth"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_001",
+        "timestamp": 1778310210791,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_324a5c49",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_087",
+        "timestamp": 1778310210792,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check observ CLI version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_088",
+        "timestamp": 1778310542336,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Try PAT login with import-token"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_089",
+        "timestamp": 1778310548105,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify auth status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_090",
+        "timestamp": 1778310554385,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_091",
+        "timestamp": 1778310569610,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_092",
+        "timestamp": 1778310588188,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/theta-eval.sh"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_093",
+        "timestamp": 1778310593926,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Quick dry-run to verify changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_094",
+        "timestamp": 1778310660205,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run theta eval: 4 models × 52 tasks"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_095",
+        "timestamp": 1778310666108,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_096",
+        "timestamp": 1778311292957,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_097",
+        "timestamp": 1778311944535,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_098",
+        "timestamp": 1778312599191,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_099",
+        "timestamp": 1778312686814,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read comparison report"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_100",
+        "timestamp": 1778314035344,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Analyze common failure patterns across all models"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_101",
+        "timestamp": 1778314686181,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Deep analysis of failure patterns"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_102",
+        "timestamp": 1778314692978,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/runs/theta-20260509/comparison.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_103",
+        "timestamp": 1778314801980,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Theta 多模型评测对比报告\n\n日期: 2026-05-09\n模型: DeepSeek-V4-Pro / Qwen3.5-397B-A17B / Kimi-K2.6 / MiniMax-M2.7\n任务: 52 (auto=45, manual=7)\n\n## 总分排名\n\n| 排名 | 模型 | PASS | FAIL | Tool准确率 | 参数质量 | 覆盖率 | 总分 | 平均延迟 |\n|",
+          "target": "/Users/wangzhaoxian/skill/runs/theta-20260509/comparison.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_104",
+        "timestamp": 1778315758101,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check if model list has usage stats"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_user_002",
+        "timestamp": 1778316057497,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_324a5c49",
+        "payload": {
+          "message": "[Request interrupted by user]"
+        }
+      },
+      {
+        "id": "evt_105",
+        "timestamp": 1778316057498,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Theta 多模型评测 — 模型列表\n# base_url: https://antchat.alipay.com/v1 (OpenAI-compatible)\n# 筛选标准: 支持 function calling (tool use) + 用量高\n\nversion: \"1.0\"\nbase_url: \"https://antchat.alipay.com/v1\"\n\nmodels:\n  - i",
+          "target": "/Users/wangzhaoxian/skill/theta-eval/models.yaml"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_106",
+        "timestamp": 1778316065135,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify 7 models loaded"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_107",
+        "timestamp": 1778316080689,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run theta eval: 7 models × 52 tasks"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_108",
+        "timestamp": 1778316089093,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_109",
+        "timestamp": 1778316768198,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_110",
+        "timestamp": 1778317438756,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_111",
+        "timestamp": 1778318113936,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_112",
+        "timestamp": 1778318920114,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "TaskOutput",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_113",
+        "timestamp": 1778319798027,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List theta-eval run results directory"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_114",
+        "timestamp": 1778319803744,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check results for each completed model"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_115",
+        "timestamp": 1778320155151,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "List all model result directories"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_116",
+        "timestamp": 1778320161452,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check results for each model"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_117",
+        "timestamp": 1778320189332,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check results.json structure"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_118",
+        "timestamp": 1778320198315,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check DeepSeek results summary"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_119",
+        "timestamp": 1778320209121,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Get all 7 model results summary"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_120",
+        "timestamp": 1778320384099,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Analyze GLM-5.1 scores detail"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_121",
+        "timestamp": 1778320416089,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check task structure in results"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_122",
+        "timestamp": 1778320426884,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check GLM-5.1 task structure"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_123",
+        "timestamp": 1778320462128,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check GLM-5.1 results and scores structure"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_124",
+        "timestamp": 1778320479111,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Full 7-model comparison with latency and errors"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_125",
+        "timestamp": 1778320502025,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Deep dive GLM-5.1 errors and scoring"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_126",
+        "timestamp": 1778320546854,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check GLM-5.1 scoring details"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_127",
+        "timestamp": 1778320574515,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Full 7-model comparison with error breakdown"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_128",
+        "timestamp": 1778320602628,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Normalized 7-model comparison"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_129",
+        "timestamp": 1778320626486,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Analyze common failure patterns across 7 models"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_130",
+        "timestamp": 1778320679795,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Detailed failure analysis per model and by category"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_131",
+        "timestamp": 1778320754957,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Deep dive into results vs scores structure"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_132",
+        "timestamp": 1778320791727,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Understand scoring structure - results vs scores"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_133",
+        "timestamp": 1778320821087,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Common failure task analysis across 7 models"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_134",
+        "timestamp": 1778320845011,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Categorized failure analysis for stable models"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_135",
+        "timestamp": 1778320853718,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/runs/theta-20260509/comparison.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_136",
+        "timestamp": 1778320943612,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Write",
+          "message": "# Theta 多模型评测对比报告\n\n日期: 2026-05-09\n模型: DeepSeek-V4-Pro / Qwen3.5-397B-A17B / MiniMax-M2.7 / MiniMax-M2.5 / Kimi-K2.6 / GLM-5 / GLM-5.1\n任务: 52 (auto=45, manual=7)\n\n## 总分排名\n\n| 排名 | 模型 | PASS | FAIL | Too",
+          "target": "/Users/wangzhaoxian/skill/runs/theta-20260509/comparison.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_137",
+        "timestamp": 1778320948412,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_138",
+        "timestamp": 1778320974253,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_139",
+        "timestamp": 1778321102570,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Read scoring rules to understand dimension score calculation"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_140",
+        "timestamp": 1778321139936,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify normalization logic against scoring rules"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_141",
+        "timestamp": 1778321188270,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Verify normalization calculation"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_142",
+        "timestamp": 1778321194888,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Read",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/runs/theta-20260509/comparison.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_143",
+        "timestamp": 1778321243587,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/runs/theta-20260509/comparison.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_144",
+        "timestamp": 1778321267488,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/skill/runs/theta-20260509/comparison.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_145",
+        "timestamp": 1778321276340,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_146",
+        "timestamp": 1778321845686,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__recall_memory",
+          "message": ""
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_147",
+        "timestamp": 1778321861424,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "[Theta多模型评测第二轮结果 2026-05-09]\n7个模型评测完成，52任务(auto=45, manual=7)，归一化总分排名：\n1. MiniMax-M2.7: 35.4 | 2. Qwen3.5-397B-A17B: 34.8 | 3. MiniMax-M2.5: 33.5 | 4. DeepSeek-V4-Pro: 30.4 | 5. Kimi-K2.6: 28.1 | 6. G"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_148",
+        "timestamp": 1778321870624,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "[Theta评测归一化策略] 当模型因API错误(429/连接失败)导致部分任务不可评分时，tool_accuracy和param_quality仅基于可评分任务计算均值，分母变小分数虚高。归一化方法：原始分×(可评分任务数/总auto任务数)，假设未评分任务得0分。GLM-5.1案例：25/45可评，原始39.2→归一化25.7，从\"第一\"变垫底。coverage维度不受影响(已基于全部auto"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_149",
+        "timestamp": 1778321880577,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "mcp__engram__store_memory",
+          "message": "[Theta评测工具不调用问题] 10个MCP工具中，grep_log/sql_exe/pql_query/get_events在6个稳定模型上几乎零正确调用，模型倾向用文本回答而非调工具。search_entities和search_entity_set名称太像导致8/28的混淆。改进方向：优化工具description加触发词、区分两个search工具描述、Hard任务expected_too"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_150",
+        "timestamp": 1778321915396,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Edit",
+          "message": "",
+          "target": "/Users/wangzhaoxian/.codefuse/engine/cc/projects/-Users-wangzhaoxian-skill/memory/project-theta-eval.md"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_151",
+        "timestamp": 1778321933927,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check engram git status"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_152",
+        "timestamp": 1778321933929,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check recent commits"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_153",
+        "timestamp": 1778321946849,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check current version"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_154",
+        "timestamp": 1778321946850,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check diff summary"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_155",
+        "timestamp": 1778321952058,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check version change"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_156",
+        "timestamp": 1778321952059,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check new test files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_157",
+        "timestamp": 1778321959884,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check db.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_158",
+        "timestamp": 1778321959885,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check handlers.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_159",
+        "timestamp": 1778321959887,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check event_log.py changes"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_160",
+        "timestamp": 1778321967982,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check new continuity module"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_161",
+        "timestamp": 1778321967984,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check new test files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_162",
+        "timestamp": 1778321974379,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Run engram tests"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_163",
+        "timestamp": 1778322007276,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Final diff summary before commit"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_164",
+        "timestamp": 1778322015427,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Stage all changed and new files"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_165",
+        "timestamp": 1778322028460,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Commit engram v0.13.1"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_166",
+        "timestamp": 1778322032521,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_167",
+        "timestamp": 1778322036752,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check remote configuration"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_168",
+        "timestamp": 1778322040986,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Push to GitHub (remote name is github)"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_169",
+        "timestamp": 1778322050274,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Check pyproject.toml for publish config"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_170",
+        "timestamp": 1778322054840,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Build the package"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_171",
+        "timestamp": 1778322064312,
+        "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_324a5c49",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "Bash",
+          "message": "Publish to PyPI"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_324a5c49-747a-45a4-a174-ab5c22e9d209",
+    "drift": true,
+    "takeover_required": false,
+    "annotator_notes": "171 tools, 2 interrupts, 278min. Scope grew with interrupts as correction attempts.",
+    "annotated_by": "human",
+    "drift_type": "scope_expansion",
+    "groundtruth_quality": "weak",
+    "weak_reason": "interrupted"
+  }
+}

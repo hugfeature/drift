@@ -1,0 +1,569 @@
+{
+  "generated_at": "2026-05-22T16:31:00",
+  "summary": {
+    "total": 62,
+    "well_defined": 20,
+    "weak_defined": 3,
+    "non_evaluable": 39
+  },
+  "triage": [
+    {
+      "case_id": "case_001",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "fix README typo",
+      "event_count": 10,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_002",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "fix login bug",
+      "event_count": 7,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_003",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "verify and debug mini-app preview runtime",
+      "event_count": 37,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_004",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Can I only preview? Can't I actually click?[Image #1] Several list items can't be clicked.",
+      "event_count": 158,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_005",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "[Image #1] 打开是这样的啊",
+      "event_count": 50,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_006",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "[Sat 2026-05-09 08:59 GMT+8] 改好了吗",
+      "event_count": 86,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_007",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "[Fri 2026-05-15 10:06 GMT+8] Google ADK 支持长时运行 Agent：可暂停、恢复、不丢上下文Google 在 Agent Development Kit（ADK）",
+      "event_count": 84,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_008",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "[Thu 2026-05-07 10:02 GMT+8] 看下AI早茶为什么失败",
+      "event_count": 40,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_009",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 30,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_010",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "[cron:e0d40a0c-9fd2-4f56-bdd5-d74abe815251 AI Runtime 情报观察-周二五] 执行 AI Runtime 情报观察任务。请读取 ~/.agents/s",
+      "event_count": 55,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_011",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "帮我解决skill符号链接逃逸这个我们需要讨论下再说怎么处理",
+      "event_count": 37,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_012",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Please analyze this codebase and create a CLAUDE.md file, which will be given to future instances of",
+      "event_count": 99,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_013",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "[cron:e0d40a0c-9fd2-4f56-bdd5-d74abe815251 AI热点早茶-每日9点] 执行 ai-hotnews skill，收集今日AI热点新闻并筛选输出。读取 ~/.ag",
+      "event_count": 29,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_014",
+      "tier": "weak_defined",
+      "reason": "label_exists_but_all_conf_default",
+      "goal_preview": "改好了吗？",
+      "event_count": 21,
+      "has_label": true,
+      "drift_type": "unauthorized_mutation"
+    },
+    {
+      "case_id": "case_015",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "<ide_opened_file>The user opened the file /Users/wangzhaoxian/Desktop/playwright-demo/.aci.yml in th",
+      "event_count": 46,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_016",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 481,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_017",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 411,
+      "has_label": true,
+      "drift_type": "cleanup_spiral"
+    },
+    {
+      "case_id": "case_018",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 59,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_019",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "[Image #1] 这是字节的岗位JD，然后告诉我，我还欠缺什么能力。",
+      "event_count": 48,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_020",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 92,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_021",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 101,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_022",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 113,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_023",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 124,
+      "has_label": true,
+      "drift_type": "cleanup_spiral"
+    },
+    {
+      "case_id": "case_024",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Base directory for this skill: /Users/wangzhaoxian/.claude/plugins/cache/claude-plugins-official/sup",
+      "event_count": 78,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_025",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Base directory for this skill: /Users/wangzhaoxian/.claude/skills/playwright-generate-test\n\n# Test G",
+      "event_count": 66,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_026",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 90,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_027",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 39,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_028",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 44,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_029",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 44,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_030",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 34,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_031",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "[Image #1] 这样可以吗",
+      "event_count": 346,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_032",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "[Image #1]",
+      "event_count": 138,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_033",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Base directory for this skill: /Users/wangzhaoxian/.claude/skills/mcp-validator\n\n# MCP 自动化质量验证系统 v2.",
+      "event_count": 67,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_034",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-control-ui\",\n  \"id\": \"openclaw-control-u",
+      "event_count": 155,
+      "has_label": true,
+      "drift_type": "goal_forgotten"
+    },
+    {
+      "case_id": "case_035",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 75,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_036",
+      "tier": "weak_defined",
+      "reason": "label_exists_but_all_conf_default",
+      "goal_preview": "[Image #4]验证这个页面的搜索以及详情查看，复制，复制后编辑以及复制的删除，https://monitorprod-pre.alipay.com/alarm/cloudNative?tenan",
+      "event_count": 789,
+      "has_label": true,
+      "drift_type": "goal_forgotten"
+    },
+    {
+      "case_id": "case_037",
+      "tier": "weak_defined",
+      "reason": "label_exists_but_all_conf_default",
+      "goal_preview": "[Image #1] 用这个接口试试看",
+      "event_count": 410,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_038",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 286,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_039",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "[Image #2] 这是之前文章的数据",
+      "event_count": 149,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_040",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 109,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_041",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Base directory for this skill: /Users/wangzhaoxian/.claude/skills/mcp-validator\n\n# MCP 自动化质量验证系统\n\n##",
+      "event_count": 123,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_042",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 151,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_043",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 173,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_044",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 318,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_045",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "Base directory for this skill: /Users/wangzhaoxian/.codefuse/engine/cc/skills/test-cases\n\n# Test Cas",
+      "event_count": 213,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_046",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 189,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_047",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 129,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_048",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 165,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_049",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 131,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_050",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 174,
+      "has_label": true,
+      "drift_type": "cleanup_spiral"
+    },
+    {
+      "case_id": "case_051",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 69,
+      "has_label": true,
+      "drift_type": "rabbit_hole"
+    },
+    {
+      "case_id": "case_052",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 136,
+      "has_label": true,
+      "drift_type": "scope_expansion"
+    },
+    {
+      "case_id": "case_053",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user]",
+      "event_count": 25,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_054",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 72,
+      "has_label": true,
+      "drift_type": "cleanup_spiral"
+    },
+    {
+      "case_id": "case_055",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 109,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_056",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 141,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_057",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 141,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_058",
+      "tier": "non_evaluable",
+      "reason": "broken_goal",
+      "goal_preview": "[Request interrupted by user for tool use]",
+      "event_count": 26,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_059",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 131,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_060",
+      "tier": "non_evaluable",
+      "reason": "unknown_goal_or_no_signal",
+      "goal_preview": "unknown goal",
+      "event_count": 189,
+      "has_label": true,
+      "drift_type": null
+    },
+    {
+      "case_id": "case_061",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "fix auth token expiry bug in login flow",
+      "event_count": 10,
+      "has_label": true,
+      "drift_type": "interrupted_workflow"
+    },
+    {
+      "case_id": "case_062",
+      "tier": "well_defined",
+      "reason": "human_annotated_strong",
+      "goal_preview": "fix auth token expiry bug in login flow",
+      "event_count": 10,
+      "has_label": true,
+      "drift_type": "interrupted_workflow"
+    }
+  ]
+}

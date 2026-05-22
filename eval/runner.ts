@@ -18,6 +18,8 @@
 import * as fs   from 'fs'
 import * as path from 'path'
 import { SessionManager } from '../src/session/manager'
+import { OllamaEmbeddingProvider } from '../src/embedding/ollama-provider'
+import type { EmbeddingProvider } from '../src/embedding/provider'
 import type { EvalFixture } from '../src/types/eval'
 import type { RawEvent }    from '../src/events/ingestion'
 
@@ -37,6 +39,23 @@ function loadFixtures(dir: string): EvalFixture[] {
 // Replay a fixture through the pipeline
 // ---------------------------------------------------------------------------
 
+interface SignalBreakdown {
+  semantic_divergence:    number
+  inactive_duration_minutes: number
+  consecutive_unrelated:  number
+  subgoal_depth:          number
+  exploratory_entropy:    number
+  unauthorized_mutations: number
+  autonomy_momentum:      number
+  hallucinated_claims:    number
+}
+
+interface WeightedContribution {
+  signal: string
+  raw_value: number
+  weighted: number
+}
+
 interface ReplayResult {
   fixture_id:     string
   final_score:    number
@@ -44,13 +63,24 @@ interface ReplayResult {
   drift_status:   string
   takeover_rec:   boolean
   narrative:      string[]
+  signals:        SignalBreakdown | null
+  weighted_contributions: WeightedContribution[]
+  dominant_signal: string
 }
+
+// Shared embedding provider — reuse across all fixtures to avoid re-init
+const useOllama = process.argv.includes('--ollama')
+  || Boolean(process.env.DRIFT_EMBEDDING_OLLAMA)
+const sharedEmbedding: EmbeddingProvider | undefined = useOllama
+  ? new OllamaEmbeddingProvider()
+  : undefined
 
 async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
   const session = new SessionManager({
     agent:      fixture.agent,
     session_id: fixture.session.id,
     started_at: fixture.session.started_at,
+    embedding:    sharedEmbedding,
     langsmith:    false,
     verification: false,
   })
@@ -89,6 +119,31 @@ async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
   const narrative     = session.getNarrative().segments.map(s => s.summary)
   const takeoverRec   = lastResult?.takeover.recommended ?? false
 
+  // Extract signal breakdown for FP analysis
+  const signals: SignalBreakdown | null = lastResult?.drift_score.signals
+    ? { ...lastResult.drift_score.signals }
+    : null
+
+  // Compute weighted contributions per signal
+  const defaultWeights: Record<string, number> = {
+    semantic_divergence:    0.22,
+    inactive_duration:      0.13,
+    consecutive_unrelated:  0.13,
+    subgoal_depth:          0.05,
+    exploratory_entropy:    0.10,
+    unauthorized_mutations: 0.05,
+    autonomy_momentum:      0.22,
+    hallucinated_claims:    0.10,
+  }
+
+  const contributions: WeightedContribution[] = signals
+    ? computeWeightedContributions(signals, defaultWeights)
+    : []
+
+  const dominantSignal = contributions.length > 0
+    ? contributions.reduce((max, c) => c.weighted > max.weighted ? c : max).signal
+    : 'none'
+
   return {
     fixture_id:     fixture.id,
     final_score:    finalScore,
@@ -96,7 +151,34 @@ async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
     drift_status:   lastResult?.drift_score.status ?? 'aligned',
     takeover_rec:   takeoverRec,
     narrative,
+    signals,
+    weighted_contributions: contributions,
+    dominant_signal: dominantSignal,
   }
+}
+
+function computeWeightedContributions(
+  signals: SignalBreakdown,
+  weights: Record<string, number>
+): WeightedContribution[] {
+  const signalMap: Record<string, number> = {
+    semantic_divergence:    signals.semantic_divergence,
+    inactive_duration:      Math.min(signals.inactive_duration_minutes / 10, 1.0),
+    consecutive_unrelated:  Math.min(signals.consecutive_unrelated / 5, 1.0),
+    subgoal_depth:          Math.min(signals.subgoal_depth / 3, 1.0),
+    exploratory_entropy:    signals.exploratory_entropy,
+    unauthorized_mutations: Math.min(signals.unauthorized_mutations, 1.0),
+    autonomy_momentum:      signals.autonomy_momentum,
+    hallucinated_claims:    Math.min(signals.hallucinated_claims / 3, 1.0),
+  }
+
+  return Object.entries(signalMap)
+    .map(([signal, rawValue]) => ({
+      signal,
+      raw_value: Math.round(rawValue * 1000) / 1000,
+      weighted: Math.round(rawValue * (weights[signal] ?? 0) * 1000) / 1000,
+    }))
+    .sort((a, b) => b.weighted - a.weighted)
 }
 
 // ---------------------------------------------------------------------------
@@ -122,11 +204,18 @@ interface PerTypeMetrics {
 
 function computeMetrics(
   fixtures: EvalFixture[],
-  results:  ReplayResult[]
+  results:  ReplayResult[],
+  filter: 'all' | 'strong' | 'weak' = 'all'
 ): EvalMetrics {
   let tp = 0, fp = 0, fn = 0, tn = 0
+  let included = 0
 
   for (let i = 0; i < fixtures.length; i++) {
+    const quality = fixtures[i].label.groundtruth_quality ?? 'strong'
+    if (filter === 'strong' && quality !== 'strong') continue
+    if (filter === 'weak' && quality !== 'weak') continue
+
+    included++
     const label    = fixtures[i].label.drift
     const detected = results[i].drift_detected
 
@@ -143,7 +232,7 @@ function computeMetrics(
     : (2 * precision * recall) / (precision + recall)
 
   return {
-    total:  fixtures.length,
+    total:  included,
     passed: tp + tn,
     failed: fp + fn,
     precision: Math.round(precision * 1000) / 1000,
@@ -201,6 +290,9 @@ interface EvalReport {
     final_score:    number
     drift_status:   string
     passed:         boolean
+    signals:        SignalBreakdown | null
+    weighted_contributions: WeightedContribution[]
+    dominant_signal: string
   }>
 }
 
@@ -220,7 +312,10 @@ function writeReport(report: EvalReport): string {
 // ---------------------------------------------------------------------------
 
 async function run(): Promise<void> {
-  const fixtureDir = path.join(__dirname, 'fixtures')
+  const fixtureDirArg = process.argv.find(a => a.startsWith('--fixture-dir='))
+  const fixtureDir = fixtureDirArg
+    ? fixtureDirArg.split('=')[1]
+    : path.join(__dirname, 'fixtures-valid')
   const fixtures   = loadFixtures(fixtureDir)
 
   if (fixtures.length === 0) {
@@ -260,14 +355,34 @@ async function run(): Promise<void> {
     }
   }
 
-  const metrics = computeMetrics(fixtures, results)
-  const perType = computePerTypeMetrics(fixtures, results)
+  const metricsAll    = computeMetrics(fixtures, results, 'all')
+  const metricsStrong = computeMetrics(fixtures, results, 'strong')
+  const metricsWeak   = computeMetrics(fixtures, results, 'weak')
+  const perType       = computePerTypeMetrics(fixtures, results)
+
+  const strongCount = fixtures.filter(f => (f.label.groundtruth_quality ?? 'strong') === 'strong').length
+  const weakCount   = fixtures.length - strongCount
 
   console.log('\n' + '─'.repeat(60))
-  console.log(`Results:   ${metrics.passed}/${metrics.total} passed`)
-  console.log(`Precision: ${metrics.precision}`)
-  console.log(`Recall:    ${metrics.recall}`)
-  console.log(`F1:        ${metrics.f1}`)
+  console.log(`Total fixtures: ${fixtures.length}  (strong: ${strongCount}, weak: ${weakCount})`)
+  console.log()
+  console.log(`  STRONG only (${metricsStrong.total} fixtures):`)
+  console.log(`    Results:   ${metricsStrong.passed}/${metricsStrong.total} passed`)
+  console.log(`    Precision: ${metricsStrong.precision}`)
+  console.log(`    Recall:    ${metricsStrong.recall}`)
+  console.log(`    F1:        ${metricsStrong.f1}`)
+  console.log()
+  console.log(`  WEAK only (${metricsWeak.total} fixtures):`)
+  console.log(`    Results:   ${metricsWeak.passed}/${metricsWeak.total} passed`)
+  console.log(`    Precision: ${metricsWeak.precision}`)
+  console.log(`    Recall:    ${metricsWeak.recall}`)
+  console.log(`    F1:        ${metricsWeak.f1}`)
+  console.log()
+  console.log(`  ALL (${metricsAll.total} fixtures):`)
+  console.log(`    Results:   ${metricsAll.passed}/${metricsAll.total} passed`)
+  console.log(`    Precision: ${metricsAll.precision}`)
+  console.log(`    Recall:    ${metricsAll.recall}`)
+  console.log(`    F1:        ${metricsAll.f1}`)
   console.log('─'.repeat(60))
 
   if (perType.length > 0) {
@@ -278,6 +393,9 @@ async function run(): Promise<void> {
       )
     }
   }
+
+  // Use strong-only metrics as the primary report metric
+  const metrics = metricsStrong
 
   // Write structured JSON report
   const report: EvalReport = {
@@ -295,11 +413,134 @@ async function run(): Promise<void> {
       final_score:    results[i].final_score,
       drift_status:   results[i].drift_status,
       passed:         f.label.drift === results[i].drift_detected,
+      signals:        results[i].signals,
+      weighted_contributions: results[i].weighted_contributions,
+      dominant_signal: results[i].dominant_signal,
     })),
   }
 
   const reportPath = writeReport(report)
   console.log(`\n📄 Report saved: ${reportPath}`)
+
+  // Generate timelines if --timeline flag is set
+  if (process.argv.includes('--timeline')) {
+    await generateTimelines(fixtures, fixtureDir)
+  }
+
+  // -----------------------------------------------------------------------
+  // FP Analysis: dump false positives with signal breakdown
+  // -----------------------------------------------------------------------
+  const fpCases: Array<{ fixture: EvalFixture; result: ReplayResult }> = []
+  const fnCases: Array<{ fixture: EvalFixture; result: ReplayResult }> = []
+
+  for (let i = 0; i < fixtures.length; i++) {
+    const expected = fixtures[i].label.drift
+    const detected = results[i].drift_detected
+    if (!expected && detected) fpCases.push({ fixture: fixtures[i], result: results[i] })
+    if (expected && !detected) fnCases.push({ fixture: fixtures[i], result: results[i] })
+  }
+
+  if (fpCases.length > 0) {
+    console.log('\n' + '═'.repeat(60))
+    console.log(`FALSE POSITIVES (${fpCases.length} cases) — expected=false, detected=true`)
+    console.log('═'.repeat(60))
+
+    // FP by dominant signal
+    const fpBySignal = new Map<string, number>()
+    for (const fp of fpCases) {
+      const sig = fp.result.dominant_signal
+      fpBySignal.set(sig, (fpBySignal.get(sig) ?? 0) + 1)
+    }
+    console.log('\nFP by dominant signal:')
+    for (const [sig, count] of [...fpBySignal.entries()].sort((a, b) => b[1] - a[1])) {
+      console.log(`  ${sig.padEnd(28)} ${count} cases`)
+    }
+
+    // FP by score band
+    const bands = { '0.50-0.55': 0, '0.55-0.60': 0, '0.60-0.70': 0, '0.70-0.80': 0, '0.80+': 0 }
+    for (const fp of fpCases) {
+      const s = fp.result.final_score
+      if (s < 0.55) bands['0.50-0.55']++
+      else if (s < 0.60) bands['0.55-0.60']++
+      else if (s < 0.70) bands['0.60-0.70']++
+      else if (s < 0.80) bands['0.70-0.80']++
+      else bands['0.80+']++
+    }
+    console.log('\nFP by score band:')
+    for (const [band, count] of Object.entries(bands)) {
+      if (count > 0) console.log(`  ${band.padEnd(28)} ${count} cases`)
+    }
+
+    // Per-FP detail
+    console.log('\nPer-FP signal breakdown:')
+    for (const fp of fpCases) {
+      console.log(`\n  ${fp.fixture.id}  score=${fp.result.final_score.toFixed(3)}  dominant=${fp.result.dominant_signal}`)
+      console.log(`    desc: ${fp.fixture.description.slice(0, 80)}`)
+      if (fp.result.weighted_contributions.length > 0) {
+        console.log('    weighted contributions:')
+        for (const c of fp.result.weighted_contributions) {
+          const bar = '█'.repeat(Math.round(c.weighted * 50))
+          console.log(`      ${c.signal.padEnd(26)} raw=${c.raw_value.toFixed(3).padStart(6)}  weighted=${c.weighted.toFixed(3).padStart(6)}  ${bar}`)
+        }
+      }
+    }
+  }
+
+  if (fnCases.length > 0) {
+    console.log('\n' + '═'.repeat(60))
+    console.log(`FALSE NEGATIVES (${fnCases.length} cases) — expected=true, detected=false`)
+    console.log('═'.repeat(60))
+
+    // FN by drift type
+    const fnByType = new Map<string, number>()
+    for (const fn of fnCases) {
+      const t = fn.fixture.label.drift_type ?? 'unknown'
+      fnByType.set(t, (fnByType.get(t) ?? 0) + 1)
+    }
+    console.log('\nFN by drift type:')
+    for (const [t, count] of [...fnByType.entries()].sort((a, b) => b[1] - a[1])) {
+      console.log(`  ${t.padEnd(28)} ${count} cases`)
+    }
+
+    // Per-FN detail
+    console.log('\nPer-FN signal breakdown:')
+    for (const fn of fnCases) {
+      console.log(`\n  ${fn.fixture.id}  score=${fn.result.final_score.toFixed(3)}  type=${fn.fixture.label.drift_type ?? 'n/a'}  dominant=${fn.result.dominant_signal}`)
+      if (fn.result.weighted_contributions.length > 0) {
+        console.log('    weighted contributions:')
+        for (const c of fn.result.weighted_contributions) {
+          const bar = '█'.repeat(Math.round(c.weighted * 50))
+          console.log(`      ${c.signal.padEnd(26)} raw=${c.raw_value.toFixed(3).padStart(6)}  weighted=${c.weighted.toFixed(3).padStart(6)}  ${bar}`)
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Timeline generation (--timeline flag)
+// ---------------------------------------------------------------------------
+
+async function generateTimelines(fixtures: EvalFixture[], fixtureDir: string): Promise<void> {
+  const { TimelineBuilder } = await import('../src/timeline/builder')
+  const builder = new TimelineBuilder()
+
+  const timelineDir = path.join(__dirname, 'timelines')
+  if (!fs.existsSync(timelineDir)) {
+    fs.mkdirSync(timelineDir, { recursive: true })
+  }
+
+  for (const fixture of fixtures) {
+    const events = (fixture.session as any).events as any[] ?? []
+    const toolEvents = events.filter((e: any) => e.type === 'tool_call')
+    const goalText = fixture.session.goals[0]?.raw ?? ''
+
+    const timeline = builder.build(fixture.session.id, goalText, toolEvents)
+    const outPath = path.join(timelineDir, `${fixture.id}.timeline.json`)
+    fs.writeFileSync(outPath, JSON.stringify(timeline, null, 2))
+  }
+
+  console.log(`\n📊 Timelines generated: ${timelineDir}/ (${fixtures.length} files)`)
 }
 
 run().catch(err => {

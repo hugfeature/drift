@@ -22,7 +22,9 @@
  */
 
 import type { RuntimeEvent, GoalRelation } from '../types/event'
-import type { DriftScore, DriftSignals, DriftStatus } from '../types/scoring'
+import type { DriftScore, DriftSignals, DriftStatus, BehavioralPathologySignals } from '../types/scoring'
+import { RabbitHoleDetector } from './rabbit-hole-detector'
+import { ExplanationBuilder } from './explanation-builder'
 import type { Goal } from '../types/goal'
 import { GoalStore } from '../goal/store'
 import {
@@ -107,6 +109,7 @@ export class DriftScorer {
   private embeddingProvider: EmbeddingProvider
   private useRealEmbedding: boolean
   private goalEmbeddingCache: Map<string, number[]> = new Map()
+  private rabbitHoleDetector: RabbitHoleDetector
 
   // Tracks the last time each goal had an aligned action
   private lastAlignedAt: Map<string, number> = new Map()
@@ -123,6 +126,7 @@ export class DriftScorer {
     this.embeddingProvider = embeddingProvider ?? new KeywordEmbeddingProvider()
     // Detect if we have a real embedding provider (not keyword-based)
     this.useRealEmbedding = !(this.embeddingProvider instanceof KeywordEmbeddingProvider)
+    this.rabbitHoleDetector = new RabbitHoleDetector()
   }
 
   // ---------------------------------------------------------------------------
@@ -149,18 +153,28 @@ export class DriftScorer {
     const status     = this.classifyStatus(score)
     const contributing = this.identifyContributingEvents(events, signals)
 
+    // Behavioral pathology detection (independent of semantic signals)
+    const behavioral = this.rabbitHoleDetector.detect(events)
+
     // Side effect: update GoalStore state based on score
     if (activeGoal) {
       await this.applyTransitions(activeGoal, score, signals)
     }
 
-    return {
+    const driftScore: DriftScore = {
       score,
       status,
       signals,
+      behavioral: behavioral ?? undefined,
       computed_at: Date.now(),
       contributing_event_ids: contributing,
     }
+
+    // Build interpretable explanation trace
+    const explanationBuilder = new ExplanationBuilder()
+    driftScore.explanation = explanationBuilder.build(driftScore, events)
+
+    return driftScore
   }
 
   // ---------------------------------------------------------------------------
@@ -206,6 +220,14 @@ export class DriftScorer {
         ].join(' ')
       : activeGoal.raw
 
+    // Goal clarity gate: if the goal is too vague/short to meaningfully compare,
+    // cap divergence at 0.4 (neutral). Vague goals like "改好了吗", "[Image #1]",
+    // timestamps, etc. can never produce meaningful keyword overlap with any action.
+    // Assess clarity from raw goal text, not the expanded goalText (which includes
+    // allowed_domains tokens that inflate clarity artificially).
+    const goalClarity = this.assessGoalClarity(activeGoal.raw)
+    const maxDivergence = goalClarity < 0.3 ? 0.4 : 1.0
+
     // Score recent tool_call events (exclude system/infrastructure tools)
     const recentToolCalls = events
       .filter(e => e.type === 'tool_call' && !isSystemTool(String(e.payload['tool_name'] ?? '')))
@@ -213,22 +235,23 @@ export class DriftScorer {
 
     if (recentToolCalls.length === 0) return 0
 
-    // Compute divergences using the appropriate strategy
-    const divergences = this.useRealEmbedding
+    // --- Layer 1: per-event divergence for goal_relation tagging ---
+    // Used by consecutive_unrelated signal (needs per-event classification)
+    const perEventDivergences = this.useRealEmbedding
       ? await this.computeDivergencesWithEmbedding(goalText, recentToolCalls)
       : this.computeDivergencesWithKeywords(goalText, recentToolCalls)
 
-    const avg = divergences.reduce((s, d) => s + d, 0) / divergences.length
-
-    // Update goal_relation on all events in window (lazy computation).
-    // Always update — ensures events processed across multiple score() calls
-    // get classified, keeping consecutive_unrelated accurate.
+    // Tag goal_relation on each event.
+    // When goal is too vague for meaningful comparison, cap divergence scores
+    // so events don't get incorrectly classified as "unrelated".
     recentToolCalls.forEach((e, i) => {
-      e.goal_relation           = this.classifyRelation(divergences[i])
-      e.relation_confidence     = 1 - Math.abs(divergences[i] - 0.5) * 2
+      const effectiveDivergence = Math.min(perEventDivergences[i], maxDivergence)
+      e.goal_relation           = this.classifyRelation(effectiveDivergence)
+      e.relation_confidence     = goalClarity < 0.3
+        ? 0.3  // Low confidence when goal is vague
+        : 1 - Math.abs(perEventDivergences[i] - 0.5) * 2
       e.goal_relation_computed_at = Date.now()
 
-      // Track last aligned action time
       if (e.goal_relation === 'aligned' || e.goal_relation === 'refinement') {
         const current = this.lastAlignedAt.get(activeGoal.id)
         if (!current || e.timestamp > current) {
@@ -237,7 +260,47 @@ export class DriftScorer {
       }
     })
 
-    return Math.min(avg, 1.0)
+    // --- Layer 2: session intent summary for final divergence score ---
+    // Aggregating actions reveals collective intent that individual events miss.
+    // With rich payloads, the summary captures "what was actually done" holistically.
+    const summaryDivergence = await this.computeSummaryDivergence(goalText, recentToolCalls)
+
+    // Blend strategy: summary divergence is the primary signal (captures collective
+    // runtime intent), per-event avg is secondary (catches individual deviations).
+    // Weight summary more heavily — it sees the forest, not just the trees.
+    const perEventAvg = perEventDivergences.reduce((s, d) => s + d, 0) / perEventDivergences.length
+    const blended = summaryDivergence * 0.6 + perEventAvg * 0.4
+    // Apply goal clarity cap — vague goals cannot drive high divergence scores
+    return Math.min(blended, maxDivergence)
+  }
+
+  /**
+   * Compute divergence using aggregated session intent summary.
+   * Concatenates recent action payloads into a single text, then compares
+   * against goal. This bridges the gap where individual "Read foo.ts" actions
+   * have zero keyword overlap with the goal, but collectively the file names,
+   * commands, and targets reveal the session's true intent.
+   */
+  private async computeSummaryDivergence(
+    goalText: string,
+    events: RuntimeEvent[]
+  ): Promise<number> {
+    const summary = this.buildRichIntentSummary(events)
+    if (this.useRealEmbedding) {
+      // Embed the full session summary against goal — captures collective intent
+      const goalCacheKey = goalText.slice(0, 300)
+      let goalVector = this.goalEmbeddingCache.get(goalCacheKey)
+      if (!goalVector) {
+        goalVector = await this.embeddingProvider.embed(goalText)
+        this.goalEmbeddingCache.set(goalCacheKey, goalVector)
+      }
+      const summaryVector = await this.embeddingProvider.embed(summary.slice(0, 1000))
+      const rawSimilarity = cosineSimilarity(goalVector, summaryVector)
+      return this.calibrateEmbeddingDivergence(1 - rawSimilarity)
+    }
+    const keywordProvider = this.embeddingProvider as KeywordEmbeddingProvider
+    const similarity = keywordProvider.tokenSimilarity(goalText, summary)
+    return 1 - similarity
   }
 
   /**
@@ -262,8 +325,11 @@ export class DriftScorer {
 
     const divergences: number[] = []
     for (const event of events) {
-      const actionText = this.extractActionText(event)
-      const actionVector = await this.embeddingProvider.embed(actionText)
+      // Per-event: use SHORT payload for embedding — calibration bounds are tuned for
+      // concise text like "Read scorer.ts", "Edit auth.ts". Rich payloads cause all
+      // cosine similarities to collapse into ~0.45-0.55 range, destroying resolution.
+      const actionPayload = this.buildExecutionPayload(event)
+      const actionVector = await this.embeddingProvider.embed(actionPayload)
       const rawSimilarity = cosineSimilarity(goalVector, actionVector)
       const calibrated = this.calibrateEmbeddingDivergence(1 - rawSimilarity)
       divergences.push(calibrated)
@@ -282,14 +348,16 @@ export class DriftScorer {
    * Rescale: divergence < 0.25 → 0 (aligned), divergence > 0.65 → 1.0 (unrelated)
    */
   private calibrateEmbeddingDivergence(rawDivergence: number): number {
-    const LOW = 0.25   // below this = clearly aligned
-    const HIGH = 0.65  // above this = clearly unrelated
+    const LOW = 0.40   // below this = clearly aligned (calibrated from eval fixtures: 1 - aligned_P75)
+    const HIGH = 0.57  // above this = clearly unrelated (calibrated: 1 - unrelated_P25)
     const calibrated = (rawDivergence - LOW) / (HIGH - LOW)
     return Math.max(0, Math.min(1, calibrated))
   }
 
   /**
    * Keyword fallback path: uses token-set similarity (zero network calls).
+   * Uses rich payload so keyword matching has more tokens to work with —
+   * file paths, commands, messages all provide signal vs goal text.
    */
   private computeDivergencesWithKeywords(
     goalText: string,
@@ -297,8 +365,8 @@ export class DriftScorer {
   ): number[] {
     const keywordProvider = this.embeddingProvider as KeywordEmbeddingProvider
     return events.map(e => {
-      const actionText = this.extractActionText(e)
-      const similarity = keywordProvider.tokenSimilarity(goalText, actionText)
+      const actionPayload = this.buildRichPayload(e)
+      const similarity = keywordProvider.tokenSimilarity(goalText, actionPayload)
       return 1 - similarity
     })
   }
@@ -387,8 +455,15 @@ export class DriftScorer {
    * Duration matters because drift is a temporal phenomenon: the agent keeps going
    * without correction for an extended period. Short high-tool-count sessions are
    * usually legitimate batch operations.
+   *
+   * Suppressed when goal is cron/automation-triggered — these are designed to run
+   * autonomously, so high tool-to-user ratio is expected behavior, not drift.
    */
   private computeAutonomyMomentum(events: RuntimeEvent[]): number {
+    // Check if active goal is automation/cron triggered — suppress signal entirely
+    const activeGoal = this.store.getActive()
+    if (activeGoal && this.isAutomationGoal(activeGoal)) return 0
+
     const toolCalls = events.filter(
       e => e.type === 'tool_call' && !isSystemTool(String(e.payload['tool_name'] ?? ''))
     ).length
@@ -416,6 +491,17 @@ export class DriftScorer {
     // Combine: duration weighted 60%, ratio 40%
     // Duration is more reliable because it doesn't depend on user event injection
     return durationSignal * 0.6 + ratioSignal * 0.4
+  }
+
+  /**
+   * Detect if a goal was triggered by automation (cron, scheduler, CI).
+   * Automation goals are expected to run autonomously without user interaction.
+   */
+  private isAutomationGoal(goal: Goal): boolean {
+    const raw = goal.raw
+    return /^\[cron:/i.test(raw)
+      || /^\[schedule:/i.test(raw)
+      || /^\[ci:/i.test(raw)
   }
 
   // ---------------------------------------------------------------------------
@@ -488,42 +574,192 @@ export class DriftScorer {
   // Helpers
   // ---------------------------------------------------------------------------
 
-  private extractActionText(event: RuntimeEvent): string {
+  /**
+   * Assess how clear/specific a goal is for semantic comparison.
+   * Returns 0-1 where 0 = completely vague, 1 = highly specific.
+   *
+   * Vague goals (conversational, timestamps, image refs) can never produce
+   * meaningful keyword overlap with any action, so divergence should be capped.
+   */
+  private assessGoalClarity(goalText: string): number {
+    const cleaned = goalText
+      .replace(/\[.*?\]/g, '')           // Remove [Image #1], [Request...], [timestamps]
+      .replace(/\d{4}-\d{2}-\d{2}/g, '') // Remove dates
+      .replace(/\d{2}:\d{2}/g, '')       // Remove times
+      .replace(/GMT[+-]\d+/g, '')        // Remove timezone
+      .replace(/https?:\/\/\S+/g, '')    // Remove URLs (not semantically useful for keyword)
+      .trim()
+
+    // Count CJK characters (each one carries semantic meaning, no spaces)
+    const cjkChars = (cleaned.match(/[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]/g) ?? []).length
+
+    // Count meaningful Latin tokens (>2 chars, not stopwords)
+    const stopwords = new Set(['the', 'is', 'at', 'in', 'on', 'for', 'to', 'of', 'and', 'a', 'an'])
+    const latinTokens = cleaned
+      .split(/[\s,;.!?]+/)
+      .filter(t => t.length > 2 && !stopwords.has(t.toLowerCase()) && !/^[\u4e00-\u9fff]+$/.test(t))
+
+    // CJK: ~3 chars ≈ 1 meaningful English token in information density
+    const effectiveTokenCount = latinTokens.length + Math.floor(cjkChars / 3)
+
+    // Scoring factors
+    const hasActionVerb = /\b(fix|add|create|implement|update|remove|debug|test|verify|build|deploy|refactor|migrate)\b/i.test(cleaned)
+      || /[解决修复创建添加删除调试验证部署重构迁移实现更新查看分析检查]/.test(cleaned)
+    const hasFilePath = /\.[a-z]{1,4}$/m.test(cleaned) || /\//.test(cleaned)
+
+    // 0-3 tokens = very vague, 4-8 = moderate, 9+ = clear
+    let score = Math.min(effectiveTokenCount / 8, 1.0)
+    if (hasActionVerb) score = Math.min(score + 0.3, 1.0)
+    if (hasFilePath) score = Math.min(score + 0.2, 1.0)
+
+    return score
+  }
+
+  /**
+   * Build structured execution semantic payload from a runtime event.
+   * Output: "{verb} {semantic_target}" — strips noise, preserves intent.
+   *
+   * Examples: "Read src/scoring/scorer.ts", "Run npm test",
+   *           "Fetch blog.google/adk", "Search Google ADK agent"
+   */
+  private buildExecutionPayload(event: RuntimeEvent): string {
     const p = event.payload
-    const parts: string[] = []
+    const toolName = String(p['tool_name'] ?? 'unknown')
+    const verb = this.normalizeToolVerb(toolName)
+    const target = this.extractSemanticTarget(p)
+    return target ? `${verb} ${target}` : verb
+  }
 
-    // Tool name
-    if (p['tool_name']) parts.push(String(p['tool_name']))
+  /**
+   * Build rich execution payload that preserves full runtime intent.
+   * Unlike buildExecutionPayload which abbreviates to "{verb} {target}",
+   * this retains command text, file paths, edit descriptions, and tool_input
+   * so embedding can capture WHAT the agent is actually doing, not just
+   * which tool category it used.
+   *
+   * Examples:
+   *   "Edit src/auth.ts: Fix token refresh logic to handle expired sessions"
+   *   "Run npm test -- --grep 'auth' to verify login flow"
+   *   "Read package.json to check dependency versions"
+   */
+  private buildRichPayload(event: RuntimeEvent): string {
+    const p = event.payload
+    const toolName = String(p['tool_name'] ?? 'unknown')
+    const verb = this.normalizeToolVerb(toolName)
+    const parts: string[] = [verb]
 
-    // Prefer description field (most semantically rich)
+    // Include full target path (not abbreviated)
+    const target = p['target'] as string | undefined
+    if (target) parts.push(this.abbreviatePath(target))
+
+    // Include tool_input details (command, file_path, query, content snippet)
     const toolInput = p['tool_input'] as Record<string, unknown> | undefined
     if (toolInput) {
-      if (toolInput['description']) {
-        parts.push(String(toolInput['description']))
-      }
-      if (toolInput['command']) {
-        parts.push(String(toolInput['command']))
-      }
-      if (toolInput['file_path']) {
-        parts.push(String(toolInput['file_path']))
-      }
-      if (toolInput['query']) {
-        parts.push(String(toolInput['query']))
+      if (toolInput['file_path']) parts.push(this.abbreviatePath(String(toolInput['file_path'])))
+      if (toolInput['command']) parts.push(String(toolInput['command']).slice(0, 200))
+      if (toolInput['query']) parts.push(String(toolInput['query']).slice(0, 200))
+      if (toolInput['content']) parts.push(String(toolInput['content']).slice(0, 200))
+      if (toolInput['description']) parts.push(String(toolInput['description']).slice(0, 200))
+      if (toolInput['new_string']) parts.push(`writing: ${String(toolInput['new_string']).slice(0, 150)}`)
+    }
+
+    // Include message (often contains intent description)
+    const message = String(p['message'] ?? '').trim()
+    if (message) parts.push(message.slice(0, 200))
+
+    // Include tool_response snippet if present (reveals what happened)
+    const response = String(p['tool_response'] ?? '').trim()
+    if (response) parts.push(`result: ${response.slice(0, 100)}`)
+
+    return parts.join(' ').trim().slice(0, 500)
+  }
+
+  /**
+   * Normalize tool names to semantic verbs.
+   * "mcp__engram__recall_memory" → "Recall", "Bash" → "Run"
+   */
+  private normalizeToolVerb(toolName: string): string {
+    const lower = toolName.toLowerCase()
+    const stripped = lower.replace(/^mcp__\w+__/, '')
+    if (/^(read|view|cat|grep|glob|ls)$/.test(stripped)) return 'Read'
+    if (/^(edit|write|save|patch|modify)$/.test(stripped)) return 'Edit'
+    if (/^(bash|exec|shell|run|command|terminal)$/.test(stripped)) return 'Run'
+    if (/^(web_search|search|query)$/.test(stripped)) return 'Search'
+    if (/^(web_fetch|fetch|download|curl)$/.test(stripped)) return 'Fetch'
+    if (/^(delete|remove|rm|clean)$/.test(stripped)) return 'Delete'
+    if (/^(create|add|new|generate|init|create_task)$/.test(stripped)) return 'Create'
+    if (/^(list|enumerate|scan)$/.test(stripped)) return 'List'
+    if (/^(recall|remember|recall_memory)$/.test(stripped)) return 'Recall'
+    if (/^(cron|schedule)$/.test(stripped)) return 'Schedule'
+    return stripped.charAt(0).toUpperCase() + stripped.slice(1)
+  }
+
+  /**
+   * Extract semantic target from event payload.
+   * Priority: file_path > command > query > target > message.
+   * Paths and URLs are abbreviated to meaningful segments.
+   */
+  private extractSemanticTarget(payload: Record<string, unknown>): string {
+    const parts: string[] = []
+
+    const toolInput = payload['tool_input'] as Record<string, unknown> | undefined
+    if (toolInput) {
+      if (toolInput['file_path']) parts.push(this.abbreviatePath(String(toolInput['file_path'])))
+      if (toolInput['command']) parts.push(String(toolInput['command']).slice(0, 120))
+      if (toolInput['query']) parts.push(String(toolInput['query']).slice(0, 120))
+      if (toolInput['description']) parts.push(String(toolInput['description']).slice(0, 120))
+    }
+
+    if (payload['target']) parts.push(this.abbreviatePath(String(payload['target'])))
+
+    const message = String(payload['message'] ?? '').trim()
+    if (message) {
+      const urlPattern = /https?:\/\/[^\s)]+/g
+      const withAbbreviatedUrls = message.replace(urlPattern, url => this.abbreviatePath(url))
+      parts.push(withAbbreviatedUrls.slice(0, 150))
+    }
+
+    return parts.join(' ').trim()
+  }
+
+  /**
+   * Abbreviate file paths and URLs to semantically meaningful parts.
+   * "/Users/x/project/src/scoring/scorer.ts" → "src/scoring/scorer.ts"
+   * "https://blog.google/.../google-adk/" → "blog.google/google-adk"
+   */
+  private abbreviatePath(fullPath: string): string {
+    if (fullPath.startsWith('http://') || fullPath.startsWith('https://')) {
+      try {
+        const url = new URL(fullPath)
+        const pathSegments = url.pathname.split('/').filter(Boolean)
+        const lastSegment = pathSegments.slice(-1)[0] ?? ''
+        return `${url.hostname}/${lastSegment}`
+      } catch {
+        return fullPath.slice(0, 80)
       }
     }
 
-    // Message from adapter
-    if (p['message']) parts.push(String(p['message']))
-    if (p['target']) parts.push(String(p['target']))
+    const segments = fullPath.split(/[/\\]/).filter(Boolean)
+    const homeIdx = segments.findIndex(s => s === 'Users' || s === 'home')
+    const meaningful = homeIdx >= 0 ? segments.slice(homeIdx + 2) : segments
+    return meaningful.slice(-3).join('/')
+  }
 
-    // Tool response — extract stdout for bash commands (limited to avoid noise)
-    const toolResponse = p['tool_response'] as Record<string, unknown> | undefined
-    if (toolResponse && toolResponse['stdout']) {
-      const stdout = String(toolResponse['stdout']).slice(0, 200)
-      parts.push(stdout)
-    }
+  /**
+   * Aggregate recent action payloads into a session intent summary.
+   * More tokens = more keyword overlap opportunities with the goal.
+   */
+  private buildSessionIntentSummary(events: RuntimeEvent[]): string {
+    return events.map(e => this.buildExecutionPayload(e)).join('; ')
+  }
 
-    return parts.join(' ') || 'unknown action'
+  /**
+   * Build rich intent summary using full execution payloads.
+   * Captures what the agent actually did across the window — commands run,
+   * files touched, edits made — so embedding can see collective intent.
+   */
+  private buildRichIntentSummary(events: RuntimeEvent[]): string {
+    return events.map(e => this.buildRichPayload(e)).join('; ')
   }
 
   private identifyContributingEvents(

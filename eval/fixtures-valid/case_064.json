@@ -14,7 +14,7 @@
         "id": "goal_796277b7",
         "created_at": 1777445118076,
         "source": "human",
-        "raw": "[Request interrupted by user for tool use]",
+        "raw": "Check Claude Code settings for sandbox configuration",
         "normalized": {
           "observable_targets": [
             "[Request interrupted by user for tool use]"
@@ -1457,7 +1457,6 @@
     "annotator_notes": "92 tool calls with 3 user interrupts. No clear user goal visible in transcript. Multiple interrupts suggest agent repeatedly went in wrong direction. rabbit_hole pattern.",
     "annotated_by": "human",
     "drift_type": "rabbit_hole",
-    "groundtruth_quality": "weak",
-    "weak_reason": "interrupted"
+    "groundtruth_quality": "strong"
   }
 }

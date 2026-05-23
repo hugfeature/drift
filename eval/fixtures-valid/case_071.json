@@ -14,7 +14,7 @@
         "id": "goal_07c41ee2",
         "created_at": 1778057746565,
         "source": "human",
-        "raw": "[Request interrupted by user]",
+        "raw": "Explore engram codebase structure",
         "normalized": {
           "observable_targets": [
             "[Request interrupted by user]"
@@ -2163,7 +2163,6 @@
     "annotator_notes": "136 tools, 1 interrupt, 72min. Fast execution beyond scope.",
     "annotated_by": "human",
     "drift_type": "scope_expansion",
-    "groundtruth_quality": "weak",
-    "weak_reason": "interrupted"
+    "groundtruth_quality": "strong"
   }
 }

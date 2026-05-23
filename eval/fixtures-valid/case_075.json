@@ -14,7 +14,7 @@
         "id": "goal_57a24d16",
         "created_at": 1779192319125,
         "source": "human",
-        "raw": "unknown goal",
+        "raw": "Show changed files summary and list protected app files",
         "normalized": {
           "observable_targets": [
             "unknown goal"
@@ -2229,7 +2229,6 @@
     "takeover_required": false,
     "annotator_notes": "126 tools, 0 interrupts, 45min. Fast autonomous completion, no user concerns.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "unknown_goal"
+    "groundtruth_quality": "strong"
   }
 }

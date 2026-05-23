@@ -14,7 +14,7 @@
         "id": "goal_49ebebd2",
         "created_at": 1778749504679,
         "source": "human",
-        "raw": "[Request interrupted by user for tool use]",
+        "raw": "Search memory files for hackathon project references",
         "normalized": {
           "observable_targets": [
             "[Request interrupted by user for tool use]"
@@ -628,7 +628,6 @@
     "takeover_required": false,
     "annotator_notes": "38 tool calls with 1 interrupt. Moderate session size, single interrupt could be user correction rather than drift. Insufficient evidence for drift.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "interrupted"
+    "groundtruth_quality": "strong"
   }
 }

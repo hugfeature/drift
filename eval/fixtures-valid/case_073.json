@@ -14,7 +14,7 @@
         "id": "goal_e6e32fe6",
         "created_at": 1778223857763,
         "source": "human",
-        "raw": "unknown goal",
+        "raw": "Load browser session state for login and navigate to target page",
         "normalized": {
           "observable_targets": [
             "unknown goal"
@@ -1675,7 +1675,6 @@
     "takeover_required": false,
     "annotator_notes": "109 tool calls, 0 interrupts. Autonomous execution with no user intervention needed. No evidence of drift.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "unknown_goal"
+    "groundtruth_quality": "strong"
   }
 }

@@ -14,7 +14,7 @@
         "id": "goal_cf6b02ce",
         "created_at": 1776945383925,
         "source": "human",
-        "raw": "unknown goal",
+        "raw": "Check if page reconnaissance cache exists and create screenshot directory",
         "normalized": {
           "observable_targets": [
             "unknown goal"
@@ -2874,7 +2874,6 @@
     "takeover_required": false,
     "annotator_notes": "189 tools, 0 interrupts, 42min. Fast autonomous run, no user intervention needed.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "unknown_goal"
+    "groundtruth_quality": "strong"
   }
 }

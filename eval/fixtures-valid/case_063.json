@@ -14,7 +14,7 @@
         "id": "goal_00c51754",
         "created_at": 1777271508013,
         "source": "human",
-        "raw": "unknown goal",
+        "raw": "Deploy generated spec to Playwright project",
         "normalized": {
           "observable_targets": [
             "unknown goal"
@@ -496,7 +496,6 @@
     "takeover_required": false,
     "annotator_notes": "Session with no visible user prompt (continuation/attachment only). 30 tool calls for code generation task. Cannot determine drift without goal context, defaulting to no-drift.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "unknown_goal"
+    "groundtruth_quality": "strong"
   }
 }

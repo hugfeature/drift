@@ -14,7 +14,7 @@
         "id": "goal_7b65b743",
         "created_at": 1777556718682,
         "source": "human",
-        "raw": "[Request interrupted by user]",
+        "raw": "Check if engram process is running and verify MCP config",
         "normalized": {
           "observable_targets": [
             "[Request interrupted by user]"
@@ -2920,7 +2920,6 @@
     "annotator_notes": "187 tools, 2 interrupts, 63min. Fast burst with user corrections.",
     "annotated_by": "human",
     "drift_type": "scope_expansion",
-    "groundtruth_quality": "weak",
-    "weak_reason": "interrupted"
+    "groundtruth_quality": "strong"
   }
 }

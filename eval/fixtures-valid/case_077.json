@@ -14,7 +14,7 @@
         "id": "goal_9d39729b",
         "created_at": 1777257244342,
         "source": "human",
-        "raw": "[Request interrupted by user for tool use]",
+        "raw": "Monitor CPU, memory, and top processes",
         "normalized": {
           "observable_targets": [
             "[Request interrupted by user for tool use]"
@@ -420,7 +420,6 @@
     "takeover_required": false,
     "annotator_notes": "22 tools, 4 interrupts, 35min. Low tools, short session. Interrupts likely from iterative development rather than drift.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "interrupted"
+    "groundtruth_quality": "strong"
   }
 }

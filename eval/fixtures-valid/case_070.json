@@ -14,7 +14,7 @@
         "id": "goal_8ddfb2bf",
         "created_at": 1778307819284,
         "source": "human",
-        "raw": "[Request interrupted by user]",
+        "raw": "Find engram project directory and check git status",
         "normalized": {
           "observable_targets": [
             "[Request interrupted by user]"
@@ -2555,7 +2555,6 @@
     "annotator_notes": "164 tools, 1 interrupt, 230min. Extended execution beyond reasonable scope.",
     "annotated_by": "human",
     "drift_type": "rabbit_hole",
-    "groundtruth_quality": "weak",
-    "weak_reason": "interrupted"
+    "groundtruth_quality": "strong"
   }
 }

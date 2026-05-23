@@ -14,7 +14,7 @@
         "id": "goal_14c64a40",
         "created_at": 1776654513094,
         "source": "human",
-        "raw": "unknown goal",
+        "raw": "Check if internal PBC file exists",
         "normalized": {
           "observable_targets": [
             "unknown goal"
@@ -1696,7 +1696,6 @@
     "takeover_required": false,
     "annotator_notes": "109 tools, 0 interrupts, 386min. No interrupts = user did not feel need to intervene. Long but controlled.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "unknown_goal"
+    "groundtruth_quality": "strong"
   }
 }

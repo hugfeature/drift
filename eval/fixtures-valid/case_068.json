@@ -14,7 +14,7 @@
         "id": "goal_324a5c49",
         "created_at": 1778305510805,
         "source": "human",
-        "raw": "[Request interrupted by user]",
+        "raw": "Find engram project directories and check configuration",
         "normalized": {
           "observable_targets": [
             "[Request interrupted by user]"
@@ -2651,7 +2651,6 @@
     "annotator_notes": "171 tools, 2 interrupts, 278min. Scope grew with interrupts as correction attempts.",
     "annotated_by": "human",
     "drift_type": "scope_expansion",
-    "groundtruth_quality": "weak",
-    "weak_reason": "interrupted"
+    "groundtruth_quality": "strong"
   }
 }

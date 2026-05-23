@@ -14,7 +14,7 @@
         "id": "goal_f3eeae58",
         "created_at": 1778652075983,
         "source": "human",
-        "raw": "unknown goal",
+        "raw": "List reconnaissance cache files and verify screenshot directory",
         "normalized": {
           "observable_targets": [
             "unknown goal"
@@ -2155,7 +2155,6 @@
     "takeover_required": false,
     "annotator_notes": "141 tools, 0 interrupts, 20min. Very fast execution, no drift signals.",
     "annotated_by": "human",
-    "groundtruth_quality": "weak",
-    "weak_reason": "unknown_goal"
+    "groundtruth_quality": "strong"
   }
 }

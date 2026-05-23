@@ -494,14 +494,34 @@ export class DriftScorer {
   }
 
   /**
-   * Detect if a goal was triggered by automation (cron, scheduler, CI).
+   * Detect if a goal was triggered by automation or skill execution.
+   *
    * Automation goals are expected to run autonomously without user interaction.
+   * This includes:
+   *   - Explicit cron/schedule/CI prefixes
+   *   - Skill execution context (goal starts with "Base directory")
+   *   - Short imperative commands that are clearly task dispatches
+   *     (e.g., "Check if engram process is running", "Monitor CPU usage")
    */
   private isAutomationGoal(goal: Goal): boolean {
     const raw = goal.raw
-    return /^\[cron:/i.test(raw)
-      || /^\[schedule:/i.test(raw)
-      || /^\[ci:/i.test(raw)
+
+    // Explicit automation markers
+    if (/^\[cron:/i.test(raw)) return true
+    if (/^\[schedule:/i.test(raw)) return true
+    if (/^\[ci:/i.test(raw)) return true
+
+    // Skill execution context
+    if (/^Base directory/i.test(raw)) return true
+
+    // Short imperative commands (task dispatch pattern):
+    // Starts with a verb, under 80 chars, no question marks, no conversational markers
+    if (raw.length < 80 && !raw.includes('?') && !raw.includes('请') && !raw.includes('帮')) {
+      const taskDispatchPattern = /^(check|list|show|monitor|deploy|verify|find|search|load|create|run|execute|start|stop|restart|scan|fetch|get|update|sync|build|test|validate|clean|remove|delete|install|migrate|backup)\b/i
+      if (taskDispatchPattern.test(raw)) return true
+    }
+
+    return false
   }
 
   // ---------------------------------------------------------------------------

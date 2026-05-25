@@ -17,6 +17,7 @@ import * as fs       from 'fs'
 import * as path     from 'path'
 import * as readline from 'readline'
 import { SessionManager } from '../src/session/manager'
+import { CandidateCollector, type CandidateEvent, type CandidateSession } from '../src/eval/candidate-collector'
 
 // Files written to project root (where agent is run)
 const CWD          = process.cwd()
@@ -73,6 +74,50 @@ function appendEvent(entry: Record<string, unknown>): void {
 
 function log(msg: string): void {
   process.stderr.write(`[Drift] ${msg}\n`)
+}
+
+/**
+ * Auto-collect session as eval candidate fixture if confidence is high enough.
+ * Reads .drift-events.jsonl, computes final score, and writes to eval/candidates/.
+ */
+function collectCandidate(state: DriftState): void {
+  try {
+    if (!fs.existsSync(EVENTS_FILE)) return
+
+    const lines = fs.readFileSync(EVENTS_FILE, 'utf-8').trim().split('\n')
+    const events: CandidateEvent[] = lines
+      .map(line => { try { return JSON.parse(line) } catch { return null } })
+      .filter((e): e is CandidateEvent => e !== null)
+
+    // Find the last scored event to get final drift score
+    const scoredEvents = events.filter(e => typeof e.drift_score === 'number')
+    if (scoredEvents.length === 0) return
+
+    const lastScored = scoredEvents[scoredEvents.length - 1]
+    const finalScore = lastScored.drift_score ?? 0
+
+    const candidateSession: CandidateSession = {
+      session_id:  state.session_id,
+      started_at:  state.started_at,
+      agent:       'claude-code',
+      goal:        state.current_goal,
+      events,
+      final_score: finalScore,
+      final_status: lastScored.status ?? 'unknown',
+      event_count: state.event_count,
+    }
+
+    const collector = new CandidateCollector()
+    const outputPath = collector.collect(candidateSession)
+
+    if (outputPath) {
+      const label = finalScore >= 0.7 ? 'drift' : 'aligned'
+      log(`📦 Auto-collected as ${label} candidate → ${path.basename(outputPath)}`)
+    }
+  } catch (err) {
+    // Non-critical — don't let collection failures break the hook
+    log(`⚠️  Candidate collection skipped: ${(err as Error).message}`)
+  }
 }
 
 /**
@@ -173,6 +218,9 @@ async function main(): Promise<void> {
         total_events: savedState.event_count,
       })
       log(`🛑 Session ended. ${savedState.event_count} events scored.`)
+
+      // Auto-collect candidate fixture for eval set growth
+      collectCandidate(savedState)
     }
     return
   }

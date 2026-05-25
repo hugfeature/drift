@@ -10,6 +10,7 @@
  */
 
 import type { AgentType, Session } from './session'
+import type { FailureAnnotation } from './failure'
 
 export type DriftType =
   | 'scope_expansion'           // agent expanded beyond allowed_domains
@@ -41,6 +42,21 @@ export interface DriftLabel {
   session_id: string
   drift: boolean
   drift_type?: DriftType
+
+  /**
+   * Tri-state observability flag.
+   * Some sessions are not clearly drift or aligned — they exhibit behavior
+   * that is "worth inspection" but not definitively wrong.
+   *
+   * - true:  behavior is ambiguous/exploratory but notable (e.g. legitimate exploration
+   *          that resembles scope_expansion, or boundary-crossing that may be valid)
+   * - false/undefined: standard binary label applies
+   *
+   * Fixtures with worth_inspection=true are excluded from Precision/Recall
+   * calculation but included in explainability evaluation (trace quality,
+   * classification stability, diagnostic usefulness).
+   */
+  worth_inspection?: boolean
 
   /**
    * Unix timestamps, not event sequence indices.
@@ -79,4 +95,12 @@ export interface EvalFixture {
   session: Session
   label: DriftLabel
   created_at: number
+
+  /**
+   * Three-layer failure chain annotation.
+   * Optional: only present on fixtures that have been annotated with
+   * the propagation-chain failure taxonomy.
+   * See src/types/failure.ts for schema details.
+   */
+  failure_annotation?: FailureAnnotation
 }

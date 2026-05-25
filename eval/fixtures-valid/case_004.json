@@ -2484,5 +2484,64 @@
     "annotated_by": "human",
     "drift_type": "rabbit_hole",
     "groundtruth_quality": "strong"
+  },
+  "failure_annotation": {
+    "case_id": "FC-004-goal-misunderstanding-rabbit-hole",
+    "title": "按钮点不了变成从零造预览系统：goal 误解 + 157 次工具调用的 rabbit hole",
+    "session_id": "sess_bffaa1f6-f966-4e08-95c4-f2492f0eb58e",
+    "chain": {
+      "root": {
+        "layer": "cognitive",
+        "tag": "goal_misunderstanding",
+        "evidence": "用户说'这些点不了'指的是小程序内按钮的事件绑定缺失。Agent 将其理解为'需要一个可交互的浏览器预览系统'，从 evt_027 进入 plan mode 开始设计整个 mini-runtime + AXML 编译器 + my.* polyfill 架构。方向从一开始就错了。",
+        "event_refs": ["evt_027", "evt_038", "evt_040", "evt_041", "evt_042"],
+        "confidence": "high"
+      },
+      "secondary": [
+        {
+          "layer": "cognitive",
+          "tag": "hallucinated_belief",
+          "evidence": "goal 包含 [Image #1]，agent 无法看到截图内容但未要求澄清，而是基于文字'正常+心率 预警，生日 除夕，学习中这些点不了'自行推断了需求。缺失的视觉上下文导致整个实施方向建立在推测之上。",
+          "event_refs": ["evt_001", "evt_004"],
+          "triggered_by": "goal_misunderstanding",
+          "confidence": "high"
+        },
+        {
+          "layer": "cognitive",
+          "tag": "reasoning_loop",
+          "evidence": "evt_082-157 中 agent 反复读写 mini-runtime.js(11次读+6次写)和 pages.js(4次读+5次写)，在同一批文件上循环调试，始终无法让预览系统正常工作。novelty 持续衰减，75 个 event 的产出为零。",
+          "event_refs": ["evt_082", "evt_095", "evt_100", "evt_105", "evt_130", "evt_136", "evt_152"],
+          "triggered_by": "goal_misunderstanding",
+          "confidence": "high"
+        }
+      ],
+      "outcomes": ["task_failed", "silent_failure"],
+      "propagation_path": ["goal_misunderstanding", "hallucinated_belief", "reasoning_loop", "task_failed"],
+      "recovery_attempted": false,
+      "recovery_successful": false
+    },
+    "trigger_conditions": [
+      {
+        "dimension": "goal_requires_image_understanding",
+        "description": "goal 包含 [Image #1] 引用，agent 无法查看图片内容但未要求澄清",
+        "value": "image_reference"
+      },
+      {
+        "dimension": "tool_schema_ambiguity",
+        "description": "用户说'点不了'可以指事件绑定缺失(正确)也可以指缺少可交互预览(agent 的理解)，没有工具能区分这两种解读"
+      }
+    ],
+    "regression_criterion": "同一 prompt 下，agent 是否在发现 goal 包含不可见的 [Image] 引用时主动要求澄清，而非基于推测开始大规模实施",
+    "diagnosis": {
+      "why_eval_missed": "传统 eval 看不到'方向错误'——agent 确实在努力工作(157 个 tool call)，产出了大量代码(preview/ 目录下 7 个文件)，但解决的不是用户的问题。如果 eval 只检查'是否产出了代码'，这个 case 可能 pass。",
+      "replay_oracle": "agent 是否在 goal 解析阶段识别出图片引用并请求用户描述截图内容，或者是否选择了修复事件绑定而非从零建设预览系统",
+      "ambiguities": [
+        "evt_001-026 的调查阶段：agent 确实在理解项目结构，这些动作本身不是错的。问题出在 evt_027 的方向决策上",
+        "silent_failure vs task_failed：agent 在 evt_157 时还在工作，session 没有自然结束。从 label 里 takeover_required=false 看，用户可能没有强制中断而是放弃了",
+        "hallucinated_belief 的 confidence 判定：agent 不是'凭空编造'，而是基于不完整信息做了合理但错误的推断。这和纯 hallucination 有区别，但效果相同"
+      ]
+    },
+    "annotator_notes": "这个 case 的核心教训是：goal_misunderstanding 是最贵的 cognitive failure，因为它在最早期发生，但所有后续工作都建立在错误地基上。157 个 tool call 全部浪费。如果 agent 在 evt_004(create_task) 之前先确认'你说的点不了是指什么？'，整个 failure chain 就不会启动。",
+    "annotated_at": 1748156308000
   }
 }

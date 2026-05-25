@@ -156,6 +156,13 @@ export interface DriftExplanation {
   first_observed_at?: number
   /** Recommended action */
   recommendation?: string
+  /**
+   * Observability flag: this session is classified as aligned but exhibits
+   * behavior patterns worth human inspection. The trace explains WHY it
+   * looked suspicious (what signal triggered, what pattern resembled drift).
+   * Supports diagnostic usefulness over pure precision optimization.
+   */
+  worth_inspection?: boolean
 }
 
 export interface DriftScore {

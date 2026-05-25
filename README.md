@@ -66,12 +66,12 @@ npx ts-node eval/runner.ts --fixture-dir=eval/fixtures-valid
 npx ts-node eval/runner.ts --fixture-dir=eval/fixtures-valid --timeline
 ```
 
-**Current benchmark (20 well-defined fixtures):**
+**Current benchmark (36 strong fixtures):**
 
 ```
-Precision: 0.750
-Recall:    0.818
-F1:        0.783
+Precision: 0.773
+Recall:    0.895
+F1:        0.829
 ```
 
 ---
@@ -223,24 +223,33 @@ Temporal signatures distinguish drift types:
 Drift uses a curated benchmark of real agent sessions with human annotations.
 
 **Data quality tiers:**
-- `fixtures-valid/` — 20 well-defined fixtures (strong goals, clear annotations)
-- `quarantine/weak/` — 3 fixtures with ambiguous goals
-- `quarantine/non-evaluable/` — 39 fixtures with broken/missing goals
+- `fixtures-valid/` — 36 strong fixtures (clear goals, human annotations)
+- `quarantine/` — fixtures with ambiguous goals or broken data
 
-**Label schema:**
+**Label schema (tri-state):**
 
 ```json
 {
   "drift": true,
   "drift_type": "scope_expansion",
   "drift_started_at": 1747051500000,
+  "worth_inspection": false,
   "takeover_required": true,
   "annotated_by": "human",
   "groundtruth_quality": "strong"
 }
 ```
 
-**Contributing fixtures:** See `scripts/contribute.ts`. Real sessions only — synthetic traces not accepted.
+`worth_inspection: true` marks sessions that exhibit notable behavior (exploratory-but-valid, ambiguous boundary) — excluded from Precision/Recall but included in explainability evaluation.
+
+**Auto-collection:** Fixtures grow automatically as you use Drift. The hook collects high-confidence sessions (score ≥ 0.7 or ≤ 0.15) as candidates. Review with:
+
+```bash
+npx ts-node scripts/review-candidates.ts              # list candidates
+npx ts-node scripts/review-candidates.ts --approve-all  # approve high-confidence
+```
+
+**Manual contribution:** See `scripts/contribute.ts`. Real sessions only — synthetic traces not accepted.
 
 ---
 
@@ -261,8 +270,9 @@ src/
 └── adapters/       Claude Code hook
 
 eval/
-├── fixtures-valid/ 20 well-defined labeled sessions
-├── quarantine/     42 fixtures pending review
+├── fixtures-valid/ 36 strong labeled sessions
+├── candidates/     Auto-collected sessions pending human review
+├── quarantine/     Fixtures with broken/ambiguous data
 ├── timelines/      Generated temporal trajectories (gitignored)
 ├── reports/        Structured JSON eval reports
 └── runner.ts       Benchmark runner (--timeline, --ollama flags)

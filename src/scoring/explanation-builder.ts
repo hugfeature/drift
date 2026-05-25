@@ -27,13 +27,33 @@ export class ExplanationBuilder {
    * Returns undefined for aligned sessions (no explanation needed).
    */
   build(score: DriftScore, events: RuntimeEvent[]): DriftExplanation | undefined {
-    if (score.status === 'aligned' && (!score.behavioral || score.behavioral.rabbit_hole_score < 0.55)) {
+    const isBorderline = score.status === 'aligned' && score.score >= 0.30
+    const hasBehavioralSignal = score.behavioral && score.behavioral.rabbit_hole_score >= 0.55
+
+    // Clearly aligned with no elevated signals — no explanation needed
+    if (score.status === 'aligned' && !hasBehavioralSignal && !isBorderline) {
       return undefined
     }
 
     const classification = this.classifyDrift(score)
     const evidence = this.gatherEvidence(score, events)
     const severity = this.assessSeverity(score, classification)
+
+    // Borderline aligned: output "why it looked suspicious" diagnostic
+    // This supports observability — behavior worth inspection even if not drift
+    if (isBorderline && classification === 'aligned') {
+      const suspiciousReasons = this.explainSuspicion(score, evidence)
+      return {
+        classification: 'aligned',
+        severity: 'low',
+        summary: `Aligned but notable: ${suspiciousReasons}`,
+        evidence,
+        first_observed_at: undefined,
+        recommendation: undefined,
+        worth_inspection: true,
+      }
+    }
+
     const summary = this.buildSummary(classification, severity, evidence)
     const firstObservedAt = this.findOnset(events, classification)
     const recommendation = this.recommend(classification, severity)
@@ -46,6 +66,38 @@ export class ExplanationBuilder {
       first_observed_at: firstObservedAt,
       recommendation,
     }
+  }
+
+  /**
+   * Explain why a borderline-aligned session looked suspicious.
+   * Outputs human-readable rationale for observability — even if final
+   * verdict is "not drift", the behavioral pattern is worth noting.
+   */
+  private explainSuspicion(score: DriftScore, evidence: DriftEvidence[]): string {
+    const parts: string[] = []
+    const signals = score.signals
+
+    if (signals.semantic_divergence > 0.25) {
+      parts.push(`semantic divergence elevated (${(signals.semantic_divergence * 100).toFixed(0)}%)`)
+    }
+    if (signals.autonomy_momentum > 0.5) {
+      parts.push(`high autonomy without checkpoint (momentum: ${(signals.autonomy_momentum * 100).toFixed(0)}%)`)
+    }
+    if (signals.consecutive_unrelated >= 3) {
+      parts.push(`${signals.consecutive_unrelated} consecutive actions not clearly goal-aligned`)
+    }
+    if (signals.exploratory_entropy > 0.5) {
+      parts.push(`scattered tool usage pattern (entropy: ${signals.exploratory_entropy.toFixed(2)})`)
+    }
+    if (score.behavioral && score.behavioral.target_repetition > 0.3) {
+      parts.push(`repeated file operations (${(score.behavioral.target_repetition * 100).toFixed(0)}% revisits)`)
+    }
+
+    if (parts.length === 0 && evidence.length > 0) {
+      parts.push(evidence[0].observation)
+    }
+
+    return parts.join('; ') || 'multiple low-level signals elevated simultaneously'
   }
 
   private classifyDrift(score: DriftScore): DriftExplanation['classification'] {

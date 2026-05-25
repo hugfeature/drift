@@ -4,7 +4,7 @@
  * This is the core algorithm of the Drift project.
  *
  * Scoring combines five independent signals:
- *   1. semantic_divergence   — embedding distance: current actions vs active goal
+ *   1. semantic_divergence   — embedding distance: current actions vs active goal、
  *   2. inactive_duration     — how long the active goal has had no aligned actions
  *   3. consecutive_unrelated — run of unrelated events (Goal Forgotten trigger)
  *   4. subgoal_depth         — nesting depth risk

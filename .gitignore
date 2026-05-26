@@ -10,6 +10,12 @@ node_modules
 # Raw fixtures contain non-anonymized data - only anonymized versions are published
 eval/fixtures/
 
+# Auto-collected candidates (unreviewed, may contain sensitive data)
+eval/candidates/
+
 # Reports may contain local paths
 eval/reports/
 eval/timelines/
+
+# Publication drafts (personal use)
+docs/publish-drafts.md

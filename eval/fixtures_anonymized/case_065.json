@@ -1,0 +1,152 @@
+{
+  "id": "fixture_0gmzlgo2",
+  "description": "Codefuse hooks.json configured UserPromptSubmit/PostToolUse/Stop but omitted SessionStart. Drift session never initialized, scoring pipeline broken from day one.",
+  "agent": "claude-code",
+  "created_at": 0,
+  "label": {
+    "session_id": "sess_codefuse_hooks_20260528",
+    "drift": true,
+    "takeover_required": true,
+    "annotator_notes": "Third instance of incomplete_followthrough pattern (after case_063 task closure, case_064 codex hooks). ~/.codefuse/hooks.json had 3 of 4 required hooks but missed SessionStart — the one that initializes the drift session and resets state. Without it, UserPromptSubmit/PostToolUse hooks fire into a session that was never started, so goal is never set and scoring has no baseline. Agent that configured this understood the hook system well enough to write a correct drift-hook.sh wrapper and register 3 event types, but missed the foundational one. Discovered when user asked why Aone Copilot sessions had no drift visibility.",
+    "annotated_by": "human",
+    "drift_type": "incomplete_followthrough",
+    "groundtruth_quality": "strong",
+    "session_trigger_type": "recovery",
+    "failure_fixture": {
+      "fixture_id": "FF-065-codefuse-missing-session-start",
+      "session_id": "sess_codefuse_hooks_20260528",
+      "trigger_type": "recovery",
+      "root_failure": "SessionStart hook not registered in ~/.codefuse/hooks.json; drift session never initialized",
+      "secondary_failures": [
+        "3/4 hooks present created false confidence that setup was complete"
+      ],
+      "detectability": "low",
+      "trace_refs": [
+        "~/.codefuse/hooks.json (before fix — no SessionStart entry)",
+        "~/.codefuse/hooks/drift-hook.sh (wrapper script present and correct)",
+        "No .drift-state.json or .drift-events.jsonl produced for codefuse sessions"
+      ],
+      "expected_outcome": {
+        "task_completed": true,
+        "workflow_closed": true,
+        "observability_complete": true
+      },
+      "actual_outcome": {
+        "task_completed": true,
+        "workflow_closed": true,
+        "observability_complete": false
+      }
+    },
+    "failure_edges": [
+      {
+        "source_session_id": "sess_codefuse_hooks_initial_setup_20260525",
+        "target_session_id": "sess_codefuse_hooks_20260528",
+        "relation": "remediation_of",
+        "inferred_failure": "plan_divergence",
+        "confidence": "high"
+      }
+    ],
+    "failure_chain": {
+      "root": {
+        "layer": "cognitive",
+        "tag": "plan_divergence",
+        "evidence": "Agent configured 3/4 hooks correctly (UserPromptSubmit, PostToolUse, Stop) but omitted SessionStart — the hook that initializes the drift session. The wrapper script drift-hook.sh was correct and would handle SessionStart if called, but the hooks.json registration was incomplete.",
+        "event_refs": [],
+        "confidence": "high"
+      },
+      "secondary": [
+        {
+          "layer": "outcome",
+          "tag": "silent_failure",
+          "evidence": "Without SessionStart, the drift session is never initialized. Subsequent hooks (UserPromptSubmit/PostToolUse) fire but have no session context to score against. No error is raised — the failure is completely silent.",
+          "triggered_by": "plan_divergence",
+          "confidence": "high"
+        }
+      ],
+      "outcomes": [
+        "silent_failure"
+      ],
+      "propagation_path": [
+        "plan_divergence",
+        "silent_failure"
+      ],
+      "recovery_attempted": false,
+      "recovery_successful": false,
+      "failure_domain": "observability_infra",
+      "detectability": "low",
+      "cross_session": {
+        "upstream_session_date": "2026-05-25",
+        "upstream_action": "configured ~/.codefuse/hooks.json with UserPromptSubmit/PostToolUse/Stop only",
+        "missed_action": "add SessionStart hook registration",
+        "detection_delay_days": 3,
+        "detected_by": "user",
+        "remediation_session_drift_score": 0
+      }
+    },
+    "diagnosis": {
+      "why_eval_missed": "The hook wrapper script (drift-hook.sh) correctly handles all 4 event types including SessionStart. The hooks.json registered 3 of 4. No runtime error occurs — the missing hook simply never fires. A health check testing 'do hooks execute?' would pass for the 3 registered hooks.",
+      "replay_oracle": "When configuring drift hooks for any agent runtime, does the agent verify that ALL 4 required hooks (SessionStart, UserPromptSubmit, PostToolUse, Stop) are registered, not just a subset?",
+      "ambiguities": [
+        "This is the third instance of the same failure pattern across three different runtimes (case_064 codex, case_064 claude, case_065 codefuse). Whether to count as one recurring pattern or three separate cases depends on analysis granularity."
+      ]
+    }
+  },
+  "session": {
+    "id": "sess_ecdefe20",
+    "started_at": 0,
+    "agent": "claude-code",
+    "active_goal_id": "goal_fix_codefuse_hooks",
+    "goals": [
+      {
+        "id": "goal_fix_codefuse_hooks",
+        "created_at": 0,
+        "source": "human",
+        "raw": "SessionStart hook 注入这个Claude或者antcc为什么看不到",
+        "normalized": {
+          "observable_targets": [
+            "investigate and fix missing SessionStart hook in codefuse"
+          ],
+          "allowed_domains": [
+            "codefuse",
+            "hooks",
+            "drift",
+            "session"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 4000,
+        "type": "observation",
+        "source": "agent",
+        "goal_id": "goal_fix_codefuse_hooks",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "shell",
+          "message": "cat ~/.codefuse/hooks.json — found UserPromptSubmit/PostToolUse/Stop but no SessionStart"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 16000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_fix_codefuse_hooks",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "file_replace",
+          "message": "Added SessionStart hook to ~/.codefuse/hooks.json"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  }
+}

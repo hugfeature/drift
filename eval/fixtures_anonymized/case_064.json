@@ -1,0 +1,181 @@
+{
+  "id": "fixture_yl2oj1j0",
+  "description": "Agent configured drift SessionStart hook for Codex but omitted UserPromptSubmit, PostToolUse, and Stop hooks. Drift data pipeline was broken from day one — only session_start events recorded, no scoring.",
+  "agent": "claude-code",
+  "created_at": 0,
+  "label": {
+    "session_id": "sess_codex_hooks_20260528",
+    "drift": true,
+    "takeover_required": true,
+    "annotator_notes": "When setting up drift hooks for Codex CLI (~/.codex/hooks.json), agent only configured SessionStart hook but missed the 3 other essential hooks: UserPromptSubmit (captures goal), PostToolUse (scores tool calls), and Stop (finalizes session). Same pattern as case_063: agent completed the visible/obvious part of the task (SessionStart works, hook/started + hook/completed appear in logs) but missed the downstream obligations that make the feature actually functional. User discovered the gap when investigating why Codex sessions had no drift scores. The ~/.codex/hooks.json had been sitting with incomplete config since initial setup. Also: Claude Code settings.json had the same gap — only SessionStart configured, no UserPromptSubmit/PostToolUse/Stop for drift.",
+    "annotated_by": "human",
+    "drift_type": "incomplete_followthrough",
+    "groundtruth_quality": "strong",
+    "session_trigger_type": "recovery",
+    "failure_fixture": {
+      "fixture_id": "FF-064-codex-hooks-incomplete",
+      "session_id": "sess_codex_hooks_20260528",
+      "trigger_type": "recovery",
+      "root_failure": "Only SessionStart hook configured for drift; UserPromptSubmit/PostToolUse/Stop omitted",
+      "secondary_failures": [
+        "same incomplete config in ~/.claude/settings.json"
+      ],
+      "detectability": "low",
+      "trace_refs": [
+        "~/.codex/hooks.json (before fix)",
+        "~/.codex/logs_2.sqlite (hook/started + hook/completed events with no drift data)",
+        "~/.drift-events.jsonl (only session_start, zero tool_call/goal_set)",
+        "~/.claude/settings.json (same gap)"
+      ],
+      "expected_outcome": {
+        "task_completed": true,
+        "workflow_closed": true,
+        "observability_complete": true
+      },
+      "actual_outcome": {
+        "task_completed": true,
+        "workflow_closed": true,
+        "observability_complete": false
+      }
+    },
+    "failure_edges": [
+      {
+        "source_session_id": "sess_codex_hooks_initial_setup_20260523",
+        "target_session_id": "sess_codex_hooks_20260528",
+        "relation": "remediation_of",
+        "inferred_failure": "plan_divergence",
+        "confidence": "high"
+      }
+    ],
+    "failure_chain": {
+      "root": {
+        "layer": "cognitive",
+        "tag": "plan_divergence",
+        "evidence": "Agent configured SessionStart hook correctly but didn't reason about the full event lifecycle (UserPromptSubmit → PostToolUse → Stop) needed for drift scoring to function. Understood the hook system partially — enough to make the visible part work, not enough to complete the pipeline.",
+        "event_refs": [],
+        "confidence": "high"
+      },
+      "secondary": [
+        {
+          "layer": "outcome",
+          "tag": "silent_failure",
+          "evidence": "Codex logs showed hook/started + hook/completed events — surface indicators looked healthy. But .drift-events.jsonl only contained session_start, zero tool_call or goal_set events. The eval pipeline was silently broken from day one. No data ≠ no problem — no data WAS the problem.",
+          "triggered_by": "plan_divergence",
+          "confidence": "high"
+        }
+      ],
+      "outcomes": [
+        "silent_failure"
+      ],
+      "propagation_path": [
+        "plan_divergence",
+        "silent_failure"
+      ],
+      "recovery_attempted": false,
+      "recovery_successful": false,
+      "failure_domain": "observability_infra",
+      "detectability": "silent",
+      "cross_session": {
+        "upstream_session_date": "2026-05-23",
+        "upstream_action": "configured ~/.codex/hooks.json with SessionStart only",
+        "missed_action": "add UserPromptSubmit, PostToolUse, Stop hooks for drift",
+        "detection_delay_days": 5,
+        "detected_by": "user",
+        "remediation_session_drift_score": 0
+      }
+    },
+    "diagnosis": {
+      "why_eval_missed": "The hook infrastructure appeared functional — Codex logs showed hook/started and hook/completed events firing on every session. A health-check-based monitor would report green. The failure is that the SCOPE of instrumentation was incomplete: only 1 of 4 required hook types was configured. This is an observability validity problem, not an agent behavior problem — we weren't watching the right things.",
+      "replay_oracle": "When configuring drift hooks for any new agent runtime, does the agent enumerate ALL required hook event types (SessionStart, UserPromptSubmit, PostToolUse, Stop) and configure each one, rather than only the most obvious one?",
+      "ambiguities": [
+        "Whether Claude Code's settings.json hooks section has the same incomplete config is a separate instance of the same failure pattern — counted as one case or two depends on whether we consider per-runtime or per-pattern."
+      ]
+    }
+  },
+  "session": {
+    "id": "sess_ecde2026",
+    "started_at": 0,
+    "agent": "claude-code",
+    "active_goal_id": "goal_investigate_codex_hooks",
+    "goals": [
+      {
+        "id": "goal_investigate_codex_hooks",
+        "created_at": 0,
+        "source": "human",
+        "raw": "看看codex的会话你可以获取到吗？我在这里也加了hooks",
+        "normalized": {
+          "observable_targets": [
+            "investigate codex drift hook configuration and session data"
+          ],
+          "allowed_domains": [
+            "codex",
+            "hooks",
+            "drift",
+            "session"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 285,
+        "type": "observation",
+        "source": "agent",
+        "goal_id": "goal_investigate_codex_hooks",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "shell",
+          "message": "cat ~/.codex/hooks.json — found only SessionStart configured for drift"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 57000,
+        "type": "observation",
+        "source": "agent",
+        "goal_id": "goal_investigate_codex_hooks",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "shell",
+          "message": "sqlite3 logs_2.sqlite — hook/started and hook/completed events present, confirming SessionStart fires but no drift scoring data produced"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 127000,
+        "type": "observation",
+        "source": "agent",
+        "goal_id": "goal_investigate_codex_hooks",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "shell",
+          "message": "cat ~/.drift-events.jsonl — only session_start event, zero tool_call or goal_set events. Root cause confirmed: missing UserPromptSubmit + PostToolUse + Stop hooks"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 383000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_investigate_codex_hooks",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "file_replace",
+          "message": "Added UserPromptSubmit, PostToolUse, Stop hooks to ~/.codex/hooks.json"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  }
+}

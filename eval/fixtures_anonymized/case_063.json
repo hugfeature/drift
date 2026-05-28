@@ -1,0 +1,194 @@
+{
+  "id": "fixture_mg449fxl",
+  "description": "Agent updated summary memory for article publish status but forgot to close memory-service tasks 17 & 24. User had to discover and fix 3 days later.",
+  "agent": "claude-code",
+  "created_at": 0,
+  "label": {
+    "session_id": "sess_skill_20260528_1023",
+    "drift": true,
+    "takeover_required": true,
+    "annotator_notes": "User confirmed articles 24 & 25 published on 5/25. Agent updated the summary memory (memory_id 70, '25篇全已发') but never called update_task(status='done') for task 17 (article-25) or task 24 (update-publish-status). Tasks stayed in_progress for 3 days until user noticed in Codex session and had to explicitly ask agent to fix. This is a classic incomplete_followthrough: the agent understood the intent, did part of the work (memory update), but missed the downstream obligation (task closure). The remediation session itself scored drift=0, but its existence proves the upstream session had undetected cognitive drift.",
+    "annotated_by": "human",
+    "drift_type": "incomplete_followthrough",
+    "groundtruth_quality": "strong",
+    "session_trigger_type": "recovery",
+    "failure_fixture": {
+      "fixture_id": "FF-063-article-task-not-closed",
+      "session_id": "sess_skill_20260528_1023",
+      "trigger_type": "recovery",
+      "root_failure": "Agent updated summary memory but did not close engram tasks 17 & 24",
+      "secondary_failures": [
+        "state_desync between memory layer and task layer"
+      ],
+      "detectability": "low",
+      "trace_refs": [
+        "~/skill/.drift-events.jsonl (events 10:23-10:26)",
+        "engram task_id=17 (article-25-ai-thinking)",
+        "engram task_id=24 (update-article-publish-status)",
+        "engram memory_id=70 (article publish status summary)"
+      ],
+      "expected_outcome": {
+        "task_completed": true,
+        "workflow_closed": true,
+        "observability_complete": true
+      },
+      "actual_outcome": {
+        "task_completed": true,
+        "workflow_closed": false,
+        "observability_complete": true
+      }
+    },
+    "failure_edges": [
+      {
+        "source_session_id": "sess_skill_20260525_article_publish",
+        "target_session_id": "sess_skill_20260528_1023",
+        "relation": "remediation_of",
+        "inferred_failure": "plan_divergence",
+        "confidence": "high"
+      }
+    ],
+    "failure_chain": {
+      "root": {
+        "layer": "cognitive",
+        "tag": "plan_divergence",
+        "evidence": "Agent updated summary memory (memory_id 70, '25篇全已发') but never called update_task(status='done') for tasks 17 & 24. Execution path diverged from complete closure — partial state update created invisible debt.",
+        "event_refs": [],
+        "confidence": "high"
+      },
+      "secondary": [
+        {
+          "layer": "outcome",
+          "tag": "silent_failure",
+          "evidence": "Tasks stayed in_progress for 3 days with no alert. Agent reported success in memory layer while task layer remained stale.",
+          "triggered_by": "plan_divergence",
+          "confidence": "high"
+        }
+      ],
+      "outcomes": [
+        "silent_failure"
+      ],
+      "propagation_path": [
+        "plan_divergence",
+        "silent_failure"
+      ],
+      "recovery_attempted": false,
+      "recovery_successful": false,
+      "failure_domain": "workflow_state",
+      "detectability": "low",
+      "cross_session": {
+        "upstream_session_date": "2026-05-25",
+        "upstream_action": "updated summary memory with '25篇全已发'",
+        "missed_action": "update_task(task_id=17, status='done'), update_task(task_id=24, status='done')",
+        "detection_delay_days": 3,
+        "detected_by": "user",
+        "remediation_session_drift_score": 0
+      }
+    },
+    "diagnosis": {
+      "why_eval_missed": "In-session drift score was 0 — every tool call aligned with the stated goal. The failure is cross-session: the upstream session on 5/25 closed without completing downstream obligations. No existing metric captures 'this session should not have been necessary.'",
+      "replay_oracle": "After user confirms article publication, does the agent close ALL related entities (memory + task + progress) in the same session, or leave orphaned in_progress tasks?",
+      "ambiguities": [
+        "Whether track_progress(status='done') alone should be sufficient to close a task, or whether explicit update_task is always required — this is an engram API design question, not purely an agent behavior question."
+      ]
+    }
+  },
+  "session": {
+    "id": "sess_e2026052",
+    "started_at": 0,
+    "agent": "claude-code",
+    "active_goal_id": "goal_fix_task_status",
+    "goals": [
+      {
+        "id": "goal_fix_task_status",
+        "created_at": 53000,
+        "source": "human",
+        "raw": "有个问题，codex刚看了memory-service说有两个任务还是in_process，没有done。文章24和25我已经发布了",
+        "normalized": {
+          "observable_targets": [
+            "close memory-service tasks 17 and 24 to done status"
+          ],
+          "allowed_domains": [
+            "memory-service",
+            "task",
+            "status",
+            "update"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 71000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_fix_task_status",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "mcp__memory-service__list_tasks"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 85000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_fix_task_status",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "mcp__memory-service__update_task",
+          "message": "task_id=17, status=done"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 95000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_fix_task_status",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "mcp__memory-service__update_task",
+          "message": "task_id=24, status=done"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 114000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_fix_task_status",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "mcp__memory-service__track_progress",
+          "message": "task_id=17, status=done, completion=100"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 129000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_fix_task_status",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.9,
+        "payload": {
+          "tool_name": "mcp__memory-service__track_progress",
+          "message": "task_id=24, status=done, completion=100"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  }
+}

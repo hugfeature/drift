@@ -42,6 +42,15 @@ export type CognitiveTag =
   | 'state_loss'                // agent forgets what it already did or decided
   | 'hallucinated_belief'       // agent acts on something it believes but never verified
   | 'goal_misunderstanding'     // agent parsed the goal incorrectly from the start
+  | 'false_environment_assumption'  // agent reasons from unverified premise about system state
+                                    // (epistemic failure — not fabrication, but unchecked assumption)
+                                    // case_066: assumed hook was configured, built explanation on that
+  | 'missing_state_verification'    // agent skipped a prerequisite check before reasoning/acting
+                                    // (omission failure — only when explicit verification step exists)
+                                    // case_066: didn't check hooks.json before explaining why hook is invisible
+  | 'premature_root_cause_inference' // agent jumped to a sophisticated explanation without ruling out basics
+                                     // (inverse of reasoning_loop: too few iterations, not too many)
+                                     // case_066: "UI hides system prompt" before checking "is hook registered?"
 
 // ─── Layer 3: Tool Execution Layer ──────────────────────────────────────────
 // What went wrong at the tool call level. These are the concrete faults.
@@ -73,6 +82,9 @@ export type FailureDomain =
   | 'observability_infra'    // failure in the instrumentation/monitoring itself
   | 'human_operator'         // failure due to human misconfiguration or oversight
   | 'external_dependency'    // failure in external service/API/model provider
+  | 'debugging'              // failure in the diagnostic process itself
+                             // (agent doesn't just do wrong things — it explains wrong things wrongly)
+                             // case_066: first instance
 
 // ─── Detectability ──────────────────────────────────────────────────────────
 // "The most dangerous failures are silently non-observable."
@@ -203,6 +215,8 @@ export function getFailureLayer(tag: FailureTag): FailureLayer {
     'directive_override', 'plan_divergence', 'context_desync',
     'memory_corruption', 'reasoning_loop', 'tool_oscillation',
     'state_loss', 'hallucinated_belief', 'goal_misunderstanding',
+    'false_environment_assumption', 'missing_state_verification',
+    'premature_root_cause_inference',
   ])
   if (outcomeTags.has(tag)) return 'outcome'
   if (cognitiveTags.has(tag)) return 'cognitive'

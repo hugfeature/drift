@@ -55,6 +55,138 @@ export type ToolFailureTag =
   | 'schema_mismatch'           // tool input/output didn't match expected schema
   | 'stale_observation'         // agent acted on outdated tool output
 
+// ─── Layer 4 (Orthogonal): Failure Domain ───────────────────────────────────
+// NOT a fourth layer in the propagation chain.
+// This is an orthogonal dimension that answers: "where in the system did this fail?"
+//
+// The three layers (Outcome/Cognitive/Tool) describe the WHAT and HOW.
+// FailureDomain describes the WHERE — which system boundary the failure lives in.
+//
+// Key insight from case_063/064: some failures are not agent behavior problems
+// but observability validity problems — "are we even watching the right thing?"
+
+export type FailureDomain =
+  | 'agent_runtime'          // failure in the agent's core reasoning/execution loop
+  | 'tool_execution'         // failure at the tool call boundary
+  | 'memory_layer'           // failure in persistent memory (engram, MEMORY.md, etc.)
+  | 'workflow_state'         // failure in task/state tracking across sessions
+  | 'observability_infra'    // failure in the instrumentation/monitoring itself
+  | 'human_operator'         // failure due to human misconfiguration or oversight
+  | 'external_dependency'    // failure in external service/API/model provider
+
+// ─── Detectability ──────────────────────────────────────────────────────────
+// "The most dangerous failures are silently non-observable."
+//
+// Traditional monitoring: no alert ≈ no problem.
+// Agent systems: no data may itself BE the failure.
+//
+// This field captures how hard a failure is to notice.
+
+export type Detectability = 'high' | 'medium' | 'low' | 'silent'
+
+// ─── Cross-Session Context ──────────────────────────────────────────────────
+// For failures that span multiple sessions — where the remediation session
+// scores drift=0 but its existence proves the upstream session had undetected drift.
+
+export interface CrossSessionContext {
+  /** When the upstream failure occurred */
+  upstream_session_date: string
+
+  /** What the agent did in the upstream session (the partial work) */
+  upstream_action: string
+
+  /** What the agent should have done but didn't */
+  missed_action: string
+
+  /** How many days until someone noticed */
+  detection_delay_days: number
+
+  /** Who caught it — user discovery is the worst case */
+  detected_by: 'user' | 'agent_self' | 'automated_check' | 'peer_agent'
+
+  /** The remediation session's drift score (typically 0 — that's the paradox) */
+  remediation_session_drift_score: number
+}
+
+// ─── Session Trigger Type ────────────────────────────────────────────────────
+// Why does this session exist?
+// A recovery session that scores drift=0 is still evidence of upstream failure.
+// Hand-annotated only — no auto-inference, no LLM classifier.
+
+export type SessionTriggerType =
+  | 'new_intent'               // user starts genuinely new work
+  | 'continuation'             // resuming interrupted or unfinished work
+  | 'recovery'                 // fixing something a previous session left incomplete
+  | 'verification'             // checking whether previous work actually landed
+
+// ─── Failure Edge ────────────────────────────────────────────────────────────
+// Many agent failures are only proven when a future session appears.
+// A FailureEdge is a causal link between two sessions.
+// Interface only — no graph engine, no traversal, no auto-inference.
+
+export interface FailureEdge {
+  /** The session where the failure originated */
+  source_session_id: string
+
+  /** The session where the failure was discovered/remediated */
+  target_session_id: string
+
+  /** What relationship the target has to the source */
+  relation:
+    | 'remediation_of'         // target fixes what source left incomplete
+    | 'verification_of'        // target checks whether source actually worked
+    | 'continuation_of'        // target resumes source's unfinished work
+
+  /** If this edge implies a retroactive failure on the source session */
+  inferred_failure?: string
+
+  /** Confidence in the inferred failure */
+  confidence?: 'high' | 'medium' | 'low'
+}
+
+// ─── Failure Fixture ─────────────────────────────────────────────────────────
+// The minimal replayable unit of the failure corpus.
+// Low-cost to fill → fast corpus growth. Annotation (deep RCA) is optional.
+//
+// Answers: "what happened, what was expected, what was actual, how to replay."
+
+export interface FailureFixture {
+  /** Unique fixture ID */
+  fixture_id: string
+
+  /** Links to the session where failure was observed */
+  session_id: string
+
+  /** Why this session exists */
+  trigger_type: SessionTriggerType
+
+  /** Primary failure (free text, will converge into tags with corpus growth) */
+  root_failure: string
+
+  /** Additional failures that compounded the root */
+  secondary_failures?: string[]
+
+  /** How hard this failure is to notice */
+  detectability: Detectability
+
+  /** Pointers to raw trace data (file paths, event IDs, log lines) */
+  trace_refs: string[]
+
+  /** What should have happened */
+  expected_outcome: {
+    task_completed: boolean
+    workflow_closed: boolean
+    observability_complete: boolean
+  }
+
+  /** What actually happened */
+  actual_outcome: {
+    task_completed: boolean
+    workflow_closed: boolean
+    observability_complete: boolean
+  }
+}
+
 // ─── Unified tag type ───────────────────────────────────────────────────────
 
 export type FailureTag = OutcomeTag | CognitiveTag | ToolFailureTag
@@ -137,6 +269,24 @@ export interface FailureChain {
 
   /** Optional: what the agent did to try to recover */
   recovery_description?: string
+
+  /**
+   * Orthogonal: which system boundary the failure lives in.
+   * Not part of the propagation chain — answers WHERE, not WHAT/HOW.
+   */
+  failure_domain?: FailureDomain
+
+  /**
+   * How hard this failure is to detect.
+   * 'silent' = no signal at all, absence of data IS the failure.
+   */
+  detectability?: Detectability
+
+  /**
+   * Cross-session context for failures where the remediation session
+   * looks clean (drift=0) but its existence proves upstream drift.
+   */
+  cross_session?: CrossSessionContext
 }
 
 // ─── Annotated Failure Case ─────────────────────────────────────────────────
@@ -155,6 +305,15 @@ export interface FailureAnnotation {
 
   /** The propagation chain — this is the core diagnosis */
   chain: FailureChain
+
+  /** Why does this session exist? Hand-annotated. */
+  session_trigger_type?: SessionTriggerType
+
+  /** Lightweight replayable fixture — the minimum corpus unit */
+  failure_fixture?: FailureFixture
+
+  /** Causal edges linking this session to other sessions */
+  failure_edges?: FailureEdge[]
 
   /**
    * Trigger conditions that would reproduce this failure class.

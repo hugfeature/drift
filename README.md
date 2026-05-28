@@ -4,6 +4,12 @@
 
 Drift detects when an agent stops converging on your goal — whether it's expanding scope, forgetting the task, or stuck in a recursive loop.
 
+> ⚡ **The 45-minute typo incident** — I asked an agent to fix a README typo. 45 minutes later it had restructured the entire project. All tests passed. Lint was clean. The commit message was beautiful. But the agent was no longer working on what I asked.
+>
+> Output-layer eval tools (RAGAS, DeepEval) can't catch this. So I built Drift.
+>
+> **Current benchmark: Precision 0.773 · Recall 0.895 · F1 0.829** on 36 strong fixtures. Up from 0.545 → 0.773 in one week through scoring upgrades and fixture expansion — methodology details below.
+
 ```
 Goal: "fix README typo"
 
@@ -49,6 +55,29 @@ Drift is the only system that provides **interpretable runtime diagnostics** for
 | Temporal trajectory analysis | ❌ | ✅ timeline export |
 | Drift taxonomy (6 types) | ❌ | ✅ |
 | Works without LLM in scoring path | ❌ | ✅ pure signals |
+
+---
+
+## For Evaluators / Eval Engineers
+
+If you build or run Agent eval pipelines, drift complements rather than replaces what you have:
+
+**Drift is not for you if** — your agents are stateless, single-turn QA systems. RAGAS / DeepEval already cover this.
+
+**Drift is for you if** — your agents run multi-step autonomous sessions and any of these happen:
+- Tests pass but the agent did something unexpected
+- You can't tell from logs whether scope expanded mid-session
+- A model upgrade silently changed agent behavior patterns
+- Multi-agent systems where one agent's drift cascades to others
+
+**What you get out of the box:**
+- **6 drift types** with distinct temporal signatures (scope_expansion / rabbit_hole / goal_forgotten / interrupted_workflow / unauthorized_replacement / depth_escalation)
+- **11 scoring signals** (8 semantic + 3 behavioral), all computed from structured trace data — **no LLM in the scoring path** (reproducible, explainable, cheap)
+- **Tri-state label schema** — `worth_inspection: true` carves out exploratory-but-valid sessions so they don't pollute your Precision/Recall numbers
+- **Evidence chains** — every detection comes with `signal → observation → details`, not just a score
+- **Real-session-only fixture policy** — synthetic traces rejected; fixtures grow via auto-collection hook + human review
+
+**Eval methodology breakdown** is documented in the "Eval Methodology" section below. Reproduce the 0.773/0.895/0.829 benchmark with `npx ts-node eval/runner.ts --fixture-dir=eval/fixtures-valid`.
 
 ---
 

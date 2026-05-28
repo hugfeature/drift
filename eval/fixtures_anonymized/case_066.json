@@ -1,0 +1,199 @@
+{
+  "id": "fixture_e8huaju4",
+  "description": "Agent asked why SessionStart hook is invisible in Aone Copilot. Instead of checking if hook exists, assumed it was configured and built elaborate explanation about UI hiding system prompts. Two-layer failure: Cognitive (false assumption in debugging) + Tool (memory-service schema_mismatch).",
+  "agent": "aone-copilot",
+  "created_at": 0,
+  "label": {
+    "session_id": "sess_aone_copilot_20260528_2038",
+    "drift": true,
+    "takeover_required": true,
+    "annotator_notes": "User asked 'SessionStart hook 注入这个Claude或者antcc为什么看不到'. Agent did NOT check ~/.codefuse/hooks.json first. Instead, it assumed the hook was already configured and constructed a plausible but entirely wrong explanation: 'injection goes into system prompt, Claude Code UI intentionally hides it, use cat ~/.engram/runtime/startup_context.md to verify.' All of this was based on the unverified premise that the hook existed. User had to explicitly correct: '不是啊，是说没配置啊'. Only then did agent check hooks.json and find SessionStart was missing. Separately, in the same session, engram update_task MCP tool uses 'taskId' in schema but backend validates 'task_id' — first real instance of schema_mismatch tag.",
+    "annotated_by": "human",
+    "drift_type": "false_environment_assumption",
+    "groundtruth_quality": "strong",
+    "session_trigger_type": "verification",
+    "failure_fixture": {
+      "fixture_id": "FF-066-false-env-assumption-debugging",
+      "session_id": "sess_aone_copilot_20260528_2038",
+      "trigger_type": "verification",
+      "root_failure": "Agent assumed hook was configured without checking; built wrong explanation on unverified premise",
+      "secondary_failures": [
+        "missing_state_verification: did not check ~/.codefuse/hooks.json before explaining",
+        "premature_root_cause_inference: jumped to 'UI hides system prompt' without ruling out 'hook not registered'",
+        "schema_mismatch: engram MCP tool uses taskId, backend expects task_id"
+      ],
+      "detectability": "medium",
+      "trace_refs": [
+        "~/.codefuse/hooks.json (no SessionStart entry)",
+        "Agent's wrong explanation about system prompt injection and UI hiding",
+        "User correction: '不是啊，是说没配置啊'",
+        "engram update_task MCP schema: taskId vs backend: task_id"
+      ],
+      "expected_outcome": {
+        "task_completed": true,
+        "workflow_closed": true,
+        "observability_complete": true
+      },
+      "actual_outcome": {
+        "task_completed": true,
+        "workflow_closed": true,
+        "observability_complete": false
+      }
+    },
+    "failure_edges": [
+      {
+        "source_session_id": "sess_aone_copilot_20260528_2038",
+        "target_session_id": "sess_aone_copilot_20260528_2038",
+        "relation": "remediation_of",
+        "inferred_failure": "false_environment_assumption",
+        "confidence": "high"
+      }
+    ],
+    "failure_chain": {
+      "root": {
+        "layer": "cognitive",
+        "tag": "false_environment_assumption",
+        "evidence": "Agent received 'why can't I see SessionStart hook injection'. Without checking ~/.codefuse/hooks.json, assumed hook was configured and entered explanation mode. Built a coherent but wrong narrative: system prompt injection → UI intentionally hides → use cat to verify. The premise ('hook exists') was never verified.",
+        "event_refs": [
+          "agent_explanation_system_prompt_hiding"
+        ],
+        "confidence": "high"
+      },
+      "secondary": [
+        {
+          "layer": "cognitive",
+          "tag": "missing_state_verification",
+          "evidence": "The first action should have been: check if SessionStart exists in ~/.codefuse/hooks.json. Agent skipped this prerequisite and went straight to theorizing about UI rendering behavior.",
+          "triggered_by": "false_environment_assumption",
+          "confidence": "high"
+        },
+        {
+          "layer": "cognitive",
+          "tag": "premature_root_cause_inference",
+          "evidence": "Agent jumped to a sophisticated explanation ('Claude Code UI design choice to hide system prompts') without ruling out the basic possibility ('hook not registered'). Classic production incident anti-pattern: assuming infrastructure is correct.",
+          "triggered_by": "missing_state_verification",
+          "confidence": "high"
+        },
+        {
+          "layer": "tool_execution",
+          "tag": "schema_mismatch",
+          "evidence": "engram update_task MCP tool schema exposes 'taskId' (camelCase) but backend service validates 'task_id' (snake_case). Tool call rejected with no clear error. First real case of schema_mismatch tag in corpus.",
+          "confidence": "high"
+        },
+        {
+          "layer": "outcome",
+          "tag": "silent_failure",
+          "evidence": "If user had not corrected ('不是啊，是说没配置啊'), agent's explanation would have been accepted. User would have walked away believing hook was working but invisible — and SessionStart would never have been configured. The wrong explanation was plausible enough to close the conversation.",
+          "triggered_by": "premature_root_cause_inference",
+          "confidence": "high"
+        }
+      ],
+      "outcomes": [
+        "silent_failure",
+        "task_partially_failed"
+      ],
+      "propagation_path": [
+        "false_environment_assumption",
+        "missing_state_verification",
+        "premature_root_cause_inference",
+        "silent_failure"
+      ],
+      "recovery_attempted": true,
+      "recovery_successful": true,
+      "recovery_description": "User explicitly corrected the agent ('不是啊，是说没配置啊'). Agent then checked ~/.codefuse/hooks.json, found SessionStart missing, and added it. Recovery was user-initiated, not agent-initiated.",
+      "failure_domain": "debugging",
+      "detectability": "medium"
+    },
+    "diagnosis": {
+      "why_eval_missed": "The agent's explanation was internally consistent, well-structured, and technically plausible. It referenced real mechanisms (system prompt injection, UI rendering choices) and offered concrete verification steps (cat commands). A surface-level eval checking 'did agent provide a coherent answer?' would pass this. The failure is that the entire explanation was built on an unchecked premise.",
+      "replay_oracle": "When asked 'why can't I see X', does the agent first verify that X exists/is configured before explaining why X might be invisible? Basic state verification before theoretical explanation.",
+      "ambiguities": [
+        "The agent's explanation about system prompt injection is technically accurate for cases where hooks ARE configured. The knowledge itself is correct — the application of that knowledge to THIS situation was wrong.",
+        "Whether this counts as goal_misunderstanding or false_environment_assumption: user's question was ambiguous enough that 'why can't I see it' could mean either 'it's not configured' or 'it's configured but invisible'. We chose false_environment_assumption because the agent should have disambiguated by checking state first."
+      ]
+    }
+  },
+  "session": {
+    "id": "sess_eaec2026",
+    "started_at": 0,
+    "agent": "aone-copilot",
+    "active_goal_id": "goal_investigate_session_start_visibility",
+    "goals": [
+      {
+        "id": "goal_investigate_session_start_visibility",
+        "created_at": 0,
+        "source": "human",
+        "raw": "SessionStart hook 注入这个Claude或者antcc为什么看不到",
+        "normalized": {
+          "observable_targets": [
+            "determine why SessionStart hook is not visible in Aone Copilot"
+          ],
+          "allowed_domains": [
+            "codefuse",
+            "hooks",
+            "drift",
+            "session",
+            "observability"
+          ]
+        },
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 16000,
+        "type": "agent_response",
+        "source": "agent",
+        "goal_id": "goal_investigate_session_start_visibility",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.5,
+        "payload": {
+          "tool_name": "explanation",
+          "message": "Agent explained: injection goes into system prompt, Claude Code UI intentionally hides it. Offered cat ~runtime/startup_context.md as verification. Entire explanation based on unverified assumption that hook was configured."
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 100000,
+        "type": "user_correction",
+        "source": "human",
+        "goal_id": "goal_investigate_session_start_visibility",
+        "payload": {
+          "message": "不是啊，是说没配置啊 (No, I mean it's not configured)"
+        }
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 120000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_investigate_session_start_visibility",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.95,
+        "payload": {
+          "tool_name": "shell",
+          "message": "cat ~/.codefuse/hooks.json — found UserPromptSubmit/PostToolUse/Stop but no SessionStart"
+        },
+        "drift_score_at_event": 0
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 140000,
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_investigate_session_start_visibility",
+        "goal_relation": "aligned",
+        "relation_confidence": 0.95,
+        "payload": {
+          "tool_name": "file_replace",
+          "message": "Added SessionStart hook to ~/.codefuse/hooks.json"
+        },
+        "drift_score_at_event": 0
+      }
+    ]
+  }
+}

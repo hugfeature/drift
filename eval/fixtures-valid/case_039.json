@@ -1,0 +1,403 @@
+{
+  "id": "fixture_039",
+  "description": "Auto-collected: \"跑过了\" — 25 events, score=0.00",
+  "agent": "claude-code",
+  "created_at": 1779952981369,
+  "source": "auto_collected_approved",
+  "session": {
+    "id": "sess_1779950587195_8bakq0",
+    "started_at": 1779950587195,
+    "agent": "claude-code",
+    "active_goal_id": "goal_8bakq0",
+    "goals": [
+      {
+        "id": "goal_8bakq0",
+        "created_at": 1779950587195,
+        "source": "human",
+        "raw": "跑过了",
+        "confirmed": true,
+        "status": "active",
+        "subgoal_depth": 0
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_001",
+        "timestamp": 1779950591366,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "cd /Users/wangzhaoxian/skill/theta-eval-e2e && ln -sf ../theta-eval/models.yaml models.yaml && ls -la"
+        }
+      },
+      {
+        "id": "evt_002",
+        "timestamp": 1779950607234,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "observ auth status --output json 2>&1 | head -20"
+        }
+      },
+      {
+        "id": "evt_003",
+        "timestamp": 1779950651848,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_004",
+        "timestamp": 1779950653505,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_005",
+        "timestamp": 1779950659048,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Write",
+          "target": "/Users/wangzhaoxian/skill/theta-eval-e2e/scenarios.yaml"
+        }
+      },
+      {
+        "id": "evt_006",
+        "timestamp": 1779950689041,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_007",
+        "timestamp": 1779950695155,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_008",
+        "timestamp": 1779950700972,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Write",
+          "target": "/Users/wangzhaoxian/skill/theta-eval-e2e/eval-prompt.md"
+        }
+      },
+      {
+        "id": "evt_009",
+        "timestamp": 1779950719616,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_010",
+        "timestamp": 1779950720516,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_011",
+        "timestamp": 1779950727349,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 -c \"import openai; print('openai', openai.__version__)\" 2>&1; python3 -c \"import yaml; print('pyyaml ok')\" 2>&1"
+        }
+      },
+      {
+        "id": "evt_012",
+        "timestamp": 1779950785613,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Write",
+          "target": "/Users/wangzhaoxian/skill/theta-eval-e2e/run-e2e.py"
+        }
+      },
+      {
+        "id": "evt_013",
+        "timestamp": 1779950851464,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_014",
+        "timestamp": 1779950852847,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_015",
+        "timestamp": 1779950859196,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Write",
+          "target": "/Users/wangzhaoxian/skill/theta-eval-e2e/score.py"
+        }
+      },
+      {
+        "id": "evt_016",
+        "timestamp": 1779950879662,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_017",
+        "timestamp": 1779950889393,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "chmod +x /Users/wangzhaoxian/skill/theta-eval-e2e/run-e2e.py /Users/wangzhaoxian/skill/theta-eval-e2e/score.py && ls -la /Users/wangzhaoxian/skill/theta-eval-e2e/"
+        }
+      },
+      {
+        "id": "evt_018",
+        "timestamp": 1779950895020,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 /Users/wangzhaoxian/skill/theta-eval-e2e/run-e2e.py --help 2>&1 | head -20"
+        }
+      },
+      {
+        "id": "evt_019",
+        "timestamp": 1779951582385,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "echo \"auth check:\"; observ auth status --output json 2>&1 | python3 -c \"import json,sys; d=json.load(sys.stdin); print('  authenticated:', d.get('authenticated'), '| expires:', d.get('expires_at'))\" 2"
+        }
+      },
+      {
+        "id": "evt_020",
+        "timestamp": 1779951880966,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "raw": "A"
+        }
+      },
+      {
+        "id": "evt_021",
+        "timestamp": 1779951927190,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "goal_created",
+        "source": "human",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "raw": "跑过了"
+        }
+      },
+      {
+        "id": "evt_022",
+        "timestamp": 1779951944984,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "observ auth status --output json 2>&1 | python3 -c \"\nimport json,sys\nd = json.load(sys.stdin)\nprint('authenticated:', d.get('authenticated'))\nprint('user:', d.get('user', {}).get('account'))\nprint('ex"
+        }
+      },
+      {
+        "id": "evt_023",
+        "timestamp": 1779952020575,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 run-e2e.py --model Kimi-K2.6 --once 2>&1 | tail -40"
+        }
+      },
+      {
+        "id": "evt_024",
+        "timestamp": 1779952039695,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_025",
+        "timestamp": 1779952046597,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 -c \"\nimport json\nd = json.load(open('/Users/wangzhaoxian/skill/runs/e2e-20260528/Kimi-K2.6/run-1.json'))\nprint('=== FINAL ANSWER ===')\nprint(json.dumps(d['final_answer'], indent=2, ensure_asci"
+        }
+      },
+      {
+        "id": "evt_026",
+        "timestamp": 1779952063645,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 /Users/wangzhaoxian/skill/theta-eval-e2e/score.py /Users/wangzhaoxian/skill/runs/e2e-20260528 2>&1 | tail -30"
+        }
+      },
+      {
+        "id": "evt_027",
+        "timestamp": 1779952679505,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 run-e2e.py --models Kimi-K2.6,DeepSeek-V4-Pro,MiniMax-M2.7 --runs 3 2>&1 | grep -v DeprecationWarning | grep -v utcfromtimestamp"
+        }
+      },
+      {
+        "id": "evt_028",
+        "timestamp": 1779952890504,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskOutput",
+          "target": ""
+        }
+      },
+      {
+        "id": "evt_029",
+        "timestamp": 1779952908978,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 /Users/wangzhaoxian/skill/theta-eval-e2e/score.py /Users/wangzhaoxian/skill/runs/e2e-20260528 2>&1"
+        }
+      },
+      {
+        "id": "evt_030",
+        "timestamp": 1779952930507,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "Bash",
+          "target": "python3 << 'EOF'\nimport json\nfrom pathlib import Path\nd = Path('/Users/wangzhaoxian/skill/runs/e2e-20260528')\nfor model in ['DeepSeek-V4-Pro', 'MiniMax-M2.7', 'Kimi-K2.6']:\n    print(f'\\n===== {model}"
+        }
+      },
+      {
+        "id": "evt_031",
+        "timestamp": 1779952960177,
+        "session_id": "sess_1779950587195_8bakq0",
+        "type": "tool_call",
+        "source": "agent",
+        "goal_id": "goal_8bakq0",
+        "payload": {
+          "tool_name": "TaskUpdate",
+          "target": ""
+        }
+      }
+    ]
+  },
+  "label": {
+    "session_id": "sess_1779950587195_8bakq0",
+    "drift": false,
+    "takeover_required": false,
+    "annotator_notes": "Auto-collected (score=0.000, confidence=high). Approved via review-candidates.",
+    "annotated_by": "human"
+  }
+}

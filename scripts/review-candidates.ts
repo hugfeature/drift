@@ -64,11 +64,20 @@ function approveCandidate(candidateId: string): void {
   const sourcePath = path.join(CANDIDATES_DIR, filename)
   const data = JSON.parse(fs.readFileSync(sourcePath, 'utf-8'))
 
-  // Assign a proper case_NNN ID for the fixtures-valid directory
+  // Assign a proper case_NNN ID — scan BOTH directories to avoid collisions
   fs.mkdirSync(FIXTURES_DIR, { recursive: true })
-  const existing = fs.readdirSync(FIXTURES_DIR)
-    .filter(f => f.startsWith('case_') && f.endsWith('.json'))
-  const nextNum = existing.length + 1
+  const MAIN_FIXTURES_DIR = path.resolve(__dirname, '../eval/fixtures')
+  const allDirs = [FIXTURES_DIR]
+  if (fs.existsSync(MAIN_FIXTURES_DIR)) allDirs.push(MAIN_FIXTURES_DIR)
+
+  let maxNum = 0
+  for (const dir of allDirs) {
+    for (const f of fs.readdirSync(dir)) {
+      const match = f.match(/^case_(\d+)\.json$/)
+      if (match) maxNum = Math.max(maxNum, parseInt(match[1], 10))
+    }
+  }
+  const nextNum = maxNum + 1
   const caseId = `case_${String(nextNum).padStart(3, '0')}`
 
   // Transform auto_label into proper label format

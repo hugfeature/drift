@@ -119,14 +119,53 @@ Recovery attempted: **no.** At event 081, the user sent a screenshot (evt_user_0
 
 ---
 
+## Case C: The Agent That Compressed Two Tasks Into One
+
+**Setup.** User provided two independent article drafts — "Agent 正在重演分布式系统灾难" (Agent is Replaying Distributed System Disasters) and "Allow/Deny 已经过时了" (Allow/Deny is Obsolete) — and said: "两篇写成公众号文章" (write these two into WeChat articles).
+
+The user's intent: two independent articles, each from its own draft.
+
+**What happened.**
+
+| Phase | Events | Behavior |
+|-------|--------|----------|
+| Goal internalization | L5–L11 | Agent receives two drafts. Calls `create_task` with goal: "把两篇草稿**合并成一篇**公众号文章". The word "两篇" (two articles) became "一篇" (one article). **Goal narrowing happened at the moment of internalization, not during execution.** |
+| Execution | L34–L92 | Agent creates directory `27-Agent正在重演分布式系统灾难/`, writes article, generates 6 HTML illustrations, updates MOC, marks Engram task as `completion: 100%`. All executed flawlessly. |
+| False completion | L101 | Agent outputs "交付完成" (delivery complete). Only article 27 exists. Article 28 was never planned. |
+| User intervention | L105 | User: "？？？那么我另一篇文章呢？" (What about my other article?) |
+| Recovery | L117+ | Agent acknowledges the error, creates article 28 independently, revises article 27 to avoid overlap. |
+
+**The root failure is goal narrowing.** The `create_task` call is the smoking gun — the goal text explicitly says "合并成一篇" (merge into one). This is not an execution failure; the agent's plan was internally consistent with its (wrong) understanding. Every downstream action — directory creation, MOC update, Engram progress tracking — was correct *given the narrowed goal*.
+
+**How this differs from adjacent patterns:**
+
+- **`goal_misunderstanding`** (Case B): The agent misread the *direction* of the task — user said "fix buttons," agent built a browser. Goal narrowing preserves direction but compresses *scope*.
+- **`incomplete_followthrough`** (case_063/064/065): The agent understood the full goal but dropped steps during execution. Goal narrowing happens *before* execution begins — the plan itself is already incomplete.
+- **`plan_divergence`** (Case A): The agent completed its task and kept going *beyond* scope. Goal narrowing is the inverse — the agent stopped *short* of scope.
+
+**The chain:**
+
+```
+goal_narrowing → false_completion → task_partially_failed
+       ↑                ↑                    ↑
+  (Cognitive)      (Cognitive)           (Outcome)
+ "两篇"→"一篇"   Declared done at 50%   User got half the work
+```
+
+Recovery attempted: **yes**, user-triggered. Successful after user's explicit "？？？" prompt.
+
+**Why eval would miss this.** The delivered article was high quality — well-structured, with 6 HTML illustrations, proper MOC entry. Any eval checking output quality, tool call coherence, or completion signals would pass this session. The only detection path is checking whether the *quantity constraint* in the original prompt ("两篇") matches the actual output count ("一篇"). Current eval frameworks have no such capability.
+
+---
+
 ## The Three-Layer Schema
 
-These two cases forced a schema with three layers. Each layer answers a different question:
+These three cases forced a schema with three layers. Each layer answers a different question:
 
 | Layer | Question | Example tags |
 |-------|----------|--------------|
 | **Outcome** | What did the user see? | `task_failed`, `task_partially_failed`, `task_boundary_violation`, `unsafe_action`, `silent_failure` |
-| **Cognitive/Runtime** | What went wrong in the agent's reasoning? | `directive_override`, `plan_divergence`, `goal_misunderstanding`, `hallucinated_belief`, `reasoning_loop`, `context_desync` |
+| **Cognitive/Runtime** | What went wrong in the agent's reasoning? | `directive_override`, `plan_divergence`, `goal_misunderstanding`, `goal_narrowing`, `hallucinated_belief`, `reasoning_loop`, `context_desync` |
 | **Tool Execution** | What went wrong at the tool call level? | `wrong_tool_called`, `hallucinated_result`, `tool_not_triggered`, `stale_observation` |
 
 ### Key design decision: tags don't cross layers.
@@ -199,9 +238,9 @@ The Tool Execution layer has no real case behind it yet. Tags like `wrong_tool_c
 
 The Cognitive layer tag `directive_override` was demoted to low-confidence in Case A due to retroactive authorization. It needs a cleaner case — one where the agent unambiguously reads a constraint and violates it with no subsequent user correction.
 
-Recovery tracking (`recovery_attempted`, `recovery_successful`) exists in the schema but both cases have `false/false`. We need a case where the agent actually tries to self-correct to validate whether the recovery fields capture enough information.
+Recovery tracking (`recovery_attempted`, `recovery_successful`) exists in the schema but Cases A and B both have `false/false`. Case C provides the first recovery data point: the agent self-corrected after user intervention (`recovery_type: user_triggered`), but we still lack a case where the agent autonomously detects its own failure and initiates recovery without prompting.
 
-These gaps are fine. A schema with 23 tags and 2 annotated cases is not a finished taxonomy. It's a testable hypothesis about how to structure agent failure data. The next 8 cases will break it, and that's the point.
+These gaps are fine. A schema with 24 tags and 3 annotated cases is not a finished taxonomy. It's a testable hypothesis about how to structure agent failure data. The next cases will break it, and that's the point.
 
 ---
 

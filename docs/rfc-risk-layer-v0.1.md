@@ -358,3 +358,84 @@ Cases 063–068 all score 0 on every signal because the agent executes flawlessl
 3. Run on full 67-fixture corpus, measure precision/recall against annotated cases
 4. If precision >0.7: proceed to Signal 5 and 7
 5. Report combined enrichment ratio for v0.1+v0.2 signals vs. v0.1 alone
+
+---
+
+## Appendix C: v0.2 Experiment Results (2026-06-01)
+
+> **Status**: All three v0.2 cognitive-layer signals implemented and replayed.
+> Session-level precision is the headline number; window enrichment confirms the signals
+> behave like proper anomalies rather than always-on noise.
+
+### C.1 Corpus
+
+- 70 eligible fixtures (corpus grew from 62 → 70 between v0.1 and v0.2 as cognitive-layer cases 063–068 + 079 + imported fixtures were added)
+- 41 fixtures labeled `drift=true` (ground truth)
+- 6 hand-curated target cases for v0.2: case_063 / 064 / 065 / 066 / 067 / 068
+- 1 self-observed FN case: case_079 (`phantom_tool_invoke`)
+
+### C.2 Session-Level Precision / Recall
+
+v0.2 signals are scoped at session-level (not window-level) because cognitive-layer failures don't have a tight "failure window" — they manifest as obligations never closed, claims never verified, or quantities silently dropped across the whole session.
+
+| Metric | Value |
+|--------|-------|
+| True Positives | 8 |
+| False Positives | **0** |
+| False Negatives | 33 |
+| True Negatives | 29 |
+| **Precision** | **100.0%** ✅ |
+| **Recall** | 19.5% |
+| **F1** | 32.7% |
+
+**Success criteria** (precision ≥ 80%): ✅ **PASS** with margin — every v0.2 firing was a real drift.
+
+### C.3 Target-Case Coverage (6 hand-curated cognitive cases)
+
+| Case | Pattern | Signal Fired | Detected? |
+|------|---------|--------------|-----------|
+| case_063 | incomplete_followthrough | completion_coverage_gap | ✅ |
+| case_064 | incomplete_followthrough | obligation_closure_check | ✅ |
+| case_065 | incomplete_followthrough | obligation_closure_check | ✅ |
+| case_066 | premise_violation | assertion_without_verification + obligation_closure_check | ✅ |
+| case_067 | premise_violation (constraint_relaxation) | assertion_without_verification | ✅ |
+| case_068 | scope_compression | completion_coverage_gap | ✅ |
+
+**6/6 target cases detected.** RFC §B.5 theoretical coverage matrix held in practice.
+
+Bonus: 2 corpus fixtures (`fixture_imported_19de64d6`, `fixture_imported_e35f0907`) — never seen by detector design — also triggered v0.2 signals and turned out to be real cognitive-layer drifts on inspection. This is incidental validation that the signals generalize beyond the seed cases.
+
+### C.4 Window-Level Enrichment (sanity check)
+
+Even though v0.2 evaluation is session-level, partitioning hits into risk-window vs. baseline-window confirms the signals are sharply concentrated near failure points, not always-on:
+
+| Signal | Risk hits | Baseline hits | **Enrichment** |
+|--------|-----------|---------------|----------------|
+| completion_coverage_gap | 1 | 1 | **109.5x** |
+| assertion_without_verification | 1 | 4 | **27.4x** |
+| obligation_closure_check | 3 | 1 | **328.5x** |
+
+All three v0.2 signals dwarf the v0.1 ceiling of 8.35x enrichment. The two large multipliers (109x, 328x) reflect tiny baseline rates — these signals are rare by construction and only fire on the exact failure pattern they target.
+
+Combined v0.1 + v0.2 max enrichment: **328.5x** (vs. v0.1 alone 8.35x).
+
+### C.5 The 19.5% Recall — Honest Reading
+
+19.5% session-level recall is **expected and acceptable** for v0.2:
+
+1. **v0.2 deliberately targets 3 narrow cognitive-failure shapes** (incomplete_followthrough / premise_violation / scope_compression). The 33 FNs in the corpus are mostly v0.1-shaped failures (scope_expansion, rabbit_hole, goal_forgotten) that v0.1's 8 semantic + 3 behavioral signals already handle.
+2. The right framing is **v0.1 ∪ v0.2 coverage**, not v0.2 standalone. v0.1 covers execution-layer drift; v0.2 covers cognitive-layer drift; together they form a layered defense.
+3. **Zero FPs at 100% precision** means any v0.2 firing is safe to surface in production — the signal can drive interrupt/alert UX without a noise penalty.
+
+### C.6 What This Validates
+
+- ✅ Cognitive-layer failures (case_063–068) are detectable with non-LLM signals — pure regex + obligation patterns + assertion↔verification matching
+- ✅ Detection happens **at session end** for obligation_closure (post-hoc audit) and **at assertion time** for assertion_without_verification (near-realtime)
+- ✅ The v0.1 blind spot identified in §B.1 ("execution acts as a perfect buffer") is closed for the three pattern families enumerated in §B.2
+
+### C.7 Open Items for v0.3
+
+1. **case_079 (`phantom_tool_invoke`) still FN** — agent invents a tool result it never received. Needs a 4th cognitive signal: `tool_result_provenance` (every `tool_response` must trace back to a real `tool_call`)
+2. **Obligation pattern library** — current 3 patterns hit 3 of 5 incomplete_followthrough variants; need to widen to cover SessionEnd / hook-chain / commit-push obligation families
+3. **Quantity-extraction false-negative analysis** — completion_coverage_gap fired on case_063 + case_068 (target cases) but missed several `imported_*` fixtures that may contain quantity constraints. Audit the regex against 5-10 unmatched fixtures and report miss reasons
+4. **Composite scoring** — v0.1 + v0.2 currently fire independently. A composite risk score (e.g., weighted-OR) would let downstream consumers consume a single number instead of 11 signals

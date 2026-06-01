@@ -358,7 +358,7 @@ Example:
   Prompts: ${prompts.length}
 
 Next steps:
-  1. Run scorer: npx ts-node scripts/score-fixture.ts ${outputFile}
+  1. Score it: npx ts-node eval/runner.ts --fixture-dir=${path.dirname(outputFile)}
   2. Anonymize: npx ts-node scripts/anonymize-session.ts ${outputFile}
   3. Review and label drift/no-drift
 `)

@@ -149,9 +149,27 @@ function isCompletionEvent(event: NormalizedEvent): boolean {
   return false
 }
 
-/** Output-producing tools — things that CREATE new deliverables (not modify existing) */
+/**
+ * Output-producing tools — tools that CREATE a new deliverable on disk.
+ *
+ * Create-class only, by design. Edit-class tools (Edit/str_replace/apply_patch)
+ * are deliberately EXCLUDED: an Edit may target a brand-new deliverable OR an
+ * unrelated index/aggregate file (e.g. an Obsidian MOC, a README). Counting
+ * Edits inflates the artifact count and lets completion_coverage_gap be
+ * silently suppressed.
+ *
+ * Concrete regression that proved this (case_068, goal_narrowing): the agent
+ * wrote 2 article directories (the real deliverables) but also Edited an
+ * unrelated MOC index file in a 3rd directory. Counting that Edit pushed the
+ * artifact count from 2 to 3, met the expected=2 constraint, and suppressed
+ * the signal — masking a real goal_narrowing drift. Create-class only avoids
+ * conflating "finished a deliverable" with "touched an index".
+ *
+ * Imported trajectories use varied create-tool names, so we list known
+ * aliases. Artifacts are de-duplicated by parent directory downstream.
+ */
 const OUTPUT_TOOLS = new Set([
-  'Write', 'write',
+  'Write', 'write', 'create_file',
 ])
 
 /**

@@ -3,19 +3,21 @@
  *
  * This is the core algorithm of the Drift project.
  *
- * Scoring combines five independent signals:
- *   1. semantic_divergence   — embedding distance: current actions vs active goal、
- *   2. inactive_duration     — how long the active goal has had no aligned actions
- *   3. consecutive_unrelated — run of unrelated events (Goal Forgotten trigger)
- *   4. subgoal_depth         — nesting depth risk
- *   5. exploratory_entropy   — Shannon entropy of recent tool usage
+ * Scoring combines eight independent signals:
+ *   1. semantic_divergence    — embedding distance: current actions vs active goal
+ *   2. inactive_duration      — how long the active goal has had no aligned actions
+ *   3. consecutive_unrelated  — run of unrelated events (Goal Forgotten trigger)
+ *   4. subgoal_depth          — nesting depth risk
+ *   5. exploratory_entropy    — Shannon entropy of recent tool usage
  *   6. unauthorized_mutations — governance violations
+ *   7. autonomy_momentum      — session duration + tool-to-user ratio (running unattended)
+ *   8. hallucinated_claims    — unverified tool_response claims (from ClaimChecker)
  *
  * v0 thresholds (operational, subject to eval-driven tuning):
  *   FORGOTTEN_CONSECUTIVE  = 5  consecutive unrelated actions
  *   FORGOTTEN_INACTIVE_MIN = 10 minutes
  *   DEPTH_RISK_THRESHOLD   = 3  subgoal levels
- *   DRIFTING_SCORE         = 0.5
+ *   DRIFTING_SCORE         = 0.45
  *   LOST_SCORE             = 0.75
  *
  * Signal weights sum to 1.0. Adjust via ScorerConfig.
@@ -55,12 +57,28 @@ export interface ScorerConfig {
   forgotten_inactive_minutes:       number   // default 10
   depth_risk_threshold:             number   // default 3
   // Score boundaries
-  drifting_score_threshold:         number   // default 0.5
+  drifting_score_threshold:         number   // default 0.45
   lost_score_threshold:             number   // default 0.75
   // Rolling window for entropy calculation (event count)
   entropy_window_size:              number   // default 20
   // Autonomy momentum: tool calls per user interaction threshold
   autonomy_tools_per_prompt_threshold: number // default 30
+}
+
+/**
+ * Cross-call scorer state for cross-process persistence (hook deployments).
+ *
+ * The scorer keeps two pieces of state alive between events that are otherwise
+ * lost when each hook invocation is a fresh process:
+ *   - last_aligned_at:      goalId → timestamp of last aligned action
+ *   - goal_embedding_cache: goal-text key → embedding vector
+ *
+ * Both are plain JSON-serializable so they can be written to the session's
+ * state file and read back on the next call.
+ */
+export interface ScorerPersistentState {
+  last_aligned_at:      Record<string, number>
+  goal_embedding_cache: Record<string, number[]>
 }
 
 const DEFAULT_CONFIG: ScorerConfig = {
@@ -139,6 +157,36 @@ export class DriftScorer {
    */
   setHallucinationCount(count: number): void {
     this.hallucinationCount = count
+  }
+
+  /**
+   * Export the scorer's cross-call state for cross-process persistence.
+   *
+   * In hook deployments each PostToolUse is a fresh process, so the in-memory
+   * lastAlignedAt / goalEmbeddingCache are lost between calls. Without this the
+   * inactive_duration signal always measures from goal creation (it never sees
+   * a prior aligned action), and every call re-embeds the goal from scratch.
+   * The hook dumps this after scoring and hydrates it before the next call.
+   */
+  dumpState(): ScorerPersistentState {
+    return {
+      last_aligned_at:      Object.fromEntries(this.lastAlignedAt),
+      goal_embedding_cache: Object.fromEntries(this.goalEmbeddingCache),
+    }
+  }
+
+  /**
+   * Restore scorer state previously produced by dumpState().
+   * Merges into the current maps so a partial/empty snapshot is safe.
+   */
+  hydrateState(state: ScorerPersistentState | null | undefined): void {
+    if (!state) return
+    for (const [goalId, ts] of Object.entries(state.last_aligned_at ?? {})) {
+      if (typeof ts === 'number') this.lastAlignedAt.set(goalId, ts)
+    }
+    for (const [key, vector] of Object.entries(state.goal_embedding_cache ?? {})) {
+      if (Array.isArray(vector)) this.goalEmbeddingCache.set(key, vector)
+    }
   }
 
   /**

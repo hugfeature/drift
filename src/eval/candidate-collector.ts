@@ -23,6 +23,16 @@ export interface CandidateSession {
   final_score: number
   final_status: string
   event_count: number
+  /**
+   * Composite risk score (v0.1 execution fused with v0.2 cognitive hits via
+   * layered-max). When present, collection is gated on this instead of the raw
+   * v0.1 final_score, so a session a cognitive signal flagged (but whose v0.1
+   * score stayed low) is still captured. Optional for callers that only have
+   * the v0.1 score.
+   */
+  composite_score?: number
+  /** Names of the zero-FP cognitive signals that fired, if any. */
+  cognitive_signals?: string[]
 }
 
 export interface CandidateEvent {
@@ -48,6 +58,10 @@ export interface CandidateFixture {
     drift: boolean
     confidence: 'high' | 'medium'
     final_score: number
+    /** Composite score used for the gate, when available (else mirrors final_score). */
+    composite_score?: number
+    /** Cognitive signals that fired, when the composite was driven by the cognitive layer. */
+    cognitive_signals?: string[]
     reason: string
   }
   session: {
@@ -117,10 +131,13 @@ export class CandidateCollector {
     if (!session.goal || session.goal.trim().length < 3) return null
     if (this.isInvalidGoal(session.goal)) return null
 
-    // Gate: score must be in high-confidence range
-    const score = session.final_score
-    const isDriftCandidate = score >= this.config.driftThreshold
-    const isAlignedCandidate = score <= this.config.alignedThreshold
+    // Gate on the composite when available — this lets a session a cognitive
+    // signal flagged (composite lifted to the cognitive floor) be captured even
+    // if its raw v0.1 final_score stayed below the drift threshold. Falls back
+    // to the v0.1 score for callers that don't compute a composite.
+    const gateScore = session.composite_score ?? session.final_score
+    const isDriftCandidate = gateScore >= this.config.driftThreshold
+    const isAlignedCandidate = gateScore <= this.config.alignedThreshold
 
     if (!isDriftCandidate && !isAlignedCandidate) return null
 
@@ -166,22 +183,33 @@ export class CandidateCollector {
           : { raw: e.goal ?? session.goal },
       }))
 
-    const reason = isDrift
-      ? `Final score ${session.final_score.toFixed(3)} >= ${this.config.driftThreshold} (auto-drift)`
-      : `Final score ${session.final_score.toFixed(3)} <= ${this.config.alignedThreshold} (auto-aligned)`
+    const gateScore = session.composite_score ?? session.final_score
+    const cognitiveDriven = (session.cognitive_signals?.length ?? 0) > 0
+    const scoreLabel = session.composite_score !== undefined
+      ? `composite ${gateScore.toFixed(3)} (v0.1 ${session.final_score.toFixed(3)})`
+      : `score ${session.final_score.toFixed(3)}`
+
+    let reason = isDrift
+      ? `${scoreLabel} >= ${this.config.driftThreshold} (auto-drift)`
+      : `${scoreLabel} <= ${this.config.alignedThreshold} (auto-aligned)`
+    if (cognitiveDriven) {
+      reason += ` — cognitive signal(s): ${session.cognitive_signals!.join(', ')}`
+    }
 
     return {
       id: fixtureId,
-      description: `Auto-collected: "${session.goal.slice(0, 60)}" — ${session.event_count} events, score=${session.final_score.toFixed(2)}`,
+      description: `Auto-collected: "${session.goal.slice(0, 60)}" — ${session.event_count} events, score=${gateScore.toFixed(2)}`,
       agent: session.agent,
       created_at: timestamp,
       source: 'auto_collected',
       auto_label: {
         drift: isDrift,
         confidence: isDrift
-          ? (session.final_score >= 0.85 ? 'high' : 'medium')
-          : (session.final_score <= 0.08 ? 'high' : 'medium'),
+          ? (gateScore >= 0.85 ? 'high' : 'medium')
+          : (gateScore <= 0.08 ? 'high' : 'medium'),
         final_score: session.final_score,
+        composite_score: session.composite_score,
+        cognitive_signals: cognitiveDriven ? session.cognitive_signals : undefined,
         reason,
       },
       session: {

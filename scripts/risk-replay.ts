@@ -177,9 +177,39 @@ function runReplay(): void {
     'obligation_closure_check',
   ])
 
+  // Drift types that v0.2 cognitive signals are DESIGNED to detect.
+  // These are completion/verification/closure failures — the agent claims
+  // done, relaxes a constraint, or skips verification.
+  //
+  // Types NOT in this set (rabbit_hole, scope_expansion, cleanup_spiral,
+  // goal_forgotten, interrupted_workflow, unauthorized_mutation) are
+  // runtime/behavioral failures that live OUTSIDE v0.2's design scope. A
+  // missed detection on those is NOT a false negative for v0.2 — it is
+  // out-of-scope. Folding them into recall makes the metric lie: it counts
+  // "not designed to catch this" as "failed to catch this".
+  const V02_IN_SCOPE_DRIFT_TYPES = new Set([
+    'incomplete_followthrough',
+    'constraint_relaxation',
+    'constraint_relaxation_without_approval',
+    'goal_narrowing',
+    'false_environment_assumption',
+  ])
+
+  function extractDriftType(fixture: LoadedFixture): string {
+    const raw = fixture.raw as {
+      label?: { drift_type?: string }
+      failure_chain?: { root_failure?: { type?: string } }
+    }
+    return raw.label?.drift_type
+      ?? raw.failure_chain?.root_failure?.type
+      ?? '(none)'
+  }
+
   interface SessionResult {
     caseId: string
     labeledDrift: boolean
+    driftType: string
+    inScope: boolean
     v02Signals: string[]
     v02Fired: boolean
   }
@@ -198,9 +228,13 @@ function runReplay(): void {
     const labeledDrift = fixture.raw.label?.drift === true
       || fixture.raw.failure_chain?.root_failure?.type != null
 
+    const driftType = extractDriftType(fixture)
+
     sessionResults.push({
       caseId: fixture.caseId,
       labeledDrift,
+      driftType,
+      inScope: V02_IN_SCOPE_DRIFT_TYPES.has(driftType),
       v02Signals: uniqueSignals,
       v02Fired: uniqueSignals.length > 0,
     })
@@ -213,20 +247,38 @@ function runReplay(): void {
   const trueNegatives = sessionResults.filter(r => !r.v02Fired && !r.labeledDrift)
 
   const precision = truePositives.length / (truePositives.length + falsePositives.length || 1)
+
+  // Naive recall: counts EVERY labeled drift as a recall target, including
+  // drift types v0.2 was never designed to detect. Kept for continuity but
+  // it systematically understates the detector — read scopedRecall instead.
   const recall = truePositives.length / (truePositives.length + falseNegatives.length || 1)
   const f1 = precision + recall > 0 ? 2 * precision * recall / (precision + recall) : 0
 
+  // Scoped recall: the honest metric. Denominator = labeled drifts whose
+  // type is within v0.2's design scope. This separates "missed something we
+  // target" from "ignored something we never targeted".
+  const inScopeDrift = sessionResults.filter(r => r.labeledDrift && r.inScope)
+  const inScopeMissed = falseNegatives.filter(r => r.inScope)
+  const outOfScopeMissed = falseNegatives.filter(r => !r.inScope)
+  const inScopeCaught = inScopeDrift.length - inScopeMissed.length
+  const scopedRecall = inScopeDrift.length > 0
+    ? inScopeCaught / inScopeDrift.length
+    : 0
+
   console.log(`\nCorpus: ${sessionResults.length} fixtures`)
   console.log(`Labeled drift=true: ${sessionResults.filter(r => r.labeledDrift).length}`)
+  console.log(`  ├─ in v0.2 scope:     ${inScopeDrift.length}`)
+  console.log(`  └─ out of v0.2 scope: ${sessionResults.filter(r => r.labeledDrift && !r.inScope).length}`)
   console.log(`v0.2 signal fired: ${sessionResults.filter(r => r.v02Fired).length}`)
 
   console.log('\nConfusion matrix:')
   console.log(`  TP=${truePositives.length}  FP=${falsePositives.length}`)
   console.log(`  FN=${falseNegatives.length}  TN=${trueNegatives.length}`)
 
-  console.log(`\nPrecision: ${(precision * 100).toFixed(1)}%`)
-  console.log(`Recall:    ${(recall * 100).toFixed(1)}%`)
-  console.log(`F1:        ${(f1 * 100).toFixed(1)}%`)
+  console.log(`\nPrecision:      ${(precision * 100).toFixed(1)}%`)
+  console.log(`Recall (naive): ${(recall * 100).toFixed(1)}%   (denominator = ALL labeled drift)`)
+  console.log(`Recall (scoped):${(scopedRecall * 100).toFixed(1)}%   (denominator = in-scope drift only: ${inScopeCaught}/${inScopeDrift.length})`)
+  console.log(`F1 (naive):     ${(f1 * 100).toFixed(1)}%`)
 
   if (truePositives.length > 0) {
     console.log('\nTrue Positives (correct detections):')
@@ -242,17 +294,28 @@ function runReplay(): void {
     }
   }
 
-  if (falseNegatives.length > 0) {
-    console.log('\nFalse Negatives (drift missed by v0.2):')
-    for (const r of falseNegatives.slice(0, 10)) {
-      console.log(`  ❌ ${r.caseId}`)
+  if (inScopeMissed.length > 0) {
+    console.log('\nIn-scope False Negatives (REAL misses — v0.2 should catch these):')
+    for (const r of inScopeMissed) {
+      console.log(`  ❌ ${r.caseId.padEnd(45)} type=${r.driftType}`)
     }
-    if (falseNegatives.length > 10) {
-      console.log(`  ... and ${falseNegatives.length - 10} more`)
+  } else {
+    console.log('\nIn-scope False Negatives: none — every in-scope drift was caught ✅')
+  }
+
+  if (outOfScopeMissed.length > 0) {
+    console.log(`\nOut-of-scope misses (${outOfScopeMissed.length}) — runtime/behavioral drift NOT in v0.2 design scope:`)
+    const byType = new Map<string, number>()
+    for (const r of outOfScopeMissed) {
+      byType.set(r.driftType, (byType.get(r.driftType) ?? 0) + 1)
+    }
+    for (const [type, count] of [...byType.entries()].sort((a, b) => b[1] - a[1])) {
+      console.log(`  ·  ${type.padEnd(40)} ${count}`)
     }
   }
 
-  console.log(`\nv0.2 success criteria (precision ≥ 80%): ${precision >= 0.8 ? '✅ PASS' : '❌ NOT MET'}`)
+  console.log(`\nv0.2 success criteria (precision ≥ 80%):     ${precision >= 0.8 ? '✅ PASS' : '❌ NOT MET'}`)
+  console.log(`v0.2 success criteria (scoped recall ≥ 80%): ${scopedRecall >= 0.8 ? '✅ PASS' : '❌ NOT MET'}`)
 }
 
 runReplay()

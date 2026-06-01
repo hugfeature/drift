@@ -24,6 +24,7 @@
 
 import * as fs from 'fs'
 import * as path from 'path'
+import { sanitizeGoal, isSystemPrompt } from '../src/goal/sanitize'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -74,6 +75,13 @@ const SYSTEM_TOOLS = new Set([
   'mcp__engram__track_progress',
 ])
 
+// System-prompt detection lives in src/goal/sanitize.ts (single source of
+// truth shared with the real-time hook). isSystemPrompt rejects transcript
+// machinery; sanitizeGoal additionally handles placeholders, image-only text,
+// and skill injection. A corpus review found 26 imported fixtures whose goal
+// was exactly an interruption marker — the largest cause of the weak bucket's
+// near-zero recall. The shared filter stops new imports from reproducing that.
+
 // ---------------------------------------------------------------------------
 // Parsing
 // ---------------------------------------------------------------------------
@@ -106,7 +114,7 @@ function parseTranscript(filePath: string): { events: ExtractedEvent[]; prompts:
       for (const block of parsed.message.content) {
         if (block.type === 'text' && block.text) {
           const text = block.text.trim()
-          if (text.length > 0 && !text.startsWith('This session is being continued')) {
+          if (text.length > 0 && !isSystemPrompt(text)) {
             currentPrompt = text.slice(0, 200)
             promptIndex++
             prompts.push(currentPrompt)
@@ -154,7 +162,14 @@ function convertToFixture(
   goalIndex: number,
   sessionId: string
 ): Record<string, unknown> {
-  const goalPrompt = prompts[goalIndex - 1] || prompts[0] || 'unknown goal'
+  // sanitizeGoal returns null for any polluted prompt (interruption marker,
+  // skill injection, image-only). Falling back to 'unknown goal' makes such
+  // sessions land in the unevaluable bucket instead of silently poisoning the
+  // semantic_divergence baseline with noise.
+  const goalPrompt =
+    sanitizeGoal(prompts[goalIndex - 1]) ||
+    sanitizeGoal(prompts[0]) ||
+    'unknown goal'
   const startedAt = events.length > 0 ? events[0].timestamp : Date.now()
   const goalId = `goal_${sessionId.slice(0, 8)}`
 
@@ -368,7 +383,7 @@ Example:
   Duration: ~${events.length > 1 ? Math.round((events[events.length - 1].timestamp - events[0].timestamp) / 60000) : 0}min
 
 Next steps:
-  1. Run scorer: npx ts-node scripts/score-fixture.ts ${outputFile}
+  1. Score it: npx ts-node eval/runner.ts --fixture-dir=${path.dirname(outputFile)}
   2. Anonymize: npx ts-node scripts/anonymize-session.ts ${outputFile}
   3. Review and label drift/no-drift
 `)

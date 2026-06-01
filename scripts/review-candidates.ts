@@ -1,14 +1,22 @@
 /**
  * Review auto-collected candidate fixtures.
  *
- * Lists candidates in eval/candidates/, lets you approve (move to fixtures-valid/)
- * or reject (delete) them.
+ * Lists candidates in eval/candidates/, lets you promote (move to
+ * fixtures-valid/) or reject (delete) them.
+ *
+ * IMPORTANT — no auto-groundtruth: promoting a candidate does NOT accept the
+ * scorer's own drift prediction as the label. The prediction is the very thing
+ * eval is supposed to grade, so promoting it as groundtruth would let the model
+ * validate itself and inflate Precision/Recall. Promoted fixtures land with
+ * label.drift UNSET and groundtruth_quality 'unreviewed'; a human must label
+ * them before they count toward the STRONG-tier headline metric.
  *
  * Usage:
- *   npx ts-node scripts/review-candidates.ts              # list all candidates
- *   npx ts-node scripts/review-candidates.ts --approve <id>   # approve → fixtures-valid/
+ *   npx ts-node scripts/review-candidates.ts                  # list all candidates
+ *   npx ts-node scripts/review-candidates.ts --approve <id>   # promote one (pending human label)
  *   npx ts-node scripts/review-candidates.ts --reject <id>    # delete candidate
- *   npx ts-node scripts/review-candidates.ts --approve-all    # approve all high-confidence
+ *   npx ts-node scripts/review-candidates.ts --approve-all    # dry-run: list high-confidence
+ *   npx ts-node scripts/review-candidates.ts --approve-all --force  # actually promote them
  */
 
 import * as fs from 'fs'
@@ -80,18 +88,33 @@ function approveCandidate(candidateId: string): void {
   const nextNum = maxNum + 1
   const caseId = `case_${String(nextNum).padStart(3, '0')}`
 
-  // Transform auto_label into proper label format
+  // Transform auto_label into a label WITHOUT inheriting the model's own drift
+  // verdict as groundtruth. The auto_label.drift is the SCORER'S prediction —
+  // promoting it straight into label.drift and stamping annotated_by:'human'
+  // creates a self-validating loop: the model grades itself against its own
+  // past predictions and Precision/Recall inflate. So we carry the prediction
+  // forward only as a hint (model_prediction), leave the groundtruth label
+  // unset, and mark it unreviewed so a real human must fill drift/drift_type
+  // before this fixture counts toward the STRONG-tier headline metric.
   const fixture = {
     ...data,
     id: `fixture_${String(nextNum).padStart(3, '0')}`,
-    source: 'auto_collected_approved',
+    source: 'auto_collected_pending_review',
     label: {
       session_id: data.session?.id ?? data.id,
-      drift: data.auto_label.drift,
-      drift_type: data.auto_label.drift ? 'scope_expansion' : undefined,
-      takeover_required: data.auto_label.drift,
-      annotator_notes: `Auto-collected (score=${data.auto_label.final_score.toFixed(3)}, confidence=${data.auto_label.confidence}). Approved via review-candidates.`,
-      annotated_by: 'human' as const,
+      drift: null,                          // groundtruth NOT set — human must label
+      drift_type: undefined,                // do not hard-code; human decides
+      takeover_required: null,
+      model_prediction: {                   // the scorer's own guess, kept for the reviewer
+        drift: data.auto_label.drift,
+        final_score: data.auto_label.final_score,
+        composite_score: data.auto_label.composite_score,
+        cognitive_signals: data.auto_label.cognitive_signals,
+        confidence: data.auto_label.confidence,
+      },
+      annotator_notes: `Auto-collected (model predicted ${data.auto_label.drift ? 'DRIFT' : 'ALIGNED'}, score=${data.auto_label.final_score.toFixed(3)}, confidence=${data.auto_label.confidence}). LABEL NOT YET REVIEWED — set drift/drift_type by hand.`,
+      annotated_by: 'auto_collected' as const,
+      groundtruth_quality: 'unreviewed' as const,
     },
   }
   delete fixture.auto_label
@@ -101,9 +124,9 @@ function approveCandidate(candidateId: string): void {
   fs.writeFileSync(destPath, JSON.stringify(fixture, null, 2))
   fs.unlinkSync(sourcePath)
 
-  console.log(`✅ Approved: ${filename} → ${caseId}.json`)
+  console.log(`✅ Promoted (pending human label): ${filename} → ${caseId}.json`)
   console.log(`   Goal: "${data.session?.goals?.[0]?.raw?.slice(0, 60)}"`)
-  console.log(`   Label: ${data.auto_label.drift ? 'DRIFT' : 'ALIGNED'} (score=${data.auto_label.final_score.toFixed(3)})`)
+  console.log(`   Model prediction: ${data.auto_label.drift ? 'DRIFT' : 'ALIGNED'} (score=${data.auto_label.final_score.toFixed(3)}) — groundtruth still UNSET`)
 }
 
 function rejectCandidate(candidateId: string): void {
@@ -118,17 +141,41 @@ function rejectCandidate(candidateId: string): void {
   console.log(`🗑️  Rejected and deleted: ${filename}`)
 }
 
-function approveAllHighConfidence(): void {
+/**
+ * Promote all high-confidence candidates into the fixture set.
+ *
+ * IMPORTANT: "high confidence" is the SCORER'S confidence in its own
+ * prediction — not a human's confidence in the label being correct. Bulk
+ * promotion still does NOT write groundtruth (approveCandidate leaves
+ * label.drift unset); these fixtures land as `unreviewed` and a human must
+ * label them before they count toward the STRONG-tier headline metric.
+ *
+ * Because even bulk promotion needs a deliberate action, this is a dry-run by
+ * default — it lists what WOULD be promoted. Pass --force to actually move them.
+ */
+function approveAllHighConfidence(force: boolean): void {
   const candidates = listCandidates().filter(c => c.confidence === 'high')
   if (candidates.length === 0) {
-    console.log('No high-confidence candidates to approve.')
+    console.log('No high-confidence candidates to promote.')
     return
   }
 
-  console.log(`Approving ${candidates.length} high-confidence candidates...\n`)
+  if (!force) {
+    console.log(`\n⚠️  ${candidates.length} high-confidence candidate(s) would be promoted to fixtures-valid/`)
+    console.log('   These are the SCORER\'S high-confidence PREDICTIONS, not human-verified labels.')
+    console.log('   Promotion leaves groundtruth UNSET — a human must still label each one.\n')
+    for (const c of candidates) {
+      console.log(`   ${c.id}  predicted=${c.drift ? 'DRIFT' : 'ALIGNED'}  score=${c.score.toFixed(2)}  "${c.goal.slice(0, 40)}"`)
+    }
+    console.log('\n   This was a dry-run. Re-run with --force to actually promote (still pending human label).\n')
+    return
+  }
+
+  console.log(`Promoting ${candidates.length} high-confidence candidate(s) (groundtruth still UNSET)...\n`)
   for (const candidate of candidates) {
     approveCandidate(candidate.id)
   }
+  console.log('\n⚠️  All promoted fixtures are marked `unreviewed`. Label drift/drift_type by hand before using in eval.')
 }
 
 // ---------------------------------------------------------------------------
@@ -141,16 +188,21 @@ function main(): void {
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`
 Usage:
-  npx ts-node scripts/review-candidates.ts                    # list candidates
-  npx ts-node scripts/review-candidates.ts --approve <id>     # approve one
-  npx ts-node scripts/review-candidates.ts --reject <id>      # reject one
-  npx ts-node scripts/review-candidates.ts --approve-all      # approve all high-confidence
+  npx ts-node scripts/review-candidates.ts                       # list candidates
+  npx ts-node scripts/review-candidates.ts --approve <id>        # promote one (groundtruth left UNSET)
+  npx ts-node scripts/review-candidates.ts --reject <id>         # reject one
+  npx ts-node scripts/review-candidates.ts --approve-all         # dry-run: list high-confidence
+  npx ts-node scripts/review-candidates.ts --approve-all --force # actually promote (still pending human label)
+
+Note: promoting NEVER accepts the scorer's drift prediction as groundtruth.
+Promoted fixtures are 'unreviewed' — a human must label drift/drift_type before
+they count in the STRONG-tier metric.
 `)
     return
   }
 
   if (args.includes('--approve-all')) {
-    approveAllHighConfidence()
+    approveAllHighConfidence(args.includes('--force'))
     return
   }
 
@@ -175,21 +227,22 @@ Usage:
   if (candidates.length === 0) return
 
   console.log(`\n📋 ${candidates.length} candidate fixture(s) pending review:\n`)
-  console.log('  ID                          | Label   | Conf   | Score | Events | Goal')
-  console.log('  ----------------------------|---------|--------|-------|--------|------')
+  console.log('  (the "Predicted" column is the SCORER\'S guess, not a verified label)\n')
+  console.log('  ID                          | Predicted | Conf   | Score | Events | Goal')
+  console.log('  ----------------------------|-----------|--------|-------|--------|------')
 
   for (const c of candidates) {
-    const label = c.drift ? 'DRIFT' : 'ALIGNED'
+    const predicted = c.drift ? 'DRIFT' : 'ALIGNED'
     const goalPreview = c.goal.slice(0, 40) + (c.goal.length > 40 ? '...' : '')
     console.log(
-      `  ${c.id.padEnd(28)} | ${label.padEnd(7)} | ${c.confidence.padEnd(6)} | ${c.score.toFixed(2).padStart(5)} | ${String(c.eventCount).padStart(6)} | ${goalPreview}`
+      `  ${c.id.padEnd(28)} | ${predicted.padEnd(9)} | ${c.confidence.padEnd(6)} | ${c.score.toFixed(2).padStart(5)} | ${String(c.eventCount).padStart(6)} | ${goalPreview}`
     )
   }
 
   console.log(`\nActions:`)
-  console.log(`  npx ts-node scripts/review-candidates.ts --approve <id>`)
+  console.log(`  npx ts-node scripts/review-candidates.ts --approve <id>   (promote — groundtruth left UNSET)`)
   console.log(`  npx ts-node scripts/review-candidates.ts --reject <id>`)
-  console.log(`  npx ts-node scripts/review-candidates.ts --approve-all  (high-confidence only)\n`)
+  console.log(`  npx ts-node scripts/review-candidates.ts --approve-all    (dry-run; add --force to promote)\n`)
 }
 
 main()

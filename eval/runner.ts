@@ -24,15 +24,113 @@ import type { EvalFixture } from '../src/types/eval'
 import type { RawEvent }    from '../src/events/ingestion'
 
 // ---------------------------------------------------------------------------
-// Fixture loading
+// Fixture loading + schema adaptation
 // ---------------------------------------------------------------------------
 
+/**
+ * New-taxonomy fixture schema (case_067/068 and future ones).
+ * These use the three-layer failure-chain annotation instead of the flat
+ * EvalFixture.label. Only the fields the adapter reads are typed here.
+ */
+interface TaxonomyFixture {
+  case_id: string
+  title?: string
+  failure_chain?: {
+    root_failure?: { type?: string }
+  }
+  session: {
+    id: string
+    started_at: number
+    agent: string
+    goals?: unknown[]
+    events?: unknown[]
+  }
+}
+
+/** A fixture is the new taxonomy schema when it carries case_id + failure_chain. */
+function isTaxonomyFixture(raw: unknown): raw is TaxonomyFixture {
+  const candidate = raw as { case_id?: unknown; failure_chain?: unknown }
+  return typeof candidate.case_id === 'string' && candidate.failure_chain != null
+}
+
+/**
+ * Adapt a new-taxonomy fixture into an EvalFixture so the legacy DriftScorer
+ * runner can evaluate it. The session block is structurally identical between
+ * schemas, so it is passed through untouched — only the top-level EvalFixture
+ * fields (id/agent/description/created_at/label) are synthesized.
+ *
+ * Drift label derivation: a fixture annotated with a root_failure IS a drift
+ * by construction, so label.drift = true. drift_type carries the taxonomy
+ * type string verbatim (it may be outside the legacy DriftType enum, e.g.
+ * goal_narrowing — that is intentional; the runner only uses it for reporting).
+ */
+function adaptTaxonomyFixture(raw: TaxonomyFixture): EvalFixture {
+  const rootType = raw.failure_chain?.root_failure?.type
+
+  return {
+    id:          raw.case_id,
+    description: raw.title ?? raw.case_id,
+    agent:       raw.session.agent as EvalFixture['agent'],
+    session:     raw.session as unknown as EvalFixture['session'],
+    created_at:  raw.session.started_at,
+    label: {
+      session_id:       raw.session.id,
+      drift:            rootType != null,
+      drift_type:       rootType as EvalFixture['label']['drift_type'],
+      takeover_required: false,
+      annotated_by:     'human',
+      groundtruth_quality: 'strong',
+    },
+  }
+}
+
+/**
+ * Load all fixtures from a directory, normalizing both schemas into EvalFixture.
+ * Legacy EvalFixture files pass through; new-taxonomy files go through the
+ * adapter. This is what lets runner.ts share the SAME corpus (fixtures/, 70
+ * cases) as module-X.ts instead of a separate fixtures-valid/ fork.
+ */
 function loadFixtures(dir: string): EvalFixture[] {
   const files = fs.readdirSync(dir).filter((f: string) => f.endsWith('.json'))
   return files.map((f: string) => {
-    const raw = fs.readFileSync(path.join(dir, f), 'utf-8')
-    return JSON.parse(raw) as EvalFixture
+    const raw = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'))
+    return isTaxonomyFixture(raw) ? adaptTaxonomyFixture(raw) : (raw as EvalFixture)
   })
+}
+
+interface CorpusTiers {
+  strong: Set<string>
+  weak: Set<string>
+  unevaluable: Set<string>
+}
+
+/**
+ * Load the three-tier fixture classification from eval/manifest.json.
+ *
+ * The manifest is the SINGLE SOURCE OF TRUTH for tiering. We deliberately
+ * ignore each fixture's own label.groundtruth_quality field to avoid
+ * dual-source drift: every ID is listed explicitly and the buckets never
+ * silently change when a fixture's metadata is edited.
+ *
+ * Three tiers:
+ *   - strong:      high-quality label + clear goal → headline metric
+ *   - weak:        usable label but thin goal → reported separately
+ *   - unevaluable: goal absent/non-recoverable → EXCLUDED from P/R entirely,
+ *                  because scoring against a missing goal is meaningless and
+ *                  counting it as a miss would understate the detector.
+ */
+function loadCorpusTiers(): CorpusTiers {
+  const manifestPath = path.join(__dirname, 'manifest.json')
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8')) as {
+    strong: { ids: string[] }
+    weak: { ids: string[] }
+    unevaluable: { ids: string[] }
+  }
+  return {
+    strong: new Set(manifest.strong.ids),
+    weak: new Set(manifest.weak.ids),
+    unevaluable: new Set(manifest.unevaluable.ids),
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -205,15 +303,25 @@ interface PerTypeMetrics {
 function computeMetrics(
   fixtures: EvalFixture[],
   results:  ReplayResult[],
-  filter: 'all' | 'strong' | 'weak' = 'all'
+  filter: 'all' | 'strong' | 'weak' | 'unevaluable' = 'all',
+  tiers: CorpusTiers = { strong: new Set(), weak: new Set(), unevaluable: new Set() }
 ): EvalMetrics {
   let tp = 0, fp = 0, fn = 0, tn = 0
   let included = 0
 
   for (let i = 0; i < fixtures.length; i++) {
-    const quality = fixtures[i].label.groundtruth_quality ?? 'strong'
-    if (filter === 'strong' && quality !== 'strong') continue
-    if (filter === 'weak' && quality !== 'weak') continue
+    const id = fixtures[i].id
+    const isStrong = tiers.strong.has(id)
+    const isWeak = tiers.weak.has(id)
+    const isUnevaluable = tiers.unevaluable.has(id)
+
+    // Tier is decided by the manifest, not the fixture field.
+    if (filter === 'strong' && !isStrong) continue
+    if (filter === 'weak' && !isWeak) continue
+    if (filter === 'unevaluable' && !isUnevaluable) continue
+    // 'all' means all EVALUABLE fixtures: unevaluable is excluded from the
+    // headline P/R because there is no usable goal to score against.
+    if (filter === 'all' && isUnevaluable) continue
 
     included++
     const label    = fixtures[i].label.drift
@@ -312,10 +420,16 @@ function writeReport(report: EvalReport): string {
 // ---------------------------------------------------------------------------
 
 async function run(): Promise<void> {
+  // Unified corpus: runner.ts and module-X.ts now share eval/fixtures/ (70
+  // cases). Previously runner defaulted to fixtures-valid/ (41), forking the
+  // corpus from risk-replay and making the two eval results incomparable.
+  // Judgment logic stays separate (DriftScorer continuous score here, v0.2
+  // discrete signals there) — only the corpus is unified. Override with
+  // --fixture-dir= if a narrower set is needed.
   const fixtureDirArg = process.argv.find(a => a.startsWith('--fixture-dir='))
   const fixtureDir = fixtureDirArg
     ? fixtureDirArg.split('=')[1]
-    : path.join(__dirname, 'fixtures-valid')
+    : path.join(__dirname, 'fixtures')
   const fixtures   = loadFixtures(fixtureDir)
 
   if (fixtures.length === 0) {
@@ -355,34 +469,42 @@ async function run(): Promise<void> {
     }
   }
 
-  const metricsAll    = computeMetrics(fixtures, results, 'all')
-  const metricsStrong = computeMetrics(fixtures, results, 'strong')
-  const metricsWeak   = computeMetrics(fixtures, results, 'weak')
-  const perType       = computePerTypeMetrics(fixtures, results)
+  const tiers = loadCorpusTiers()
 
-  const strongCount = fixtures.filter(f => (f.label.groundtruth_quality ?? 'strong') === 'strong').length
-  const weakCount   = fixtures.length - strongCount
+  const metricsAll         = computeMetrics(fixtures, results, 'all', tiers)
+  const metricsStrong      = computeMetrics(fixtures, results, 'strong', tiers)
+  const metricsWeak        = computeMetrics(fixtures, results, 'weak', tiers)
+  const metricsUnevaluable = computeMetrics(fixtures, results, 'unevaluable', tiers)
+  const perType            = computePerTypeMetrics(fixtures, results)
+
+  const strongCount      = fixtures.filter(f => tiers.strong.has(f.id)).length
+  const weakCount        = fixtures.filter(f => tiers.weak.has(f.id)).length
+  const unevaluableCount = fixtures.filter(f => tiers.unevaluable.has(f.id)).length
 
   console.log('\n' + '─'.repeat(60))
-  console.log(`Total fixtures: ${fixtures.length}  (strong: ${strongCount}, weak: ${weakCount})`)
+  console.log(`Total fixtures: ${fixtures.length}  (strong: ${strongCount}, weak: ${weakCount}, unevaluable: ${unevaluableCount})`)
   console.log()
-  console.log(`  STRONG only (${metricsStrong.total} fixtures):`)
+  console.log(`  STRONG only (${metricsStrong.total} fixtures) ← headline metric:`)
   console.log(`    Results:   ${metricsStrong.passed}/${metricsStrong.total} passed`)
   console.log(`    Precision: ${metricsStrong.precision}`)
   console.log(`    Recall:    ${metricsStrong.recall}`)
   console.log(`    F1:        ${metricsStrong.f1}`)
   console.log()
-  console.log(`  WEAK only (${metricsWeak.total} fixtures):`)
+  console.log(`  WEAK only (${metricsWeak.total} fixtures, usable label / thin goal):`)
   console.log(`    Results:   ${metricsWeak.passed}/${metricsWeak.total} passed`)
   console.log(`    Precision: ${metricsWeak.precision}`)
   console.log(`    Recall:    ${metricsWeak.recall}`)
   console.log(`    F1:        ${metricsWeak.f1}`)
   console.log()
-  console.log(`  ALL (${metricsAll.total} fixtures):`)
+  console.log(`  ALL EVALUABLE (${metricsAll.total} fixtures = strong + weak, unevaluable excluded):`)
   console.log(`    Results:   ${metricsAll.passed}/${metricsAll.total} passed`)
   console.log(`    Precision: ${metricsAll.precision}`)
   console.log(`    Recall:    ${metricsAll.recall}`)
   console.log(`    F1:        ${metricsAll.f1}`)
+  console.log()
+  console.log(`  UNEVALUABLE (${unevaluableCount} fixtures) — EXCLUDED from all metrics above.`)
+  console.log(`    Reason: goal absent/non-recoverable (interruption marker, 'unknown goal',`)
+  console.log(`    or image-only). These are the L1 eval-cleaning work queue, not misses.`)
   console.log('─'.repeat(60))
 
   if (perType.length > 0) {

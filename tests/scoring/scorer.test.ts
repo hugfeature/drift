@@ -117,6 +117,61 @@ describe('DriftScorer', () => {
     })
   })
 
+  describe('cross-process state persistence (dumpState / hydrateState)', () => {
+    it('dumps lastAlignedAt so a fresh scorer can resume inactive_duration tracking', async () => {
+      const store = bootstrapStoreWithGoal('Fix README typo', {
+        observable_targets: ['README.md'],
+        allowed_domains: ['docs'],
+      })
+
+      // First "process": score an aligned action, then dump state.
+      const scorerA = new DriftScorer(store)
+      const aligned = makeToolEvent('edit', 'README.md')
+      await scorerA.score([aligned])
+      const dumped = scorerA.dumpState()
+
+      expect(Object.keys(dumped.last_aligned_at).length).toBeGreaterThan(0)
+
+      // Second "process": a fresh scorer with no memory. Without hydration its
+      // inactive_duration would measure from goal creation; with hydration it
+      // measures from the prior aligned action.
+      const goalId = store.getActive()!.id
+      const lastAlignedTs = dumped.last_aligned_at[goalId]
+      expect(typeof lastAlignedTs).toBe('number')
+
+      const scorerB = new DriftScorer(store)
+      scorerB.hydrateState(dumped)
+
+      // A later unrelated event 30 min after the aligned action.
+      const laterTs = lastAlignedTs + 30 * 60_000
+      const laterEvent: RuntimeEvent = {
+        ...makeToolEvent('bash', undefined, { command: 'docker compose up' }),
+        timestamp: laterTs,
+      }
+      const result = await scorerB.score([laterEvent])
+
+      // inactive_duration should be ~30 min (measured from hydrated aligned ts),
+      // not from goal creation. Assert it's in the expected neighborhood.
+      expect(result.signals.inactive_duration_minutes).toBeGreaterThanOrEqual(29)
+      expect(result.signals.inactive_duration_minutes).toBeLessThanOrEqual(31)
+    })
+
+    it('hydrateState is a no-op for null/empty snapshots', () => {
+      const store = bootstrapStoreWithGoal('Fix README typo', {
+        observable_targets: ['README.md'],
+        allowed_domains: ['docs'],
+      })
+      const scorer = new DriftScorer(store)
+
+      expect(() => scorer.hydrateState(null)).not.toThrow()
+      expect(() => scorer.hydrateState(undefined)).not.toThrow()
+      expect(scorer.dumpState()).toEqual({
+        last_aligned_at: {},
+        goal_embedding_cache: {},
+      })
+    })
+  })
+
   describe('output shape', () => {
     it('always returns a DriftScore with the documented fields', async () => {
       const store = bootstrapStoreWithGoal('Refactor auth module', {

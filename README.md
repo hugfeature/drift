@@ -8,7 +8,7 @@ Drift detects when an agent stops converging on your goal — whether it's expan
 >
 > Output-layer eval tools (RAGAS, DeepEval) can't catch this. So I built Drift.
 >
-> **Current benchmark: F1 0.80 · Recall 0.89 · Precision 0.73** on 36 strong fixtures. An earlier config reached F1 0.83 (P 0.773 / R 0.895); the current threshold **deliberately trades precision for recall — in runtime governance a missed drift costs more than a false alarm.** Up from F1 0.545 in one week through scoring upgrades and fixture expansion — methodology details below.
+> **Current benchmark: F1 0.80 · Recall 0.89 · Precision 0.73** on 41 strong fixtures. Threshold `drifting ≥ 0.45` is tuned for high recall — **in runtime governance, a missed drift costs more than a false alarm.** Evolution: F1 0.545 (5/22) → peak F1 0.829 / P 0.773 (5/28, after scoring upgrades + fixture expansion) → current 0.80 (recall-tuned after adding 5 cognitive-layer cases for v0.2 risk-layer eval). Methodology below.
 >
 > **v0.2 (cognitive layer, experimental):** 3 new risk signals — `completion_coverage` · `assertion_without_verification` · `obligation_closure` — target a failure class where the agent executes flawlessly but does the wrong/incomplete thing. RFC coverage matrix: 6/6 cognitive-failure cases (063–068). Measured enrichment lands in RFC Appendix C (pending replay). See [`docs/rfc-risk-layer-v0.1.md`](docs/rfc-risk-layer-v0.1.md).
 
@@ -117,17 +117,18 @@ npx ts-node scripts/import-claude-transcript.ts \
 npx ts-node eval/runner.ts --fixture-dir=/tmp/my-trace
 ```
 
-**Current benchmark (36 strong fixtures):**
+**Current benchmark (41 strong fixtures):**
 
 ```
-Precision: 0.727   (earlier config: 0.773)
+Precision: 0.727
 Recall:    0.889
-F1:        0.800   (earlier config: 0.829)
+F1:        0.800
 ```
 
-> The current threshold (`drifting ≥ 0.45`) is tuned for **high recall** — in runtime
-> governance, missing a real drift is worse than flagging a benign one. An earlier,
-> precision-favoring config reached F1 0.829 / P 0.773.
+> Threshold `drifting ≥ 0.45` is tuned for high recall — in runtime governance,
+> missing a real drift is worse than flagging a benign one. An earlier
+> precision-favoring config peaked at F1 0.829 / P 0.773 / R 0.895 (5/28, before
+> 5 cognitive-layer cases were added for v0.2 risk-layer evaluation).
 
 ---
 
@@ -209,6 +210,16 @@ Agent Event Stream
 | `novelty_rate` | Rate of new targets appearing (decays in rabbit hole) |
 | `progress_stagnation` | Exploration-to-edit ratio (high = stuck) |
 
+**Composite risk score (one number for downstream consumers):**
+
+The execution layer (continuous score) and the cognitive layer (zero-FP discrete signals) are fused via **layered-max**: a cognitive-layer hit lifts the composite into the high-risk band so it is never diluted, otherwise the composite degrades to the trustworthy execution score. This yields a single explainable risk number — the input the authorization layer reads.
+
+```
+composite = max(execution_score, any_cognitive_hit ? 0.85 : 0)
+```
+
+On the strong tier this lifts recall (0.889 → 0.929) while holding precision (0.722 ≈ 0.727 baseline). Reproduce with `npx ts-node scripts/composite-replay.ts`. Design: [`docs/rfc-scoring-and-authorization-roadmap.md`](docs/rfc-scoring-and-authorization-roadmap.md) §A3.
+
 ---
 
 ## Explanation Traces
@@ -278,7 +289,7 @@ Temporal signatures distinguish drift types:
 Drift uses a curated benchmark of real agent sessions with human annotations.
 
 **Data quality tiers:**
-- `fixtures-valid/` — 36 strong fixtures (clear goals, human annotations)
+- `fixtures-valid/` — 41 strong fixtures (clear goals, human annotations)
 - `quarantine/` — fixtures with ambiguous goals or broken data
 
 **Label schema (tri-state):**
@@ -325,7 +336,7 @@ src/
 └── adapters/       Claude Code hook
 
 eval/
-├── fixtures-valid/ 36 strong labeled sessions
+├── fixtures-valid/ 41 strong labeled sessions
 ├── candidates/     Auto-collected sessions pending human review
 ├── quarantine/     Fixtures with broken/ambiguous data
 ├── timelines/      Generated temporal trajectories (gitignored)

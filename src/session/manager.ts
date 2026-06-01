@@ -21,7 +21,7 @@ import type { GoalScope } from '../types/goal'
 import type { DriftScore } from '../types/scoring'
 import type { TakeoverRecommendation, TakeoverConfig } from '../governance/takeover'
 import type { SessionNarrative } from '../types/narrative'
-import type { ScorerConfig } from '../scoring/scorer'
+import type { ScorerConfig, ScorerPersistentState } from '../scoring/scorer'
 import type { EmbeddingProvider } from '../embedding/provider'
 import { GoalStore } from '../goal/store'
 import { EventIngestion, type RawEvent } from '../events/ingestion'
@@ -131,6 +131,30 @@ export class SessionManager {
     return this.store.getActive()?.id ?? null
   }
 
+  /**
+   * Seed prior tool-call history into the event buffer WITHOUT scoring.
+   *
+   * Hook deployments are one process per event, so the scorer would otherwise
+   * only ever see the single current call — losing the window that signals like
+   * consecutive_unrelated, exploratory_entropy and autonomy_momentum depend on.
+   * The caller loads persisted history, seeds it here, then calls processEvent
+   * for the current tool call. Only that final call is scored (O(N), not O(N²)),
+   * but it now scores against the full historical window.
+   *
+   * Timestamps are preserved so inactive_duration / duration signals stay
+   * faithful to when actions actually happened.
+   */
+  async seedHistory(events: Array<Omit<RawEvent, 'session_id'>>): Promise<void> {
+    const activeGoal = this.store.getActive()
+    await this.ingestion.ingestBatch(
+      events.map(raw => ({
+        ...raw,
+        session_id: this.session_id,
+        goal_id:    raw.goal_id ?? activeGoal?.id,
+      })),
+    )
+  }
+
   // ---------------------------------------------------------------------------
   // Event processing
   // ---------------------------------------------------------------------------
@@ -196,6 +220,23 @@ export class SessionManager {
 
   getCurrentScore(): DriftScore | null {
     return this.lastScore
+  }
+
+  /**
+   * Restore scorer cross-call state (lastAlignedAt + embedding cache) before
+   * replaying events. In hook deployments each call is a fresh process, so the
+   * caller persists this between invocations to keep inactive_duration accurate
+   * and avoid re-embedding the goal on every tool call.
+   */
+  hydrateScorerState(state: ScorerPersistentState | null | undefined): void {
+    this.scorer.hydrateState(state)
+  }
+
+  /**
+   * Export scorer cross-call state for persistence after processing events.
+   */
+  dumpScorerState(): ScorerPersistentState {
+    return this.scorer.dumpState()
   }
 
   getNarrative(): SessionNarrative {

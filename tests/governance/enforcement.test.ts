@@ -105,12 +105,34 @@ describe('enforcementConfigFromEnv', () => {
   })
 })
 
-describe('toHookOutput — Claude Code PreToolUse JSON contract', () => {
-  it('serializes to hookSpecificOutput with the exact field names', () => {
-    const r = resolveEnforcement(verdict('ask', true, 0.85), ON)
+describe('toHookOutput — cross-CLI PreToolUse JSON contract (Claude + codex)', () => {
+  it('block → emits permissionDecision=deny (the one value both CLIs honor)', () => {
+    const r = resolveEnforcement(verdict('block', true, 0.99), ON)
     const out = toHookOutput(r)
     expect(out.hookSpecificOutput.hookEventName).toBe('PreToolUse')
-    expect(out.hookSpecificOutput.permissionDecision).toBe('ask')
+    expect(out.hookSpecificOutput.permissionDecision).toBe('deny')
     expect(typeof out.hookSpecificOutput.permissionDecisionReason).toBe('string')
+  })
+
+  it('ask → OMITS permissionDecision (codex rejects non-deny; pause not portable)', () => {
+    const r = resolveEnforcement(verdict('ask', true, 0.85), ON)
+    const out = toHookOutput(r)
+    expect(out.hookSpecificOutput.permissionDecision).toBeUndefined()
+    // reason is still carried for logging/explainability
+    expect(out.hookSpecificOutput.permissionDecisionReason).toContain('reason for ask')
+  })
+
+  it('allow → OMITS permissionDecision (silence = proceed on both CLIs)', () => {
+    const r = resolveEnforcement(verdict('auto', false, 0.2), ON)
+    const out = toHookOutput(r)
+    expect(out.hookSpecificOutput.permissionDecision).toBeUndefined()
+  })
+
+  it('never serializes "allow" or "ask" as a permissionDecision value (codex guard)', () => {
+    for (const v of ['auto', 'ask_soft', 'ask'] as const) {
+      const out = toHookOutput(resolveEnforcement(verdict(v, true, 0.8), ON))
+      expect(out.hookSpecificOutput.permissionDecision).not.toBe('allow')
+      expect(out.hookSpecificOutput.permissionDecision).not.toBe('ask')
+    }
   })
 })

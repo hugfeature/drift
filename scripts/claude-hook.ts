@@ -344,13 +344,21 @@ function historyToSeedEvents(
 }
 
 /**
- * Emit the Claude Code PreToolUse decision JSON on stdout.
- * `ask` / `deny` pause the agent; `allow` lets it proceed.
+ * Emit the PreToolUse decision on stdout — cross-CLI safe (Claude Code + codex).
+ *
+ * Only a hard `deny` writes anything: it is the single permissionDecision value
+ * both CLIs honor. `allow` and `ask` proceed via SILENCE — we write NOTHING to
+ * stdout. This is required because codex throws on any non-`deny` value
+ * (`unsupported permissionDecision: allow`), and Claude Code treats a silent
+ * hook as default-allow. The `ask` pause is not portable to codex, so its
+ * intent is surfaced via the stderr log instead, never via stdout.
  */
 function emitPermissionDecision(decision: 'ask' | 'deny' | 'allow', reason: string): void {
+  if (decision !== 'deny') return // proceed silently — no stdout for allow/ask
+
   const output = toHookOutput({
-    permissionDecision: decision,
-    paused:             decision !== 'allow',
+    permissionDecision: 'deny',
+    paused:             true,
     soft_advisory:      null,
     reason,
   })

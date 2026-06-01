@@ -39,6 +39,25 @@ function extractGoalText(fixture: LoadedFixture): string | undefined {
   return activeGoal?.raw ?? activeGoal?.normalized?.observable_targets?.[0]
 }
 
+/**
+ * Extract the original user prompt text from a fixture.
+ *
+ * Used by the completion_coverage_gap detector to read quantity constraints
+ * (e.g. "two test files"). Both the aggregate enrichment pass and the
+ * v0.2 session-level pass must use the SAME extraction, otherwise the
+ * completion_coverage_gap signal silently never fires in one of them.
+ */
+function extractPromptText(fixture: LoadedFixture): string {
+  const goals = fixture.raw.session?.goals
+  if (goals?.[0]?.raw) return goals[0].raw
+
+  const fallback = fixture.raw as unknown as {
+    agent_context?: { task?: string }
+    description?: string
+  }
+  return fallback.agent_context?.task ?? fallback.description ?? ''
+}
+
 function classifyRisk(riskSignals: PrimarySignal[]): TrajectoryRisk {
   if (riskSignals.length >= 3) return 'HIGH'
   if (riskSignals.length >= 1) return 'MEDIUM'
@@ -67,7 +86,8 @@ function runReplay(): void {
   for (const fixture of fixtures) {
     const events = normalizeEvents(fixture.events)
     const goalText = extractGoalText(fixture)
-    const allSignals = runAllDetectors(events, goalText)
+    const promptText = extractPromptText(fixture)
+    const allSignals = runAllDetectors(events, goalText, promptText)
     const windowResult = extractWindows(events, { windowSize: WINDOW_SIZE })
     const { riskSignals, baselineSignals } = partitionSignals(allSignals, windowResult)
 
@@ -169,12 +189,7 @@ function runReplay(): void {
   for (const fixture of fixtures) {
     const events = normalizeEvents(fixture.events)
     const goalText = extractGoalText(fixture)
-
-    // Extract prompt text for completion_coverage_gap
-    let promptText = ''
-    const goals = fixture.raw.session?.goals
-    if (goals?.[0]?.raw) promptText = goals[0].raw
-    if (!promptText) promptText = (fixture.raw as any).agent_context?.task ?? (fixture.raw as any).description ?? ''
+    const promptText = extractPromptText(fixture)
 
     const allSignals = runAllDetectors(events, goalText, promptText)
     const v02Hits = allSignals.filter(s => V02_SIGNALS.has(s.signal))

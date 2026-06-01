@@ -8,7 +8,9 @@ Drift detects when an agent stops converging on your goal — whether it's expan
 >
 > Output-layer eval tools (RAGAS, DeepEval) can't catch this. So I built Drift.
 >
-> **Current benchmark: Precision 0.773 · Recall 0.895 · F1 0.829** on 36 strong fixtures. Up from 0.545 → 0.773 in one week through scoring upgrades and fixture expansion — methodology details below.
+> **Current benchmark: F1 0.80 · Recall 0.89 · Precision 0.73** on 36 strong fixtures. An earlier config reached F1 0.83 (P 0.773 / R 0.895); the current threshold **deliberately trades precision for recall — in runtime governance a missed drift costs more than a false alarm.** Up from F1 0.545 in one week through scoring upgrades and fixture expansion — methodology details below.
+>
+> **v0.2 (cognitive layer, experimental):** 3 new risk signals — `completion_coverage` · `assertion_without_verification` · `obligation_closure` — target a failure class where the agent executes flawlessly but does the wrong/incomplete thing. RFC coverage matrix: 6/6 cognitive-failure cases (063–068). Measured enrichment lands in RFC Appendix C (pending replay). See [`docs/rfc-risk-layer-v0.1.md`](docs/rfc-risk-layer-v0.1.md).
 
 ```
 Goal: "fix README typo"
@@ -77,7 +79,7 @@ If you build or run Agent eval pipelines, drift complements rather than replaces
 - **Evidence chains** — every detection comes with `signal → observation → details`, not just a score
 - **Real-session-only fixture policy** — synthetic traces rejected; fixtures grow via auto-collection hook + human review
 
-**Eval methodology breakdown** is documented in the "Eval Methodology" section below. Reproduce the 0.773/0.895/0.829 benchmark with `npx ts-node eval/runner.ts --fixture-dir=eval/fixtures-valid`.
+**Eval methodology breakdown** is documented in the "Eval Methodology" section below. Reproduce the current benchmark (F1 0.80, recall-favoring) with `npx ts-node eval/runner.ts --fixture-dir=eval/fixtures-valid`.
 
 ---
 
@@ -95,13 +97,37 @@ npx ts-node eval/runner.ts --fixture-dir=eval/fixtures-valid
 npx ts-node eval/runner.ts --fixture-dir=eval/fixtures-valid --timeline
 ```
 
+### Replay your own trace
+
+Point Drift at a real Claude Code transcript and get a drift report in seconds —
+no need to run the bundled fixtures.
+
+```bash
+# 1. Find your real sessions (sorted by tool-call count)
+npx ts-node scripts/import-claude-transcript.ts --scan \
+  ~/.codefuse/engine/cc/projects/<your-project-slug>/
+
+# 2. Convert one session into a Drift fixture
+mkdir -p /tmp/my-trace
+npx ts-node scripts/import-claude-transcript.ts \
+  ~/.codefuse/engine/cc/projects/<slug>/<session-id>.jsonl \
+  /tmp/my-trace/session.json
+
+# 3. Score it
+npx ts-node eval/runner.ts --fixture-dir=/tmp/my-trace
+```
+
 **Current benchmark (36 strong fixtures):**
 
 ```
-Precision: 0.773
-Recall:    0.895
-F1:        0.829
+Precision: 0.727   (earlier config: 0.773)
+Recall:    0.889
+F1:        0.800   (earlier config: 0.829)
 ```
+
+> The current threshold (`drifting ≥ 0.45`) is tuned for **high recall** — in runtime
+> governance, missing a real drift is worse than flagging a benign one. An earlier,
+> precision-favoring config reached F1 0.829 / P 0.773.
 
 ---
 

@@ -7,8 +7,12 @@ node_modules
 .DS_Store
 .aone_copilot/
 
-# Raw fixtures contain non-anonymized data - only anonymized versions are published
+# All eval corpora kept local only — GitHub holds code, not session data
 eval/fixtures/
+eval/fixtures-strong/
+eval/fixtures-valid/
+eval/fixtures_anonymized/
+eval/quarantine/
 
 # Auto-collected candidates (unreviewed, may contain sensitive data)
 eval/candidates/

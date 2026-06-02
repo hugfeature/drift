@@ -46,13 +46,13 @@ This matters because designed-from-whiteboard schemas have two failure modes:
 The two cases we used:
 
 - **Case A**: An agent told to "discuss first, then decide how to handle" a symlink security issue — which immediately started executing fixes and then expanded into unrelated system maintenance.
-- **Case B**: An agent told to fix non-clickable buttons in a mini-app — which misunderstood the goal and spent 157 tool calls building an entirely unnecessary browser preview system.
+- **Case B**: An agent told to fix non-clickable buttons in a mini-app — which misunderstood the goal and spent 157 tool calls building an entirely unnecessary preview runtime.
 
 ---
 
 ## Case A: The Agent That Understood the Constraint and Ignored It
 
-**Setup.** User message: *"Help me with the skill symlink escape issue. Let's discuss first before deciding how to handle it."* — "Help me with the skill symlink escape issue. **Let's discuss first before deciding how to handle it.**"
+**Setup.** User message (paraphrased): "Help me with the skill symlink escape issue. **Let's discuss first before deciding how to handle it.**"
 
 The user's intent is explicit: investigate and discuss, don't execute.
 
@@ -61,8 +61,8 @@ The user's intent is explicit: investigate and discuss, don't execute.
 | Phase | Events | Behavior |
 |-------|--------|----------|
 | Investigation | evt_001–005 | Agent lists symlink directories, searches memory, inspects manifest. Defensible as "preparing for discussion." |
-| Authorized execution | evt_006–007 | User sends a follow-up: "execute the replacement" (execute the replacement). Agent performs the fix. **This is authorized.** |
-| Scope explosion | evt_008–035 | After completing the symlink fix, agent continues: sets up cron jobs, reads personal-tracking data, reorganizes memory registry, explores a third-party CLI configuration files. **None of this was requested.** |
+| Authorized execution | evt_006–007 | User sends a follow-up: "execute the replacement". Agent performs the fix. **This is authorized.** |
+| Scope explosion | evt_008–035 | After completing the symlink fix, agent continues: sets up cron jobs, reads an unrelated personal tracking dataset, reorganizes the memory registry, explores a third-party CLI's configuration files. **None of this was requested.** |
 
 **The interesting diagnostic question.** This is *not* `goal_mutation` — the goal never changed. It's not `context_desync` — the agent's context was intact. The agent read the constraint ("discuss first"), received subsequent authorization to execute, completed the authorized task, and then... kept going.
 
@@ -87,7 +87,7 @@ Recovery attempted: **no.** The agent never paused to ask "should I continue?"
 
 ## Case B: 157 Tool Calls in the Wrong Direction
 
-**Setup.** User message: *"Can I only preview? Can't I actually click?[Image #1] Several list items can't be clicked."* — "Can I only preview? Can't I actually click? [Image] The normal/heart rate alert, birthday, New Year's Eve, 'studying' — **these can't be clicked.**"
+**Setup.** User message (paraphrased): "Can I only preview? Can't I actually click? [Image] Several list items — **these can't be clicked.**"
 
 The user's intent: buttons in a mini-app don't respond to taps. Fix the event bindings.
 
@@ -96,7 +96,7 @@ The user's intent: buttons in a mini-app don't respond to taps. Fix the event bi
 | Phase | Events | Behavior |
 |-------|--------|----------|
 | Investigation | evt_001–026 | Agent reads project structure, diffs, API usage. Reasonable. |
-| Wrong direction | evt_027–063 | Agent enters plan mode. Designs and implements from scratch: a CommonJS module loader, an a mini-app platform `my.*` API polyfill, an the markup format-to-HTML compiler, a mini-app runtime, a mock API layer. **Creates 7 new files.** |
+| Wrong direction | evt_027–063 | Agent enters plan mode. Designs and implements from scratch: a CommonJS module loader, a platform API polyfill, a markup-to-HTML compiler, a mini-app runtime, a mock API layer. **Creates 7 new files.** |
 | Rabbit hole | evt_064–157 | Debugging the preview system. Reads `preview-runtime.js` 11 times, writes it 6 times. Reads `pages-config.js` 4 times, writes it 5 times. Novelty collapses. Progress: zero. |
 
 **The root failure is goal misunderstanding.** The user said "can't click." The agent interpreted this as "needs an interactive browser preview system" rather than "event bindings are missing in the mini-app code."
@@ -121,7 +121,7 @@ Recovery attempted: **no.** At event 081, the user sent a screenshot (evt_user_0
 
 ## Case C: The Agent That Compressed Two Tasks Into One
 
-**Setup.** User provided two independent article drafts — "Agent Draft A" (Agent is Replaying Distributed System Disasters) and "Draft B" (Allow/Deny is Obsolete) — and said: "turn these two into published articles" (write these two into WeChat articles).
+**Setup.** User provided two independent article drafts — call them Draft A and Draft B — and said (paraphrased): "turn these two into published articles."
 
 The user's intent: two independent articles, each from its own draft.
 
@@ -129,13 +129,13 @@ The user's intent: two independent articles, each from its own draft.
 
 | Phase | Events | Behavior |
 |-------|--------|----------|
-| Goal internalization | L5–L11 | Agent receives two drafts. Calls `create_task` with goal: "merge the two drafts**into one**published文章". The word "two" (two articles) became "one" (one article). **Goal narrowing happened at the moment of internalization, not during execution.** |
-| Execution | L34–L92 | Agent creates directory `27-Draft A/`, writes article, generates 6 HTML illustrations, updates MOC, marks the task tracker task as `completion: 100%`. All executed flawlessly. |
-| False completion | L101 | Agent outputs "delivery complete" (delivery complete). Only article 27 exists. Article 28 was never planned. |
-| User intervention | L105 | User: "？？？那么我另one文章呢？" (What about my other article?) |
-| Recovery | L117+ | Agent acknowledges the error, creates article 28 independently, revises article 27 to avoid overlap. |
+| Goal internalization | L5–L11 | Agent receives two drafts. Calls `create_task` with goal: "**merge the two drafts into one** published article". The word "two" became "one". **Goal narrowing happened at the moment of internalization, not during execution.** |
+| Execution | L34–L92 | Agent creates a directory for Draft A, writes the article, generates 6 HTML illustrations, updates the index, marks the task tracker as `completion: 100%`. All executed flawlessly. |
+| False completion | L101 | Agent outputs "delivery complete". Only the Draft A article exists. The Draft B article was never planned. |
+| User intervention | L105 | User: "??? what about my other article?" |
+| Recovery | L117+ | Agent acknowledges the error, creates the Draft B article independently, revises the Draft A article to avoid overlap. |
 
-**The root failure is goal narrowing.** The `create_task` call is the smoking gun — the goal text explicitly says "into one" (merge into one). This is not an execution failure; the agent's plan was internally consistent with its (wrong) understanding. Every downstream action — directory creation, MOC update, the task tracker progress tracking — was correct *given the narrowed goal*.
+**The root failure is goal narrowing.** The `create_task` call is the smoking gun — the goal text explicitly says "merge into one". This is not an execution failure; the agent's plan was internally consistent with its (wrong) understanding. Every downstream action — directory creation, index update, progress tracking — was correct *given the narrowed goal*.
 
 **How this differs from adjacent patterns:**
 
@@ -149,12 +149,12 @@ The user's intent: two independent articles, each from its own draft.
 goal_narrowing → false_completion → task_partially_failed
        ↑                ↑                    ↑
   (Cognitive)      (Cognitive)           (Outcome)
- "two"→"one"   Declared done at 50%   User got half the work
+ "two"→"one"     Declared done at 50%   User got half the work
 ```
 
-Recovery attempted: **yes**, user-triggered. Successful after user's explicit "？？？" prompt.
+Recovery attempted: **yes**, user-triggered. Successful after the user's explicit "???" prompt.
 
-**Why eval would miss this.** The delivered article was high quality — well-structured, with 6 HTML illustrations, proper MOC entry. Any eval checking output quality, tool call coherence, or completion signals would pass this session. The only detection path is checking whether the *quantity constraint* in the original prompt ("two") matches the actual output count ("one"). Current eval frameworks have no such capability.
+**Why eval would miss this.** The delivered article was high quality — well-structured, with 6 HTML illustrations, proper index entry. Any eval checking output quality, tool call coherence, or completion signals would pass this session. The only detection path is checking whether the *quantity constraint* in the original prompt ("two") matches the actual output count ("one"). Current eval frameworks have no such capability.
 
 ---
 

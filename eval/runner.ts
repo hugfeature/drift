@@ -22,6 +22,10 @@ import { OllamaEmbeddingProvider } from '../src/embedding/ollama-provider'
 import type { EmbeddingProvider } from '../src/embedding/provider'
 import type { EvalFixture } from '../src/types/eval'
 import type { RawEvent }    from '../src/events/ingestion'
+import { normalizeEvents } from '../src/risk/normalizer'
+import { runAllDetectors } from '../src/risk/detectors'
+import { CompositeScorer } from '../src/scoring/composite'
+import { DEFAULT_COMPOSITE_CONFIG } from '../src/types/composite'
 
 // ---------------------------------------------------------------------------
 // Fixture loading + schema adaptation
@@ -146,6 +150,7 @@ interface SignalBreakdown {
   unauthorized_mutations: number
   autonomy_momentum:      number
   hallucinated_claims:    number
+  behavioral_pathology:   number
 }
 
 interface WeightedContribution {
@@ -212,26 +217,41 @@ async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
     lastResult = await session.processEvent(raw)
   }
 
-  const finalScore    = lastResult?.drift_score.score ?? 0
-  const driftDetected = finalScore >= 0.5
-  const narrative     = session.getNarrative().segments.map(s => s.summary)
-  const takeoverRec   = lastResult?.takeover.recommended ?? false
+  const executionScore = lastResult?.drift_score ?? null
+  const narrative      = session.getNarrative().segments.map(s => s.summary)
+  const takeoverRec    = lastResult?.takeover.recommended ?? false
+
+  // --- v0.2 cognitive-layer: normalize events → run detectors → fuse ---
+  const rawEvents = (fixture.session as any).events as any[] ?? []
+  const normalizedEvents = normalizeEvents(rawEvents)
+  const goalText = fixture.session.goals[0]?.raw
+  const promptText = goalText // first user message is the goal
+  const cognitiveSignals = runAllDetectors(normalizedEvents, goalText, promptText)
+
+  const compositeScorer = new CompositeScorer()
+  const compositeResult = executionScore
+    ? compositeScorer.fuse(executionScore, cognitiveSignals)
+    : null
+
+  const finalScore    = compositeResult?.score ?? executionScore?.score ?? 0
+  const driftDetected = finalScore >= DEFAULT_COMPOSITE_CONFIG.drifting_score_threshold
 
   // Extract signal breakdown for FP analysis
-  const signals: SignalBreakdown | null = lastResult?.drift_score.signals
-    ? { ...lastResult.drift_score.signals }
+  const signals: SignalBreakdown | null = executionScore?.signals
+    ? { ...executionScore.signals }
     : null
 
   // Compute weighted contributions per signal
   const defaultWeights: Record<string, number> = {
-    semantic_divergence:    0.22,
-    inactive_duration:      0.13,
-    consecutive_unrelated:  0.13,
+    semantic_divergence:    0.20,
+    inactive_duration:      0.08,
+    consecutive_unrelated:  0.10,
     subgoal_depth:          0.05,
-    exploratory_entropy:    0.10,
+    exploratory_entropy:    0.08,
     unauthorized_mutations: 0.05,
-    autonomy_momentum:      0.22,
-    hallucinated_claims:    0.10,
+    autonomy_momentum:      0.24,
+    hallucinated_claims:    0.08,
+    behavioral_pathology:   0.12,
   }
 
   const contributions: WeightedContribution[] = signals
@@ -268,6 +288,7 @@ function computeWeightedContributions(
     unauthorized_mutations: Math.min(signals.unauthorized_mutations, 1.0),
     autonomy_momentum:      signals.autonomy_momentum,
     hallucinated_claims:    Math.min(signals.hallucinated_claims / 3, 1.0),
+    behavioral_pathology:   signals.behavioral_pathology ?? 0,
   }
 
   return Object.entries(signalMap)

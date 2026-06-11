@@ -163,6 +163,7 @@ function emptyExecutionScore(): DriftScore {
       unauthorized_mutations:     0,
       autonomy_momentum:          0,
       hallucinated_claims:        0,
+      behavioral_pathology:       0,
     },
     computed_at:            Date.now(),
     contributing_event_ids: [],

@@ -6,7 +6,7 @@
  * and outputs precision/recall/F1 + per-type breakdown.
  *
  * Usage:
- *   npx ts-node scripts/batch-score.ts [--threshold 0.5] [--verbose]
+ *   npx ts-node scripts/batch-score.ts [--threshold 0.45] [--verbose]
  */
 
 import * as fs from 'fs'
@@ -179,7 +179,7 @@ function pad(s: string, len: number): string {
 async function main() {
   const args = process.argv.slice(2)
   const thresholdIdx = args.indexOf('--threshold')
-  const threshold = thresholdIdx >= 0 ? parseFloat(args[thresholdIdx + 1] || '0.5') : 0.5
+  const threshold = thresholdIdx >= 0 ? parseFloat(args[thresholdIdx + 1] || '0.45') : 0.45
   const verbose = args.includes('--verbose')
   const embeddingIdx = args.indexOf('--embedding')
   const embeddingType = embeddingIdx >= 0 ? args[embeddingIdx + 1] : 'keyword'

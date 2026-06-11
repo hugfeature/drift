@@ -60,6 +60,17 @@ const ASSERTION_PATTERNS: AssertionPattern[] = [
     },
     confidence: 'high',
   },
+  // "X has been created/written" for source/test artifacts.
+  {
+    regex: /(?:已(?:经)?(?:创建|写入|生成|配置好)|created|written|generated|set up)/i,
+    resourceExtractor: (_match, text) => {
+      const fileMatch = text.match(
+        /(?:[\w./-]+\.(?:ts|tsx|js|jsx|mjs|cjs|java|kt|py|go|rs|rb|php|cs|cpp|c|h|md|json|yaml|yml|toml|xml|sql|sh))/i,
+      )
+      return fileMatch?.[0]
+    },
+    confidence: 'high',
+  },
   // "可能是X" / "should be X" / "probably X" — rationalization of contradicting observation
   {
     regex: /(?:可能是|可能只是|应该是|大概是|probably|likely|should be|might be|perhaps).*(?:环境|tenant|配置|display|name|label|标签|显示)/i,
@@ -92,7 +103,7 @@ const ASSERTION_PATTERNS: AssertionPattern[] = [
  * Patterns indicating user correction (strengthens the signal)
  */
 const USER_CORRECTION_PATTERNS = [
-  /不是[啊的吧]|不对|错了|没[有配置]|wrong|incorrect|not configured|没配置/i,
+  /不是[啊的吧]|不对|错了|没[有配置]|没(?:有)?(?:创建|写|生成)|wrong|incorrect|not configured|not created|not written|没配置/i,
   /是说|我说的是|I mean|actually/i,
 ]
 
@@ -124,7 +135,7 @@ function isVerificationOf(event: NormalizedEvent, claimedResource: string): bool
   const messageLower = message.toLowerCase()
 
   // Direct file path match
-  if (resourceLower.includes('.json') || resourceLower.includes('.yaml') || resourceLower.includes('.md')) {
+  if (/\.[a-z0-9]+$/i.test(resourceLower)) {
     return targetLower.includes(resourceLower) || messageLower.includes(resourceLower)
   }
 

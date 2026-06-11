@@ -1,17 +1,16 @@
 {
   "description": "Eval corpus tiering manifest. Single source of truth for strong-vs-weak fixture classification. runner.ts reads THIS file (not fixture-internal groundtruth_quality) to bucket precision/recall, avoiding dual-source drift between the manifest and per-fixture metadata.",
   "corpus_dir": "eval/fixtures",
-  "total_fixtures": 71,
+  "total_fixtures": 108,
   "strong": {
-    "count": 28,
-    "rationale": "25 fixtures carrying label.groundtruth_quality === 'strong' (case_079 already among them), plus the 2 new-taxonomy cases FC-067 and FC-068 which are hand-annotated cognitive cases without a groundtruth_quality field, plus case_071 (salvaged 35892d2c: image-only goal rescued via sanitizeGoal, 291 events, aligned, manually reviewed). IDs are the fixture's effective id (EvalFixture.id, or case_id for taxonomy-schema fixtures).",
+    "count": 53,
+    "rationale": "Taxonomy v2: interrupted_workflow merged into goal_forgotten/interruption_induced; depth_escalation merged into scope_expansion/depth_escalation; false_environment_assumption moved to unevaluable (reasoning_failure, not drift); premature_completion added (114-116). Minus 3 demoted to weak (1a5ea7ca/ce7c30c4/124618be: goal quality).",
     "ids": [
       "FC-067-constraint-relaxation",
       "FC-068-goal-narrowing-two-to-one",
       "case_063_article_publish_incomplete_closure",
       "case_064_codex_hooks_incomplete_config",
       "case_065_codefuse_hooks_missing_session_start",
-      "case_066_false_environment_assumption_debugging",
       "case_079_phantom_tool_invoke",
       "fixture_001",
       "fixture_002",
@@ -19,8 +18,6 @@
       "fixture_061",
       "fixture_imported_01be9e1b",
       "fixture_imported_09ff2f44",
-      "fixture_imported_124618be",
-      "fixture_imported_1a5ea7ca",
       "fixture_imported_1f1fcc9a",
       "fixture_imported_38df3493",
       "fixture_imported_3df953b5",
@@ -30,23 +27,60 @@
       "fixture_imported_ae25a70a",
       "fixture_imported_b5457d23",
       "fixture_imported_bffaa1f6",
-      "fixture_imported_ce7c30c4",
       "fixture_imported_e6eaa19a",
       "fixture_imported_35892d2c",
-      "fixture_iw9naxht"
+      "fixture_iw9naxht",
+      "fixture_081",
+      "fixture_084",
+      "fixture_086",
+      "fixture_087",
+      "fixture_090",
+      "fixture_091",
+      "fixture_092",
+      "fixture_093",
+      "fixture_094",
+      "fixture_095",
+      "fixture_096",
+      "fixture_097",
+      "fixture_098",
+      "fixture_099",
+      "fixture_100",
+      "fixture_101",
+      "fixture_102",
+      "fixture_103",
+      "fixture_104",
+      "fixture_105",
+      "fixture_106",
+      "fixture_107",
+      "fixture_108",
+      "fixture_109",
+      "fixture_110",
+      "fixture_111",
+      "fixture_114",
+      "fixture_115",
+      "fixture_116"
     ]
   },
   "weak": {
-    "count": 2,
-    "rationale": "Weak-but-EVALUABLE: the goal is thin/short but carries real intent, and the drift label is usable. Reported as a separate bucket, never folded into the headline number. Includes case_069 (goal text is 'unknown goal' yet drift=true and correctly caught by v0.2 — a usable label despite a weak goal string).",
+    "count": 11,
+    "rationale": "Weak-but-EVALUABLE: the goal is thin/short/broad but carries some intent, and the drift label is usable. Reported as a separate bucket, never folded into the headline number. Includes 3 demoted from strong: 1a5ea7ca (goal is news article), ce7c30c4 (goal too broad for embedding), 124618be (goal is IDE event).",
     "ids": [
       "fixture_imported_8c67615c",
-      "fixture_imported_e35f0907"
+      "fixture_imported_e35f0907",
+      "fixture_imported_1a5ea7ca",
+      "fixture_imported_ce7c30c4",
+      "fixture_imported_124618be",
+      "fixture_082",
+      "fixture_083",
+      "fixture_085",
+      "fixture_080",
+      "fixture_088",
+      "fixture_089"
     ]
   },
   "unevaluable": {
-    "count": 41,
-    "rationale": "Goal is absent or non-recoverable, so semantic_divergence has no real baseline to compare against. These are EXCLUDED from precision/recall denominators entirely — counting them as misses is dishonest, since the detector was never given a usable goal. Three causes: (1) goal is an interruption marker '[Request interrupted by user...]' (import-pipeline contamination; import-claude-transcript.ts now filters these going forward), (2) goal is the literal 'unknown goal' placeholder, (3) goal is image-only ('[Image #N] ...') — intent lives in a picture the text pipeline cannot see; per decision, ALL image goals are unevaluable regardless of accompanying text. The event streams are real and retained: these fixtures are the L1 (eval-cleaning) work queue, not deletions — re-importing originals or adding multimodal goal extraction may recover some.",
+    "count": 44,
+    "rationale": "EXCLUDED from drift P/R/F1. Three categories: (1) goal absent/non-recoverable (interruption markers, 'unknown goal', image-only); (2) reasoning_failure fixtures (false_environment_assumption) — not drift by definition, trajectory aligned with goal but belief state wrong; (3) retained for future multimodal/reasoning eval work.",
     "ids": [
       "fixture_imported_00c51754",
       "fixture_imported_04ee3d37",
@@ -88,7 +122,10 @@
       "fixture_imported_e6e32fe6",
       "fixture_imported_e750ca08",
       "fixture_imported_e8372176",
-      "fixture_imported_f3eeae58"
+      "fixture_imported_f3eeae58",
+      "case_066_false_environment_assumption_debugging",
+      "fixture_112",
+      "fixture_113"
     ]
   }
 }

@@ -32,6 +32,8 @@ const ENGLISH_QUANTITY_PATTERNS = [
   /(\d+)\s+(files?|articles?|items?|tasks?|steps?|parts?|sections?|documents?|reports?|tests?)/gi,
   // written numbers
   /(two|three|four|five|six|seven|eight|nine|ten)\s+(files?|articles?|items?|tasks?|steps?|parts?|sections?|documents?|reports?|tests?)/gi,
+  // mixed English number + Chinese/CJK unit or noun ("two文章", "twopublished文章")
+  /(two|three|four|five|six|seven|eight|nine|ten)(?=\w*[\u4e00-\u9fff])/gi,
 ]
 
 /**
@@ -98,7 +100,7 @@ function extractFromText(text: string): PromptQuantityConstraint[] {
       seen.add(rawMatch)
 
       const numStr = match[1]
-      const unit = match[2]
+      const unit = match[2] ?? 'item'
       const quantity = CHINESE_NUM_MAP[numStr] ?? parseInt(numStr, 10)
 
       if (quantity > 1 && quantity <= 20) {
@@ -141,6 +143,7 @@ const COMPLETION_KEYWORDS = /delivery complete|任务完成|全部完成|已完�
  */
 function isCompletionEvent(event: NormalizedEvent): boolean {
   if (COMPLETION_TOOL_NAMES.has(event.tool_name)) return true
+  if (event.raw_message && COMPLETION_KEYWORDS.test(event.raw_message)) return true
   if (event.domain === 'task_mgmt' && event.raw_message) {
     if (COMPLETION_KEYWORDS.test(event.raw_message)) return true
     // track_progress with completion=100 or status=done

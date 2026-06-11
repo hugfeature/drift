@@ -10,6 +10,7 @@
 import type { RuntimeEvent } from '../types/event'
 import type { DriftStatus } from '../types/scoring'
 import type { SessionTimeline, TimelinePoint } from './types'
+import { DEFAULT_COMPOSITE_CONFIG } from '../types/composite'
 
 export interface TimelineBuilderConfig {
   /** Sliding window size for exploration/progress density */
@@ -22,8 +23,8 @@ export interface TimelineBuilderConfig {
 
 const DEFAULT_CONFIG: TimelineBuilderConfig = {
   windowSize: 10,
-  driftingThreshold: 0.5,
-  lostThreshold: 0.3,
+  driftingThreshold: DEFAULT_COMPOSITE_CONFIG.drifting_score_threshold,
+  lostThreshold: DEFAULT_COMPOSITE_CONFIG.lost_score_threshold,
 }
 
 export class TimelineBuilder {
@@ -41,7 +42,7 @@ export class TimelineBuilder {
     const points = this.computePoints(toolEvents)
 
     const noveltyCollapseAt = points.findIndex(p => p.cumulative_novelty < 0.3)
-    const divergenceOnsetAt = points.findIndex(p => p.goal_alignment < 0.5)
+    const divergenceOnsetAt = points.findIndex(p => p.goal_alignment < this.config.driftingThreshold)
     const meanAlignment = points.length > 0
       ? points.reduce((sum, p) => sum + p.goal_alignment, 0) / points.length
       : 1.0

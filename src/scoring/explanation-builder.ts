@@ -20,6 +20,7 @@ import type {
   DriftSignals,
   DriftScore,
 } from '../types/scoring'
+import { DEFAULT_COMPOSITE_CONFIG } from '../types/composite'
 
 export class ExplanationBuilder {
   /**
@@ -229,9 +230,10 @@ export class ExplanationBuilder {
       return 'critical'
     }
 
-    if (compositeScore > 0.7) return 'critical'
-    if (compositeScore > 0.5) return 'high'
-    if (compositeScore > 0.35) return 'moderate'
+    const { drifting_score_threshold, lost_score_threshold } = DEFAULT_COMPOSITE_CONFIG
+    if (compositeScore > lost_score_threshold) return 'critical'
+    if (compositeScore > drifting_score_threshold) return 'high'
+    if (compositeScore > drifting_score_threshold * 0.75) return 'moderate'
     return 'low'
   }
 

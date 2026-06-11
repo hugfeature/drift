@@ -91,6 +91,50 @@ export interface ObligationClosureSignal {
   completion_ratio: number
 }
 
+export interface RepairCycleDensitySignal {
+  signal: 'repair_cycle_density'
+  target_file: string
+  edit_count: number
+  interleaved_executions: number
+  first_edit_index: number
+  last_edit_index: number
+}
+
+export interface PrematureCompletionClaimSignal {
+  signal: 'premature_completion_claim'
+  completion_event_index: number
+  tool_call_count: number
+  goal_has_multi_step: boolean
+  completion_phrase: string
+}
+
+export interface ConstraintViolationSignal {
+  signal: 'constraint_violation'
+  constraint_phrase: string
+  constraint_type: 'explicit_prohibition' | 'implicit_readonly'
+  write_count: number
+  first_write_index: number
+  total_events: number
+}
+
+export interface GoalEnumerationCoverageSignal {
+  signal: 'goal_enumeration_coverage'
+  enumerated_items: string[]
+  enumeration_count: number
+  total_events: number
+  write_count: number
+  completion_declared: boolean
+}
+
+export interface GoalAbandonmentSignal {
+  signal: 'goal_abandonment'
+  last_aligned_index: number
+  first_unrelated_index: number
+  aligned_count: number
+  trailing_unrelated_count: number
+  total_events: number
+}
+
 export type PrimarySignal =
   | StaleContextSignal
   | RetryDensitySignal
@@ -98,6 +142,11 @@ export type PrimarySignal =
   | CompletionCoverageGapSignal
   | AssertionWithoutVerificationSignal
   | ObligationClosureSignal
+  | RepairCycleDensitySignal
+  | PrematureCompletionClaimSignal
+  | ConstraintViolationSignal
+  | GoalEnumerationCoverageSignal
+  | GoalAbandonmentSignal
 
 export interface ExecutionLengthFeature {
   feature: 'execution_length'

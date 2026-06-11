@@ -27,21 +27,34 @@ import {
 } from '../types/composite'
 
 /**
- * The v0.2 cognitive-layer signals validated at precision 100% / 0 FP
- * (rfc-risk-layer-v0.1.md §C.2). ONLY these are allowed to lift the composite
- * to the cognitive floor.
+ * The v0.2 cognitive-layer signals validated at zero-FP. ONLY these are allowed
+ * to lift the composite to the cognitive floor.
+ *
+ * Whitelist discipline (the project's iron rule): a signal enters this set ONLY
+ * after composite-replay confirms it adds zero FP on the STRONG tier. Verified
+ * via `npx ts-node scripts/composite-replay.ts`:
+ *   - original 3 (assertion_without_verification / completion_coverage_gap /
+ *     obligation_closure_check): RFC §C.2, precision 100%.
+ *   - added 4 (premature_completion_claim / constraint_violation /
+ *     goal_enumeration_coverage / goal_abandonment): re-replayed 2026-06-11 —
+ *     adding them lifts STRONG recall 0.675→0.875 (+8 TP) while FP stays 0
+ *     across 12 aligned-session TNs. Net gain, not redundant overlap.
  *
  * runAllDetectors() also emits stale_context / retry_density /
- * trajectory_divergence — but those are execution-layer signals already
- * reflected in the v0.1 continuous score, and they are NOT zero-FP. Letting
- * them trigger the floor would inflate false positives (verified: doing so
- * dropped STRONG-tier precision from 0.727 to 0.583). They are deliberately
- * excluded from the cognitive-hit set.
+ * trajectory_divergence / repair_cycle_density — but those are execution-layer
+ * (already in the v0.1 continuous score) and NOT zero-FP. Letting them trigger
+ * the floor inflates false positives (verified: doing so dropped STRONG-tier
+ * precision 0.727→0.583). They are deliberately excluded from the cognitive-hit
+ * set. Any future signal must clear the same replay gate before being added here.
  */
 const COGNITIVE_HIT_SIGNALS: ReadonlySet<PrimarySignal['signal']> = new Set([
   'assertion_without_verification',
   'completion_coverage_gap',
   'obligation_closure_check',
+  'premature_completion_claim',
+  'constraint_violation',
+  'goal_enumeration_coverage',
+  'goal_abandonment',
 ])
 
 function isCognitiveHit(signal: PrimarySignal): boolean {

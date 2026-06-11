@@ -105,6 +105,6 @@ export interface CompositeConfig {
 
 export const DEFAULT_COMPOSITE_CONFIG: CompositeConfig = {
   cognitive_hit_floor:      0.85,
-  drifting_score_threshold: 0.45,
+  drifting_score_threshold: 0.43,
   lost_score_threshold:     0.75,
 }

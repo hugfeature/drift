@@ -98,7 +98,7 @@ async function run(): Promise<void> {
       const score = event.tool === 'read_file' && event.target.includes('README') ? 0.1 : 0.7
       return {
         drift_score: score,
-        status: score < 0.5 ? 'aligned' : 'drifting',
+        status: score < 0.45 ? 'aligned' : 'drifting',
         event_summary: `${event.tool} on ${event.target}`,
       }
     },

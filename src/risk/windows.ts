@@ -80,6 +80,16 @@ export function getSignalFiringIndex(signal: PrimarySignal): number {
       return signal.assertion_event_index
     case 'obligation_closure_check':
       return signal.first_registration_index
+    case 'repair_cycle_density':
+      return signal.last_edit_index
+    case 'premature_completion_claim':
+      return signal.completion_event_index
+    case 'constraint_violation':
+      return signal.first_write_index
+    case 'goal_enumeration_coverage':
+      return 0
+    case 'goal_abandonment':
+      return signal.first_unrelated_index
   }
 }
 

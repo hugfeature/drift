@@ -95,7 +95,7 @@ function analyzeClaudeFile(filePath: string): SessionCandidate | null {
   } catch { return null }
 }
 
-function analyzea third-party CLIFile(filePath: string): SessionCandidate | null {
+function analyzeOpenClawFile(filePath: string): SessionCandidate | null {
   try {
     const lines = fs.readFileSync(filePath, 'utf-8').trim().split('\n')
     let toolCalls = 0
@@ -199,7 +199,7 @@ function main() {
   for (const f of openclawFiles) {
     count++
     if (count % 50 === 0) process.stderr.write('  Progress: ' + count + '/' + total + '\r')
-    const r = analyzea third-party CLIFile(f)
+    const r = analyzeOpenClawFile(f)
     if (r) candidates.push(r)
   }
   console.log('  Valid sessions: ' + candidates.length + '\n')
@@ -235,16 +235,17 @@ function main() {
     }
   }
 
-  const highDrift = notImported.filter(c => c.driftScore > 0.5).length
-  const medDrift = notImported.filter(c => c.driftScore >= 0.3 && c.driftScore <= 0.5).length
+  const DRIFT_THRESHOLD = 0.45
+  const highDrift = notImported.filter(c => c.driftScore > DRIFT_THRESHOLD).length
+  const medDrift = notImported.filter(c => c.driftScore >= 0.3 && c.driftScore <= DRIFT_THRESHOLD).length
   const lowDrift = notImported.filter(c => c.driftScore < 0.3).length
 
   console.log('\n=== Summary ===')
   console.log('  Total valid: ' + candidates.length)
   console.log('  Already imported: ' + candidates.filter(c => c.alreadyImported).length)
   console.log('  Not imported: ' + notImported.length)
-  console.log('  High drift (>0.5): ' + highDrift)
-  console.log('  Medium (0.3-0.5): ' + medDrift)
+  console.log(`  High drift (>${DRIFT_THRESHOLD}): ` + highDrift)
+  console.log(`  Medium (0.3-${DRIFT_THRESHOLD}): ` + medDrift)
   console.log('  Low (<0.3): ' + lowDrift)
 
   if (exportFile) {

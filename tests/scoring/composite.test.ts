@@ -29,10 +29,11 @@ const EMPTY_SIGNALS: DriftSignals = {
   unauthorized_mutations:     0,
   autonomy_momentum:          0,
   hallucinated_claims:        0,
+  behavioral_pathology:       0,
 }
 
 function makeExecutionScore(score: number): DriftScore {
-  const status = score >= 0.75 ? 'lost' : score >= 0.45 ? 'drifting' : 'aligned'
+  const status = score >= 0.75 ? 'lost' : score >= 0.43 ? 'drifting' : 'aligned'
   return {
     score,
     status,
@@ -118,9 +119,9 @@ describe('CompositeScorer — layered-max fusion', () => {
   // Status threshold boundaries
   // ──────────────────────────────────────────────────────────────────────────
 
-  it('classifies status at composite thresholds (0.45 drifting, 0.75 lost)', () => {
-    expect(scorer.fuse(makeExecutionScore(0.44), []).status).toBe('aligned')
-    expect(scorer.fuse(makeExecutionScore(0.45), []).status).toBe('drifting')
+  it('classifies status at composite thresholds (0.43 drifting, 0.75 lost)', () => {
+    expect(scorer.fuse(makeExecutionScore(0.42), []).status).toBe('aligned')
+    expect(scorer.fuse(makeExecutionScore(0.43), []).status).toBe('drifting')
     expect(scorer.fuse(makeExecutionScore(0.74), []).status).toBe('drifting')
     expect(scorer.fuse(makeExecutionScore(0.75), []).status).toBe('lost')
   })

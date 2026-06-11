@@ -10,6 +10,11 @@ import { detectTrajectoryDivergence } from './trajectory-divergence'
 import { detectCompletionCoverageGap } from './completion-coverage'
 import { detectAssertionWithoutVerification } from './assertion-without-verification'
 import { detectObligationClosure } from './obligation-closure'
+import { detectRepairCycle } from './repair-cycle'
+import { detectPrematureCompletion } from './premature-completion'
+import { detectConstraintViolation } from './constraint-violation'
+import { detectGoalEnumerationCoverage } from './goal-enumeration-coverage'
+import { detectGoalAbandonment } from './goal-abandonment'
 
 export { detectStaleContext } from './stale-context'
 export { detectRetryDensity } from './retry-density'
@@ -17,6 +22,11 @@ export { detectTrajectoryDivergence, inferExpectedDomain } from './trajectory-di
 export { detectCompletionCoverageGap, extractQuantityConstraints } from './completion-coverage'
 export { detectAssertionWithoutVerification } from './assertion-without-verification'
 export { detectObligationClosure } from './obligation-closure'
+export { detectRepairCycle, computeRepairCycleScore } from './repair-cycle'
+export { detectPrematureCompletion } from './premature-completion'
+export { detectConstraintViolation } from './constraint-violation'
+export { detectGoalEnumerationCoverage } from './goal-enumeration-coverage'
+export { detectGoalAbandonment } from './goal-abandonment'
 
 /**
  * Run all primary signal detectors over the full event stream.
@@ -36,6 +46,11 @@ export function runAllDetectors(
     ...detectCompletionCoverageGap(events, promptText),
     ...detectAssertionWithoutVerification(events),
     ...detectObligationClosure(events),
+    ...detectRepairCycle(events),
+    ...detectPrematureCompletion(events, goalText),
+    ...detectConstraintViolation(events, goalText),
+    ...detectGoalEnumerationCoverage(events, goalText),
+    ...detectGoalAbandonment(events),
   ]
 
   return signals.sort((a, b) => {
@@ -53,5 +68,10 @@ function getSignalSortIndex(signal: PrimarySignal): number {
     case 'completion_coverage_gap': return signal.completion_event_index
     case 'assertion_without_verification': return signal.assertion_event_index
     case 'obligation_closure_check': return signal.first_registration_index
+    case 'repair_cycle_density': return signal.first_edit_index
+    case 'premature_completion_claim': return signal.completion_event_index
+    case 'constraint_violation': return signal.first_write_index
+    case 'goal_enumeration_coverage': return 0
+    case 'goal_abandonment': return signal.first_unrelated_index
   }
 }

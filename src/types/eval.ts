@@ -13,13 +13,18 @@ import type { AgentType, Session } from './session'
 import type { FailureAnnotation } from './failure'
 
 export type DriftType =
-  | 'scope_expansion'           // agent expanded beyond allowed_domains
-  | 'goal_forgotten'            // original goal inactive, new work unrelated
+  | 'scope_expansion'           // agent expanded beyond allowed_domains (subsumes depth_escalation as evidence)
+  | 'goal_forgotten'            // original goal inactive, new work unrelated (subtypes: context_decay, interruption_induced, autonomous_shift)
   | 'unauthorized_replacement'  // agent replaced goal without human authority
-  | 'depth_escalation'          // subgoal depth exceeded safe threshold
   | 'orphan_subgoal'            // subgoal cannot trace lineage to active goal
-  | 'interrupted_workflow'      // agent resumes after interruption but diverges from original goal
   | 'conflicting_context'       // contradictory information in context causes agent confusion
+  | 'premature_completion'      // agent claimed "done" without verification — claimed_done != actually_done
+  | 'unauthorized_mutation'     // agent performed writes on a read-only/status-check task
+  | 'rabbit_hole'               // agent over-iterated on one approach far beyond task requirements
+  | 'cleanup_spiral'            // agent entered self-sustaining execution loop without stopping condition
+  | 'constraint_relaxation'     // agent unilaterally relaxed explicit user/environment constraints
+  | 'goal_narrowing'            // agent silently delivered less than requested
+  | 'incomplete_followthrough'  // agent left dangling state (unclosed tasks, partial configs)
 
 /**
  * Groundtruth quality classification.

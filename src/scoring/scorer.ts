@@ -43,21 +43,22 @@ import {
 export interface ScorerConfig {
   // Signal weights (must sum to 1.0)
   weights: {
-    semantic_divergence:    number   // default 0.22
-    inactive_duration:      number   // default 0.13
-    consecutive_unrelated:  number   // default 0.13
+    semantic_divergence:    number   // default 0.26
+    inactive_duration:      number   // default 0.08
+    consecutive_unrelated:  number   // default 0.10
     subgoal_depth:          number   // default 0.05
-    exploratory_entropy:    number   // default 0.10
+    exploratory_entropy:    number   // default 0.08
     unauthorized_mutations: number   // default 0.05
-    autonomy_momentum:      number   // default 0.22
-    hallucinated_claims:    number   // default 0.10
+    autonomy_momentum:      number   // default 0.12
+    hallucinated_claims:    number   // default 0.08
+    behavioral_pathology:   number   // default 0.18
   }
   // Thresholds
   forgotten_consecutive_threshold:  number   // default 5
   forgotten_inactive_minutes:       number   // default 10
   depth_risk_threshold:             number   // default 3
   // Score boundaries
-  drifting_score_threshold:         number   // default 0.45
+  drifting_score_threshold:         number   // default 0.43
   lost_score_threshold:             number   // default 0.75
   // Rolling window for entropy calculation (event count)
   entropy_window_size:              number   // default 20
@@ -83,19 +84,20 @@ export interface ScorerPersistentState {
 
 const DEFAULT_CONFIG: ScorerConfig = {
   weights: {
-    semantic_divergence:    0.22,
-    inactive_duration:      0.13,
-    consecutive_unrelated:  0.13,
+    semantic_divergence:    0.26,
+    inactive_duration:      0.08,
+    consecutive_unrelated:  0.10,
     subgoal_depth:          0.05,
-    exploratory_entropy:    0.10,
+    exploratory_entropy:    0.08,
     unauthorized_mutations: 0.05,
-    autonomy_momentum:      0.22,
-    hallucinated_claims:    0.10,
+    autonomy_momentum:      0.12,
+    hallucinated_claims:    0.08,
+    behavioral_pathology:   0.18,
   },
   forgotten_consecutive_threshold:  5,
   forgotten_inactive_minutes:       10,
   depth_risk_threshold:             3,
-  drifting_score_threshold:         0.45,
+  drifting_score_threshold:         0.43,
   lost_score_threshold:             0.75,
   entropy_window_size:              20,
   autonomy_tools_per_prompt_threshold: 30,
@@ -236,6 +238,10 @@ export class DriftScorer {
     // Use latest event timestamp as "now" so replay works correctly.
     // Using Date.now() would break historical session analysis.
     const latestTs = events.length > 0 ? events[events.length - 1].timestamp : Date.now()
+    // Compute behavioral pathology score (rabbit hole / repair cycle patterns)
+    const behavioral = this.rabbitHoleDetector.detect(events)
+    const behavioralPathology = behavioral?.rabbit_hole_score ?? 0
+
     return {
       semantic_divergence:    await this.computeSemanticDivergence(events, activeGoal),
       inactive_duration_minutes: this.computeInactiveDuration(activeGoal, latestTs),
@@ -245,6 +251,7 @@ export class DriftScorer {
       unauthorized_mutations: this.store.getUnauthorizedMutations().length,
       autonomy_momentum:      this.computeAutonomyMomentum(events),
       hallucinated_claims:    this.hallucinationCount,
+      behavioral_pathology:   behavioralPathology,
     }
   }
 
@@ -591,7 +598,8 @@ export class DriftScorer {
                                      * w.unauthorized_mutations +
       signals.autonomy_momentum      * w.autonomy_momentum     +
       Math.min(signals.hallucinated_claims / 3, 1.0)
-                                     * w.hallucinated_claims
+                                     * w.hallucinated_claims    +
+      signals.behavioral_pathology   * w.behavioral_pathology
 
     return Math.round(Math.min(raw, 1.0) * 1000) / 1000
   }

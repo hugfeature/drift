@@ -23,6 +23,7 @@ import type { DriftScore } from '../types/scoring'
 import type { Goal } from '../types/goal'
 import type { NarrativeSegment, SessionNarrative, NarrativeCategory } from '../types/narrative'
 import type { GoalMutation } from '../types/mutation'
+import { DEFAULT_COMPOSITE_CONFIG } from '../types/composite'
 
 function generateId(): string {
   return `seg_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
@@ -224,7 +225,8 @@ export class NarrativeEngine {
     const lastScore = sessionSegments.length > 0
       ? sessionSegments[sessionSegments.length - 1].drift_score_at_time ?? 0
       : 0
-    const finallyDrifting = lastScore >= 0.5
+    const { drifting_score_threshold } = DEFAULT_COMPOSITE_CONFIG
+    const finallyDrifting = lastScore >= drifting_score_threshold
 
     let overall: string
     if (takeoverCount > 0) {

@@ -243,15 +243,15 @@ async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
 
   // Compute weighted contributions per signal
   const defaultWeights: Record<string, number> = {
-    semantic_divergence:    0.20,
+    semantic_divergence:    0.26,
     inactive_duration:      0.08,
     consecutive_unrelated:  0.10,
     subgoal_depth:          0.05,
     exploratory_entropy:    0.08,
     unauthorized_mutations: 0.05,
-    autonomy_momentum:      0.24,
+    autonomy_momentum:      0.12,
     hallucinated_claims:    0.08,
-    behavioral_pathology:   0.12,
+    behavioral_pathology:   0.18,
   }
 
   const contributions: WeightedContribution[] = signals

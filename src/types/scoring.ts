@@ -66,6 +66,15 @@ export interface DriftSignals {
    * 0 = all claims verified or no claims made.
    */
   hallucinated_claims: number
+
+  /**
+   * Behavioral pathology score from rabbit hole detection.
+   * Measures edit→test→fail loops, target repetition, novelty decay.
+   * 0.0 = healthy execution pattern, 1.0 = severe behavioral spiral.
+   * Independent of semantic_divergence — catches drift WHERE the agent
+   * stays on-topic but never converges (infinite recursion within goal).
+   */
+  behavioral_pathology: number
 }
 
 /**

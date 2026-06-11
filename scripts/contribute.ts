@@ -77,7 +77,7 @@ function inferDriftTimestamps(events: any[]): { driftStartedAt: number; goalForg
 
   // If no relation labels exist, estimate from drift_score_at_event
   // Use the first event where score exceeds 0.5 (drifting threshold)
-  const firstHighScore = events.find((e: any) => (e.drift_score_at_event ?? 0) >= 0.5)
+  const firstHighScore = events.find((e: any) => (e.drift_score_at_event ?? 0) >= 0.45)
 
   const driftStartedAt = firstExpansion?.timestamp
     ?? firstHighScore?.timestamp

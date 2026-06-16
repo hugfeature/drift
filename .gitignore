@@ -21,5 +21,10 @@ eval/candidates/
 eval/reports/
 eval/timelines/
 
-# Publication drafts (personal use)
+# Local agent / editor config (may contain absolute paths, personal data)
+.claude/settings.local.json
+
+# Publication drafts & personal working docs (may carry author identity / real cases)
 docs/publish-drafts.md
+docs/article-draft-why-agents-drift.md
+docs/cases/

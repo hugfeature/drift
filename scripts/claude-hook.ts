@@ -39,8 +39,8 @@ import { sanitizeGoal } from '../src/goal/sanitize'
 // State files (state.json + events.jsonl) are scoped by Claude Code's own
 // session_id, NOT by CWD or project root. Rationale:
 //
-//   1. Codex / Claude / CodeFuse are typically launched from a small set of
-//      fixed directories (~, ~/skill); CWD-scoping would put unrelated work
+//   1. Different agent runtimes are typically launched from a small set of
+//      fixed directories (~, ~/work); CWD-scoping would put unrelated work
 //      into the same bucket and let parallel clients overwrite each other.
 //   2. A new task is bounded by `/clear` (or a fresh launch), which makes
 //      Claude Code allocate a new session_id — exactly the boundary we want.
@@ -250,7 +250,7 @@ function collectCandidate(state: DriftState): void {
 
 /**
  * Extract the user's prompt text from a UserPromptSubmit hook payload.
- * Claude Code / CodeFuse sends the prompt in various fields depending on version.
+ * Different agent runtimes send the prompt in various fields depending on version.
  */
 function extractPromptText(payload: Record<string, unknown>): string | null {
   // Try common field names

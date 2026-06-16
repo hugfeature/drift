@@ -40,15 +40,33 @@ const INTERNAL_BRAND_PATTERN = /\b(?:a mini-app platform|AliPay|Alibaba|AntFin|T
 const INTERNAL_URL_PATTERN = /https?:\/\/[\w.-]*(?:alibaba|alipay|antfin|taobao|alicdn|aliyun|dingtalk|1688)[^"'\s]*/gi
 
 // --- Enhanced: personal identity (no \b for Chinese) ---
-const PERSONAL_ID_PATTERN = /wangzhaoxian|探渊|503175/g
+// Personal identifiers (names, employee IDs, aliases) to redact are supplied
+// via the DRIFT_PERSONAL_IDS env var (comma-separated) so they never live in
+// the public source. Example: DRIFT_PERSONAL_IDS="myname,我的花名,12345"
+const PERSONAL_IDS = (process.env.DRIFT_PERSONAL_IDS || '')
+  .split(',').map(s => s.trim()).filter(Boolean)
+const PERSONAL_ID_PATTERN = PERSONAL_IDS.length
+  ? new RegExp(PERSONAL_IDS.map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g')
+  : /(?!x)x/g  // matches nothing when no IDs configured
 const GITHUB_USER_PATTERN = /hugfeature/g
 
-// --- Enhanced: internal project names ---
-const INTERNAL_PROJECT_OPENCLAW = /openclaw|a third-party CLI|open-claw/gi
-const INTERNAL_PROJECT_DITING = /谛听|diting|project-diting/gi
+// --- Internal project names ---
+// Internal/private project codenames are supplied via the DRIFT_INTERNAL_PROJECTS
+// env var so they never live in the public source. Format: comma-separated
+// `regex=replacement` pairs, e.g.:
+//   DRIFT_INTERNAL_PROJECTS="myclitool=agent-system,内部项目名=monitor-system"
+// `engram` is intentionally NOT here — it is a public OSS project, not a secret.
+const INTERNAL_PROJECT_RULES: Array<{ pattern: RegExp; replacement: string }> =
+  (process.env.DRIFT_INTERNAL_PROJECTS || '')
+    .split(',').map(s => s.trim()).filter(Boolean)
+    .map(pair => {
+      const eq = pair.indexOf('=')
+      const rawPat = eq >= 0 ? pair.slice(0, eq).trim() : pair
+      const repl = eq >= 0 ? pair.slice(eq + 1).trim() : '[internal-project]'
+      return { pattern: new RegExp(rawPat, 'gi'), replacement: repl }
+    })
 const INTERNAL_PROJECT_ENGRAM = /engram|mcp-engram/gi
 const INTERNAL_PROJECT_CODE_PATTERN = /pbc-[a-z0-9]+/gi
-const INTERNAL_PROJECT_OBSERV = /\bobserv(?:mcp)?\b/gi
 
 // --- Enhanced: service names in message context (no \b for Chinese) ---
 const SERVICE_NAME_IN_MSG = /alipay|dingtalk|钉钉/gi
@@ -98,12 +116,12 @@ function sanitizeText(text: string, options: AnonymizeOptions): string {
   result = result.replace(PERSONAL_ID_PATTERN, 'user_001')
   result = result.replace(GITHUB_USER_PATTERN, 'anon-dev')
 
-  // Enhanced: internal project names
-  result = result.replace(INTERNAL_PROJECT_OPENCLAW, 'agent-system')
-  result = result.replace(INTERNAL_PROJECT_DITING, 'monitor-system')
+  // Enhanced: internal project names (env-driven codenames first, then public/generic)
+  for (const rule of INTERNAL_PROJECT_RULES) {
+    result = result.replace(rule.pattern, rule.replacement)
+  }
   result = result.replace(INTERNAL_PROJECT_ENGRAM, 'memory-service')
   result = result.replace(INTERNAL_PROJECT_CODE_PATTERN, 'project-xxx')
-  result = result.replace(INTERNAL_PROJECT_OBSERV, 'obs-tool')
 
   // Enhanced: service names in message context
   result = result.replace(SERVICE_NAME_IN_MSG, '[redacted-service]')

@@ -23,10 +23,17 @@ interface SessionCandidate {
 
 const HOME = process.env.HOME || '/home/user'
 
-const CLAUDE_DIRS = [
-  path.join(HOME, '.codefuse/engine/cc/projects'),
-  path.join(HOME, '.codefuse/fuse/engine/cc/projects'),
-]
+// Agent transcript directories to scan. Defaults are generic placeholders;
+// point at your real runtime transcript dirs via the DRIFT_SCAN_DIRS env var
+// (colon-separated, paths relative to $HOME or absolute), e.g.:
+//   DRIFT_SCAN_DIRS=".my-agent/projects:.other-agent/sessions" npx ts-node scripts/batch-scan.ts
+const CLAUDE_DIRS = (process.env.DRIFT_SCAN_DIRS
+  ? process.env.DRIFT_SCAN_DIRS.split(':').map(d =>
+      path.isAbsolute(d) ? d : path.join(HOME, d))
+  : [
+      path.join(HOME, '.agent-runtime/projects'),
+    ]
+)
 
 const OPENCLAW_DIRS = [
   path.join(HOME, '.openclaw/agents/main/sessions'),

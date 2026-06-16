@@ -169,7 +169,7 @@ export class RabbitHoleDetector {
    * Used for repetition/novelty tracking.
    *
    * Falls back to tool_name when no explicit target exists — for MCP tools
-   * like `mcp__observmcp__amodel_grep_log`, repeated calls to the same
+   * like `mcp__logsearch__grep_log`, repeated calls to the same
    * tool ARE the repetition signal even without a file target.
    */
   private extractTarget(event: RuntimeEvent): string {
@@ -185,7 +185,7 @@ export class RabbitHoleDetector {
     }
 
     // Fallback: for MCP tools (which have semantically specific names like
-    // mcp__observmcp__amodel_grep_log), repeated calls to the same tool
+    // mcp__logsearch__grep_log), repeated calls to the same tool
     // IS behavioral repetition. But generic tools (Read/Bash/Edit) are too
     // common to use as repetition signal without a distinguishing target.
     const toolName = String(payload['tool_name'] ?? '')

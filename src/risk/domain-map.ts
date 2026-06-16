@@ -49,19 +49,38 @@ const TOOL_DOMAIN_MAP: Record<string, Domain> = {
   'cron': 'task_mgmt',
 }
 
-/** Prefix patterns for MCP tools */
-const MCP_DOMAIN_RULES: Array<{ pattern: RegExp; domain: Domain }> = [
+/**
+ * Prefix patterns for MCP tools.
+ *
+ * Built-in rules cover generic MCP tool families (search/browser/memory).
+ * Map your own MCP servers to domains via the DRIFT_MCP_DOMAIN_RULES env var:
+ *   DRIFT_MCP_DOMAIN_RULES="mcp__myissues__:task_mgmt,mcp__mywiki__:browser"
+ * (comma-separated `prefix:domain` pairs; matched as a `startsWith` prefix.)
+ */
+const BUILTIN_MCP_DOMAIN_RULES: Array<{ pattern: RegExp; domain: Domain }> = [
   { pattern: /^mcp__engram__/, domain: 'task_mgmt' },
-  { pattern: /^mcp__yuque/, domain: 'browser' },
-  { pattern: /^mcp__observmcp__/, domain: 'read' },
   { pattern: /^mcp__browser/, domain: 'browser' },
-  { pattern: /^mcp__codefusesearchmcp__web/, domain: 'browser' },
-  { pattern: /^mcp__antcode/, domain: 'read' },
-  { pattern: /^mcp__dima__/, domain: 'task_mgmt' },
+  { pattern: /^mcp__\w*search\w*__web/, domain: 'browser' },
+  { pattern: /^mcp__\w*wiki\w*/, domain: 'browser' },
+  { pattern: /^mcp__\w*(memory|notes)\w*__/, domain: 'task_mgmt' },
+  { pattern: /^mcp__\w*(issue|task|ticket)\w*__/, domain: 'task_mgmt' },
   { pattern: /^mcp__plugin_playwright/, domain: 'browser' },
-  { pattern: /^mcp__localmemory__/, domain: 'task_mgmt' },
-  { pattern: /^mcp__yourmemory__/, domain: 'task_mgmt' },
 ]
+
+/** User-supplied MCP rules from env (prefix:domain pairs). */
+const ENV_MCP_DOMAIN_RULES: Array<{ pattern: RegExp; domain: Domain }> =
+  (process.env.DRIFT_MCP_DOMAIN_RULES || '')
+    .split(',').map(s => s.trim()).filter(Boolean)
+    .map(pair => {
+      const [prefix, domain] = pair.split(':').map(x => x.trim())
+      return {
+        pattern: new RegExp('^' + prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')),
+        domain: domain as Domain,
+      }
+    })
+    .filter(r => r.domain)
+
+const MCP_DOMAIN_RULES = [...ENV_MCP_DOMAIN_RULES, ...BUILTIN_MCP_DOMAIN_RULES]
 
 /** Bash command prefix → domain */
 /** Rules for raw shell commands */

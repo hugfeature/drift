@@ -1,3 +1,4 @@
+import * as path from 'path'
 import { loadSingleFixture } from '../src/risk/loader'
 import { normalizeEvents } from '../src/risk/normalizer'
 import {
@@ -8,7 +9,7 @@ import {
 } from '../src/risk/detectors'
 
 const fx = loadSingleFixture(
-  '/Users/wangzhaoxian/skill/drift/eval/fixtures/case_079.json',
+  path.join(__dirname, '../eval/fixtures/case_079.json'),
 )
 const events = normalizeEvents(fx.events)
 const prompt = fx.raw.session?.goals?.[0]?.raw ?? ''

@@ -22,7 +22,8 @@ export type DriftType =
   | 'unauthorized_mutation'     // agent performed writes on a read-only/status-check task
   | 'rabbit_hole'               // agent over-iterated on one approach far beyond task requirements
   | 'cleanup_spiral'            // agent entered self-sustaining execution loop without stopping condition
-  | 'constraint_relaxation'     // agent unilaterally relaxed explicit user/environment constraints
+  | 'constraint_relaxation'     // agent unilaterally relaxed explicit user/environment constraints (lowered the bar, openly)
+  | 'constraint_circumvention'  // agent adversarially evaded a still-in-force guardrail (obfuscation, aliasing, rerouting) — constraint not relaxed, just bypassed
   | 'goal_narrowing'            // agent silently delivered less than requested
   | 'incomplete_followthrough'  // agent left dangling state (unclosed tasks, partial configs)
 

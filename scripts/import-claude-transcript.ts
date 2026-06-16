@@ -2,7 +2,7 @@
  * Import Claude Code transcript (.jsonl) into Drift fixture format.
  *
  * Claude Code stores session transcripts in:
- *   ~/.codefuse/engine/cc/projects/<project-slug>/<session-id>.jsonl
+ *   ~/<agent-transcript-dir>/projects/<project-slug>/<session-id>.jsonl
  *
  * Transcript format:
  *   - type: "user"      → user prompt (message.content = [{type:"text", text:"..."}])
@@ -314,11 +314,11 @@ Options:
   --min-events <N> Skip sessions with fewer than N tool calls (default: 5)
 
 Claude Code transcript locations:
-  ~/.codefuse/engine/cc/projects/<project-slug>/<session-id>.jsonl
+  ~/<agent-transcript-dir>/projects/<project-slug>/<session-id>.jsonl
 
 Example:
-  npx ts-node scripts/import-claude-transcript.ts --scan ~/.codefuse/engine/cc/projects/-Users-me-myproject/
-  npx ts-node scripts/import-claude-transcript.ts ~/.codefuse/engine/cc/projects/-Users-me-myproject/abc123.jsonl
+  npx ts-node scripts/import-claude-transcript.ts --scan ~/<agent-transcript-dir>/projects/-Users-me-myproject/
+  npx ts-node scripts/import-claude-transcript.ts ~/<agent-transcript-dir>/projects/-Users-me-myproject/abc123.jsonl
 `)
     process.exit(0)
   }

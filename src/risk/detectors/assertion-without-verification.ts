@@ -92,7 +92,7 @@ const ASSERTION_PATTERNS: AssertionPattern[] = [
   {
     regex: /(?:切换到|switch to|改用|fallback to|无法.*[，,].*(?:切换|改|换))/i,
     resourceExtractor: (_match, text) => {
-      const envMatch = text.match(/(?:主站|预发|生产|staging|production|pre-?prod|monitorprod|alipay\.com|mybank)/i)
+      const envMatch = text.match(/(?:主站|预发|生产|staging|production|pre-?prod)/i)
       return envMatch ? `environment:${envMatch[0]}` : undefined
     },
     confidence: 'high',

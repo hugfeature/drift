@@ -372,11 +372,18 @@ function computeMetrics(
 
 function computePerTypeMetrics(
   fixtures: EvalFixture[],
-  results:  ReplayResult[]
+  results:  ReplayResult[],
+  tiers: CorpusTiers = { strong: new Set(), weak: new Set(), unevaluable: new Set() }
 ): PerTypeMetrics[] {
   const typeMap = new Map<string, { total: number; detected: number }>()
 
   for (let i = 0; i < fixtures.length; i++) {
+    // Unevaluable fixtures are excluded from the headline P/R (no usable goal);
+    // they must likewise be excluded from the per-type recall breakdown,
+    // otherwise pending/skeleton types (e.g. premature_completion) report a
+    // bogus recall=0 even though the manifest already shelved them.
+    if (tiers.unevaluable.has(fixtures[i].id)) continue
+
     const driftType = fixtures[i].label.drift_type ?? 'none'
     if (!fixtures[i].label.drift) continue
 
@@ -496,7 +503,7 @@ async function run(): Promise<void> {
   const metricsStrong      = computeMetrics(fixtures, results, 'strong', tiers)
   const metricsWeak        = computeMetrics(fixtures, results, 'weak', tiers)
   const metricsUnevaluable = computeMetrics(fixtures, results, 'unevaluable', tiers)
-  const perType            = computePerTypeMetrics(fixtures, results)
+  const perType            = computePerTypeMetrics(fixtures, results, tiers)
 
   const strongCount      = fixtures.filter(f => tiers.strong.has(f.id)).length
   const weakCount        = fixtures.filter(f => tiers.weak.has(f.id)).length
@@ -577,6 +584,9 @@ async function run(): Promise<void> {
   const fnCases: Array<{ fixture: EvalFixture; result: ReplayResult }> = []
 
   for (let i = 0; i < fixtures.length; i++) {
+    // Skip unevaluable fixtures: they have no trustworthy label, so they must
+    // not surface as FP/FN (same reason they're excluded from headline P/R).
+    if (tiers.unevaluable.has(fixtures[i].id)) continue
     const expected = fixtures[i].label.drift
     const detected = results[i].drift_detected
     if (!expected && detected) fpCases.push({ fixture: fixtures[i], result: results[i] })

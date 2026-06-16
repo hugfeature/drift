@@ -15,7 +15,7 @@ Drift 的 eval fixtures 会随使用自动增长。`claude-hook` 在每次 sessi
 ### Step 1：查看候选列表
 
 ```bash
-cd /Users/wangzhaoxian/skill/drift
+cd /path/to/drift
 npx ts-node scripts/review-candidates.ts
 ```
 

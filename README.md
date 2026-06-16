@@ -55,9 +55,37 @@ Drift is the only system that provides **interpretable runtime diagnostics** for
 | Explains *why* drift happened | ❌ | ✅ evidence chains |
 | Detects behavioral loops (rabbit hole) | ❌ | ✅ independent detector |
 | Temporal trajectory analysis | ❌ | ✅ timeline export |
-| Drift taxonomy (6 types) | ❌ | ✅ |
+| Drift taxonomy (13 types) | ❌ | ✅ |
 | Works without LLM in scoring path | ❌ | ✅ pure signals |
 
+---
+## Where Drift Sits in the Safety Landscape
+
+In March 2026, OpenAI published [how it monitors its internal coding agents for misalignment](https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/) — a monitor powered by their strongest reasoning model reviews each agent session (chain-of-thought, actions, tool calls) and flags behavior that diverges from user intent or circumvents internal controls. Their roadmap points toward *synchronous* interception: evaluating an action **before** it executes.
+
+That work validates the core premise Drift is built on — **runtime behavior monitoring is becoming a first-class safety layer for autonomous coding agents, not an afterthought.** But the two approaches sit at opposite ends of a cost/portability spectrum:
+
+| | OpenAI internal monitor | Drift |
+|---|---|---|
+| Detection engine | Strongest reasoning LLM reviews CoT + actions | 11 structured signals, **no LLM in scoring path** |
+| Latency / cost | Asynchronous, heavyweight | Synchronous-capable, cheap, reproducible |
+| Deployment | Internal, model-provider-specific | Self-hostable on any agent's trace stream |
+| Output | Flagged for human review | Evidence chain (`signal → observation → details`) |
+| Reproducibility | Depends on monitor model version | Deterministic — same trace, same score |
+
+Drift is the lightweight, explainable, self-deployable counterpart to that premise: the same idea — *catch the agent doing the wrong thing well, at runtime* — without a frontier model in the loop, so any team can run it on its own agents.
+
+### Why behavior-layer, not chain-of-thought?
+
+A fair challenge. OpenAI's [CoT-monitorability research](https://openai.com/index/evaluating-chain-of-thought-monitorability/) (Dec 2025) found that **monitoring an agent's chain-of-thought is substantially more effective than monitoring its actions and outputs alone.** If reading the reasoning works better, why does Drift deliberately keep *no LLM in the scoring path* and score only behavior?
+
+Because CoT monitoring is the deeper layer, but it is also the **expensive, fragile, and not-always-available** one — and Drift is built to be the layer underneath it:
+
+- **It's expensive.** Effective CoT monitoring needs a strong reasoning model in the loop reviewing every session. That same paper quantifies a "monitorability cost." Drift's behavior signals are deterministic and free to compute — cheap enough to run on *every* session, synchronously, as an always-on floor.
+- **It's fragile.** The paper's own central worry is that CoT monitorability may **degrade** under RL scaling, distillation, or training-process drift — the faithful-reasoning signal is not guaranteed to survive. Behavior is not a private workspace the model can learn to keep clean: what the agent *did* is on the record regardless of what it chose to narrate.
+- **It's not always there.** Many agents and closed models expose no faithful CoT at all. Drift only needs a structured trace of actions, so it runs where CoT monitoring simply can't.
+
+So this isn't behavior-*instead-of*-CoT. It's **defense-in-depth**, which is exactly how that paper frames CoT monitoring itself — one layer among several, each with blind spots. Drift is the cheap, reproducible, always-on behavior floor; CoT monitoring (and mechanistic interpretability above it) are the deeper, costlier layers that sit on top. A missed drift at the behavior floor is caught upstairs; a CoT signal that silently degrades still leaves the behavior floor standing.
 ---
 
 ## For Evaluators / Eval Engineers
@@ -105,12 +133,12 @@ no need to run the bundled fixtures.
 ```bash
 # 1. Find your real sessions (sorted by tool-call count)
 npx ts-node scripts/import-claude-transcript.ts --scan \
-  ~/.codefuse/engine/cc/projects/<your-project-slug>/
+  ~/<agent—dir>/projects/<your-project-slug>/
 
 # 2. Convert one session into a Drift fixture
 mkdir -p /tmp/my-trace
 npx ts-node scripts/import-claude-transcript.ts \
-  ~/.codefuse/engine/cc/projects/<slug>/<session-id>.jsonl \
+  ~/<agent—dir>/projects/<slug>/<session-id>.jsonl \
   /tmp/my-trace/session.json
 
 # 3. Score it
@@ -184,6 +212,9 @@ Agent Event Stream
 | `interrupted_workflow` | Agent resumes after interruption but diverges | Post-interrupt semantic shift |
 | `unauthorized_replacement` | Agent replaces goal without human authority | Governance mutation tracking |
 | `depth_escalation` | Subgoal nesting exceeds safe threshold | Subgoal depth signal |
+| `constraint_circumvention` | Constraint still in force; agent evades it (base64-obfuscated commands, force-push via alias, rerouting a blocked command) | SafetyScanner hit + "denied → adjust → retry" pattern |
+
+> The full failure taxonomy (13 drift types + 4 reasoning-failure types) lives in [`docs/drift-type-taxonomy.md`](docs/drift-type-taxonomy.md). `constraint_circumvention` maps to the most common misalignment shape OpenAI [reported](https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/) across tens of millions of internal coding-agent runs.
 
 ---
 

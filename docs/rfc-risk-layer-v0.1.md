@@ -164,7 +164,7 @@ v0.1 succeeds if: **enrichment ratio > 1.5 for at least one primary signal**. Th
 
 1. **Bash dominance**: ~50% of events are `Bash`. Domain sub-classification depends on payload text parsing quality. If sub-classification fails for >30% of Bash events, trajectory_divergence will be unreliable
 2. **failure_point_index is heuristic**: "last event = failure" is a simplification. Some fixtures may have failure mid-session with partial recovery. v0.2 should add explicit failure_point annotation
-3. **tool_target extraction is fragile**: Payload structures vary across runtimes (codefuse, claude-code, codex). v0.1 uses regex-based extraction with fallback to `undefined`
+3. **tool_target extraction is fragile**: Payload structures vary across runtimes (claude-code, codex，and other  claude-compatible runtimes). v0.1 uses regex-based extraction with fallback to `undefined`
 4. **goal→expected_domain mapping is cold-start**: No training data for this mapping. v0.1 hardcodes based on keyword heuristics, expects noise
 5. **Cross-session gap**: Only 3 cross-session fixtures exist. Execution risk accumulation across sessions is explicitly out of scope for v0.1
 6. **Pre-experiment validation needed**: Before running the full pipeline, verify Bash sub-classification coverage. If >70% of Bash events can be mapped to a specific domain, proceed. Otherwise, revise §3.3 first
@@ -346,7 +346,7 @@ Cases 063–068 all score 0 on every signal because the agent executes flawlessl
 
 ### B.6 Open Questions
 
-1. **Thinking text availability**: Signal 5 requires agent reasoning text. Codefuse jsonl includes `thinking` blocks; other runtimes may not. Should v0.2 require thinking-in-trace, or fall back to output-text-only?
+1. **Thinking text availability**: Signal 5 requires agent reasoning text. some runtimes jsonl includes `thinking` blocks; others runtimes may not. Should v0.2 require thinking-in-trace, or fall back to output-text-only?
 2. **Obligation set curation**: Signal 7 needs manually defined obligation patterns per tool type. How many patterns cover 80% of real incomplete_followthrough cases?
 3. **Quantity extraction accuracy**: Signal 6 depends on regex capturing the right quantity from natural language. What's the false positive rate on the existing 67 fixtures?
 4. **Interaction with v0.1 signals**: Do these new signals fire independently, or should they combine with execution signals for composite risk scoring?

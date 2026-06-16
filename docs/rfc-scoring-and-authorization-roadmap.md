@@ -14,7 +14,17 @@ Two outcomes define "this project works":
 - **Track B — Dynamic authorization**: important actions pause for user confirmation; unimportant actions proceed autonomously.
 
 This RFC sequences A → B, because B's decision layer cannot exist without A's composite score as a reliable input. The two tracks share one seam: the **composite risk score** (stage A3).
+### 0.1 Design stance — why no LLM in the scoring path
 
+Both tracks rest on one non-negotiable constraint: **the scoring path is deterministic — no LLM scores drift.** This is a deliberate stance, not a limitation we haven't gotten around to fixing yet.
+
+OpenAI's [CoT-monitorability work](https://openai.com/index/evaluating-chain-of-thought-monitorability/) shows that an LLM reading an agent's chain-of-thought detects misbehavior better than reading actions alone. We accept that finding. We still keep the LLM out of Drift's scoring path, because Track B needs a signal that is:
+
+- **Cheap enough to run on every action** — B2 intercepts at `PreToolUse`. A frontier-model review per tool call is not viable as an always-on floor; deterministic signals are.
+- **Reproducible** — an authorization decision must be auditable. *Same trace → same score* is a precondition for B1's offline replay and for defending an interception after the fact. An LLM scorer whose verdict shifts with model version breaks that.
+- **Robust to CoT degradation** — that same paper's central worry is that CoT faithfulness may erode under RL scaling. A control layer cannot depend on a signal the agent's training might quietly remove. Behavior is on the record regardless.
+
+Drift is therefore the **deterministic behavior floor** in a defense-in-depth stack; LLM-based CoT monitoring and mechanistic interpretability are complementary layers above it, not substitutes for it. This stance is what makes A3's composite score a trustworthy input to B's authorization layer.
 ---
 
 ## 1. Where We Are Today (2026-06-01)
@@ -293,12 +303,12 @@ Track B core loop — "important → user confirmation, unimportant → autonomo
 
 #### B2.8 Operational constraints + post-ship audit fixes
 
-After wiring the hook into 4 client configs (`~/.claude`, `~/.codefuse`, `~/.codefuse/engine/cc`, `~/.codex`), a hidden-bug audit surfaced four issues — all fixed:
+After wiring the hook into several client configs (the configs for each agent runtime — Claude Code, Codex, and other Claude-compatible runtimes), a hidden-bug audit surfaced four issues — all fixed:
 
-- **State scoped by `session_id`, not CWD** — initial design stored `.drift-state.json` / `.drift-events.jsonl` in CWD, which broke the actual usage pattern: Codex/Claude launch from `~`, CodeFuse from `~/skill`, and the user switches tasks via `/clear` (not by changing directory). CWD-scoping would collide all three clients into one file and conflate every task done from the same shell. **Fixed**: state now lives in `~/.drift/sessions/<session_id>/state.json` and `…/events.jsonl`. Each Claude Code session — including the one created by `/clear` — gets its own bucket. `$DRIFT_HOME` and `$DRIFT_SESSION_ID` override for advanced cases. Verified: sid-A on `~` and sid-B on `~/skill` stay isolated; sid-A continues correctly when resumed from `~/skill/drift`.
-- **stderr visibility (P0)** — `~/.codefuse/hooks/drift-hook.sh` previously discarded stderr (`2>/dev/null`), making pause decisions and crashes invisible. Now appends to `~/.codefuse/logs/drift-hook.err.log`.
+- **State scoped by `session_id`, not CWD** — initial design stored `.drift-state.json` / `.drift-events.jsonl` in CWD, which broke the actual usage pattern: some runtimes launch from `~`, others from a fixed work directory, and the user switches tasks via `/clear` (not by changing directory). CWD-scoping would collide all clients into one file and conflate every task done from the same shell. **Fixed**: state now lives in `~/.drift/sessions/<session_id>/state.json` and `…/events.jsonl`. Each Claude Code session — including the one created by `/clear` — gets its own bucket. `$DRIFT_HOME` and `$DRIFT_SESSION_ID` override for advanced cases. Verified: sid-A and sid-B launched from different directories stay isolated; sid-A continues correctly when resumed from another directory.
+- **stderr visibility (P0)** — the runtime's `drift-hook.sh` previously discarded stderr (`2>/dev/null`), making pause decisions and crashes invisible. Now appends to a hook error log under the runtime's config dir.
 - **O(N²) hot path (P0)** — the first `handlePreToolUse` implementation rebuilt `SessionManager` + `setGoal` + `confirmGoal` + replayed every historical event per hook call, costing O(N²) over a session. Reworked to read the latest `drift_score` snapshot persisted by PostToolUse on the most recent `tool_call` event (O(N) read), then run only the stateless v0.2 detectors over the existing stream. Verified on 50 events: cold ~1.5s, warm ~400ms, well under the 10s hook timeout. v0.1 contribution is the score **as of the previous tool call** — the correct semantics for a *pre*-execution decision.
-- **Missing `--event PostToolUse` argument** — `~/.codefuse/engine/cc/settings.json` had a Drift PostToolUse command that omitted the `--event` flag, leaving event-type inference to `getHookEventType` from payload shape. It happened to work but was fragile; the flag is now explicit.
+- **Missing `--event PostToolUse` argument** — one runtime's `settings.json` had a Drift PostToolUse command that omitted the `--event` flag, leaving event-type inference to `getHookEventType` from payload shape. It happened to work but was fragile; the flag is now explicit.
 
 ---
 

@@ -34,7 +34,8 @@ interface TranscriptLine {
   type: string
   timestamp?: string
   message?: {
-    content: Array<{
+    // Either a plain string (codefuse dialect) or an array of typed blocks.
+    content: string | Array<{
       type: string
       text?: string
       name?: string
@@ -111,20 +112,30 @@ function parseTranscript(filePath: string): { events: ExtractedEvent[]; prompts:
     }
 
     if (parsed.type === 'user' && parsed.message?.content) {
-      for (const block of parsed.message.content) {
-        if (block.type === 'text' && block.text) {
-          const text = block.text.trim()
-          if (text.length > 0 && !isSystemPrompt(text)) {
-            currentPrompt = text.slice(0, 200)
-            promptIndex++
-            prompts.push(currentPrompt)
+      // Transcript dialects differ: some store user content as an array of
+      // typed blocks ([{type:'text', text}]), others (e.g. codefuse) store it
+      // as a plain string. Handle both, else prompt extraction silently yields
+      // zero prompts and every session collapses to a single fallback goal.
+      const content = parsed.message.content
+      let text = ''
+      if (typeof content === 'string') {
+        text = content.trim()
+      } else if (Array.isArray(content)) {
+        for (const block of content) {
+          if (block.type === 'text' && block.text) {
+            text = block.text.trim()
+            break
           }
-          break
         }
+      }
+      if (text.length > 0 && !isSystemPrompt(text)) {
+        currentPrompt = text.slice(0, 200)
+        promptIndex++
+        prompts.push(currentPrompt)
       }
     }
 
-    if (parsed.type === 'assistant' && parsed.message?.content) {
+    if (parsed.type === 'assistant' && Array.isArray(parsed.message?.content)) {
       for (const block of parsed.message.content) {
         if (block.type === 'tool_use' && block.name) {
           eventIndex++

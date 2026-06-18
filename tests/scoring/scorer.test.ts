@@ -40,7 +40,13 @@ function makeToolEvent(
 
 function bootstrapStoreWithGoal(raw: string, scope: GoalScope): GoalStore {
   const store = new GoalStore('sess_test')
-  const goal = store.create(raw)
+  // Seed created_at at the test event time base so the goal precedes the
+  // tool events makeToolEvent emits (1_700_000_000_000 + n*1000). Real goals
+  // are always created before the actions scored against them; the scorer now
+  // filters actions to the current goal segment (timestamp >= goal.created_at),
+  // so an unset created_at (Date.now(), in the future) would wrongly exclude
+  // every test event.
+  const goal = store.create(raw, 1_700_000_000_000)
   store.confirm(goal.id, scope)
   return store
 }

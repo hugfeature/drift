@@ -17,6 +17,9 @@ eval/quarantine/
 # Auto-collected candidates (unreviewed, may contain sensitive data)
 eval/candidates/
 
+# Held-out blind eval — local real-session corpus + labels + reports (sensitive)
+eval/heldout/
+
 # Reports may contain local paths
 eval/reports/
 eval/timelines/

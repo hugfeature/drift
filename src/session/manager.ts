@@ -114,6 +114,30 @@ export class SessionManager {
     return goal.id
   }
 
+  /**
+   * Switch the active goal to a new human-issued task, preserving the event
+   * timestamp (for replay) instead of using wall-clock now().
+   *
+   * Real multi-task sessions interleave several user-issued goals ("fix typo",
+   * then "now publish the article"). Scoring every later action against the
+   * FIRST goal inflates semantic_divergence and produces false positives — the
+   * agent didn't drift, the user changed the task. This marks the current
+   * active goal as `replaced` (the user authorized the switch) and creates the
+   * new goal, so semantic_divergence is computed against the current task, not
+   * a stale one.
+   *
+   * Returns the new goal id. If there is no active goal yet, this is equivalent
+   * to setGoal.
+   */
+  switchGoal(raw: string, created_at?: number): string {
+    const current = this.store.getActive()
+    if (current) {
+      this.store.markReplaced(current.id)
+    }
+    const goal = this.store.create(raw, created_at)
+    return goal.id
+  }
+
   async confirmGoal(goalId: string, normalized: GoalScope): Promise<void> {
     this.store.confirm(goalId, normalized)
 

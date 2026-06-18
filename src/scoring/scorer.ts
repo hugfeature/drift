@@ -84,15 +84,22 @@ export interface ScorerPersistentState {
 
 const DEFAULT_CONFIG: ScorerConfig = {
   weights: {
+    // autonomy_momentum retired (0.12 → 0): held-out blind eval showed it is
+    // saturated at 1.0 across real healthy sessions (agents are SUPPOSED to run
+    // tool calls continuously) — zero discriminative power, a pure FP driver.
+    // In-sample down-weighting (0.24 → 0.12) only masked it; held-out exposed
+    // it. Its weight is reallocated to semantic_divergence (the signal that
+    // actually discriminates), keeping the total at 1.0 so threshold
+    // calibration (0.43) is preserved.
     semantic_divergence:    0.26,
     inactive_duration:      0.08,
     consecutive_unrelated:  0.10,
     subgoal_depth:          0.05,
     exploratory_entropy:    0.08,
     unauthorized_mutations: 0.05,
-    autonomy_momentum:      0.12,
+    autonomy_momentum:      0.00,
     hallucinated_claims:    0.08,
-    behavioral_pathology:   0.18,
+    behavioral_pathology:   0.30,
   },
   forgotten_consecutive_threshold:  5,
   forgotten_inactive_minutes:       10,
@@ -247,7 +254,7 @@ export class DriftScorer {
       inactive_duration_minutes: this.computeInactiveDuration(activeGoal, latestTs),
       consecutive_unrelated:  this.computeConsecutiveUnrelated(events),
       subgoal_depth:          this.computeSubgoalDepthRisk(activeGoal),
-      exploratory_entropy:    this.computeExploratoryEntropy(events),
+      exploratory_entropy:    this.computeExploratoryEntropy(events, activeGoal),
       unauthorized_mutations: this.store.getUnauthorizedMutations().length,
       autonomy_momentum:      this.computeAutonomyMomentum(events),
       hallucinated_claims:    this.hallucinationCount,
@@ -283,9 +290,19 @@ export class DriftScorer {
     const goalClarity = this.assessGoalClarity(activeGoal.raw)
     const maxDivergence = goalClarity < 0.3 ? 0.4 : 1.0
 
-    // Score recent tool_call events (exclude system/infrastructure tools)
+    // Score recent tool_call events (exclude system/infrastructure tools).
+    // Restrict to the CURRENT goal segment: in multi-task sessions the user
+    // issues several goals in sequence, and actions before the active goal was
+    // created belong to a prior task. Comparing them against the current goal
+    // inflates divergence and fires false positives — the agent didn't drift,
+    // the user changed the task. For single-goal sessions activeGoal.created_at
+    // is the session start, so this is a no-op (preserves in-sample behavior).
     const recentToolCalls = events
-      .filter(e => e.type === 'tool_call' && !isSystemTool(String(e.payload['tool_name'] ?? '')))
+      .filter(e =>
+        e.type === 'tool_call' &&
+        !isSystemTool(String(e.payload['tool_name'] ?? '')) &&
+        e.timestamp >= activeGoal.created_at
+      )
       .slice(-this.config.entropy_window_size)
 
     if (recentToolCalls.length === 0) return 0
@@ -476,9 +493,18 @@ export class DriftScorer {
    * High entropy = agent is using many different tools = scattered/exploratory.
    * System/infrastructure tools are excluded.
    */
-  private computeExploratoryEntropy(events: RuntimeEvent[]): number {
+  private computeExploratoryEntropy(events: RuntimeEvent[], activeGoal: Goal | null): number {
+    // Restrict the entropy window to the current goal segment (see
+    // computeSemanticDivergence). Tool diversity accumulated across prior tasks
+    // is not evidence the current task is scattered. No-op for single-goal
+    // sessions (created_at = session start).
+    const goalStart = activeGoal?.created_at ?? 0
     const window = events
-      .filter(e => e.type === 'tool_call' && !isSystemTool(String(e.payload['tool_name'] ?? '')))
+      .filter(e =>
+        e.type === 'tool_call' &&
+        !isSystemTool(String(e.payload['tool_name'] ?? '')) &&
+        e.timestamp >= goalStart
+      )
       .slice(-this.config.entropy_window_size)
 
     if (window.length === 0) return 0

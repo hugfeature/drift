@@ -265,6 +265,23 @@ export class GoalStore {
     return updated
   }
 
+    /**
+   * Mark a goal as replaced because the user issued a new task.
+   *
+   * Distinct from markForgotten (agent lost track of the goal) and from
+   * replace() (which mints the successor goal with wall-clock now()).
+   * markReplaced only flips the status; the caller creates the successor goal
+   * with the correct event timestamp. Used by SessionManager.switchGoal for
+   * multi-task sessions and replay, where preserving event time matters.
+   */
+  markReplaced(goalId: string): Goal {
+    const goal = this.getOrThrow(goalId)
+    this.assertStatus(goal, ['active', 'drifting'], 'markReplaced')
+    const updated: Goal = { ...goal, status: 'replaced' }
+    this.goals.set(goalId, updated)
+    return updated
+  }
+
   // ---------------------------------------------------------------------------
   // Queries
   // ---------------------------------------------------------------------------

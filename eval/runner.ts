@@ -197,13 +197,32 @@ async function replayFixture(fixture: EvalFixture): Promise<ReplayResult> {
     }
   }
 
-  // Replay events (skip goal_created / goal_confirmed — already handled above)
+  // Replay events. Mid-stream goal_created events (multi-task sessions where
+  // the user issues a new task) switch the active goal so semantic_divergence
+  // is computed against the CURRENT task, not the first one. The first
+  // goal_created is already handled by setGoal above, so skip it.
   const replayableTypes = ['tool_call', 'subgoal_created', 'goal_mutated']
   const events = (fixture.session as any).events as any[] ?? []
 
   let lastResult: Awaited<ReturnType<typeof session.processEvent>> | null = null
+  let seenFirstGoalCreated = false
 
   for (const evt of events) {
+    // User issued a new task → switch the active goal (preserve event time).
+    if (evt.type === 'goal_created' && evt.source === 'human') {
+      if (!seenFirstGoalCreated) {
+        // The fixture's goals[0] already seeded the first goal above. Skip the
+        // matching mid-stream marker to avoid a duplicate goal.
+        seenFirstGoalCreated = true
+        continue
+      }
+      const newGoalRaw = String(evt.payload?.message ?? '').trim()
+      if (newGoalRaw.length > 0) {
+        session.switchGoal(newGoalRaw, evt.timestamp)
+      }
+      continue
+    }
+
     if (!replayableTypes.includes(evt.type)) continue
 
     const raw: Omit<RawEvent, 'session_id'> = {
